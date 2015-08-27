@@ -1,0 +1,12 @@
+include README.rst
+include data/E_coli_K12/curated_list_of_sRNA_mRNA_interactions.txt
+include data/E_coli_K12/EcoCyc_genes_190.gff
+include data/E_coli_K12/EcoCyc_transcripts_190.gff
+include data/E_coli_K12/genome.fa
+include data/E_coli_K12/REP_elements_table_from_SmartTrables.txt
+include data/E_coli_K12/draw_links.conf
+include data/E_coli_K12/ec_karyotype.conf
+include data/E_coli_K12/plot_interactions.sh
+include data/E_coli_K12/sRNAs_highlight_wide.txt
+include data/E_coli_K12/tRNAs_highlight_wide.txt
+include data/E_coli_K12/rRNAs_highlight.txt

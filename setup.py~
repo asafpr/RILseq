@@ -1,0 +1,11 @@
+from setuptools import setup
+
+setup(name='pro_clash',
+      version='0.1',
+      description='Processing PRO-CLASH experiments results',
+      url='http://github.com/asafpr/pro_clash',
+      author='Asaf Peer',
+      author_email='asafpr@gmail.com',
+      license='MIT',
+      packages=['pro_clash'],
+      zip_safe=False)
