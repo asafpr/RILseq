@@ -106,9 +106,6 @@ def process_command_line(argv):
         '--bwa_exec', default='bwa',
         help='bwa command')
     parser.add_argument(
-        '--prinseq_exec', default='prinseq-lite.pl',
-        help='Executable of prinseq.')
-    parser.add_argument(
         '-S', '--samtools_cmd', default='samtools',
         help='Samtools executable.')
     parser.add_argument(
