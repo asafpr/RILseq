@@ -369,6 +369,7 @@ def get_unmapped_reads(
     single_mapped = set()
     for read in samfile.fetch(until_eof=True):
         if (not read.is_paired) and (read.is_unmapped or all_reads):
+            reverse_seq = False
             if read.is_reverse:
                 # This can't happen unless all_reads is set to True
                 reverse_seq = True
