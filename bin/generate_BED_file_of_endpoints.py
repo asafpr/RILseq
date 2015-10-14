@@ -260,7 +260,7 @@ def main(argv=None):
     # Read the bam files and return the long sequences
     r1_seqs = {}
     r2_seqs = {}
-    for bamfile in settings.bamfiles:
+    for bamfile in list(RILseq.flat_list(settings.bamfiles)):
         r1s, r2s = get_reads_seqs(
             pysam.Samfile(bamfile), read_5ps.keys(), rev=settings.reverse)
         r1_seqs.update(r1s)

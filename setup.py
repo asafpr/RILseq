@@ -5,7 +5,7 @@ def readme():
         return f.read()
     
 setup(name='RILseq',
-      version='0.22',
+      version='0.23',
       description='Processing RILSeq experiments results',
       long_description=readme(),
       classifiers=[
