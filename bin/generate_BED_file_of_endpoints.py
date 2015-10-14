@@ -17,7 +17,7 @@ import random
 from Bio.Seq import Seq
 import pysam
 from Bio import SeqIO
-
+import RILseq
 
 def process_command_line(argv):
     """
