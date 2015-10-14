@@ -38,14 +38,14 @@ def process_command_line(argv):
         'list_reads',
         help='File with list of reads and their fused positions.')
     parser.add_argument(
-        'bamfile',
-        help='The original bam file with the full reads.')
-    parser.add_argument(
         'track_name',
         help='Name of track')
     parser.add_argument(
         'track_desc',
         help='Description of the track')
+    parser.add_argument(
+        'bamfiles', action='append', nargs='+',
+        help='The original bam file (or several files) with the full reads.')
 
 
     parser.add_argument(
@@ -257,9 +257,14 @@ def main(argv=None):
         read_5ps[line[6]] = [int(line[1])-1, line[2], line[0]]
         read_3ps[line[6]] = [int(line[4])-1, line[5], line[3]]
 #        read_genes[line[6]] = [line[0], line[1]]
-    # Read the bam file and return the long sequences
-    r1_seqs, r2_seqs = get_reads_seqs(
-        pysam.Samfile(settings.bamfile), read_5ps.keys(), rev=settings.reverse)
+    # Read the bam files and return the long sequences
+    r1_seqs = {}
+    r2_seqs = {}
+    for bamfile in settings.bamfiles:
+        r1s, r2s = get_reads_seqs(
+            pysam.Samfile(bamfile), read_5ps.keys(), rev=settings.reverse)
+        r1_seqs.update(r1s)
+        r2_seqs.update(r2s)
     # For each read find the overlap, if exists and find the fusion point
     outer = csv.writer(sys.stdout, delimiter='\t')
     print 'track name="%s" description="%s" visibility=4 itemRgb="On" useScore=0'%(
