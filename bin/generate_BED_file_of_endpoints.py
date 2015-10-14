@@ -12,10 +12,12 @@ import sys
 import argparse
 import csv
 from collections import defaultdict
+import random
 
 from Bio.Seq import Seq
 import pysam
 from Bio import SeqIO
+
 
 def process_command_line(argv):
     """
@@ -56,6 +58,10 @@ def process_command_line(argv):
         '-e', '--gene_name',
         help='Print reads involve only this gene (EcoCyc ID), '
         'applies only with -s')
+    parser.add_argument(
+        '--rand_score', default=False, action='store_true',
+        help='Set a random score (0-1000) for each read, this will allow to '
+        'present some of the reads in UCSC genome browser.')
     parser.add_argument(
         '--pos_first', default='255,0,0',
         help='Color of first part, positive strand.')
@@ -256,7 +262,7 @@ def main(argv=None):
         pysam.Samfile(settings.bamfile), read_5ps.keys(), rev=settings.reverse)
     # For each read find the overlap, if exists and find the fusion point
     outer = csv.writer(sys.stdout, delimiter='\t')
-    print 'track name="%s" description="%s" visibility=4 itemRgb="On"'%(
+    print 'track name="%s" description="%s" visibility=4 itemRgb="On" useScore=0'%(
         settings.track_name, settings.track_desc)
     # Because I'm lazy, the code is written so r1 is the 3' end of the fragment
     for rname in set(r2_seqs.keys()):
@@ -274,29 +280,32 @@ def main(argv=None):
             s1+overlap+s2, 0, read_3ps[rname][0], True, read_3ps[rname][1],
             genome[read_3ps[rname][2]])
         # Write each of the sides to the output file
+        score=0
+        if settings.rand_score:
+            score=random.randint(0, 1000)
         if read_5ps[rname][1] == '+':
             gfrom = max(0,  read_5ps[rname][0])
             gto = min(gsize[read_5ps[rname][2]], read_5ps[rname][0]+side_5p_len)
             outer.writerow([
-                    read_5ps[rname][2], gfrom, gto, "%s_5p"%rname, 0, '+',
+                    read_5ps[rname][2], gfrom, gto, "%s_5p"%rname, score, '+',
                     gfrom, gto, settings.pos_first])
         elif read_5ps[rname][1] == '-':
             gfrom = max(0, read_5ps[rname][0]-side_5p_len+1)
             gto = min(gsize[read_5ps[rname][2]], read_5ps[rname][0]+1)
             outer.writerow([
-                    read_5ps[rname][2], gfrom, gto, "%s_5p"%rname, 0, '-',
+                    read_5ps[rname][2], gfrom, gto, "%s_5p"%rname, score, '-',
                     gfrom, gto,settings.rev_first])
         if read_3ps[rname][1] == '+':
             gfrom = max(0, read_3ps[rname][0]-side_3p_len+1)
             gto = min(gsize[read_3ps[rname][2]], read_3ps[rname][0]+1)
             outer.writerow([
-                    read_3ps[rname][2], gfrom, gto,"%s_3p"%rname, 0, '+',
+                    read_3ps[rname][2], gfrom, gto,"%s_3p"%rname, score, '+',
                     gfrom, gto, settings.pos_second])
         elif read_3ps[rname][1] == '-':
             gfrom = max(0, read_3ps[rname][0])
             gto = min(gsize[read_3ps[rname][2]], read_3ps[rname][0]+side_3p_len)
             outer.writerow([
-                    read_3ps[rname][2], gfrom, gto, "%s_3p"%rname, 0, '-',
+                    read_3ps[rname][2], gfrom, gto, "%s_3p"%rname, score, '-',
                     gfrom, gto, settings.rev_second])
     return 0        # success
 

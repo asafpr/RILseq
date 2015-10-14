@@ -232,7 +232,8 @@ def read_terminators_data(
 def read_genes_data(
     ec_dir='/home/users/assafp/Database/EcoCyc/current/data',
     gfile = 'genes.dat', sRNAs_types=('BC-2.2','BC-2.2.7'),
-    other_RNAs_types=('BC-2.2.5', 'BC-2.2.6'), exclude_set=('EG10438',),
+    other_RNAs_types=('BC-2.2.5', 'BC-2.2.6', 'BC-3.1.3.6'),
+    exclude_set=('EG10438',),
     rRNA_prod='RRNA'):
     """
     Read the genes.dat from the ec directory 
@@ -298,7 +299,7 @@ def read_genes_data(
                     uid_tudata[ingene] = set(tu_data)
                     if has_types and (ingene not in exclude_set): #exclude hfq
                         sRNAs_list.append(ingene)
-                    if has_other_types:
+                    if has_other_types and (ingene not in exclude_set):
                         other_RNAs_list.append(ingene)
                 ingene = None
                 has_types = False
