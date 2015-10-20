@@ -173,42 +173,6 @@ def extend_alignment(rseq, pos5p, pos3p, is_read1, strand, genome, mismatch=1):
             return ipos 
         
                 
-def read_significant_reads(summary_file, chr_dict, gname=None):
-    """
-    Return a dict from r1->[r2] of regions that are significant
-    Arguments:
-    - `summary_file`: A summary results file
-    - `chr_dict`: Dictionary from chr name in summary file (EcoCyc) to bam
-    - `gname`: Choose reads of only this gene
-    """
-    sig_reg = defaultdict(list)
-    for line in csv.DictReader(open(summary_file), delimiter='\t'):
-        r1_from = int(line['RNA1 from'])-1
-        r1_to = int(line['RNA1 to'])
-        try:
-            r1_chrn = chr_dict[line['RNA1 chromosome']]
-        except KeyError:
-            r1_chrn = line['RNA1 chromosome']
-        r1_str = line['RNA1 strand']
-        r2_from = int(line['RNA2 from'])-1
-        r2_to = int(line['RNA2 to'])
-        try:
-            r2_chrn = chr_dict[line['RNA2 chromosome']]
-        except KeyError:
-            r2_chrn = line['RNA2 chromosome']
-        r2_str = line['RNA2 strand']
-        
-        if gname:
-            try:
-                if (gname not in line['RNA1 EcoCyc ID']) and\
-                        (gname not in line['RNA2 EcoCyc ID']):
-                    continue
-            except KeyError:
-                continue
-        for i in range(r1_from, r1_to):
-            for j in range(r2_from, r2_to):
-                sig_reg[(i, r1_str, r1_chrn)].append((j, r2_str, r2_chrn))
-    return sig_reg
         
 def find_overlap(s1, s2):
     """
@@ -243,7 +207,7 @@ def main(argv=None):
     else:
         chr_dict = {}
     if settings.summary:
-        sig_reads = read_significant_reads(
+        sig_reads = RILseq.read_significant_reads(
             settings.summary, chr_dict, gname=settings.gene_name)
 
     for line in csv.reader(open(settings.list_reads), delimiter='\t'):
