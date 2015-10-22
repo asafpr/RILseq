@@ -1146,7 +1146,8 @@ def has_rep(chrn, rfrom, rto, rstrand, rep_pos):
 def report_interactions(
     region_interactions, outfile, interacting_regions, seglen, ec_dir, ec_chrs,
     refseq_dir, targets_file, rep_file,  single_counts, shuffles, RNAup_cmd,
-    servers, rlen, est_utr_lens, pad_seqs):
+    servers, rlen, est_utr_lens, pad_seqs, num_of_sig_ints_as1,
+    num_of_sig_ints_as2):
     """
     Report the interactions with additional data such as genes in region, if
     it's a known target, number of single fragments count, binding energy
@@ -1168,6 +1169,9 @@ def report_interactions(
     - `est_utr_lens`: Estimated lengths of UTRs when data is not available in
                       EcoCyc
     - `pad_seqs`: Pad the interacting regions when extracting sequences.
+    - `num_of_sig_ints_as1`: Number of reads in significant interactions for
+                             left side. A dictionary (region->int)
+    - `num_of_sig_ints_as2`: As above, as right side of read
     """
     targets = read_targets(targets_file)
     singles = read_singles(single_counts)
@@ -1202,7 +1206,7 @@ def report_interactions(
         'RNA2 chromosome', 'RNA2 from', 'RNA2 to', 'RNA2 strand',
         'interactions', 'other interactions of RNA1',
         'other interactinos of RNA2', 'total other interactions', 'odds ratio',
-        "Fisher's exact test p-value" ]
+        "Fisher's exact test p-value", "pred effect" ]
     if shuffles > 0 and fsa_seqs:
         header_vec.extend([
                 'Free energy of hybridization',
@@ -1247,10 +1251,17 @@ def report_interactions(
             list_of_genes(
             r1_from, r1_to, r1_str, r1_chrnbam, r1_chrn, r2_from, r2_to, r2_str,
             r2_chrnbam, r2_chrn, region_interactions, pos_maps, seglen, rlen)
+        # Count the number of interactions of the regions with other regions
+        tot_ints_as1 = sum([num_of_sig_ints_as1[(r1, r1_str, r1_chrnbam)] for\
+                                r1 in range(r1_from, r1_to, seglen)])
+        tot_ints_as2 = sum([num_of_sig_ints_as2[(r2, r2_str, r2_chrnbam)] for\
+                                r2 in range(r2_from, r2_to, seglen)])
+        pred_eff = (float(ints)/(tot_ints_as1)) *\
+            (float(ints)/(tot_ints_as2))
 
         out_data[rkey] = [
             r1_chrn, min1_pos+1, max1_pos+1, r1_str, r2_chrn, min2_pos+1,
-            max2_pos+1, r2_str, ints, mat_b, mat_c, mat_d, odds, pv]
+            max2_pos+1, r2_str, ints, mat_b, mat_c, mat_d, odds, pv, pred_eff]
         if shuffles > 0 and fsa_seqs:
             p5_seqs =  get_seqs(
                 r1_chrn, min1_pos-pad_seqs, max1_pos+pad_seqs, r1_str, fsa_seqs,

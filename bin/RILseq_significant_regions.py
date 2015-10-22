@@ -109,7 +109,7 @@ def process_command_line(argv):
         '--max_pv', type=float, default=0.05,
         help='Maximal pvalue to report (after correction).')
     parser.add_argument(
-        '--min_odds_ratio', type=float, default=2.0,
+        '--min_odds_ratio', type=float, default=1.0,
         help='Minimal odds ratio to report')
     
 
@@ -156,7 +156,8 @@ def main(argv=None):
                      reg1[1], reg1[2], reg2[0], reg2[0]+settings.seglen,
                      reg2[1], reg2[2], 0, 0, 0))
     else:
-    
+        num_of_sig_ints_as1 = defaultdict(int)
+        num_of_sig_ints_as2 = defaultdict(int)
         # Now run the test for each pair of interacting regions
         found_in_interaction = defaultdict(bool)
         interacting_regions = []
@@ -182,6 +183,13 @@ def main(argv=None):
                     for r2 in range(r2_from, r2_to, settings.seglen):
                         found_in_interaction[
                             (r1, reg1[1], reg1[2], r2, reg2[1], reg2[2])] = True
+                        num_of_sig_ints_as1[(r1, reg1[1], reg1[2])] +=\
+                            len(region_interactions[(r1, reg1[1], reg1[2])]\
+                            [(r2, reg2[1], reg2[2])])
+                        num_of_sig_ints_as2[(r2, reg2[1], reg2[2])] +=\
+                            len(region_interactions[(r1, reg1[1], reg1[2])]\
+                            [(r2, reg2[1], reg2[2])])
+                        
                 # Report this interaction
                 interacting_regions.append(
                     (pv, ints, odds, r1_from, r1_to, reg1[1], reg1[2],  r2_from,
@@ -192,7 +200,8 @@ def main(argv=None):
         settings.ec_dir, settings.EC_chrlist, settings.refseq_dir,
         settings.targets_file, settings.rep_table, settings.single_counts,
         settings.shuffles, settings.RNAup_cmd, settings.servers,
-        settings.length, settings.est_utr_lens, settings.pad_seqs)
+        settings.length, settings.est_utr_lens, settings.pad_seqs,
+        num_of_sig_ints_as1, num_of_sig_ints_as2)
     # application code here, like:
     # run(settings, args)
     return 0        # success
