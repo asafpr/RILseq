@@ -37,13 +37,20 @@ def process_command_line(argv):
         help='Split the genome to windows of this size.')
     parser.add_argument(
         '--sRNAs', default=False, action='store_true',
-        help='Color the lines going to or coming from sRNAs in orange.')
+        help='Color the lines going to or coming from sRNAs in orange. Must be'
+        ' used with ec_dir.')
     parser.add_argument(
         '--known',
-        help='Use this file to color the known interactions in red.')
+        help='Use this file to color the known interactions in red.'
+        ' Must give --refseq_dir as well.')
     parser.add_argument(
-        '--ECdir', default= '/home/users/assafp/EC/NC_000913',
-        help='The genome ptt and rnt files header (just add rnt.gz).')
+        '--refseq_dir', default='/home/users/assafp/EC/',
+        help='RefSeq dir of organism to get the gene description from.'
+        ' Should be given if --known is given.')
+    parser.add_argument(
+        '--ec_dir', #default='/home/users/assafp/Database/EcoCyc/19.0/data',
+        help='EcoCyc data dir, used to map the regions to genes. If not'
+        ' given only the regions will be reported')
     parser.add_argument(
         '-c', '--chrn', default='chr',
         help='Name of chromosome to plot.')
@@ -97,8 +104,8 @@ def main(argv=None):
             settings.summary, chr_dict)
     if settings.known:
         known_reads = defaultdict(list)
-        ptt_c, ptt_str = get_coords("%s.ptt.gz"%settings.ECdir)
-        rnt_c, rnt_str = get_coords("%s.rnt.gz"%settings.ECdir)
+        ptt_c, ptt_str = get_coords("%s.ptt.gz"%settings.refseq_dir)
+        rnt_c, rnt_str = get_coords("%s.rnt.gz"%settings.refseq_dir)
         for line in open(settings.known):
             spl = line.strip().split()
             try:
@@ -129,7 +136,7 @@ def main(argv=None):
     if settings.sRNAs:
         from RILseq.ecocyc_parser import read_genes_data
         uid_pos, uid_names, uid_tudata, sRNAs_list, other_RNAs_list, rRNAs = \
-            read_genes_data()
+            read_genes_data(settings.ec_dir)
         sposs = set()
         for g in sRNAs_list:
             for i in range(uid_pos[g][1], uid_pos[g][2]):

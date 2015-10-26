@@ -1205,7 +1205,7 @@ def report_interactions(
         'RNA1 chromosome', 'RNA1 from', 'RNA1 to', 'RNA1 strand',
         'RNA2 chromosome', 'RNA2 from', 'RNA2 to', 'RNA2 strand',
         'interactions', 'other interactions of RNA1',
-        'other interactinos of RNA2', 'total other interactions', 'odds ratio',
+        'other interactions of RNA2', 'total other interactions', 'odds ratio',
         "Fisher's exact test p-value", "pred effect" ]
     if shuffles > 0 and fsa_seqs:
         header_vec.extend([
