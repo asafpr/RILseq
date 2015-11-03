@@ -488,10 +488,43 @@ def get_NM_number(tags):
     return 10
 
 
+def replace_with_XA(read, al, chrnames_bam):
+    """
+    Replace the position of the read with one of the alternatives
+    Arguments:
+    - `read`: A read object
+    - `al`: Alternative position string
+    - `chrnames_bam`: The names of the chrs in the bam file
+    """
+    apos = int(al[1][1:])
+    nm_num = get_NM_number(read.tags)
+    # Add the read one to the XA tag
+    tags = read.tags
+    for xt in tags:
+        if xt[0] == 'XA':
+            xaval = xt[1]
+            tags.remove(xt)
+            strs = '+'
+            if read.is_reverse:
+                strs = '-'
+            tags.append(('XA', '%s,%s%d,%s,%d;'%(
+                        chrnames_bam[read.tid],
+                        strs, read.pos,
+                        read.cigarstring, nm_num) +xaval))
+            read.tags = tags
+    read.pos = apos
+    read.is_reverse = al[1][0]=='-'
+    read.cigarstring = al[2]
+    read.tid = min([i for i, x in enumerate(chrnames_bam) if x==al[0]])
+
+
 def test_concordance(
     read1, read2, maxdist, chrnames_bam, trans_gff=None, remove_self=False):
     """
-    Test if the two reads can be concordant and not ligated
+    Test if the two reads can be concordant and not ligated.
+    If it finds a combination that is concordant, replace the concordant
+    positions to be the major ones. You should check if they are under the
+    allowed mismatches.
     Update:
     test all the XA, if one combination is concordant return True
     Arguments:
@@ -543,17 +576,24 @@ def test_concordance(
             if is_conc(
                 is_rev1, read2.is_reverse, pos1, read2.pos, altp[0],
                 chrnames_bam[read2.tid]):
+                # Replace with alternative
+                replace_with_XA(read1, altp, chrnames_bam)
                 return True
             for altp2 in r2_XA:
                 is_rev2 = (altp2[1][0] == '-')
                 pos2 = abs(int(altp2[1]))
                 if is_conc(is_rev1, is_rev2, pos1, pos2, altp[0], altp2[0]):
+                    # Replace both with alternatives
+                    replace_with_XA(read1, altp, chrnames_bam)
+                    replace_with_XA(read2, altp2, chrnames_bam)
                     return True
     if r2_XA:
         for altp2 in r2_XA:
             is_rev2 = (altp2[1][0] == '-')
             pos2 = abs(int(altp2[1]))
             if is_conc(read1.is_reverse, is_rev2, read1.pos, pos2, altp2[0], chrnames_bam[read1.tid]):
+                # Replace with alternative
+                replace_with_XA(read2, altp2, chrnames_bam)
                 return True
         
     return False
@@ -577,7 +617,7 @@ def read_bam_file(bamfile, chrnames_bam, max_NM=0):
             # If there are multiple hits, choose the one with the smallest coor
             alt_list = get_XA_mapping(read.tags, max_NM)
             min_pos = read.pos
-            min_is_rev = read.is_reverse
+            min_al = None
             for al in alt_list:
                 apos = int(al[1][1:])
                 # test this alternative only if its NM is as the original one
@@ -585,31 +625,18 @@ def read_bam_file(bamfile, chrnames_bam, max_NM=0):
                     continue
                 if apos < min_pos:
                     min_pos = apos
-                    min_is_rev = al[1][0]=='-'
+                    min_al = al
             # If changed, add the read one to the XA tag
-            tags = read.tags
-            if read.pos !=min_pos:
-                for xt in tags:
-                    if xt[0] == 'XA':
-                        xaval = xt[1]
-                        tags.remove(xt)
-                        strs = '+'
-                        if read.is_reverse:
-                            strs = '-'
-                        tags.append(('XA', '%s,%s%d,%s,%d;'%(
-                                    chrnames_bam[read.tid],
-                                    strs, read.pos,
-                                    read.cigarstring, nm_num) +xaval))
-                read.tags = tags
-            read.pos = min_pos
-            read.is_reverse = min_is_rev
+            if read.pos != min_pos:
+                replace_with_XA(read, min_al, chrnames_bam)
             read_objects[read.qname] = read
     return read_objects
 
 
 def write_reads_table(
     outfile, read1_reads, read2_reads, chrnames_bam, maxdist,
-    remove_self, trans_gff=None, write_single=None, single_mapped=None):
+    remove_self, trans_gff=None, write_single=None, single_mapped=None,
+    max_NM=1):
     """
     Read the lists of reads and print a list of chimeric fragments after
     removing concordant reads
@@ -625,6 +652,7 @@ def write_reads_table(
     - `write_single`: Write reads that are not chimeric to this file
     - `single_mapped`: A set with read names of fragments that were originally
                        mapped as single
+    - `max_NM`: Maximla number of mismatches. Used to screen printing of singles
     """
     
 
@@ -638,6 +666,9 @@ def write_reads_table(
             read1_reads[rname], read2_reads[rname], maxdist,
             chrnames_bam, trans_gff=trans_gff, remove_self=remove_self):
             if write_single:
+                if get_NM_number(read1_reads[rname].tags) > max_NM or\
+                        get_NM_number(read2_reads[rname].tags) > max_NM:
+                    continue
                 write_to = write_single
                 read_type = "single"
             else:

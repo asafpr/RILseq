@@ -17,6 +17,7 @@ be separated afterwards according to read names.
 import sys
 import argparse
 import pysam
+import os
 
 import RILseq
 
@@ -65,11 +66,13 @@ def process_command_line(argv):
         '-a', '--all_reads',
         help='Map all reads in the BAM file, write all the fragments that are'
         ' not chimeric to the file specified here e.g. '
-        '-a single_fragments_mapping.txt. This will serve for normalization.')
+        '-a single_fragments_mapping.txt. By default these reads will be '
+        'written to the standard output.')
     parser.add_argument(
         '-A', '--add_all_reads', default=True, action='store_false',
-        help='Map all reads in the BAM file, write all the fragments that are'
-        ' not chimeric to the output file (stdout)')
+        help='By default map all reads in the BAM file, write all the fragments'
+        ', either chimeric ro single to the output file (stdout). '
+        "If this option is selected don't wirte the single reads.")
     parser.add_argument(
         '--keep_circular', default=False, action='store_true',
         help='Remove reads that are probably a result of circular RNAs by'
@@ -142,14 +145,16 @@ def main(argv=None):
         libname = outhead.rsplit('/',1)[-1]
         fsq1name = "%s/%s_ends_1.fastq"%(settings.dirout, libname)
         fsq2name = "%s/%s_ends_2.fastq"%(settings.dirout, libname)
-        if not settings.skip_mapping:
+        if settings.skip_mapping:
+            fsq1 = open(os.devnull, 'w')
+            fsq2 = fsq1
+        else:
             fsq1 = open(fsq1name, 'w')
             fsq2 = open(fsq2name, 'w')
-            single_mapped = RILseq.get_unmapped_reads(
-                bfin, fsq1, fsq2, settings.length, settings.maxG,
-                rev=settings.reverse_complement, all_reads=outall!=None,
-                dust_thr=settings.dust_thr)
-            # Apply dust filter
+        single_mapped = RILseq.get_unmapped_reads(
+            bfin, fsq1, fsq2, settings.length, settings.maxG,
+            rev=settings.reverse_complement, all_reads=outall!=None,
+            dust_thr=settings.dust_thr)
         reads_in = []
         # Map the fastq files to the genome
         for fqname in (fsq1name, fsq2name):
@@ -169,7 +174,8 @@ def main(argv=None):
         RILseq.write_reads_table(
             sys.stdout, reads_in[0], reads_in[1], bfin.references,
             settings.distance, not settings.keep_circular,
-            trans_dict, write_single=outall, single_mapped=single_mapped)
+            trans_dict, write_single=outall, single_mapped=single_mapped,
+            max_NM=settings.allowed_mismatches)
     return 0        # success
 
 if __name__ == '__main__':
