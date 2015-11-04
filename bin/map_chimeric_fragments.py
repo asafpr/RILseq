@@ -153,7 +153,7 @@ def main(argv=None):
             fsq2 = open(fsq2name, 'w')
         single_mapped = RILseq.get_unmapped_reads(
             bfin, fsq1, fsq2, settings.length, settings.maxG,
-            rev=settings.reverse_complement, all_reads=outall!=None,
+            rev=settings.reverse_complement, all_reads=True,
             dust_thr=settings.dust_thr)
         reads_in = []
         # Map the fastq files to the genome

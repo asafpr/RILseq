@@ -128,7 +128,7 @@ def main(argv=None):
             uid_pos,_,_,_,_,rRNAs = RILseq.ecocyc_parser.read_genes_data(
                 settings.ec_dir)
         except IOError:
-            rRNAs = None
+            raise 
         rr_pos = []
         chr_dict = dict(zip(
                 settings.EC_chrlist.split(',')[1::2],
