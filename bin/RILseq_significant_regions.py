@@ -145,7 +145,9 @@ def main(argv=None):
         RILseq.read_reads_table(
         open(settings.reads_in), settings.seglen, rr_pos, settings.only_singles)
     sys.stderr.write("Total interactions: %d\n"%total_interactions)
-
+    num_of_sig_ints_as1 = defaultdict(int)
+    num_of_sig_ints_as2 = defaultdict(int)
+        
     # If all interactions are desired, skip the tests and report all
     if settings.all_interactions:
         interacting_regions = []
@@ -156,8 +158,6 @@ def main(argv=None):
                      reg1[1], reg1[2], reg2[0], reg2[0]+settings.seglen,
                      reg2[1], reg2[2], 0, 0, 0))
     else:
-        num_of_sig_ints_as1 = defaultdict(int)
-        num_of_sig_ints_as2 = defaultdict(int)
         # Now run the test for each pair of interacting regions
         found_in_interaction = defaultdict(bool)
         interacting_regions = []

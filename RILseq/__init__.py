@@ -1288,8 +1288,8 @@ def report_interactions(
                                 r1 in range(r1_from, r1_to, seglen)])
         tot_ints_as2 = sum([num_of_sig_ints_as2[(r2, r2_str, r2_chrnbam)] for\
                                 r2 in range(r2_from, r2_to, seglen)])
-        pred_eff = (float(ints)/(tot_ints_as1)) *\
-            (float(ints)/(tot_ints_as2))
+        pred_eff = (float(ints)/(tot_ints_as1+1)) *\
+            (float(ints)/(tot_ints_as2+1))
 
         out_data[rkey] = [
             r1_chrn, min1_pos+1, max1_pos+1, r1_str, r2_chrn, min2_pos+1,
