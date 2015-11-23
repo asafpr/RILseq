@@ -13,6 +13,7 @@ removed. This will be done by excluding reads that map less than 1000 bp apart
 or on the same transcript (from EcoCyc annotations)
 """
 
+import pysam
 import sys
 import argparse
 from collections import defaultdict
@@ -36,6 +37,24 @@ def process_command_line(argv):
         'reads_in',
         help='An output file of map_chimeric_fragments.py with the chimeric'
         ' fragments.')
+    parser.add_argument(
+        '--total_RNA',
+        help='Normalize in total RNA from this bam file.')
+    parser.add_argument(
+        '--total_reverse', default=False, action='store_true',
+        help='Total library is the reverse strand.')
+    parser.add_argument(
+        '--min_total_counts', type=int, default=10,
+        help='Minimal number of reads in the total library to assess'
+        ' normalization from.')
+    parser.add_argument(
+        '--norm_percentile', type=float, default=0.99,
+        help='Percentile of IP/total to use when evaluating normalization'
+        ' of odds ratio in total. The value IP/total is evaluated for every'
+        ' region with at least (--min_total_counts) reads and to avoid'
+        ' outliers the 99th percentile is taken as the normalization value'
+        ' meaning this is the highest amount of IP reads that can be obtained'
+        ' in this library given the amount of total RNA.')
     parser.add_argument(
         '--ec_dir', #default='/home/users/assafp/Database/EcoCyc/19.0/data',
         help='EcoCyc data dir, used to map the regions to genes. If not'
@@ -144,9 +163,6 @@ def main(argv=None):
     region_interactions, region_ints_as1, region_ints_as2, total_interactions=\
         RILseq.read_reads_table(
         open(settings.reads_in), settings.seglen, rr_pos, settings.only_singles)
-    sys.stderr.write("Total interactions: %d\n"%total_interactions)
-    num_of_sig_ints_as1 = defaultdict(int)
-    num_of_sig_ints_as2 = defaultdict(int)
         
     # If all interactions are desired, skip the tests and report all
     if settings.all_interactions:
@@ -183,17 +199,48 @@ def main(argv=None):
                     for r2 in range(r2_from, r2_to, settings.seglen):
                         found_in_interaction[
                             (r1, reg1[1], reg1[2], r2, reg2[1], reg2[2])] = True
-                        num_of_sig_ints_as1[(r1, reg1[1], reg1[2])] +=\
-                            len(region_interactions[(r1, reg1[1], reg1[2])]\
-                            [(r2, reg2[1], reg2[2])])
-                        num_of_sig_ints_as2[(r2, reg2[1], reg2[2])] +=\
-                            len(region_interactions[(r1, reg1[1], reg1[2])]\
-                            [(r2, reg2[1], reg2[2])])
                         
                 # Report this interaction
                 interacting_regions.append(
                     (pv, ints, odds, r1_from, r1_to, reg1[1], reg1[2],  r2_from,
                      r2_to, reg2[1], reg2[2],  mat_b, mat_c, mat_d))
+    # Read the number of total RNAs in each region if the bam file is given
+    if settings.total_RNA:
+        # prepare a dictionary of features
+        feat_dict = defaultdict(lambda: defaultdict(set))
+        for region1 in region_ints_as1:
+            for i in range(settings.seglen):
+                feat_dict[region1[2]+region1[1]][region1[0]+i].add(region1)
+        for region2 in region_ints_as2:
+            for i in range(settings.seglen):
+                feat_dict[region2[2]+region2[1]][region2[0]+i].add(region2)
+        feat_list = {}
+        for chrom, data in feat_dict.items():
+            maxpos = max(data.keys())
+            list_of_sets = []
+            for k in range(maxpos+1):
+                list_of_sets.append(list(data[k]))
+            feat_list[chrom] = list_of_sets
+        totRNA_counts = RILseq.count_features(feat_list, pysam.Samfile(settings.total_RNA), 5, rev=settings.total_reverse)
+        # Collect all the ratios between IP and total then choose the 90%
+        # percentile to avoid liers 
+        max_IP_div_total_as1 = []
+        max_IP_div_total_as2 = []
+        for reg, counts in totRNA_counts.items():
+            if counts > settings.min_total_counts:
+                counts = float(counts+1)
+#                div_prod = max(region_ints_as1[reg]/counts, region_ints_as2[reg]/counts)
+                max_IP_div_total_as1.append(region_ints_as1[reg]/counts)
+                max_IP_div_total_as2.append(region_ints_as2[reg]/counts)
+#        mm1_sorted = sorted(max_IP_div_total_as1)
+        mm_sorted = sorted(max_IP_div_total_as2+max_IP_div_total_as1)
+        max_IP_div_total = mm_sorted[
+            int(len(mm_sorted)*settings.norm_percentile)]
+        sys.stderr.write("%f\n"%(max_IP_div_total))
+            
+    else:
+        totRNA_counts = defaultdict(int)
+        max_IP_div_total = 0
     # Read the additional data to decorate the results with
     RILseq.report_interactions(
         region_interactions, sys.stdout, interacting_regions, settings.seglen,
@@ -201,9 +248,8 @@ def main(argv=None):
         settings.targets_file, settings.rep_table, settings.single_counts,
         settings.shuffles, settings.RNAup_cmd, settings.servers,
         settings.length, settings.est_utr_lens, settings.pad_seqs,
-        num_of_sig_ints_as1, num_of_sig_ints_as2)
-    # application code here, like:
-    # run(settings, args)
+        totRNA_counts, max_IP_div_total)
+
     return 0        # success
 
 if __name__ == '__main__':
