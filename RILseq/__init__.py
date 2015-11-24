@@ -18,7 +18,8 @@ from . import dinuc_shuffle
 # A small helper function to handle argmunets parsing
 def flat_list(list_to_flat):
     """
-    Flattent he list of arguments to one list
+    Flattent the list of arguments to one list. The lists of input might be list
+    of lists, this function yields them as one list
     Arguments:
     - `list_to_flat`: A nested list
     """
@@ -34,7 +35,7 @@ def run_bwa(bwa_cmd, fname1, fname2, output_dir, output_prefix, mismatches,
             fasta_genome, params_aln, params_sampe, params_samse, samtools_cmd,
             processors=1):
     """
-    Run bwa on paired or single end fastq files. write a sorted  bam and a bai
+    Run bwa on paired or single end fastq files. write a sorted bam and a bai
     file
     Arguments:
     - `bwa_cmd`: executable of bwa
@@ -72,16 +73,15 @@ def run_bwa(bwa_cmd, fname1, fname2, output_dir, output_prefix, mismatches,
         next_cmd = ' '.join([bwa_cmd, 'sampe', params_sampe,
                        fasta_genome, sai1.name, sai2.name,
                        fname1, fname2] + ['|'] + samtobam + ['|'] + bamsort)
-        logging.info("Executing %s"%next_cmd)
-        call(next_cmd, shell=True)
     else: # Single end
         next_cmd = ' '.join(
             [bwa_cmd, 'samse'] + params_samse.split(' ') + \
                 [fasta_genome, sai1.name, fname1] + \
             ['|'] + samtobam + ['|'] + bamsort)
-        logging.info("Executing %s"%next_cmd)
-        call(next_cmd, shell=True)
+    logging.info("Executing %s"%next_cmd)
+    call(next_cmd, shell=True)
     bamname = "%s/%s.bam"%(output_dir, output_prefix)
+    # Indexing the bam file
     index_cmd = [samtools_cmd, 'index', bamname]
     logging.info("Indexing bam file %s"%' '.join(index_cmd))
     call(index_cmd)
@@ -99,6 +99,8 @@ def read_gtf(gtf_file, feature, identifier):
     - `identifier`: The identifier to use from column 8
     """
     # First initialize a dictionary
+    # posfeat->[chromosome+strand]->[position]->
+    # [set of entities in this position]
     pos_feat = defaultdict(lambda: defaultdict(set))
     # Get all the names of the features
     all_features = set(['~~intergenic', '~~antisense'])
@@ -117,7 +119,7 @@ def read_gtf(gtf_file, feature, identifier):
         # Change to 0-based coordinates and add this feature to all the
         # positions it convers
         for i in range(int(line[3])-1, int(line[4])):
-            # Concat the strand tot he name of the chromosome
+            # Concat the strand to the name of the chromosome
             pos_feat[line[0]+line[6]][i].add(fid)
     # Change the dictionary to list
     pos_feat_list = {}
@@ -137,6 +139,8 @@ def get_paired_pos(read, rev=False):
     start and end positions
     Arguments:
     - `read`: A read from pysam
+    - `rev`: The read is the reverse complement of the RNA, in this case
+             return the opposite strand
     """
     strand = '+'
     if rev!=read.is_read2:
@@ -151,6 +155,8 @@ def get_single_pos(read, rev=False):
     start and end positions
     Arguments:
     - `read`: A read from pysam
+    - `rev`: The read is the reverse complement of the RNA, in this case
+             return the opposite strand
     """
     strand = '+'
     if rev!=read.is_reverse:
@@ -163,7 +169,7 @@ def get_single_pos(read, rev=False):
 
 
 def count_features(
-    features_lists, samfile, overlap, rev=False, checkpoint=100000):
+    features_lists, samfile, overlap, rev=False, checkpoint=1000000):
     """
     Go over the samfile and for each pair of reads find the features that
     overlap the fragment with at least 'overlap' nucleotides. Add 1 to the count
@@ -199,8 +205,8 @@ def count_features(
         # Take only the forward mate
         counter += 1
         if checkpoint and counter%checkpoint==0:
-            pass
-#            sys.stderr.write("Processed %i fragments\n"%counter)
+#            pass
+            sys.stderr.write("Processed %i fragments\n"%counter)
         try:
             chrname = samfile.getrname(read.tid)
         except ValueError:
@@ -211,10 +217,9 @@ def count_features(
         else:
             strand, fpos, tpos = get_single_pos(read, rev=rev)
         
-        # Count the number of times a feature intersects with the fragmen
+        # Count the number of times a feature intersects with the fragment
         rcounts = defaultdict(int)
         for fset in features_lists[chrname+strand][fpos:tpos]:
-
             for el in fset:
                 rcounts[el] += 1
         # Go over the list of features, if the number of counts is above the
@@ -355,15 +360,15 @@ def get_unmapped_reads(
     If rev is set assume first read is the reverse complement and reverse
     complement it, put it as read 2 and treat the second read as read 1.
     Can handle single-end as well.
-    If all_reads is True, returnt ha names of the reads that are mapped.
+    If all_reads is True, return the names of the reads that are mapped.
     Arguments:
     - `samfile`: Open Samfile object
     - `outfile1`: Open fastq file for reads 1
     - `outfile2`: Open fastq file for reads 2
     - `length`: Write the first X nt of the sequences
     - `maxG`: Maximal fraction of G's in any of the reads
-    - `rev`: Reads are reverse complement (Livny's protocol). Has no influence
-             on single-end reads
+    - `rev`: Reads are reverse complement (Livny's RNAtag-seq protocol for
+             instance). Has no influence on single-end reads
     - `all_reads`: Return all reads, including mapped ones
     - `dust_thr`: DUST filter threshold. If=0, not applied.
     """
