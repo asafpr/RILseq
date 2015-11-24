@@ -39,7 +39,8 @@ def process_command_line(argv):
         ' fragments.')
     parser.add_argument(
         '--total_RNA',
-        help='Normalize in total RNA from this bam file.')
+        help='Normalize in total RNA from these bam files. Enter a comma '
+        'separated list of bam files.')
     parser.add_argument(
         '--total_reverse', default=False, action='store_true',
         help='Total library is the reverse strand.')
@@ -221,7 +222,13 @@ def main(argv=None):
             for k in range(maxpos+1):
                 list_of_sets.append(list(data[k]))
             feat_list[chrom] = list_of_sets
-        totRNA_counts = RILseq.count_features(feat_list, pysam.Samfile(settings.total_RNA), 5, rev=settings.total_reverse)
+        totRNA_counts = defaultdict(int)
+        for bamfile in settings.total_RNA.split(','):
+            totcounts = RILseq.count_features(
+                feat_list, pysam.Samfile(bamfile), 5,
+                rev=settings.total_reverse)
+            for k, v in totcounts.items():
+                totRNA_counts[k] += v
         # Collect all the ratios between IP and total then choose the 90%
         # percentile to avoid liers 
         max_IP_div_total_as1 = []
