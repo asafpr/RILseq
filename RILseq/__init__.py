@@ -368,7 +368,7 @@ def get_unmapped_reads(
     - `length`: Write the first X nt of the sequences
     - `maxG`: Maximal fraction of G's in any of the reads
     - `rev`: Reads are reverse complement (Livny's RNAtag-seq protocol for
-             instance). Has no influence on single-end reads
+             instance).
     - `all_reads`: Return all reads, including mapped ones
     - `dust_thr`: DUST filter threshold. If=0, not applied.
     """
@@ -381,13 +381,18 @@ def get_unmapped_reads(
                 reverse_seq = True
             cseq = read.seq
             cqual = read.qual
-            if reverse_seq:
+            # If the read is the reverse complement of the RNA XOR it's been
+            # reversed on the bam file, reverse it
+            if rev!=reverse_seq:
                 cseq = str(Seq(cseq).reverse_complement())
                 cqual = cqual[::-1]
             if all_reads and (not read.is_unmapped):
                 single_mapped.add(read.qname)
-            if cseq.count('G', 0, length) >= int(maxG*length) or\
-                    cseq.count('G', -length) >= int(maxG*length):
+            search_for = 'G'
+            if rev:
+                search_for = 'C'
+            if cseq.count(search_for, 0, length) >= int(maxG*length) or\
+                    cseq.count(search_for, -length) >= int(maxG*length):
                 continue
             outfile1.write("@%s\n%s\n+\n%s\n"%(
                     read.qname, cseq[:length],
@@ -1247,7 +1252,7 @@ def report_interactions(
         "Fisher's exact test p-value"]
     if ip_tot_norm > 0:
         header_vec.extend(["total RNA reads1", "total RNA reads2",
-        "Total normalized odds ratio" ])
+        "Total normalized odds ratio", "RNA1 pred effect", "RNA2 pred effect"])
     if shuffles > 0 and fsa_seqs:
         header_vec.extend([
                 'Free energy of hybridization',
@@ -1302,12 +1307,18 @@ def report_interactions(
                                       r1 in range(r1_from, r1_to, seglen)])
             tot_totals_as2 = sum([totRNA_count[(r2, r2_str, r2_chrnbam)] for\
                                       r2 in range(r2_from, r2_to, seglen)])
-
+            rna1_eff = min(
+                1,((mat_b + ints)/float(tot_totals_as1+1))/ip_tot_norm)*\
+                ints/float(ints + mat_b)
+            rna2_eff = min(
+                1,((mat_c + ints)/float(tot_totals_as2+1))/ip_tot_norm) *\
+                ints/float(ints + mat_c)
             pred_eff = min(
                 1,((mat_b + ints)/float(tot_totals_as1+1))/ip_tot_norm)*\
                 min(1,((mat_c + ints)/float(tot_totals_as2+1))/ip_tot_norm) *\
                 odds
-            out_data[rkey].extend([tot_totals_as1, tot_totals_as2, pred_eff])
+            out_data[rkey].extend(
+                [tot_totals_as1, tot_totals_as2, pred_eff, rna1_eff, rna2_eff])
         if shuffles > 0 and fsa_seqs:
             p5_seqs =  get_seqs(
                 r1_chrn, min1_pos-pad_seqs, max1_pos+pad_seqs, r1_str, fsa_seqs,
