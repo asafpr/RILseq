@@ -1252,7 +1252,7 @@ def report_interactions(
         "Fisher's exact test p-value"]
     if ip_tot_norm > 0:
         header_vec.extend(["total RNA reads1", "total RNA reads2",
-        "Total normalized odds ratio", "RNA1 pred effect", "RNA2 pred effect"])
+        "Total normalized odds ratio", "RNA1 pred effect", "RNA2 pred effect", "Maximal RNA effect"])
     if shuffles > 0 and fsa_seqs:
         header_vec.extend([
                 'Free energy of hybridization',
@@ -1318,7 +1318,7 @@ def report_interactions(
                 min(1,((mat_c + ints)/float(tot_totals_as2+1))/ip_tot_norm) *\
                 odds
             out_data[rkey].extend(
-                [tot_totals_as1, tot_totals_as2, pred_eff, rna1_eff, rna2_eff])
+                [tot_totals_as1, tot_totals_as2, pred_eff, rna1_eff, rna2_eff, max(rna1_eff, rna2_eff)])
         if shuffles > 0 and fsa_seqs:
             p5_seqs =  get_seqs(
                 r1_chrn, min1_pos-pad_seqs, max1_pos+pad_seqs, r1_str, fsa_seqs,
