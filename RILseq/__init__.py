@@ -169,7 +169,8 @@ def get_single_pos(read, rev=False):
 
 
 def count_features(
-    features_lists, samfile, overlap, rev=False, checkpoint=1000000):
+    features_lists, samfile, overlap, rev=False, checkpoint=1000000,
+    get_sum=False):
     """
     Go over the samfile and for each pair of reads find the features that
     overlap the fragment with at least 'overlap' nucleotides. Add 1 to the count
@@ -182,12 +183,14 @@ def count_features(
     - `rev`: reverse the strand of the read
     - `checkpoint`: Report every 100000 reads processed, set to None or False
                     for silencing
+    - `get_sum`: Return the number of reads as well
                     
     Return:
     - `fcounts`: A dictionary from gene name to number of reads mapped to the
                  gene. ~~antisense and ~~intergenic count the number of reads
                  that were not mapped to a gene and found antisense to a gene
                  or in intergenic region.
+    - `reasd_num`: Number of reads if get_sum is True
     """
     fcounts = defaultdict(int)
     counter = 0
@@ -247,7 +250,10 @@ def count_features(
                 fcounts['~~antisense'] += 1
             else:
                 fcounts['~~intergenic'] += 1
-    return fcounts
+    if get_sum:
+        return fcounts, counter
+    else:
+        return fcounts
 
 
 def generate_wig(samfile, rev=False, first_pos=False):
@@ -1189,7 +1195,8 @@ def has_rep(chrn, rfrom, rto, rstrand, rep_pos):
 def report_interactions(
     region_interactions, outfile, interacting_regions, seglen, ec_dir, ec_chrs,
     refseq_dir, targets_file, rep_file,  single_counts, shuffles, RNAup_cmd,
-    servers, rlen, est_utr_lens, pad_seqs, totRNA_count, ip_tot_norm):
+    servers, rlen, est_utr_lens, pad_seqs, totRNA_count, ip_tot_norm=0,
+    total_reads_IP=0, total_reads_total=0):
     """
     Report the interactions with additional data such as genes in region, if
     it's a known target, number of single fragments count, binding energy
@@ -1215,6 +1222,8 @@ def report_interactions(
                       the number of reads from total RNA
     - `ip_tot_norm`: The maximal IP/total value. all values will be normalized
                      to this ratio
+    - `total_reads_IP`: Number of reads in IP library
+    - `total_reads_total`: Number of reads in total library
     """
     targets = read_targets(targets_file)
     singles = read_singles(single_counts)
@@ -1251,8 +1260,12 @@ def report_interactions(
         'other interactions of RNA2', 'total other interactions', 'odds ratio',
         "Fisher's exact test p-value"]
     if ip_tot_norm > 0:
-        header_vec.extend(["total RNA reads1", "total RNA reads2",
-        "Total normalized odds ratio", "RNA1 pred effect", "RNA2 pred effect", "Maximal RNA effect"])
+        header_vec.extend(
+            ["total RNA reads1", "total RNA reads2", "lib norm IP RNA1",
+             "lib norm IP RNA2", "lib norm total RAN1", "lib norm total RNA2",
+             "IP/total ratio1", "IP/total ratio2",
+             "Total normalized odds ratio",
+             "RNA1 pred effect", "RNA2 pred effect", "Maximal RNA effect"])
     if shuffles > 0 and fsa_seqs:
         header_vec.extend([
                 'Free energy of hybridization',
@@ -1318,7 +1331,14 @@ def report_interactions(
                 min(1,((mat_c + ints)/float(tot_totals_as2+1))/ip_tot_norm) *\
                 odds
             out_data[rkey].extend(
-                [tot_totals_as1, tot_totals_as2, pred_eff, rna1_eff, rna2_eff, max(rna1_eff, rna2_eff)])
+                [tot_totals_as1, tot_totals_as2,
+                 (ints+mat_b)/float(total_reads_IP),
+                 (ints+mat_c)/float(total_reads_IP),
+                 tot_totals_as1/float(total_reads_total),
+                 tot_totals_as2/float(total_reads_total),
+                 (mat_b + ints)/float(tot_totals_as1+1),
+                 (mat_c + ints)/float(tot_totals_as2+1), pred_eff, rna1_eff,
+                 rna2_eff, max(rna1_eff, rna2_eff)])
         if shuffles > 0 and fsa_seqs:
             p5_seqs =  get_seqs(
                 r1_chrn, min1_pos-pad_seqs, max1_pos+pad_seqs, r1_str, fsa_seqs,

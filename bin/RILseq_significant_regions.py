@@ -223,12 +223,15 @@ def main(argv=None):
                 list_of_sets.append(list(data[k]))
             feat_list[chrom] = list_of_sets
         totRNA_counts = defaultdict(int)
+        sum_reads = 0
         for bamfile in settings.total_RNA.split(','):
-            totcounts = RILseq.count_features(
-                feat_list, pysam.Samfile(bamfile), 5,
-                rev=settings.total_reverse)
+            saminf = pysam.Samfile(bamfile)
+            totcounts, sum_of_counts_lib = RILseq.count_features(
+                feat_list, saminf, 5,
+                rev=settings.total_reverse, get_sum=True)
             for k, v in totcounts.items():
                 totRNA_counts[k] += v
+            sum_reads += sum_of_counts_lib
         # Collect all the ratios between IP and total then choose the 90%
         # percentile to avoid liers 
         max_IP_div_total_as1 = []
@@ -255,7 +258,7 @@ def main(argv=None):
         settings.targets_file, settings.rep_table, settings.single_counts,
         settings.shuffles, settings.RNAup_cmd, settings.servers,
         settings.length, settings.est_utr_lens, settings.pad_seqs,
-        totRNA_counts, max_IP_div_total)
+        totRNA_counts, max_IP_div_total, total_interactions, sum_reads)
 
     return 0        # success
 
