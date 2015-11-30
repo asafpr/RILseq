@@ -1262,7 +1262,7 @@ def report_interactions(
     if ip_tot_norm > 0:
         header_vec.extend(
             ["total RNA reads1", "total RNA reads2", "lib norm IP RNA1",
-             "lib norm IP RNA2", "lib norm total RAN1", "lib norm total RNA2",
+             "lib norm IP RNA2", "lib norm total RNA1", "lib norm total RNA2",
              "IP/total ratio1", "IP/total ratio2",
              "Total normalized odds ratio",
              "RNA1 pred effect", "RNA2 pred effect", "Maximal RNA effect"])
