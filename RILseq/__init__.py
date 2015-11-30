@@ -1265,7 +1265,9 @@ def report_interactions(
              "lib norm IP RNA2", "lib norm total RNA1", "lib norm total RNA2",
              "IP/total ratio1", "IP/total ratio2",
              "Total normalized odds ratio",
-             "RNA1 pred effect", "RNA2 pred effect", "Maximal RNA effect"])
+             "RNA1 pred effect", "RNA2 pred effect", "Maximal RNA effect",
+             "Total reads IP: %d"%total_reads_IP,
+             "Total reads total: %d"%total_reads_total])
     if shuffles > 0 and fsa_seqs:
         header_vec.extend([
                 'Free energy of hybridization',
