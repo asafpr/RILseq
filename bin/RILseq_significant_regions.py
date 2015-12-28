@@ -206,6 +206,7 @@ def main(argv=None):
                     (pv, ints, odds, r1_from, r1_to, reg1[1], reg1[2],  r2_from,
                      r2_to, reg2[1], reg2[2],  mat_b, mat_c, mat_d))
     # Read the number of total RNAs in each region if the bam file is given
+    sum_reads=0
     if settings.total_RNA:
         # prepare a dictionary of features
         feat_dict = defaultdict(lambda: defaultdict(set))
