@@ -421,9 +421,9 @@ def get_unmapped_reads(
                 if not read.is_reverse:
                     outseq = outseq.reverse_complement()
                     outqual = read.qual[::-1][-length:]
+                outseq = str(outseq[-length:])
                 if (str(outseq).count('C')>=int(maxG*length)):
                     continue
-                outseq = str(outseq[-length:])
             else: # First read in the fragment
                 ouf = outfile1
                 outseq = Seq(read.seq)
@@ -431,9 +431,9 @@ def get_unmapped_reads(
                 if read.is_reverse:
                     outseq = outseq.reverse_complement()
                     outqual = read.qual[::-1][:length]
+                outseq = str(outseq[:length])
                 if outseq.count('G') >= int(maxG*length):
                     continue
-                outseq = str(outseq[:length])
             # test if read passes DUST filter
             if pass_dust_filter(outseq, dust_thr):
                 ouf.write("@%s\n%s\n+\n%s\n"%(read.qname, outseq, outqual))
