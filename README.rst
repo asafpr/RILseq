@@ -95,6 +95,7 @@ Data Files
 This package works well for E. coli K12 (RefSeq NC_000913.2 genome). The data
 directory contains the genome (E_coli_K12/genome.fa), the EcoCyc genes gff file and the
 EcoCyc transcripts gff file. These files and other in the directory are based on EcoCyc version 19.0 and include data from BioCyCTM pathway/genome database under license from SRI international. 
+
 .. image:: ecocyc-logo.jpg
    :width: 20pt
 The genome should be indexed using bwa index genome.fa before using it. The two gff files can be generated using the scripts::
