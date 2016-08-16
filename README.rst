@@ -109,4 +109,13 @@ and::
 There are two additional files in the data directory: a curated list of targets
 taken from EcoCyc with slight changes and a table of REP elements (used for annotation of results), this table was downloaded from:  http://ecocyc.org/group?id=biocyc14-8223-3640227683 
 
+Requirements
+------------
+This package requires
+- samtools (tested on version 1.2)
+- bwa (tested on version 0.7.12)
+- pysam
+- numpy & scipy
+- biopython
+
 The project is hosted on github: https://github.com/asafpr/RILseq
