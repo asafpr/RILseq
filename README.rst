@@ -3,7 +3,7 @@ RILseq
 ================
 Intention
 ---------
-This package can be used to analyzed RILseq experiments. It is written for a prokaryotic genome, without splice junction mapping and with some additional features. RILseq is described in `Melamed *et al* <http://www.cell.com/molecular-cell/fulltext/S1097-2765(16)30413-0>_` Molecular Cell 63 (2016), pp. 884-897.
+This package can be used to analyzed RILseq experiments. It is written for a prokaryotic genome, without splice junction mapping and with some additional features. RILseq is described in Melamed et al, Molecular Cell 63 (2016), pp. 884-897 (http://www.cell.com/molecular-cell/fulltext/S1097-2765(16)30413-0).
 
 The package handles the different stages processing fastq files to pairs of interacting RNAs and some statistics. It *does not* handle quality issues, adapter removing etc. so the fastq files should be treated with cutadapt or equivalent before applying this package.
 
