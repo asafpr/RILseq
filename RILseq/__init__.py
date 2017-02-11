@@ -56,30 +56,44 @@ def run_bwa(bwa_cmd, fname1, fname2, output_dir, output_prefix, mismatches,
     """
     # Run aln of bwa on both files
     sai1 = NamedTemporaryFile(dir=output_dir)
-    call([bwa_cmd, 'aln', '-n', str(mismatches), '-t', str(processors),
-          params_aln, fasta_genome, fname1], stdout=sai1)
+   
+    # Added 11.2.17 - bug fix for adding of the params_aln parameters.
+    # This param was ignored when using the splitting option of subprocess.
+    next_cmd = [bwa_cmd, 'aln', '-n', str(mismatches)]
+    next_cmd.extend(params_aln.split())
+    next_cmd.extend([fasta_genome, fname1])
+
+    logging.info("Executing %s", ' '.join(next_cmd))
+    call(next_cmd, stdout=sai1)
+
     if fname2:
         sai2 = NamedTemporaryFile(dir=output_dir)
-        next_cmd = [bwa_cmd, 'aln', '-n', str(mismatches),
-                    params_aln, fasta_genome, fname2]
+        next_cmd = [bwa_cmd, 'aln', '-n', str(mismatches)]
+        next_cmd.extend(params_aln.split())
+        next_cmd.extend([fasta_genome, fname2])
         logging.info("Executing %s", ' '.join(next_cmd))
         call(next_cmd, stdout=sai2)
-    # Run sampe on both sai files and convert to bam on the fly
+        # Run sampe on both sai files
 
-    samtobam = [samtools_cmd, 'view', '-Sb', '-']
-    bamsort = [samtools_cmd, 'sort', '-',
-               "%s/%s"%(output_dir, output_prefix)]
+    # Changed 11.2.17 by niv. Piping bug fix in version update of the cluster
+    bwa_file = NamedTemporaryFile(dir=output_dir)
     if fname2:
-        next_cmd = ' '.join([bwa_cmd, 'sampe', params_sampe,
-                       fasta_genome, sai1.name, sai2.name,
-                       fname1, fname2] + ['|'] + samtobam + ['|'] + bamsort)
-    else: # Single end
-        next_cmd = ' '.join(
-            [bwa_cmd, 'samse'] + params_samse.split(' ') + \
-                [fasta_genome, sai1.name, fname1] + \
-            ['|'] + samtobam + ['|'] + bamsort)
-    logging.info("Executing %s"%next_cmd)
-    call(next_cmd, shell=True)
+        bwa_sam_cmd = ' '.join([bwa_cmd, 'sampe', params_sampe, fasta_genome, sai1.name, sai2.name, fname1, fname2,
+                                '>', bwa_file.name])
+    else:  # Single end
+        bwa_sam_cmd = ' '.join([bwa_cmd, 'samse', params_samse, fasta_genome, sai1.name, fname1, '>', bwa_file.name])
+
+    view_file = NamedTemporaryFile(dir=output_dir)
+    view_cmd = ' '.join([samtools_cmd, 'view', '-u', bwa_file.name, '>', view_file.name])
+    sort_cmd = ' '.join([samtools_cmd, 'sort', view_file.name, '-o', "%s/%s.bam" % (output_dir, output_prefix)])
+
+    logging.info("Executing %s" % bwa_sam_cmd)
+    call(bwa_sam_cmd, shell=True)
+    logging.info("Executing %s" % view_cmd)
+    call(view_cmd, shell=True)
+    logging.info("Executing %s" % sort_cmd)
+    call(sort_cmd, shell=True)
+
     bamname = "%s/%s.bam"%(output_dir, output_prefix)
     # Indexing the bam file
     index_cmd = [samtools_cmd, 'index', bamname]
@@ -169,7 +183,8 @@ def get_single_pos(read, rev=False):
 
 
 def count_features(
-    features_lists, samfile, overlap, rev=False, checkpoint=1000000):
+    features_lists, samfile, overlap, rev=False, checkpoint=1000000,
+    get_sum=False):
     """
     Go over the samfile and for each pair of reads find the features that
     overlap the fragment with at least 'overlap' nucleotides. Add 1 to the count
@@ -182,12 +197,14 @@ def count_features(
     - `rev`: reverse the strand of the read
     - `checkpoint`: Report every 100000 reads processed, set to None or False
                     for silencing
+    - `get_sum`: Return the number of reads as well
                     
     Return:
     - `fcounts`: A dictionary from gene name to number of reads mapped to the
                  gene. ~~antisense and ~~intergenic count the number of reads
                  that were not mapped to a gene and found antisense to a gene
                  or in intergenic region.
+    - `reasd_num`: Number of reads if get_sum is True
     """
     fcounts = defaultdict(int)
     counter = 0
@@ -247,7 +264,10 @@ def count_features(
                 fcounts['~~antisense'] += 1
             else:
                 fcounts['~~intergenic'] += 1
-    return fcounts
+    if get_sum:
+        return fcounts, counter
+    else:
+        return fcounts
 
 
 def generate_wig(samfile, rev=False, first_pos=False):
@@ -368,7 +388,7 @@ def get_unmapped_reads(
     - `length`: Write the first X nt of the sequences
     - `maxG`: Maximal fraction of G's in any of the reads
     - `rev`: Reads are reverse complement (Livny's RNAtag-seq protocol for
-             instance). Has no influence on single-end reads
+             instance).
     - `all_reads`: Return all reads, including mapped ones
     - `dust_thr`: DUST filter threshold. If=0, not applied.
     """
@@ -381,13 +401,18 @@ def get_unmapped_reads(
                 reverse_seq = True
             cseq = read.seq
             cqual = read.qual
-            if reverse_seq:
+            # If the read is the reverse complement of the RNA XOR it's been
+            # reversed on the bam file, reverse it
+            if rev!=reverse_seq:
                 cseq = str(Seq(cseq).reverse_complement())
                 cqual = cqual[::-1]
             if all_reads and (not read.is_unmapped):
                 single_mapped.add(read.qname)
-            if cseq.count('G', 0, length) >= int(maxG*length) or\
-                    cseq.count('G', -length) >= int(maxG*length):
+            search_for = 'G'
+            if rev:
+                search_for = 'C'
+            if cseq.count(search_for, 0, length) >= int(maxG*length) or\
+                    cseq.count(search_for, -length) >= int(maxG*length):
                 continue
             outfile1.write("@%s\n%s\n+\n%s\n"%(
                     read.qname, cseq[:length],
@@ -410,9 +435,9 @@ def get_unmapped_reads(
                 if not read.is_reverse:
                     outseq = outseq.reverse_complement()
                     outqual = read.qual[::-1][-length:]
+                outseq = str(outseq[-length:])
                 if (str(outseq).count('C')>=int(maxG*length)):
                     continue
-                outseq = str(outseq[-length:])
             else: # First read in the fragment
                 ouf = outfile1
                 outseq = Seq(read.seq)
@@ -420,9 +445,9 @@ def get_unmapped_reads(
                 if read.is_reverse:
                     outseq = outseq.reverse_complement()
                     outqual = read.qual[::-1][:length]
+                outseq = str(outseq[:length])
                 if outseq.count('G') >= int(maxG*length):
                     continue
-                outseq = str(outseq[:length])
             # test if read passes DUST filter
             if pass_dust_filter(outseq, dust_thr):
                 ouf.write("@%s\n%s\n+\n%s\n"%(read.qname, outseq, outqual))
@@ -1184,7 +1209,8 @@ def has_rep(chrn, rfrom, rto, rstrand, rep_pos):
 def report_interactions(
     region_interactions, outfile, interacting_regions, seglen, ec_dir, ec_chrs,
     refseq_dir, targets_file, rep_file,  single_counts, shuffles, RNAup_cmd,
-    servers, rlen, est_utr_lens, pad_seqs, totRNA_count, ip_tot_norm):
+    servers, rlen, est_utr_lens, pad_seqs, totRNA_count, ip_tot_norm=0,
+    total_reads_IP=0, total_reads_total=0):
     """
     Report the interactions with additional data such as genes in region, if
     it's a known target, number of single fragments count, binding energy
@@ -1210,6 +1236,8 @@ def report_interactions(
                       the number of reads from total RNA
     - `ip_tot_norm`: The maximal IP/total value. all values will be normalized
                      to this ratio
+    - `total_reads_IP`: Number of reads in IP library
+    - `total_reads_total`: Number of reads in total library
     """
     targets = read_targets(targets_file)
     singles = read_singles(single_counts)
@@ -1246,8 +1274,14 @@ def report_interactions(
         'other interactions of RNA2', 'total other interactions', 'odds ratio',
         "Fisher's exact test p-value"]
     if ip_tot_norm > 0:
-        header_vec.extend(["total RNA reads1", "total RNA reads2",
-        "Total normalized odds ratio" ])
+        header_vec.extend(
+            ["total RNA reads1", "total RNA reads2", "lib norm IP RNA1",
+             "lib norm IP RNA2", "lib norm total RNA1", "lib norm total RNA2",
+             "IP/total ratio1", "IP/total ratio2",
+             "Total normalized odds ratio",
+             "RNA1 pred effect", "RNA2 pred effect", "Maximal RNA effect",
+             "Total reads IP: %d"%total_reads_IP,
+             "Total reads total: %d"%total_reads_total])
     if shuffles > 0 and fsa_seqs:
         header_vec.extend([
                 'Free energy of hybridization',
@@ -1302,12 +1336,25 @@ def report_interactions(
                                       r1 in range(r1_from, r1_to, seglen)])
             tot_totals_as2 = sum([totRNA_count[(r2, r2_str, r2_chrnbam)] for\
                                       r2 in range(r2_from, r2_to, seglen)])
-
+            rna1_eff = min(
+                1,((mat_b + ints)/float(tot_totals_as1+1))/ip_tot_norm)*\
+                ints/float(ints + mat_b)
+            rna2_eff = min(
+                1,((mat_c + ints)/float(tot_totals_as2+1))/ip_tot_norm) *\
+                ints/float(ints + mat_c)
             pred_eff = min(
                 1,((mat_b + ints)/float(tot_totals_as1+1))/ip_tot_norm)*\
                 min(1,((mat_c + ints)/float(tot_totals_as2+1))/ip_tot_norm) *\
                 odds
-            out_data[rkey].extend([tot_totals_as1, tot_totals_as2, pred_eff])
+            out_data[rkey].extend(
+                [tot_totals_as1, tot_totals_as2,
+                 (ints+mat_b)/float(total_reads_IP),
+                 (ints+mat_c)/float(total_reads_IP),
+                 tot_totals_as1/float(total_reads_total),
+                 tot_totals_as2/float(total_reads_total),
+                 (mat_b + ints)/float(tot_totals_as1+1),
+                 (mat_c + ints)/float(tot_totals_as2+1), pred_eff, rna1_eff,
+                 rna2_eff, max(rna1_eff, rna2_eff)])
         if shuffles > 0 and fsa_seqs:
             p5_seqs =  get_seqs(
                 r1_chrn, min1_pos-pad_seqs, max1_pos+pad_seqs, r1_str, fsa_seqs,
