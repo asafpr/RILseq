@@ -1367,13 +1367,8 @@ def report_interactions(
                  (mat_b + ints)/float(tot_totals_as1+1),
                  (mat_c + ints)/float(tot_totals_as2+1), pred_eff, rna1_eff,
                  rna2_eff, max(rna1_eff, rna2_eff)])
-<<<<<<< HEAD
-        if shuffles > 0 and fsa_seqs:
-            p5_seqs =  get_seqs(
-=======
         if shuffles != 0 and fsa_seqs:
-            p5_seqs = get_seqs(
->>>>>>> 655b193d6ee68e6358cded580b97f056e33c7817
+            p5_seqs =  get_seqs(
                 r1_chrn, min1_pos-pad_seqs, max1_pos+pad_seqs, r1_str, fsa_seqs,
                 shuffles=shuffles)
             if r2_str == '+':
