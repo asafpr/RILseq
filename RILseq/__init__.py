@@ -1147,6 +1147,9 @@ def get_seqs(chrn, pfrom, pto, pstrand, fsa_seqs, shuffles=0):
         pseq = pseq.reverse_complement()
     if not pseq:
         pseq = 'AAA'
+    if shuffles<0:
+        shf_seqs = {'real': pseq}
+        return shf_seqs
     if shuffles>0:
         shf_seqs = {'real': pseq}
         for i in range(shuffles):
@@ -1207,7 +1210,7 @@ def has_rep(chrn, rfrom, rto, rstrand, rep_pos):
 
 
 def report_interactions(
-    region_interactions, outfile, interacting_regions, seglen, ec_dir, ec_chrs,
+    region_interactions, outfile, interacting_regions, seglen, ec_dir, genome, ec_chrs,
     refseq_dir, targets_file, rep_file,  single_counts, shuffles, RNAup_cmd,
     servers, rlen, est_utr_lens, pad_seqs, totRNA_count, ip_tot_norm=0,
     total_reads_IP=0, total_reads_total=0):
@@ -1220,6 +1223,7 @@ def report_interactions(
     - `interacting_regions`: A list of interacting regions as tuples
     - `seglen`: Segment length
     - `ec_dir`: Directory of EcoCyc flatfiles
+    - `genome`: Genome fasta file. Used if ec_dir is ommited
     - `ec_chrs`: A list of chromosome names to build a dictionary
     - `refseq_dir`: The RefSeq directory to get the gene descriptions from
     - `targets_file`: A file with sRNA-target in EcoCyc IDs
@@ -1251,17 +1255,23 @@ def report_interactions(
         rep_pos = ecocyc_parser.read_REP_table(rep_file)
     except IOError:
         rep_pos = None
-    try:
-        fsa_seqs = ecocyc_parser.read_fsas(ec_dir)
-    except IOError:
-        fsa_seqs = None
-    if shuffles > 0:
+    if genome and not ec_dir:
+        fsa_seqs = {}
+        from Bio import SeqIO
+        for record in SeqIO.parse(genome, 'fasta'):
+            fsa_seqs[record.id] = record.seq
+    else: 
+        try:
+            fsa_seqs = ecocyc_parser.read_fsas(ec_dir)
+        except IOError:
+            fsa_seqs = None
+    if shuffles != 0:
         rnup = RNAup_tar_pred.RNAupTarPred(cmd=RNAup_cmd, servers=servers)
     try:
         _, uid_names, _, sRNAs, _, _  = ecocyc_parser.read_genes_data(ec_dir)
     except IOError:
         uid_names, sRNAs = None, None
-    if len(ec_chrs) >= 2:
+    if len(ec_chrs) >= 2 and ec_dir:
         chr_dict = dict(zip(ec_chrs.split(',')[0::2], ec_chrs.split(',')[1::2]))
     else:
         chr_dict = {}
@@ -1286,6 +1296,8 @@ def report_interactions(
         header_vec.extend([
                 'Free energy of hybridization',
                 'empirical p-value of free energy'])
+    if shuffles < 0 and fsa_seqs:
+        header_vec.extend(['Free energy of hybridization'])
     if rep_pos:
         header_vec.extend(['RNA1 REP elements', 'RNA2 REP elements'])
     if targets and pos_maps:
@@ -1355,8 +1367,13 @@ def report_interactions(
                  (mat_b + ints)/float(tot_totals_as1+1),
                  (mat_c + ints)/float(tot_totals_as2+1), pred_eff, rna1_eff,
                  rna2_eff, max(rna1_eff, rna2_eff)])
+<<<<<<< HEAD
         if shuffles > 0 and fsa_seqs:
             p5_seqs =  get_seqs(
+=======
+        if shuffles != 0 and fsa_seqs:
+            p5_seqs = get_seqs(
+>>>>>>> 655b193d6ee68e6358cded580b97f056e33c7817
                 r1_chrn, min1_pos-pad_seqs, max1_pos+pad_seqs, r1_str, fsa_seqs,
                 shuffles=shuffles)
             if r2_str == '+':
@@ -1366,9 +1383,12 @@ def report_interactions(
                 p3_seq = get_seqs(
                     r2_chrn, min2_pos, max2_pos+pad_seqs, r2_str, fsa_seqs)
             rnrgs = rnup.scoreall(p3_seq, p5_seqs)
-            pv = len([r for r in rnrgs.values() if r>=rnrgs['real']])/float(
-                len(rnrgs))
-            out_data[rkey].extend([-rnrgs['real'], pv])
+            if shuffles>0:
+                pv = len([r for r in rnrgs.values() if r>=rnrgs['real']])/float(
+                    len(rnrgs))
+                out_data[rkey].extend([-rnrgs['real'], pv])
+            else:
+                out_data[rkey].extend([-rnrgs['real']])
         if rep_pos:
             out_data[rkey].append(','.join(has_rep(
                         r1_chrn, min1_pos, max1_pos, r1_str, rep_pos)))

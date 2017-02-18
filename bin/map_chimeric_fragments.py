@@ -6,7 +6,7 @@ other mapper), the bam file is screened for reads that weren't mapped to the
 genome or weren't concise and try to map wach of the ends to a different
 location. This script report the reads that are chimeric in a table of the
 format:
-chr1   position1    strand1    chr2   position2    strand2    read_name
+chr1   position1    strand1    chr2   position2    strand2    read_name     read_type
 
 where the position1 is the first position of the first read and position2 is
 the last position of read2.
@@ -112,7 +112,7 @@ def process_command_line(argv):
         '-S', '--samtools_cmd', default='samtools',
         help='Samtools executable.')
     parser.add_argument(
-        '--params_aln', default='-k 2 -l 6 -N -M 0',
+        '--params_aln', default='-N -M 0',
         help='Additional parameters for aln function of bwa.')
     parser.add_argument(
         '--samse_params', default='-n 1000',

@@ -38,6 +38,8 @@ def process_command_line(argv):
         help='An output file of map_chimeric_fragments.py with the chimeric'
         ' fragments.')
     parser.add_argument(
+        '-g', '--genome', help='genome fasta file')
+    parser.add_argument(
         '--total_RNA',
         help='Normalize in total RNA from these bam files. Enter a comma '
         'separated list of bam files.')
@@ -80,7 +82,7 @@ def process_command_line(argv):
         ' file to EcoCyc names. See the names of chromosomes in bam file using'
         ' samtools view -H foo.bam.')
     parser.add_argument(
-        '--refseq_dir', default='/home/users/assafp/EC/',
+        '--refseq_dir', #default='/home/users/assafp/EC/',
         help='RefSeq dir of organism to get the gene description from.')
     parser.add_argument(
         '-t', '--targets_file', #default='/home/users/assafp/Database/EcoCyc/19.0/data/curated_list_of_sRNA_mRNA_interactions.txt',
@@ -103,7 +105,10 @@ def process_command_line(argv):
         ' hybridization energy using RNAup.')
     parser.add_argument(
         '--servers', #default=['pearl03']*16+['pearl01']*8+['gem']*8+['pearl02']*8+['jade']*8+['menash']*8+['amber']*10,
-        help='A list of computers to run RNAup on (or number of CPUs')
+        help='A list of computers to run RNAup on (or number of CPUs)')
+    parser.add_argument(
+        '--run_RNAup', default=False, action='store_true',
+        help='Run RNAup and compute the interactions predicted strength')
     parser.add_argument(
         '--RNAup_cmd', default='RNAup -Xp -w 25 -b -o',
         help='Executable of RNAup with its parameters')
@@ -206,6 +211,7 @@ def main(argv=None):
                     (pv, ints, odds, r1_from, r1_to, reg1[1], reg1[2],  r2_from,
                      r2_to, reg2[1], reg2[2],  mat_b, mat_c, mat_d))
     # Read the number of total RNAs in each region if the bam file is given
+    sum_reads=0
     if settings.total_RNA:
         # prepare a dictionary of features
         feat_dict = defaultdict(lambda: defaultdict(set))
@@ -223,12 +229,15 @@ def main(argv=None):
                 list_of_sets.append(list(data[k]))
             feat_list[chrom] = list_of_sets
         totRNA_counts = defaultdict(int)
+        sum_reads = 0
         for bamfile in settings.total_RNA.split(','):
-            totcounts = RILseq.count_features(
-                feat_list, pysam.Samfile(bamfile), 5,
-                rev=settings.total_reverse)
+            saminf = pysam.Samfile(bamfile)
+            totcounts, sum_of_counts_lib = RILseq.count_features(
+                feat_list, saminf, 5,
+                rev=settings.total_reverse, get_sum=True)
             for k, v in totcounts.items():
                 totRNA_counts[k] += v
+            sum_reads += sum_of_counts_lib
         # Collect all the ratios between IP and total then choose the 90%
         # percentile to avoid liers 
         max_IP_div_total_as1 = []
@@ -248,14 +257,16 @@ def main(argv=None):
     else:
         totRNA_counts = defaultdict(int)
         max_IP_div_total = 0
+    if (settings.shuffles ==0 and settings.run_RNAup):
+        settings.shuffles=-1
     # Read the additional data to decorate the results with
     RILseq.report_interactions(
         region_interactions, sys.stdout, interacting_regions, settings.seglen,
-        settings.ec_dir, settings.EC_chrlist, settings.refseq_dir,
+        settings.ec_dir, settings.genome, settings.EC_chrlist, settings.refseq_dir,
         settings.targets_file, settings.rep_table, settings.single_counts,
         settings.shuffles, settings.RNAup_cmd, settings.servers,
         settings.length, settings.est_utr_lens, settings.pad_seqs,
-        totRNA_counts, max_IP_div_total)
+        totRNA_counts, max_IP_div_total, total_interactions, sum_reads)
 
     return 0        # success
 

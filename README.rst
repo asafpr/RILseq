@@ -3,7 +3,7 @@ RILseq
 ================
 Intention
 ---------
-This package can be used to analyzed RILseq experiments. It is written for a prokaryotic genome, without splice junction mapping and with some additional features. RILseq is described in Melamed *et al* <citation>.
+This package can be used to analyzed RILseq experiments. It is written for a prokaryotic genome, without splice junction mapping and with some additional features. RILseq is described in Melamed et al, Molecular Cell 63 (2016), pp. 884-897 (http://www.cell.com/molecular-cell/fulltext/S1097-2765(16)30413-0).
 
 The package handles the different stages processing fastq files to pairs of interacting RNAs and some statistics. It *does not* handle quality issues, adapter removing etc. so the fastq files should be treated with cutadapt or equivalent before applying this package.
 
@@ -94,7 +94,8 @@ Data Files
 ----------
 This package works well for E. coli K12 (RefSeq NC_000913.2 genome). The data
 directory contains the genome (E_coli_K12/genome.fa), the EcoCyc genes gff file and the
-EcoCyc transcripts gff file. The genome should be indexed using bwa index genome.fa before using it. The two gff files can be generated using the scripts::
+EcoCyc transcripts gff file. These files and other in the directory are based on EcoCyc version 19.0 and include data from BioCyCTM pathway/genome database under license from SRI international. 
+The genome should be indexed using bwa index genome.fa before using it. The two gff files can be generated using the scripts::
 
     generate_transcripts_gff.py EcoCyc_data_dir
 
@@ -104,5 +105,14 @@ and::
 
 There are two additional files in the data directory: a curated list of targets
 taken from EcoCyc with slight changes and a table of REP elements (used for annotation of results), this table was downloaded from:  http://ecocyc.org/group?id=biocyc14-8223-3640227683 
+
+Requirements
+------------
+This package requires
+ - samtools (tested on version 1.2)
+ - bwa (tested on version 0.7.12)
+ - pysam
+ - numpy & scipy
+ - biopython
 
 The project is hosted on github: https://github.com/asafpr/RILseq

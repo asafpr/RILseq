@@ -10,3 +10,4 @@ include data/E_coli_K12/plot_interactions.sh
 include data/E_coli_K12/sRNAs_highlight_wide.txt
 include data/E_coli_K12/tRNAs_highlight_wide.txt
 include data/E_coli_K12/rRNAs_highlight.txt
+include ecocyc-logo.jpg
