@@ -784,15 +784,15 @@ def read_significant_reads(summary_file, chr_dict, gname=None):
     """
     sig_reg = defaultdict(list)
     for line in csv.DictReader(open(summary_file), delimiter='\t'):
-        r1_from = int(line['RNA1 from'])-1
-        r1_to = int(line['RNA1 to'])
+        r1_from = int(line['Start of RNA1 first read'])-1
+        r1_to = int(line['Start of RNA1 last read'])
         try:
             r1_chrn = chr_dict[line['RNA1 chromosome']]
         except KeyError:
             r1_chrn = line['RNA1 chromosome']
         r1_str = line['RNA1 strand']
-        r2_from = int(line['RNA2 from'])-1
-        r2_to = int(line['RNA2 to'])
+        r2_from = int(line['Start of RNA2 first read'])-1
+        r2_to = int(line['Start of RNA2 last read'])
         try:
             r2_chrn = chr_dict[line['RNA2 chromosome']]
         except KeyError:
@@ -1278,8 +1278,8 @@ def report_interactions(
     # All the output will be stored here and then sorted according to the name
     out_data = {}
     header_vec = [
-        'RNA1 chromosome', 'RNA1 from', 'RNA1 to', 'RNA1 strand',
-        'RNA2 chromosome', 'RNA2 from', 'RNA2 to', 'RNA2 strand',
+        'RNA1 chromosome', 'Start of RNA1 first read', 'Start of RNA1 last read', 'RNA1 strand',
+        'RNA2 chromosome', 'Start of RNA2 first read', 'Start of RNA2 last read', 'RNA2 strand',
         'interactions', 'other interactions of RNA1',
         'other interactions of RNA2', 'total other interactions', 'odds ratio',
         "Fisher's exact test p-value"]
