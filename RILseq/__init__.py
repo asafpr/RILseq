@@ -56,30 +56,44 @@ def run_bwa(bwa_cmd, fname1, fname2, output_dir, output_prefix, mismatches,
     """
     # Run aln of bwa on both files
     sai1 = NamedTemporaryFile(dir=output_dir)
-    call([bwa_cmd, 'aln', '-n', str(mismatches), '-t', str(processors),
-          params_aln, fasta_genome, fname1], stdout=sai1)
+   
+    # Added 11.2.17 - bug fix for adding of the params_aln parameters.
+    # This param was ignored when using the splitting option of subprocess.
+    next_cmd = [bwa_cmd, 'aln', '-n', str(mismatches)]
+    next_cmd.extend(params_aln.split())
+    next_cmd.extend([fasta_genome, fname1])
+
+    logging.info("Executing %s", ' '.join(next_cmd))
+    call(next_cmd, stdout=sai1)
+
     if fname2:
         sai2 = NamedTemporaryFile(dir=output_dir)
-        next_cmd = [bwa_cmd, 'aln', '-n', str(mismatches),
-                    params_aln, fasta_genome, fname2]
+        next_cmd = [bwa_cmd, 'aln', '-n', str(mismatches)]
+        next_cmd.extend(params_aln.split())
+        next_cmd.extend([fasta_genome, fname2])
         logging.info("Executing %s", ' '.join(next_cmd))
         call(next_cmd, stdout=sai2)
-    # Run sampe on both sai files and convert to bam on the fly
+        # Run sampe on both sai files
 
-    samtobam = [samtools_cmd, 'view', '-Sb', '-']
-    bamsort = [samtools_cmd, 'sort', '-',
-               "%s/%s"%(output_dir, output_prefix)]
+    # Changed 11.2.17 by niv. Piping bug fix in version update of the cluster
+    bwa_file = NamedTemporaryFile(dir=output_dir)
     if fname2:
-        next_cmd = ' '.join([bwa_cmd, 'sampe', params_sampe,
-                       fasta_genome, sai1.name, sai2.name,
-                       fname1, fname2] + ['|'] + samtobam + ['|'] + bamsort)
-    else: # Single end
-        next_cmd = ' '.join(
-            [bwa_cmd, 'samse'] + params_samse.split(' ') + \
-                [fasta_genome, sai1.name, fname1] + \
-            ['|'] + samtobam + ['|'] + bamsort)
-    logging.info("Executing %s"%next_cmd)
-    call(next_cmd, shell=True)
+        bwa_sam_cmd = ' '.join([bwa_cmd, 'sampe', params_sampe, fasta_genome, sai1.name, sai2.name, fname1, fname2,
+                                '>', bwa_file.name])
+    else:  # Single end
+        bwa_sam_cmd = ' '.join([bwa_cmd, 'samse', params_samse, fasta_genome, sai1.name, fname1, '>', bwa_file.name])
+
+    view_file = NamedTemporaryFile(dir=output_dir)
+    view_cmd = ' '.join([samtools_cmd, 'view', '-u', bwa_file.name, '>', view_file.name])
+    sort_cmd = ' '.join([samtools_cmd, 'sort', view_file.name, '-o', "%s/%s.bam" % (output_dir, output_prefix)])
+
+    logging.info("Executing %s" % bwa_sam_cmd)
+    call(bwa_sam_cmd, shell=True)
+    logging.info("Executing %s" % view_cmd)
+    call(view_cmd, shell=True)
+    logging.info("Executing %s" % sort_cmd)
+    call(sort_cmd, shell=True)
+
     bamname = "%s/%s.bam"%(output_dir, output_prefix)
     # Indexing the bam file
     index_cmd = [samtools_cmd, 'index', bamname]
@@ -770,15 +784,15 @@ def read_significant_reads(summary_file, chr_dict, gname=None):
     """
     sig_reg = defaultdict(list)
     for line in csv.DictReader(open(summary_file), delimiter='\t'):
-        r1_from = int(line['RNA1 from'])-1
-        r1_to = int(line['RNA1 to'])
+        r1_from = int(line['Start of RNA1 first read'])-1
+        r1_to = int(line['Start of RNA1 last read'])
         try:
             r1_chrn = chr_dict[line['RNA1 chromosome']]
         except KeyError:
             r1_chrn = line['RNA1 chromosome']
         r1_str = line['RNA1 strand']
-        r2_from = int(line['RNA2 from'])-1
-        r2_to = int(line['RNA2 to'])
+        r2_from = int(line['Start of RNA2 first read'])-1
+        r2_to = int(line['Start of RNA2 last read'])
         try:
             r2_chrn = chr_dict[line['RNA2 chromosome']]
         except KeyError:
@@ -1264,8 +1278,8 @@ def report_interactions(
     # All the output will be stored here and then sorted according to the name
     out_data = {}
     header_vec = [
-        'RNA1 chromosome', 'RNA1 from', 'RNA1 to', 'RNA1 strand',
-        'RNA2 chromosome', 'RNA2 from', 'RNA2 to', 'RNA2 strand',
+        'RNA1 chromosome', 'Start of RNA1 first read', 'Start of RNA1 last read', 'RNA1 strand',
+        'RNA2 chromosome', 'Start of RNA2 first read', 'Start of RNA2 last read', 'RNA2 strand',
         'interactions', 'other interactions of RNA1',
         'other interactions of RNA2', 'total other interactions', 'odds ratio',
         "Fisher's exact test p-value"]

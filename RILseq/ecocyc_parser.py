@@ -506,8 +506,11 @@ def position_to_gene(
                             (gname, 'EST5UTR', i-gpos[2])
 
         if est_3utr:
+            curr_chr_len = fsa_lens[gpos[0]]
             if gpos[3] == '+':
                 for i in range(gpos[2], gpos[2]+utr_len):
+
+                    i = i % curr_chr_len
                     if (i, gpos[3]) not in pos_map[gpos[0]]:
                         pos_map[gpos[0]][(i, gpos[3])] =\
                             (gname, 'EST3UTR', i-gpos[2])
@@ -528,6 +531,8 @@ def position_to_gene(
 
             else: # Minus strand
                 for i in range(gpos[1]-utr_len, gpos[1]):
+                    i = i % curr_chr_len
+                    
                     if (i, gpos[3]) not in pos_map[gpos[0]]:
                         pos_map[gpos[0]][(i, gpos[3])] =\
                             (gname, 'EST3UTR', gpos[1]-i)
@@ -676,4 +681,6 @@ def position_to_gene(
                         pos_map[chrn][(i, anti_strand(rep_d[3]))] = tuple(
                             list(pos_map[chrn][(i, anti_strand(rep_d[3]))]) +\
                                 ['REP_%s_AS'%rep_name])
+
     return pos_map
+
