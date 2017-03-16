@@ -88,9 +88,6 @@ def process_command_line(argv):
         '--samse_params', default=' ',
         help='Additional parameters for samse function of bwa.')
 
-
-
-
     settings = parser.parse_args(argv)
 
     return settings

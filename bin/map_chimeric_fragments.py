@@ -48,7 +48,7 @@ def process_command_line(argv):
         "Jonathan Livny's protocol for library construction")
     parser.add_argument(
         '-t', '--transcripts',
-        help='A gff file od transcripts. If given, screen reads that might'
+        help='A gff file of transcripts. If given, screen reads that might'
         ' reside from the same transcript. Very useful for screening ribosomal'
         ' RNAs. Otherwise use only the size limit.')
     parser.add_argument(
@@ -106,6 +106,12 @@ def process_command_line(argv):
         '-p', '--processors', type=int, default=8,
         help='Number of processors to be used by bwa aln.')
     parser.add_argument(
+        '-f', '--feature', default='exon',
+        help='Name of features to count on the GTF file (column 2).')
+    parser.add_argument(
+        '-i', '--identifier', default='gene_id',
+        help='Name of identifier to print (in column 8 of the GTF file).')
+    parser.add_argument(
         '--bwa_exec', default='bwa',
         help='bwa command')
     parser.add_argument(
@@ -125,7 +131,7 @@ def main(argv=None):
     settings = process_command_line(argv)
     # Read the transcripts if given
     if settings.transcripts:
-        trans_dict = RILseq.read_transcripts(settings.transcripts)
+        trans_dict = RILseq.read_transcripts(settings.transcripts, settings.feature, settings.identifier)
     else:
         trans_dict = None
     # Get the ends of the reads from the bam files

@@ -136,9 +136,6 @@ def process_command_line(argv):
     parser.add_argument(
         '--min_odds_ratio', type=float, default=1.0,
         help='Minimal odds ratio to report')
-    
-
-
 
     settings = parser.parse_args(argv)
 
@@ -148,7 +145,7 @@ def process_command_line(argv):
 
 def main(argv=None):
     settings = process_command_line(argv)
-    if settings.ribozero:
+    if settings.ribozero and settings.ec_dir:
         try:
             uid_pos,_,_,_,_,rRNAs = RILseq.ecocyc_parser.read_genes_data(
                 settings.ec_dir)
@@ -159,7 +156,7 @@ def main(argv=None):
                 settings.EC_chrlist.split(',')[1::2],
                 settings.EC_chrlist.split(',')[0::2]))
         for rrgene in rRNAs:
-            # Pad the position of the rRNA gene with the alignment lenght
+            # Pad the position of the rRNA gene with the alignment length
             rr_pos.append([chr_dict[uid_pos[rrgene][0]]] +\
                               [uid_pos[rrgene][1]-settings.length] +\
                               [uid_pos[rrgene][2]+settings.length] +\
