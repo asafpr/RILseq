@@ -59,7 +59,7 @@ def run_bwa(bwa_cmd, fname1, fname2, output_dir, output_prefix, mismatches,
    
     # Added 11.2.17 - bug fix for adding of the params_aln parameters.
     # This param was ignored when using the splitting option of subprocess.
-    next_cmd = [bwa_cmd, 'aln', '-n', str(mismatches)]
+    next_cmd = [bwa_cmd, 'aln', '-n', str(mismatches), '-t', str(processors)]
     next_cmd.extend(params_aln.split())
     next_cmd.extend([fasta_genome, fname1])
 
@@ -68,7 +68,7 @@ def run_bwa(bwa_cmd, fname1, fname2, output_dir, output_prefix, mismatches,
 
     if fname2:
         sai2 = NamedTemporaryFile(dir=output_dir)
-        next_cmd = [bwa_cmd, 'aln', '-n', str(mismatches)]
+        next_cmd = [bwa_cmd, 'aln', '-n', str(mismatches), '-t', str(processors)]
         next_cmd.extend(params_aln.split())
         next_cmd.extend([fasta_genome, fname2])
         logging.info("Executing %s", ' '.join(next_cmd))
@@ -566,7 +566,7 @@ def test_concordance(
                  transcript and have same orientation (possibly self ligation)
     - `chrnames_bam`: A list of chr names as they appear in the bam file.
                       can be generated from Samfile.getrname() function
-    - `trans_gff`: A dict TU->(from, to, strand)
+    - `trans_gff`: A dict IGT->(from, to, strand)
     - `remove_self`: Remove pairs that have the same orientation but different
                      order i.e. r1--->r2---> instead of r2--->r1--->
     """
@@ -904,7 +904,7 @@ def minpv_regions(
     - `r_int`: regions interactions double dictionary
     - `t_int_as1`: Total interactions of every region as region 1
     - `t_int_as2`: As above for the second read
-    - `tot_int`: Total interractions
+    - `tot_int`: Total interactions
     - `f_int`: interacting regions that were used
     - `seglen`: Length of segment (usually 100)
     - `maxsegs`: Maximal number of neighbouring segment to join
@@ -950,7 +950,7 @@ def minpv_regions(
                         odds = np.inf
                     else:
                         odds = (float(a)*d)/(float(b)*c)
-                    if odds < min_odds:
+                    if odds <= min_odds:
                         continue
                     odds, pv = fisher_exact(
                         [[a, b], [c, d]], alternative='greater')
@@ -1054,7 +1054,7 @@ def get_genes_dict(ec_dir, pad=100):
             except KeyError:
                 cn1 = v[0]
 
-            if len(v)>2 and (v[2]=='IGR' or v[2]=='TU' or v[2]=='TU_AS'):
+            if len(v)>2 and (v[2]=='IGR' or v[2]=='IGT' or v[2]=='IGT_AS'):
                 try:
                     cn2 = uid_gene[v[1]]['COMMON-NAME']
                 except KeyError:
@@ -1173,8 +1173,8 @@ def get_names(gname, uid_names, annotations):
             p0_desc = annotations[p0_name]
         except KeyError:
             p0_desc = '-'
-    if len(gname)>2 and (gname[2]=='IGR' or gname[2]=='TU' or\
-                             gname[2]=='TU_AS'):
+    if len(gname)>2 and (gname[2]=='IGR' or gname[2]=='IGT' or\
+                             gname[2]=='IGT_AS'):
         try:
             cn2 = uid_names[gname[1]]['COMMON-NAME']
         except KeyError:
@@ -1288,7 +1288,7 @@ def report_interactions(
             ["total RNA reads1", "total RNA reads2", "lib norm IP RNA1",
              "lib norm IP RNA2", "lib norm total RNA1", "lib norm total RNA2",
              "IP/total ratio1", "IP/total ratio2",
-             "Total normalized odds ratio",
+             "Normalized Odds Ratio (NOR)",
              "RNA1 pred effect", "RNA2 pred effect", "Maximal RNA effect",
              "Total reads IP: %d"%total_reads_IP,
              "Total reads total: %d"%total_reads_total])

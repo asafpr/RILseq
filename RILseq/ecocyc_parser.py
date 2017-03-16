@@ -183,7 +183,7 @@ def read_promoters_data(
             if line.startswith('COMPONENT-OF'):
                 tutemp = line.strip().split()[-1]
                 if tutemp.startswith('TU'):
-                    tuname = tutemp
+                    tuname = tutemp.replace('TU', 'IGT')
             if line.startswith('//'):
                 if tuname and p1pos:
                     tu_promoters[tuname] = p1pos
@@ -218,7 +218,7 @@ def read_terminators_data(
             if line.startswith('COMPONENT-OF'):
                 tutemp = line.strip().split()[-1]
                 if tutemp.startswith('TU'):
-                    tuname = tutemp
+                    tuname = tutemp.replace('TU', 'IGT')
             if line.startswith('//'):
                 if tuname and left_pos and right_pos:
                     tu_promoters[tuname] = (left_pos, right_pos)
@@ -247,7 +247,7 @@ def read_genes_data(
     - `uid_pos`: A dictionary UID->genomic position (from, to, strand) 0-based
                  The right position is exclusive as python coords
     - `uid_names`: A dict UID->{category->name}
-    - `uid_tudata`: A dict UID->[TUs]
+    - `uid_tudata`: A dict UID->[IGTs]
     - `sRNAs list`: A list of sRNAs,
     - `other_RNAs_list`: a list of tRNAs, rRNAs etc
     - `rRNA_prod`: Name of rRNA product to return a list of rRNAs
@@ -286,7 +286,7 @@ def read_genes_data(
             if line.startswith('COMPONENT-OF'):
                 tuname = line.strip().split()[-1]
                 if tuname.startswith('TU'):
-                    tu_data.append(tuname)
+                    tu_data.append(tuname.replace('TU', 'IGT'))
                 else:
                     chrom_name = tuname.rsplit('-',1)[0]
             if line.startswith('PRODUCT'):
@@ -329,20 +329,20 @@ def position_to_gene(
     """
     For each postion (and strand) determines the gene in the position.
     If the real transcription is known use it. If between the TSS and the
-    gene start there is another gene, both are in the same TU,
-    this region is intergenic and will be marked as gene1_gene2_TU.
-    If the terminator is known use it to determine 3' end of the TU.
+    gene start there is another gene, both are in the same IGT,
+    this region is intergenic and will be marked as gene1_gene2_IGT.
+    If the terminator is known use it to determine 3' end of the IGT.
     If the gene is a sRNA use the end of the gene as 3' end
-    If there are multiple TUs associated with the gene take the longest one.
+    If there are multiple IGTs associated with the gene take the longest one.
     If the promoter/terminator is not known (not associated in the DB)
     use the default length to set 3'/5' UTRs.
     If the region is intergenic annotate is as gene1_gene2_IGR
     Arguments:
     - `uid_pos`: Dict Unique ID -> position
     - `uid_tu`: Unique ID -> Transcription units
-    - `tu_promoters`: TU ID -> promoter position (+1)
-    - `tu_terminators`: TU ID -> terminator positions (left, right)
-    - `tu_genes`: Dict TU ID -> [genes]
+    - `tu_promoters`: IGT ID -> promoter position (+1)
+    - `tu_terminators`: IGT ID -> terminator positions (left, right)
+    - `tu_genes`: Dict IGT ID -> [genes]
     - `sRNAs_list`: A list of sRNAs, ignore terminators and promoters
     - `fsa_lens`: Lengths of chromosomes
     - `rep_pos`: Positions of REP elements in the genome
@@ -353,7 +353,7 @@ def position_to_gene(
     """
     def first_in_TU(gname):
         """
-        If it's first in TU return the promoter name (TU). If not return None
+        If it's first in TU return the promoter name (IGT). If not return None
         Arguments:
         - `gname`: gene name
         """
@@ -390,7 +390,7 @@ def position_to_gene(
     
     def last_in_TU(gname):
         """
-        If it's last in TU return the terminator name (TU). If not return None
+        If it's last in TU return the terminator name (IGT). If not return None
         Arguments:
         - `gname`: gene name
         """
@@ -651,15 +651,15 @@ def position_to_gene(
 #        sys.stderr.write('%d\t%s\n'%(i, next_gene[0]))
             igr_plus_tag = 'IGR'
             igr_minus_tag = 'IGR'
-        # Test if the genes are in the same TU
+        # Test if the genes are in the same IGT
             for tu in uid_tu[last_gene[0]]:
                 if next_gene[0] in tu_genes[tu]:
                     if uid_pos[last_gene[0]][3] == '+':
-                        igr_plus_tag = 'TU'
-                        igr_minus_tag = 'TU_AS'
+                        igr_plus_tag = 'IGT'
+                        igr_minus_tag = 'IGT_AS'
                     else:
-                        igr_plus_tag = 'TU_AS'
-                        igr_minus_tag = 'TU'
+                        igr_plus_tag = 'IGT_AS'
+                        igr_minus_tag = 'IGT'
 
             while (((i, '+') not in pos_map[chrn]) or\
                        ((i, '-') not in pos_map[chrn])) and i < chrlen:
