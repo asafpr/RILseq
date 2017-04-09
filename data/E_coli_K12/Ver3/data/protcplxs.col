@@ -1,0 +1,1110 @@
+# Copyright SRI International 1999-2016, Marine Biological Laboratory 1998-2001, DoubleTwist Inc 1998-1999.  All Rights Reserved.
+#
+# Authors:
+#    Peter D. Karp
+#    Ingrid Keseler
+#    Carol Fulcher
+#    Anamika Kothari
+#    Suzanne Paley
+#    Markus Krummenacker
+#    Dan Weaver
+#    Ian Paulsen
+#    Amanda Mackie
+#    Julio Collado-Vides
+#    Cesar Bonavides-Martinez
+#    Socorro Gama-Castro
+#    Alberto Santos-Zavaleta
+#    Verena Weiss
+#    John L Ingraham
+#    Robert Gunsalus
+#    Robert LaRossa
+#
+# Please see the license agreement regarding the use of and distribution of this file.
+# The format of this file is defined at http://bioinformatics.ai.sri.com/ptools/flatfile-format.html .
+#
+# Species: Escherichia coli K-12 substr. MG1655
+# Database: EcoCyc
+# Version: 20.0
+# File Name: protcplxs.col
+# Date and time generated: April 18, 2016, 20:07:49
+#
+#		1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	25	26	27	28	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	25	26	27	28
+UNIQUE-ID	NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-NAME	GENE-ID	GENE-ID	GENE-ID	GENE-ID	GENE-ID	GENE-ID	GENE-ID	GENE-ID	GENE-ID	GENE-ID	GENE-ID	GENE-ID	GENE-ID	GENE-ID	GENE-ID	GENE-ID	GENE-ID	GENE-ID	GENE-ID	GENE-ID	GENE-ID	GENE-ID	GENE-ID	GENE-ID	GENE-ID	GENE-ID	GENE-ID	GENE-ID	SUBUNIT-COMPOSITION
+CPLX0-2681	ClpXP protease specificity-enhancing factor	sspB																												EG10978																												2*EG10978-MONOMER
+CPLX0-8015	ethanol dehydrogenase / alcohol dehydrogenase	adhP																												G6775																												4*ADHP-MONOMER
+TMAOREDUCTI-CPLX	trimethylamine N-oxide reductase TorCA	torC	torA																											EG11815	EG11814																											1*EG11815-MONOMER,1*TORA-MONOMER
+CPLX0-246	L-cysteine desulfurase	sufS																												G6906																												2*G6906-MONOMER
+CPLX0-7993	ureidoglycolate dehydrogenase	allD																												G6286																												2*G6286-MONOMER
+SPERMIDINESYN-CPLX	spermidine synthase	speE																												EG10963																												2*SPERMIDINESYN-MONOMER
+CPLX0-236	arylamine <i>N</i>-acetyltransferase	nhoA																												G6770																												2*G6770-MONOMER
+CPLX0-7975	NadR DNA-binding transcriptional repressor and NMN adenylyltransferase	nadR																												EG11335																												4*PD04413
+RIB5PISOMB-CPLX	allose-6-phosphate isomerase / ribose-5-phosphate isomerase B	rpiB																												EG11827																												2*RIB5PISOMB-MONOMER
+CPLX0-2061	2,3-diketo-L-gulonate reductase	yiaK																												EG12279																												2*EG12279-MONOMER
+CPLX0-7950	2-hydroxy-6-oxononatrienedioate hydrolase	mhpC																												M012																												2*MHPCHYDROL-MONOMER
+PROS-CPLX	prolyl-tRNA synthetase	proS																												EG10770																												2*PROS-MONOMER
+CPLX0-1668	anaerobic fatty acid oxidation complex	fadJ	fadI																											G7212	G7213																											2*G7212-MONOMER,2*G7213-MONOMER
+CPLX0-7927	NADPH-dependent curcumin/dihydrocurcumin reductase	curA																												G6760																												2*G6760-MONOMER
+PHES-CPLX	phenylalanyl-tRNA synthetase	pheS	pheT																											EG10709	EG10710																											2*PHES-MONOMER,2*PHET-MONOMER
+CPLX0-1262	D-arabinose 5-phosphate isomerase	kdsD																												G7662																												4*G7662-MONOMER
+CPLX0-7887	glutamate-pyruvate aminotransferase	alaC																												G7242																												2*G7242-MONOMER
+PC00007	TrpR transcriptional repressor	trpR																												EG11029																												2*PD00423
+CPLX-8332	MoaC hexamer	moaC																												EG11666																												6*EG11666-MONOMER
+CPLX0-7839	CSD sulfur transfer protein	csdE																												G7455																												2*G7455-MONOMER
+NUCLEOSIDE-DIP-KIN-CPLX	nucleoside diphosphate kinase	ndk																												EG10650																												4*NUCLEOSIDE-DIP-KIN-MONOMER
+CPLX-166	mannitol PTS permease	mtlA																												EG10615																												2*MTLA-MONOMER
+CPLX0-7810	EfeB dimer	efeB																												EG11735																												2*EG11735-MONOMER
+NAD-SYNTH-CPLX	NAD synthetase, NH<sub>3</sub>-dependent	nadE																												EG10663																												2*NAD-SYNTH-MONOMER
+CHORISMUTPREPHENDEHYDRAT-CPLX	chorismate mutase / prephenate dehydratase	pheA																												EG10707																												2*CHORISMUTPREPHENDEHYDRAT-MONOMER
+CPLX0-7766	proofreading thioesterase in enterobactin biosynthesis	entH																												EG11105																												4*EG11105-MONOMER
+LYSU-CPLX	Ap<sub>3</sub>A synthetase / Ap<sub>4</sub>A synthetase / lysyl-tRNA synthetase	lysU																												EG10553																												2*LYSU-MONOMER
+ATPE-CPLX	ATP synthase F<sub>0</sub> complex - subunit c	atpE																												EG10102																												10*ATPE-MONOMER
+CPLX0-7733	AsnC DNA-binding transcriptional dual regulator	asnC																												EG10093																												2*PD00250
+HYDROPEROXIDII-CPLX	catalase II	katE																												EG10509																												4*HYDROPEROXIDII-MONOMER
+ASNSYNB-CPLX	asparagine synthetase B	asnB																												EG10092																												2*ASNSYNB-MONOMER
+CPLX0-7712	GDP-mannose mannosyl hydrolase	gmm																												EG11789																												2*GDPMANMANHYDRO-MONOMER
+GSAAMINOTRANS-CPLX	glutamate-1-semialdehyde aminotransferase	hemL																												EG10432																												2*GSAAMINOTRANS-MONOMER
+ANSB-CPLX	asparaginase II	ansB																												EG10046																												4*ANSB-MONOMER
+CPLX0-7688	succinate-semialdehyde dehydrogenase (NADP<sup>+</sup>)	gabD																												EG11329																												4*SUCCSEMIALDDEHYDROG-MONOMER
+GLUTDECARBOXA-CPLX	glutamate decarboxylase A	gadA																												EG50009																												6*GLUTDECARBOXA-MONOMER
+ADENYLYLSULFKIN-CPLX	adenylylsulfate kinase	cysC																												EG10185																												2*ADENYLYLSULFKIN-MONOMER
+CPLX0-7662	&beta;-D-glucuronidase	uidA																												EG11055																												4*BETA-GLUCURONID-MONOMER
+GCVMULTI-CPLX	glycine cleavage system	lpd	gcvP	gcvH	gcvT																									EG10543	EG11810	EG10371	EG11442																									2*E3-MONOMER,2*GCVP-MONOMER,1*LIPOYL-GCVH,1*GCVT-MONOMER
+ACETOLACTSYNI-CPLX	acetohydroxybutanoate synthase / acetolactate synthase	ilvB	ilvN																											EG10494	EG10502																											2*LARGEILVB-MONOMER,2*SMALLILVN-MONOMER
+CPLX0-7642	osmolyte:H<sup>+</sup> symporter ProP	proP																												EG11612																												2*PROP-MONOMER
+FOLXTET-CPLX	dihydroneopterin triphosphate 2'-epimerase	folX																												G7195																												8*H2NTPEPIM-MONOMER
+ABC-55-CPLX	putative transport complex, ABC superfamily	ycjP	ycjO	ycjN																										G6650	G6649	G6648																										1*YCJP-MONOMER,1*YCJO-MONOMER,1*YCJN-MONOMER
+CPLX0-7616	tartronate semialdehyde reductase 2	glxR																												G6278																												4*G6278-MONOMER
+ENTMULTI-CPLX	enterobactin synthase	entB	entD	entF	entE																									EG10260	EG10262	EG10264	EG10263																									2*HOLO-ENTB,1*ENTD-MONOMER,1*ENTF-PANT,2*ENTE-MONOMER
+ABC-33-CPLX	xylose ABC transporter	xylG	xylH	xylF																										EG12275	EG12276	EG20252																										2*XYLG-MONOMER,2*XYLH-MONOMER,1*XYLF-MONOMER
+CPLX0-7532	ammonia / ammonium transporter	amtB																												EG11821																												3*AMTB-MONOMER
+DMBPPRIBOSYLTRANS-CPLX	nicotinate-nucleotide dimethylbenzimidazole phosphoribosyltransferase	cobT																												EG12151																												2*DMBPPRIBOSYLTRANS-MONOMER
+ABC-18-CPLX	methyl-&beta;-D-galactoside / galactose ABC transporter	mglA	mglC	mglB																										EG10592	EG10594	EG10593																										2*MGLA-MONOMER,2*MGLC-MONOMER,1*MGLB-MONOMER
+CPLX0-7425	HipAB toxin/antitoxin complex and DNA-binding transcriptional repressor	hipB	hipA																											EG10442	EG10443																											2*EG10442-MONOMER,1*EG10443-MONOMER
+DCYSDESULF-CPLX	D-cysteine desulfhydrase, PLP-dependent / 3-chloro-D-alanine dehydrochlorinase	dcyD																												G7038																												2*DCYSDESULF-MONOMER
+3-ISOPROPYLMALDEHYDROG-CPLX	3-isopropylmalate dehydrogenase	leuB																												EG11577																												2*3-ISOPROPYLMALDEHYDROG-MONOMER
+CPLX0-3970	murein tripeptide ABC transporter OppBCDFMppA	oppB	oppC	oppD	oppF	mppA																								EG10675	EG10676	EG10677	EG10678	G6665																								1*OPPB-MONOMER,1*OPPC-MONOMER,1*OPPD-MONOMER,1*OPPF-MONOMER,1*G6665-MONOMER
+CPLX0-921	periplasmic chaperone, inhibitor of vertebrate C-type lysozyme	ivy																												G6104																												2*G6104-MONOMER
+CPLX0-3948	XTPase / ITPase	yjjX																												EG12600																												2*EG12600-MONOMER
+CPLX0-8202	alanine racemase 1, PLP-binding, biosynthetic	alr																												EG10001																												2*ALARACEBIOSYN-MONOMER
+CPLX0-3923	predicted monooxygenase	ydhR																												G6895																												2*G6895-MONOMER
+CPLX0-8182	N<sup>6</sup>-L-threonylcarbamoyladenine synthase	tsaE	tsaD	tsaB																										EG11757	EG11171	G6991																										1*EG11757-MONOMER,1*EG11171-MONOMER,1*G6991-MONOMER
+CPLX0-3661	fused heptose 7-phosphate kinase/heptose 1-phosphate adenyltransferase	rfaE																												G7590																												2*G7590-MONOMER
+CPLX0-8159	putrescine aminotransferase	patA																												G7596																												2*G7596-MONOMER
+CPLX0-3323	holocytochrome <I>c</I> synthetase	ccmE	ccmF	ccmG	ccmH																									EG12055	EG12054	EG12053	EG12052																									1*CCME-MONOMER,1*EG12054-MONOMER,1*EG12053-MONOMER,1*EG12052-MONOMER
+CPLX0-8119	predicted PTS permease FryBCA	fryC	fryB	fryA																										G7249	G7250	G7246																										1*MONOMER0-6,1*G7250-MONOMER,1*G7246-MONOMER
+CPLX0-3101	ClpP serine protease	clpP																												EG10158																												14*EG10158-MONOMER
+CPLX0-8097	peptide antibiotic / peptide nucleic acid transporter	sbmA																												EG10928																												2*SBMA-MONOMER
+UDHA-CPLX	pyridine nucleotide transhydrogenase, soluble	sthA																												EG11428																												8*UDHA-MONOMER
+CPLX0-263	isoaspartyl dipeptidase / asparaginase III	iaaA																												EG12407																												2*MONOMER0-2,2*MONOMER0-3
+CPLX0-8012	dTDP-glucose pyrophosphorylase	rffH																												EG11454																												4*DTDPGLUCOSEPP2-MONOMER
+THREODEHYD-CPLX	threonine dehydrogenase	tdh																												EG10993																												4*THREODEHYD-MONOMER
+CPLX0-244	NADPH nitroreductase NfsA	nfsA																												EG11261																												2*EG11261-MONOMER
+CPLX0-7989	murein tripeptide amidase A	mpaA																												G6662																												2*G6662-MONOMER
+SIROHEMESYN-CPLX	siroheme synthase	cysG																												EG10188																												2*SIROHEMESYN-MONOMER
+CPLX0-232	predicted PTS permease GlvCB (cryptic)	glvC	glvB																											EG11710	EG11709																											1*GLVC-MONOMER,1*GLVB-MONOMER
+CPLX0-7970	HypT-[Met]reduced	hypT																												G7924																												2*G7924-MONOMER
+RECFOR-CPLX	RecFOR complex	recF	recR	recO																										EG10828	EG10834	EG10832																										1*EG10828-MONOMER,1*EG10834-MONOMER,1*EG10832-MONOMER
+CPLX0-1962	3-hydroxy acid dehydrogenase	ydfG																												EG12345																												4*EG12345-MONOMER
+CPLX0-7945	zinc-binding phosphatase	ycdX																												G6540																												3*G6540-MONOMER
+PPK-CPLX	polyphosphate kinase	ppk																												EG11510																												2*PPK-MONOMER
+CPLX0-1642	ribonuclease E inhibitor protein A	rraA																												EG11879																												3*EG11879-MONOMER
+CPLX0-7921	mannose PTS permease - ManX subunit	manX																												EG10567																												2*MANX-MONOMER
+PEPSYNTH-CPLX	phosphoenolpyruvate synthetase	ppsA																												EG10759																												2*PEPSYNTH-MONOMER
+CPLX0-1241	MazF toxin of the MazF-MazE toxin-antitoxin system that exhibits ribonuclease activity	mazF																												EG11249																												2*EG11249-MONOMER
+CPLX0-7879	NusB-S10 complex	rpsJ	nusB																											EG10909	EG10666																											1*EG10909-MONOMER,1*EG10666-MONOMER
+PC00003	AraC DNA-binding transcriptional dual regulator	araC																												EG10054																												2*PD00242
+CPLX-722	periplasmic protein with phosphoanhydride phosphatase and multiple inositol-polyphosphate phosphatase activity	appA																												EG10049																												2*APPA-MONOMER
+CPLX0-7836	predicted structural protein, ethanolamine utilization microcompartment	eutS																												G7292																												6*G7292-MONOMER
+NRDE-CPLX	ribonucleoside-diphosphate reductase 2, &alpha; subunit dimer	nrdE																												EG20257																												2*NRDE-MONOMER
+CPLX-159	predicted PTS permease FrvAB	frvB	frvA																											EG11863	EG11864																											1*FRVB-MONOMER,1*FRVA-MONOMER
+CPLX0-7806	disulfide reductase	yfcG																												G7194																												2*G7194-MONOMER
+CARNDEHYDRA-CPLX	&gamma;-butyrobetainyl-CoA:carnitine CoA transferase	caiB																												EG11559																												2*CARNDEHYDRA-MONOMER
+CPLX0-7759	MetR DNA-binding transcriptional dual regulator	metR																												EG10591																												2*PD03938
+LUMAZINESYN-CPLX	6,7-dimethyl-8-ribityllumazine synthase	ribE																												EG11322																												60*LUMAZINESYN-MONOMER
+ATPA-CPLX	ATP synthase F<sub>1</sub> complex - alpha subunit	atpA																												EG10098																												3*ATPA-MONOMER
+CPLX0-7728	tRNA pseudouridine synthase I	truA																												EG10454																												2*EG10454-MONOMER
+HOMSUCTRAN-CPLX	homoserine <i>O</i>-succinyltransferase	metA																												EG10581																												2*HOMSUCTRAN-MONOMER
+AROH-CPLX	2-dehydro-3-deoxyphosphoheptonate aldolase	aroH																												EG10080																												2*AROH-MONOMER
+CPLX0-7709	glutamate-putrescine ligase	puuA																												G6644																												12*G6644-MONOMER
+GMP-REDUCT-CPLX	GMP reductase	guaC																												EG10422																												4*GMP-REDUCT-MONOMER
+AMP-NUCLEOSID-CPLX	AMP nucleosidase	amn																												EG10039																												6*AMP-NUCLEOSID-MONOMER
+CPLX0-7685	hypoxanthine phosphoribosyltransferase	hpt																												EG20098																												4*HYPOXANPRIBOSYLTRAN-MONOMER
+GLUTAMINESYN-OLIGOMER	glutamine synthetase	glnA																												EG10383																												12*GLUTAMINESYN-MONOMER
+ADCLY-CPLX	aminodeoxychorismate lyase	pabC																												EG11493																												2*ADCLY-MONOMER
+CPLX0-7658	<i>N</i>-acetylneuraminate mutarotase	nanM																												G7920																												2*G7920-MONOMER
+GALACTOACETYLTRAN-CPLX	galactoside O-acetyltransferase	lacA																												EG10524																												3*GALACTOACETYLTRAN-MONOMER
+ABC-8-CPLX	dipeptide ABC transporter	dppD	dppF	dppB	dppC	dppA																								EG12627	EG12628	EG12625	EG12626	EG10248																								1*DPPD-MONOMER,1*DPPF-MONOMER,1*DPPB-MONOMER,1*DPPC-MONOMER,1*DPPA-MONOMER
+CPLX0-7633	L-fuculose-phosphate aldolase	fucA																												EG10348																												4*FUCPALDOL-MONOMER
+FLAGELLAR-MOTOR-COMPLEX	Flagellar Motor Complex	fliN	fliM	fliG	flgH	motA	motB	flgB	flgC	flgF	flgG	flgI	fliF	fliE	fliL															EG10324	EG10323	EG11654	G364	EG10601	EG10602	G358	G359	G362	G363	G365	EG11347	EG11346	EG10322															1*FLIN-FLAGELLAR-C-RING-SWITCH,34*FLIM-FLAGELLAR-C-RING-SWITCH,26*FLIG-FLAGELLAR-SWITCH-PROTEIN,1*FLGH-FLAGELLAR-L-RING,1*MOTA-FLAGELLAR-MOTOR-STATOR-PROTEIN,1*MOTB-FLAGELLAR-MOTOR-STATOR-PROTEIN,1*FLGB-FLAGELLAR-MOTOR-ROD-PROTEIN,1*FLGC-FLAGELLAR-MOTOR-ROD-PROTEIN,1*FLGF-FLAGELLAR-MOTOR-ROD-PROTEIN,1*FLGG-FLAGELLAR-MOTOR-ROD-PROTEIN,1*FLGI-FLAGELLAR-P-RING,1*FLIF-FLAGELLAR-MS-RING,1*EG11346-MONOMER,2*EG10322-MONOMER
+ABC-52-CPLX	putative transport complex, ABC superfamily	yhdZ	yhdY	yhdX	yhdW																									EG12837	EG12836	EG12835	EG12834																									1*YHDZ-MONOMER,1*YHDY-MONOMER,1*YHDX-MONOMER,1*YHDW-MONOMER
+CPLX0-7613	predicted carboxysome structural protein	eutN																												G7286																												6*G7286-MONOMER
+ENOLASE-CPLX	enolase	eno																												EG10258																												2*ENOLASE-MONOMER
+ABC-3-CPLX	lysine / arginine / ornithine ABC transporter	hisQ	hisP	hisM	argT																									EG12125	EG10452	EG10007	EG10072																									1*HISQ-MONOMER,2*HISP-MONOMER,1*HISM-MONOMER,1*ARGT-MONOMER
+CPLX0-7525	2-succinyl-5-enolpyruvyl-6-hydroxy-3-cyclohexene-1-carboxylate synthase	menD																												EG10579																												2*MEND-MONOMER
+DIHYDROXYACIDDEHYDRAT-CPLX	dihydroxy acid dehydratase	ilvD																												EG10496																												2*DIHYDROXYACIDDEHYDRAT-MONOMER
+ABC-14-CPLX	histidine ABC transporter	hisP	hisM	hisQ	hisJ																									EG10452	EG10007	EG12125	EG12124																									2*HISP-MONOMER,1*HISM-MONOMER,1*HISQ-MONOMER,1*HISJ-MONOMER
+CPLX0-7421	tRNA (cytidine/uridine-2'-<i>O</i>)-ribose methyltransferase	trmL																												EG11888																												2*EG11888-MONOMER
+DALADEHYDROG-CPLX	D-amino acid dehydrogenase	dadA																												EG11407																												2*DALADEHYDROGA-MONOMER
+CPLX0-3959	Xer site-specific recombination system	xerC	xerD																											EG11069	EG11071																											1*EG11069-MONOMER,1*EG11071-MONOMER
+CPLX0-881	ClpA ATP-dependent protease specificity component and chaperone	clpA																												EG10156																												6*EG10156-MONOMER
+CPLX0-3939	universal stress protein UP12	uspG																												G6334																												2*G6334-MONOMER
+CPLX0-8199	c-di-GMP phosphodiesterase	dosP																												G6783																												2*G6783-MONOMER
+CPLX0-3901	&alpha;-D-xyloside xylohydrolase	yicI																												EG11685																												6*EG11685-MONOMER
+CPLX0-8179	peptidoglycan glycosyltransferase - peptidoglycan D,D transpeptidase	lpoA	mrcA																											G7642	EG10748																											1*G7642-MONOMER,1*EG10748-MONOMER
+CPLX0-3602	RNase T	rnt																												EG11547																												2*EG11547-MONOMER
+CPLX0-8156	Xaa-Pro dipeptidase	pepQ																												EG10698																												2*EG10698-MONOMER
+CPLX0-3241	NapGH, alternative quinol dehydrogenase	napG	napH																											EG12064	EG12062																											1*NAPG-MONOMER,1*NAPH-MONOMER
+CPLX0-8113	negative regulator of the <i>Pho</i> regulon	phoU																												EG10735																												2*EG10735-MONOMER
+CPLX0-3041	peptidase T	pepT																												EG11549																												2*EG11549-MONOMER
+CPLX0-8092	bifunctional &beta;-cystathionase, PLP-dependent and regulator of maltose regulon	malY																												EG10564																												2*EG10564-MONOMER
+TRYPTOPHAN-CPLX	tryptophanase / L-cysteine desulfhydrase	tnaA																												EG11005																												4*TRYPTOPHAN-MONOMER
+CPLX0-255	phenylhydantoinase	hyuA																												G7492																												4*G7492-MONOMER
+CPLX0-801	periplasmic acid stress chaperone	hdeA																												EG11398																												2*EG11398-MONOMER
+THIOREDOXIN-REDUCT-NADPH-CPLX	thioredoxin reductase	trxB																												EG11032																												2*THIOREDOXIN-REDUCT-NADPH-MONOMER
+CPLX0-2424	topoisomerase IV	parE	parC																											EG10687	EG10686																											2*EG10687-MONOMER,2*EG10686-MONOMER
+CPLX0-7986	HypCD complex involved in hydrogenase maturation	hypD	hypC																											EG10486	EG10485																											1*EG10486-MONOMER,1*EG10485-MONOMER
+SECD-SECF-YAJC-YIDC-CPLX	SecD-SecF-YajC-YidC Secretion Complex	yidC	yajC	secF	secD																									EG11197	EG11096	EG10940	EG10938																									1*YIDC,1*EG11096-MONOMER,1*SECF,1*SECD
+CPLX0-229	ribonucleoside triphosphate reductase activase	nrdG																												G812																												2*RNTRACTIV-MONOMER
+CPLX0-7962	L-amino acid N-acyltransferase	mnaT																												G6759																												2*G6759-MONOMER
+QOR-CPLX	quinone oxidoreductase	qor																												EG11492																												2*QOR-MONOMER
+CPLX0-1941	ferric enterobactin outer membrane transport complex	exbD	exbB	tonB	fepA																									EG10272	EG10271	EG11012	EG10293																									1*EG10272-MONOMER,1*EG10271-MONOMER,1*EG11012-MONOMER,1*EG10293-MONOMER
+CPLX0-7940	CP4-6 prophage; probable 2-keto-3-deoxygluconate aldolase	yagE																												G6140																												4*G6140-MONOMER
+PKI-COMPLEX	pyruvate kinase I	pykF																												EG10804																												4*PKI-MONOMER
+CPLX0-1581	palmitoyl transferase for Lipid A	pagP																												EG12180																												2*EG12180-MONOMER
+CPLX0-7914	multifunctional nuclease Cas1	cas1																												G7425																												2*G7425-MONOMER
+PDXH-CPLX	pyridoxine 5'-phosphate oxidase / pyridoxamine 5'-phosphate oxidase	pdxH																												EG11487																												2*PDXH-MONOMER
+CPLX0-1162	HslV hexamer	hslV																												EG11676																												6*EG11676-MONOMER
+CPLX0-7870	AtoS sensory histidine kinase	atoS																												EG11667																												2*ATOS-MONOMER
+PANTOATE-BETA-ALANINE-LIG-CPLX	pantothenate synthetase	panC																												EG11746																												2*PANTOATE-BETA-ALANINE-LIG-MONOMER
+CPLX-63	trimethylamine N-oxide reductase TorYZ	torZ	torY																											G7022	G7023																											1*G7022-MONOMER,1*G7023-MONOMER
+CPLX0-7826	dITP/XTP pyrophosphatase	rdgB																												G7530																												2*G7530-MONOMER
+NITRITREDUCT-CPLX	nitrite reductase - NADH dependent	nirD	nirB																											EG10655	EG10653																											1*NIRD-MONOMER,2*NIRB-MONOMER
+CPLX-156	predicted PTS permease CmtBA	cmtB	cmtA																											EG11791	EG11792																											1*CMTB-MONOMER,1*CMTA-MONOMER
+CPLX0-7801	predicted structural protein, ethanolamine utilization microcompartment	eutL																												G7271																												3*G7271-MONOMER
+METHGLYSYN-CPLX	methylglyoxal synthase	mgsA																												G6497																												6*METHGLYSYN-MONOMER
+BRANCHED-CHAINAMINOTRANSFER-CPLX	branched-chain amino-acid aminotransferase	ilvE																												EG10497																												6*BRANCHED-CHAINAMINOTRANSFER-MONOMER
+CPLX0-7756	NsrR DNA-binding transcriptional repressor	nsrR																												EG11212																												2*EG11212-MONOMER
+LDC2-CPLX	lysine decarboxylase 2	ldcC																												G6094																												10*LDC2-MONOMER
+ASPS-CPLX	aspartyl-tRNA synthetase	aspS																												EG10097																												2*ASPS-MONOMER
+CPLX0-7725	CRISPR-associated complex for antiviral defense	casA	casB	casC	casD	casE																								G7430	G7429	G7428	G7427	G7426																								1*G7430-MONOMER,2*G7429-MONOMER,6*G7428-MONOMER,1*G7427-MONOMER,1*G7426-MONOMER
+HMP-P-KIN-CPLX	hydroxymethylpyrimidine kinase / phosphohydroxymethylpyrimidine kinase	thiD																												G7135																												4*HMP-P-KIN-MONOMER
+AROD-CPLX	3-dehydroquinate dehydratase	aroD																												EG10076																												2*AROD-MONOMER
+CPLX0-7705	Fis DNA-binding transcriptional dual regulator	fis																												EG10317																												2*PD00196
+GLYOHMETRANS-CPLX	serine hydroxymethyltransferase	glyA																												EG10408																												2*GLYOHMETRANS-MONOMER
+ALPHA-SUBUNIT-CPLX	formate dehydrogenase N, subcomplex	fdnI	fdnH	fdnG																										EG11229	EG11228	EG11227																										1*FDNI-MONOMER,1*FDNH-MONOMER,1*FDNG-MONOMER
+CPLX0-7682	iron-sulfur cluster scaffold protein	nfuA																												G7748																												2*G7748-MONOMER
+GLUTAMIDOTRANS-CPLX	imidazole glycerol phosphate synthase	hisH	hisF																											EG10450	EG10448																											1*GLUTAMIDOTRANS-MONOMER,1*CYCLASE-MONOMER
+ACSERLYA-CPLX	<i>O</i>-acetylserine sulfhydrylase A	cysK																												EG10192																												2*ACSERLYA-MONOMER
+CPLX0-7654	glycerol channel GlpF	glpF																												EG10396																												4*GLPF-MONOMER
+FUMARASE-C	fumarase C	fumC																												EG10358																												4*FUMC-MONOMER
+ABC-64-CPLX	taurine ABC transporter	tauA	tauC	tauB																										G6217	G6219	G6218																										1*TAUA-MONOMER,2*TAUC-MONOMER,2*TAUB-MONOMER
+CPLX0-7630	multifunctional acyl-CoA thioesterase I and protease I and lysophospholipase L1	tesA																												EG11542																												4*THIOESTERI-MONOMER
+FADB-CPLX	fatty acid oxidation complex, &alpha; component	fadB																												EG10279																												2*FADB-MONOMER
+ABC-49-CPLX	glutathione ABC transporter	gsiA	gsiB	gsiD	gsiC																									G6429	G6430	G6432	G6431																									2*YLIA-MONOMER,1*YLIB-MONOMER,1*YLID-MONOMER,1*YLIC-MONOMER
+CPLX0-7609	5-carboxymethylaminomethyluridine-tRNA synthase [multifunctional]	mnmE	mnmG																											EG10997	EG10375																											2*EG10997-MONOMER,2*EG10375-MONOMER
+E3-CPLX	lipoamide dehydrogenase	lpd																												EG10543																												2*E3-MONOMER
+ABC-27-CPLX	phosphate ABC transporter	pstB	pstA	pstC	pstS																									EG10783	EG10782	EG10784	EG10734																									2*PSTB-MONOMER,1*PSTA-MONOMER,1*PSTC-MONOMER,1*PSTS-MONOMER
+CPLX0-7466	xylulokinase	xylB																												EG11075																												2*XYLULOKIN-MONOMER
+DIHYDROOROT-CPLX	dihydroorotase	pyrC																												EG10806																												2*DIHYDROOROT-MONOMER
+ABC-11-CPLX	iron (III) hydroxamate ABC transporter	fhuC	fhuB	fhuD																										EG10304	EG10303	EG10305																										2*FHUC-MONOMER,2*FHUB-MONOMER,1*FHUD-MONOMER
+CPLX0-7417	IS2 insertion element repressor InsA	insC-1																												G6212																												2*G6212-MONOMER
+CYT-O-UBIOX-CPLX	cytochrome <i>bo</i> terminal oxidase	cyoD	cyoA	cyoB	cyoC																									EG10181	EG10178	EG10179	EG10180																									1*CYOD-MONOMER,1*CYOA-MONOMER,1*CYOB-MONOMER,1*CYOC-MONOMER
+CPLX0-8214	carboxylesterase	yjfP																												G7853																												2*G7853-MONOMER
+CPLX0-3936	dihydroneopterin aldolase	folB																												EG11673																												8*H2NEOPTERINALDOL-MONOMER
+CPLX0-8192	nucleotide exchange factor	grpE																												EG10416																												2*EG10416-MONOMER
+CPLX0-3841	4-diphosphocytidyl-2-C-methylerythritol kinase	ispE																												EG11294																												2*EG11294-MONOMER
+CPLX0-8176	tRNA threonylcarbamoyladenosine dehydratase	tcdA																												G7456																												2*G7456-MONOMER
+CPLX0-3561	GTP hydrolase involved in nickel liganding into hydrogenases	hypB																												EG10484																												2*EG10484-MONOMER
+CPLX0-8152	cystine / cysteine ABC transporter	tcyN	tcyL	tcyJ																										EG12347	G7037	G7039																										1*EG12347-MONOMER,1*G7037-MONOMER,1*G7039-MONOMER
+CPLX0-321	pyridoxine 5'-phosphate synthase	pdxJ																												EG10693																												8*PDXJ-MONOMER
+CPLX0-8110	molybdenum cofactor insertion chaperone for PaoABC	paoD																												G6154																												2*G6154-MONOMER
+YDGEF-CPLX	multidrug / spermidine efflux transporter	mdtJ	mdtI																											G6858	G6857																											1*B1600-MONOMER,1*B1599-MONOMER
+CPLX0-301	3-octaprenyl-4-hydroxybenzoate carboxy-lyase	ubiD																												EG11396																												6*EG11396-MONOMER
+TRANSKETOI-CPLX	transketolase I	tktA																												EG11427																												2*TRANSKETOI-MONOMER
+CPLX0-253	NADPH dehydrogenase (quinone)	mdaB																												EG12656																												2*EG12656-MONOMER
+CPLX0-8006	enoyl-[acyl-carrier-protein] reductase	fabI																												EG11528																												4*ENOYL-ACP-REDUCT-NADH-MONOMER
+SUPEROX-DISMUTMN-CPLX	superoxide dismutase (Mn)	sodA																												EG10953																												2*SUPEROX-DISMUTMN-MONOMER
+CPLX0-241	tagatose-1,6-bisphosphate aldolase 2	gatY	gatZ																											EG12419	G7128																											1*TAGAALDOL2-MONOMER,1*G7128-MONOMER
+CPLX0-7983	mechanosensitive channel YbiO	ybiO																												G6417																												7*G6417-MONOMER
+SAICARSYN-CPLX	phosphoribosylaminoimidazole-succinocarboxamide synthase	purC																												EG10791																												3*SAICARSYN-MONOMER
+CPLX0-224	NADPH-dependent FMN reductase	ssuE																												G6479																												2*MONOMER0-146
+CPLX0-7959	adenylosuccinate lyase	purB																												EG11314																												4*ASL-MONOMER
+PYRROLINECARBREDUCT-CPLX	pyrroline-5-carboxylate reductase	proC																												EG10769																												10*PYRROLINECARBREDUCT-MONOMER
+CPLX0-1881	enamine/imine deaminase, redox regulated chaperone	ridA																												G7877																												3*G7877-MONOMER
+CPLX0-7936	5-phospho-&alpha;-D-ribosyl 1,2-cyclic phosphate phosphodiesterase	phnP																												EG10725																												2*EG10725-MONOMER
+CPLX0-1461	HF-I, host factor for RNA phage Q &beta; replication	hfq																												EG10438																												6*EG10438-MONOMER
+CPLX0-7910	DNA polymerase III, &psi;-&chi; subunit	holC	holD																											EG11413	EG11414																											1*EG11413-MONOMER,1*EG11414-MONOMER
+PC00084	RcsAB DNA-binding transcriptional dual regulator	rcsB	rcsA																											EG10821	EG10820																											1*RCSB-MONOMER,1*PD02233
+CPLX0-1141	selenocysteine synthase	selA																												EG10941																												10*EG10941-MONOMER
+CPLX0-7852	GadE-RcsB DNA binding transcriptional activator	rcsB	gadE																											EG10821	EG11544																											1*RCSB-MONOMER,1*EG11544-MONOMER
+OROTPDECARB-CPLX	orotidine-5'-phosphate decarboxylase	pyrF																												EG10809																												2*OROTPDECARB-MONOMER
+CPLX-3944	FecAR Signal Transduction System	fecA	fecR																											EG10286	EG10292																											1*EG10286-MONOMER,1*EG10292-MONOMER
+CPLX0-7822	MqsA-MqsR antitoxin/toxin complex	mqsA	mqsR																											G7571	G7572																											2*G7571-MONOMER,4*G7572-MONOMER
+NIRB-CPLX	dimer of large subunit of nitrite reductase	nirB																												EG10653																												2*NIRB-MONOMER
+CPLX-153	&beta;-glucoside PTS permease AscF (cryptic)	ascF																												EG10086																												2*ASCF-MONOMER
+CPLX0-7795	KdpE-Phosphorylated DNA-binding transcriptional activator	kdpE																												EG10517																												2*PHOSPHO-KDPE
+MENE-CPLX	<i>o</i>-succinylbenzoate-CoA ligase	menE																												EG12437																												4*O-SUCCINYLBENZOATE-COA-LIG-MONOMER
+BETAGALACTOSID-CPLX	&beta;-galactosidase	lacZ																												EG10527																												4*BETAGALACTOSID-MONOMER
+CPLX0-7748	CpxR-P<sup>asp</sup> DNA-binding transcriptional dual regulator	cpxR																												EG10020																												2*PHOSPHO-CPXR
+KDPGALDOL-4OH2OXOGLUTARALDOL-CPLX	multifunctional 2-keto-3-deoxygluconate 6-phosphate aldolase and 2-keto-4-hydroxyglutarate aldolase and oxaloacetate decarboxylase	eda																												EG10256																												3*KDPGALDOL-4OH2OXOGLUTARALDOL-MONOMER
+ASPKINIHOMOSERDEHYDROGI-CPLX	aspartate kinase / homoserine dehydrogenase	thrA																												EG10998																												4*ASPKINIHOMOSERDEHYDROGI-MONOMER
+CPLX0-7722	L-rhamnonate dehydratase	yfaW																												G7160																												8*G7160-MONOMER
+HISS-CPLX	histidyl-tRNA synthetase	hisS																												EG10453																												2*HISS-MONOMER
+ARGDECARBOXBIO-CPLX	arginine decarboxylase, biosynthetic	speA																												EG10959																												4*ARGDECARBOXBIO-MONOMER
+CPLX0-7697	MukEF complex	mukE	mukF																											EG11252	EG12165																											4*EG11252-MONOMER,2*EG12165-MONOMER
+GLYCOPHOSPHORYL-CPLX	glycogen phosphorylase	glgP																												EG10380																												2*GLYCOPHOSPHORYL-MONOMER
+ALAS-CPLX	alanyl-tRNA synthetase and DNA-binding transcriptional repressor	alaS																												EG10034																												2*ALAS-MONOMER
+CPLX0-7675	2Fe-2S cluster-containing protein	yeaW																												G6988																												3*G6988-MONOMER
+GLUCOSE-1-PHOSPHAT-CPLX	glucose-1-phosphatase	agp																												EG10033																												2*GLUCOSE-1-PHOSPHAT-MONOMER
+ACETYLORNTRANSAM-CPLX	<i>N</i>-acetylornithine aminotransferase / <i>N</i>-succinyldiaminopimelate aminotransferase	argD																												EG10066																												2*ACETYLORNTRANSAM-MONOMER
+CPLX0-7649	L-rhamnose mutarotase	rhaM																												EG11865																												2*EG11865-MONOMER
+FRUCBISALD-CLASSII	fructose bisphosphate aldolase class II	fbaA																												EG10282																												2*FRUCTBISALD-CLASSII-MONOMER
+ABC-61-CPLX	putative transport complex, ABC superfamily	ybbP	ybbA																											G6270	EG11657																											1*YBBP-MONOMER,1*YBBA-MONOMER
+CPLX0-7627	mechanosensitive channel MscL	mscL																												EG11180																												5*EG11180-MONOMER
+FABB-CPLX	KASI	fabB																												EG10274																												2*FABB-MONOMER
+ABC-45-CPLX	phospholipid ABC transporter	mlaC	mlaF	mlaE	mlaD	mlaB																								G7659	EG12801	EG12800	EG12799	G7658																								1*G7659-MONOMER,2*YRBF-MONOMER,2*YRBE-MONOMER,1*EG12799-MONOMER,2*G7658-MONOMER
+CPLX0-7564	1-hydroxy-2-methyl-2-(E)-butenyl 4-diphosphate reductase	ispH																												EG11081																												2*EG11081-MONOMER
+E1O	2-oxoglutarate decarboxylase, thiamine-requiring	sucA																												EG10979																												12*E1O-MONOMER
+ABC-24-CPLX	putrescine / spermidine ABC transporter	potA	potB	potC	potD																									EG10749	EG10750	EG10751	EG10752																									2*POTA-MONOMER,1*POTB-MONOMER,1*POTC-MONOMER,1*POTD-MONOMER
+CPLX0-7458	glycolate oxidase	glcD	glcE	glcF																										G7545	G7544	G0-8601																										1*G7545-MONOMER,1*G7544-MONOMER,1*MONOMER0-561
+DIACYLGLYKIN-CPLX	diacylglycerol kinase	dgkA																												EG10224																												3*DIACYLGLYKIN-MONOMER
+7-ALPHA-HYDROXYSTEROID-DEH-CPLX	7-&alpha;-hydroxysteroid dehydrogenase	hdhA																												EG10425																												4*7-ALPHA-HYDROXYSTEROID-DEH-MONOMER
+CPLX0-7	N-acetylmuramic acid PTS permease	murP	crr																											G7264	EG10165																											1*MONOMER0-5,1*CRR-MONOMER
+CYSSYNMULTI-CPLX	cysteine synthase complex	cysE	cysK																											EG10187	EG10192																											6*SERINE-O-ACETTRAN-MONOMER,2*ACSERLYA-MONOMER
+CPLX0-3956	50S ribosomal protein complex L8	rplJ	rplL																											EG10871	EG10873																											1*EG10871-MONOMER,4*EG10873-MONOMER
+CPLX0-8211	hydroxyethylthiazole kinase	thiM																												M007																												2*THZ-KIN-MONOMER
+CPLX0-3932	AcrAD-TolC multidrug efflux system	acrD	acrA	tolC																										EG10014	EG11703	EG11009																										3*ACRD-MONOMER,1*EG11703-MONOMER,3*EG11009-MONOMER
+CPLX0-8189	peptidyl-lysine acetyltransferase	patZ																												G7350																												4*G7350-MONOMER
+CPLX0-3802	DNA polymerase III, &tau; subunit dimer	dnaX																												EG10245																												2*EG10245-MONOMER
+CPLX0-8173	Cas2 dimer	cas2																												EG12845																												2*EG12845-MONOMER
+CPLX0-3501	7-cyano-7-deazaguanine reductase	queF																												G7452																												2*G7452-MONOMER
+CPLX0-8127	2-hydroxycyclohepta-1,4,6-triene-1-carboxyl-CoA thioesterase	paaY																												G6721																												3*G6721-MONOMER
+CPLX0-3161	<i>N</i>-succinyl-L-diaminopimelate desuccinylase	dapE																												EG10208																												4*MONOMER0-1981
+CPLX0-8107	small heat shock protein IbpB homodimer	ibpB																												EG11535																												2*EG11535-MONOMER
+UVRABC-CPLX	UvrABC Nucleotide Excision Repair Complex	uvrB	uvrC	uvrA																										EG11062	EG11063	EG11061																										1*EG11062-MONOMER,1*EG11063-MONOMER,1*EG11061-MONOMER
+CPLX0-2982	HflB, integral membrane ATP-dependent zinc metallopeptidase	hflC	hflK	ftsH																										EG10435	EG10436	EG11506																										6*EG10435-MONOMER,6*EG10436-MONOMER,6*EG11506-MONOMER
+CPLX0-8044	molybdopterin-guanine dinucleotide biosynthesis adaptor protein	mobB																												EG11828																												2*EG11828-MONOMER
+TRANS-CPLX-204	MdtEF-TolC multidrug efflux transport system	tolC	mdtE	mdtF																										EG11009	EG12240	EG12241																										3*EG11009-MONOMER,3*EG12240-MONOMER,3*YHIV-MONOMER
+TRANS-CPLX-201	AcrAB-TolC multidrug efflux system	acrA	tolC	acrB																										EG11703	EG11009	EG11704																										6*EG11703-MONOMER,3*EG11009-MONOMER,3*ACRB-MONOMER
+CPLX0-251	2-methylcitrate synthase	prpC																												G6198																												2*G6198-MONOMER
+SULFATE-ADENYLYLTRANS-CPLX	sulfate adenylyltransferase	cysD	cysN																											EG10186	EG10194																											4*CYSD-MONOMER,4*CYSN-MONOMER
+CPLX0-2381	degradosome	ppk	rne	rhlB	pnp	eno																								EG11510	EG10859	EG10844	EG10743	EG10258																								2*PPK-MONOMER,4*EG10859-MONOMER,2*EG10844-MONOMER,3*EG10743-MONOMER,2*ENOLASE-MONOMER
+CPLX0-7979	monoacetylchitobiose-6-phosphate hydrolase	chbF																												EG10144																												4*EG10144-MONOMER
+RIBULPEPIM-CPLX	L-ribulose 5-phosphate 4-epimerase	araD																												EG10055																												4*RIBULPEPIM-MONOMER
+CPLX0-2161	EmrKY-TolC multidrug efflux transport system	emrK	emrY	tolC																										G7233	EG13283	EG11009																										1*G7233-MONOMER,1*EMRY-MONOMER,3*EG11009-MONOMER
+CPLX0-7956	CsrA dimer	csrA																												EG11447																												2*EG11447-MONOMER
+PURK-CPLX	<i>N</i><sup>5</sup>-carboxyaminoimidazole ribonucleotide synthetase	purK																												EG10796																												2*PURK-MONOMER
+CPLX0-1821	oligoribonuclease	orn																												G7842																												2*G7842-MONOMER
+CPLX0-7933	predicted carbamoyltransferase	ygeW																												G7489																												3*G7489-MONOMER
+PHOSPHASERDECARB-CPLX	phosphatidylserine decarboxylase	psd																												EG10775																												1*PHOSPHASERDECARB-ALPHA-MONOMER,1*PHOSPHASERDECARB-BETA-MONOMER
+CPLX0-1401	2,3-diaminopropionate ammonia-lyase	ygeX																												G7490																												2*G7490-MONOMER
+CPLX0-7906	L-carnitine : &gamma;-butyrobetaine antiporter	caiT																												EG11561																												3*CAIT-MONOMER
+PC00040	CysB transcriptional dual regulator	cysB																												EG10184																												4*PD00232
+CPLX0-1081	RNase PH	rph																												EG10863																												1*EG10863-MONOMER
+CPLX0-7847	4-hydroxy-L-threonine phosphate dehydrogenase, NAD-dependent	pdxA																												EG10691																												2*PDXA-MONOMER
+ORNDECARBOX-BIO-CPLX	ornithine decarboxylase, biosynthetic	speC																												EG10961																												2*ORNDECARBOX-BIO-MONOMER
+CPLX-170	galactosamine PTS permease (cryptic)	agaB	agaC	agaD																										EG12769	EG12770	G7635																										1*AGAB-MONOMER,1*AGAC-MONOMER,1*AGAD-MONOMER
+CPLX0-7819	K<sup>+</sup> : H<sup>+</sup> antiporter KefC	kefC																												EG10521																												2*KEFC-MONOMER
+NAP-CPLX	periplasmic nitrate reductase	napB	napC	napH	napG	napA																								EG12061	EG12060	EG12062	EG12064	EG12067																								1*NAPB-MONOMER,1*NAPC-MONOMER,1*NAPH-MONOMER,1*NAPG-MONOMER,1*NAPA-MONOMER
+CITTRANS-CPLX	citrate lyase, citrate-ACP transferase component	citF																												G6341																												6*CITTRANS-MONOMER
+CPLX0-7789	macrodomain Ter protein	matP																												EG12855																												2*EG12855-MONOMER
+MALIC-NAD-CPLX	malate dehydrogenase, NAD-requiring	maeA																												EG10948																												4*MALIC-NAD-MONOMER
+B2-CPLX	ribonucleoside diphosphate reductase 1, &beta; subunit dimer	nrdB																												EG10661																												2*NRDB-MONOMER
+CPLX0-7744	3-keto-L-gulonate 6-phosphate decarboxylase	ulaD																												G7858																												2*G7858-MONOMER
+KDO-8PPHOSPHAT-CPLX	3-deoxy-D-<i>manno</i>-octulosonate 8-phosphate phosphatase	kdsC																												G7663																												4*G7663-MONOMER
+ASPCARBCAT-TRIMER	aspartate carbamoyltransferase, catalytic subunit	pyrB																												EG10805																												3*ASPCARBCAT-MONOMER
+CPLX0-7719	quinolinate synthase	nadA																												EG10630																												2*QUINOLINATE-SYNTHA-MONOMER
+GUANYL-KIN-CPLX	guanylate kinase	gmk																												EG10965																												2*GUANYL-KIN-MONOMER
+APP-UBIOX-CPLX	cytochrome <i>bd</i>-II terminal oxidase	appC	appB																											EG11380	EG11379																											1*APPC-MONOMER,1*APPB-MONOMER
+CPLX0-7694	glutaminase	ybaS																												G6261																												4*G6261-MONOMER
+GLYC3PDEHYDROGBIOSYN-CPLX	glycerol-3-phosphate dehydrogenase, biosynthetic	gpsA																												EG20091																												2*GLYC3PDEHYDROGBIOSYN-MONOMER
+AGMATIN-CPLX	agmatinase	speB																												EG10960																												2*AGMATIN-MONOMER
+CPLX0-7669	ArgP DNA-binding transcriptional dual regulator	argP																												EG10490																												2*EG10490-MONOMER
+GLUC1PADENYLTRANS-CPLX	glucose-1-phosphate adenylyltransferase	glgC																												EG10379																												4*GLUC1PADENYLTRANS-MONOMER
+ACETYL-COA-CARBOXYLTRANSFER-CPLX	acetyl-CoA carboxyltransferase	accA	accD																											EG11647	EG10217																											2*CARBOXYL-TRANSFERASE-ALPHA-MONOMER,2*CARBOXYL-TRANSFERASE-BETA-MONOMER
+CPLX0-7646	ribose pyranase	rbsD																												EG10817																												10*EG10817-MONOMER
+FORMHYDROGI-CPLX	hydrogenase 1	hyaA	hyaB	hyaC																										EG10468	EG10469	EG10470																										2*HYAA-MONOMER,2*HYAB-MONOMER,1*HYAC-MONOMER
+ABC-59-CPLX	YddO/YddP/YddQ/YddR/YddS ABC transporter	ddpB	ddpC	ddpA	ddpD	ddpF																								G6780	G6779	G6781	G6778	G6777																								1*YDDR-MONOMER,1*YDDQ-MONOMER,1*YDDS-MONOMER,1*YDDP-MONOMER,1*YDDO-MONOMER
+CPLX0-7624	YhaV-PrlF toxin-antitoxin complex	prlF	yhaV																											EG10955	G7629																											2*EG10955-MONOMER,4*G7629-MONOMER
+F-O-CPLX	ATP synthase F<sub>0</sub> complex	atpE	atpF	atpB																										EG10102	EG10103	EG10099																										10*ATPE-MONOMER,2*ATPF-MONOMER,1*ATPB-MONOMER
+ABC-40-CPLX	glycine betaine ABC transporter, non-osmoregulatory	osmF	yehY	yehX	yehW																									EG12012	EG12011	EG12010	EG12009																									1*YEHZ-MONOMER,1*YEHY-MONOMER,1*YEHX-MONOMER,1*YEHW-MONOMER
+CPLX0-7536	FKBP-type peptidyl prolyl cis-trans isomerase	slyD																												EG11663																												2*EG11663-MONOMER
+DTDPRHAMSYNTHMULTI-CPLX	dTDP-L-rhamnose synthetase	rfbC	rfbD																											EG11979	EG12411																											1*DTDPDEHYDRHAMEPIM-MONOMER,1*DTDPDEHYRHAMREDUCT-MONOMER
+ABC-21-CPLX	putative transporter complex, ABC superfamily	yadG	yadH																											EG12320	EG12321																											1*YADG-MONOMER,1*YADH-MONOMER
+CPLX0-7450	Flagellar Motor Switch Complex	fliG	fliM	fliN																										EG11654	EG10323	EG10324																										26*FLIG-FLAGELLAR-SWITCH-PROTEIN,34*FLIM-FLAGELLAR-C-RING-SWITCH,1*FLIN-FLAGELLAR-C-RING-SWITCH
+DGTPTRIPHYDRO-CPLX	deoxyguanosine triphosphate triphosphohydrolase	dgt																												EG10225																												4*DGTPTRIPHYDRO-MONOMER
+6PFK-1-CPX	6-phosphofructokinase I	pfkA																												EG10699																												4*6PFK-1-MONOMER
+CPLX0-5	EntS-TolC Enterobactin Efflux Transport System	entS	tolC																											EG11104	EG11009																											1*YBDA-MONOMER,3*EG11009-MONOMER
+CREC-CPLX	CreC sensory histidine kinase	creC																												EG10730																												2*CREC-MONOMER
+CPLX0-3952	riboflavin synthase	ribC																												EG11406																												3*RIBOFLAVIN-SYN-MONOMER
+CPLX0-8207	periplasmic acid stress chaperone	hdeB																												EG11399																												2*EG11399-MONOMER
+CPLX0-3929	D-arabinose 5-phosphate isomerase	gutQ																												EG10973																												4*EG10973-MONOMER
+CPLX0-8186	L-galactitol-1-phosphate 5-dehydrogenase	gatD																												EG12417																												2*GALACTITOLPDEHYD-MONOMER
+CPLX0-3761	DNA polymerase III, &beta; subunit	dnaN																												EG10242																												2*EG10242-MONOMER
+CPLX0-8165	ssDNA-binding protein	ssb																												EG10976																												4*EG10976-MONOMER
+CPLX0-341	fused 4'-phosphopantothenoylcysteine decarboxylase and phosphopantothenoylcysteine synthetase	dfp																												EG10004																												12*EG10004-MONOMER
+CPLX0-8123	6-carboxy-5,6,7,8-tetrahydropterin synthase	queD																												G7431																												6*G7431-MONOMER
+CPLX0-3108	ClpAXP	clpP	clpA	clpX																										EG10158	EG10156	EG10159																										14*EG10158-MONOMER,6*EG10156-MONOMER,6*EG10159-MONOMER
+CPLX0-8104	methyl accepting chemotaxis protein - dipeptide sensing	tap																												EG10987																												2*TAP-MONOMER
+UPPSYN-CPLX	undecaprenyl diphosphate synthase	ispU																												G6092																												2*UPPSYN-MONOMER
+CPLX0-2901	aspartate 1-decarboxylase	panD																												EG11747																												4*MONOMER0-1842,4*MONOMER0-1843
+CPLX0-8033	acetyl esterase	aes																												EG11101																												2*EG11101-MONOMER
+CPLX0-8016	UDP-3-O-(R-3-hydroxymyristoyl)-glucosamine <i>N</i>-acyltransferase	lpxD																												EG10316																												3*UDPHYDROXYMYRGLUCOSAMNACETYLTRANS-MONO
+TORS-CPLX	TorS sensory histidine kinase	torS																												G6514																												2*TORS-MONOMER
+CPLX0-248	cysteine desulfurase	iscS																												G7325																												2*G7325-MONOMER
+CPLX0-7994	poly-&beta;-1,6-N-acetyl-D-glucosamine synthase	pgaD	pgaC																											G6528	G6529																											1*G6528-MONOMER,1*G6529-MONOMER
+SUCC-DEHASE	succinate:quinone oxidoreductase subcomplex	sdhA	sdhB	sdhC	sdhD																									EG10931	EG10932	EG10933	EG10934																									1*SDH-FLAVO,1*SDH-FE-S,1*SDH-MEMB1,1*SDH-MEMB2
+CPLX0-2361	DNA polymerase III, core enzyme	dnaE	dnaQ	holE																										EG10238	EG10243	EG11505																										1*EG10238-MONOMER,1*EG10243-MONOMER,1*EG11505-MONOMER
+CPLX0-7976	translocation and assembly module	tamB	tamA																											G7875	G7874																											1*G7875-MONOMER,1*G7874-MONOMER
+RIBONUCLEOSIDE-DIP-REDUCTI-CPLX	ribonucleoside diphosphate reductase 1	nrdA	nrdB																											EG10660	EG10661																											2*NRDA-MONOMER,2*NRDB-MONOMER
+CPLX0-2081	dihydroxyacetone kinase	dhaK	dhaL	dhaM																										G6627	G6626	EG12399																										2*G6627-MONOMER,2*MONOMER0-1261,2*EG12399-MONOMER
+CPLX0-7951	2-hydroxypentadienoate hydratase	mhpD																												M013																												5*MHPDHYDROL-MONOMER
+PRPPAMIDOTRANS-CPLX	amidophosphoribosyl transferase	purF																												EG10794																												4*PRPPAMIDOTRANS-MONOMER
+CPLX0-1683	cryptic adenine deaminase	adeD																												EG11692																												2*EG11692-MONOMER
+CPLX0-7928	RelB-antitoxin and DNA-binding transcriptional repressor	relB																												EG10836																												4*EG10836-MONOMER
+PHOR-CPLX	PhoR sensory histidine kinase	phoR																												EG10733																												2*PHOR-MONOMER
+CPLX0-1321	HflK-HflC complex; regulator of FtsH protease	hflK	hflC																											EG10436	EG10435																											1*EG10436-MONOMER,1*EG10435-MONOMER
+CPLX0-7888	glutamate-pyruvate aminotransferase	alaA																												G7184																												2*G7184-MONOMER
+PC00010	LexA DNA-binding transcriptional repressor	lexA																												EG10533																												2*PD00205
+CPLX-8401	5-dehydro-4-deoxy-<small>D</small>-glucuronate isomerase	kduI																												G7463																												6*G7463-MONOMER
+CPLX0-7841	sulfite reductase, flavoprotein subunit complex	cysJ																												EG10191																												8*ALPHACOMP-MONOMER
+O-SUCCHOMOSERLYASE-CPLX	<i>O</i>-succinylhomoserine(thiol)-lyase / <i>O</i>-succinylhomoserine lyase	metB																												EG10582																												4*O-SUCCHOMOSERLYASE-MONOMER
+CPLX-167	N-acetylglucosamine PTS permease	nagE																												EG10635																												2*NAGE-MONOMER
+CPLX0-7811	protoporphyrinogen oxidase	hemG																												EG11485																												4*PROTOPORGENOXI-MONOMER
+NADH-DHI-CPLX	NADH:quinone oxidoreductase I	nuoA	nuoH	nuoJ	nuoK	nuoL	nuoM	nuoN	nuoI	nuoG	nuoF	nuoE	nuoC	nuoB																EG12082	EG12088	EG12090	EG12091	EG12092	EG11773	EG12093	EG12089	EG12087	EG11774	EG12086	EG12084	EG12083																1*NUOA-MONOMER,1*NUOH-MONOMER,1*NUOJ-MONOMER,1*NUOK-MONOMER,1*NUOL-MONOMER,1*NUOM-MONOMER,1*NUON-MONOMER,1*NUOI-MONOMER,1*NUOG-MONOMER,1*NUOF-MONOMER,1*NUOE-MONOMER,1*NUOC-MONOMER,1*NUOB-MONOMER
+CHORISMUTPREPHENDEHYDROG-CPLX	chorismate mutase / prephenate dehydrogenase	tyrA																												EG11039																												2*CHORISMUTPREPHENDEHYDROG-MONOMER
+CPLX0-7776	fructose-1,6-bisphosphatase	yggF																												EG11245																												2*EG11245-MONOMER
+LYXK-CPLX	L-xylulose kinase	lyxK																												EG12284																												2*LYXK-MONOMER
+ATPF-CPLX	ATP synthase F<sub>0</sub> complex - b subunit	atpF																												EG10103																												2*ATPF-MONOMER
+CPLX0-7734	ArsR DNA-binding transcriptional repressor	arsR																												EG12235																												2*EG12235-MONOMER
+IMIDHISTID-CPLX	imidazoleglycerol-phosphate dehydratase / histidinol-phosphatase	hisB																												EG10445																												2*IMIDPHOSPHADEHYDHISTIDPHOSPHA-MONOMER
+ASP-SEMIALDEHYDE-DEHYDROGENASE-CPLX	aspartate semialdehyde dehydrogenase	asd																												EG10088																												2*ASP-SEMIALDEHYDE-DEHYDROGENASE-MONOMER
+CPLX0-7713	DsdC DNA-binding transcriptional dual regulator	dsdC																												EG13161																												2*PD00297
+GSP-CPLX	fused glutathionylspermidine amidase / glutathionylspermidine synthetase	gss																												EG12882																												2*GSP-MONOMER
+ANTHRANSYN-CPLX	anthranilate synthase	trpE	trpD																											EG11028	EG11027																											2*ANTHRANSYNCOMPI-MONOMER,2*ANTHRANSYNCOMPII-MONOMER
+CPLX0-7691	isovaleryl-CoA dehydrogenase and DNA-binding transcriptional repressor	aidB																												EG11811																												4*EG11811-MONOMER
+GLUTDECARBOXB-CPLX	glutamate decarboxylase B	gadB																												EG11490																												6*GLUTDECARBOXB-MONOMER
+ADHC-CPLX	formaldehyde dehydrogenase	frmA																												EG50010																												2*ADHC-MONOMER
+CPLX0-7666	CaiF transcriptional activator	caiF																												G6088																												2*G6088-MONOMER
+GCVP-CPLX	glycine decarboxylase	gcvP																												EG11810																												2*GCVP-MONOMER
+ACETOLACTSYNII-CPLX	acetohydroxybutanoate synthase / acetolactate synthase	ilvG_1	ilvG_2	ilvM																										G8221	EG10498	EG10501																										1*G8221-MONOMER,1*LARGEILVG-MONOMER,1*SMALLILVM-MONOMER
+CPLX0-7643	acetohydroxy acid isomeroreductase	ilvC																												EG10495																												4*KETOLREDUCTOISOM-MONOMER
+FORMATEDEHYDROGN-CPLX	formate dehydrogenase N	fdnG	fdnH	fdnI																										EG11227	EG11228	EG11229																										3*FDNG-MONOMER,3*FDNH-MONOMER,3*FDNI-MONOMER
+ABC-56-CPLX	aliphatic sulfonate ABC transporter	ssuA	ssuC	ssuB																										G6478	G6476	EG12358																										1*G6478-MONOMER,2*YCBM-MONOMER,2*YCBE-MONOMER
+CPLX0-7617	essential respiratory protein A	erpA																												EG12332																												2*EG12332-MONOMER
+ERYTH4PDEHYDROG-CPLX	erythrose 4-phosphate dehydrogenase	epd																												EG10368																												4*ERYTH4PDEHYDROG-MONOMER
+ABC-34-CPLX	glycerol-3-phosphate / glycerophosphodiester ABC transporter	ugpC	ugpA	ugpE	ugpB																									EG11048	EG11046	EG11049	EG11047																									2*UGPC-MONOMER,1*UGPA-MONOMER,1*UGPE-MONOMER,1*UGPB-MONOMER
+CPLX0-7533	outer membrane porin C	ompC																												EG10670																												3*EG10670-MONOMER
+DSBC-CPLX	protein disulfide isomerase/protein disulfide oxidoreductase - DsbC<sub>reduced</sub>	dsbC																												EG11070																												2*DSBC-MONOMER
+ABC-19-CPLX	molybdate ABC transporter	modC	modB	modA																										EG10152	EG10002	EG12427																										2*MODC-MONOMER,2*MODB-MONOMER,1*MODA-MONOMER
+CPLX0-7426	octaprenyl diphosphate synthase	ispB																												EG10017																												2*OPPSYN-MONOMER
+DEOA-CPLX	thymidine phosphorylase / uracil phosphorylase	deoA																												EG10219																												2*DEOA-MONOMER
+3-ISOPROPYLMALISOM-CPLX	isopropylmalate isomerase	leuC	leuD																											EG11576	EG11575																											1*LEUC-MONOMER,1*LEUD-MONOMER
+CPLX0-3971	GDP-mannose hydrolase	nudK																												EG12410																												2*EG12410-MONOMER
+CPLX0-961	PspC transcriptional regulator; toxin of a PspC-PspB toxin-antitoxin pair	pspC																												EG10778																												2*EG10778-MONOMER
+CPLX0-3949	thiazole synthase	thiG	thiH																											EG11589	EG11590																											6*THIG-MONOMER,6*THIH-MONOMER
+CPLX0-8204	zinc responsive, periplasmic protein with chaperone activity	zraP																												EG11918																												8*EG11918-MONOMER
+CPLX0-3924	FKBP-type peptidyl-prolyl <i>cis-trans</i> isomerase (rotamase)	fklB																												G7865																												2*G7865-MONOMER
+CPLX0-8183	serine endoprotease	degS																												EG11652																												3*EG11652-MONOMER
+CPLX0-3681	ADP-L-glycero-D-mannoheptose-6-epimerase	rfaD																												EG10838																												5*EG10838-MONOMER
+CPLX0-8160	succinate:quinone oxidoreductase	sdhD	sdhC	sdhB	sdhA																									EG10934	EG10933	EG10932	EG10931																									3*SDH-MEMB2,3*SDH-MEMB1,3*SDH-FE-S,3*SDH-FLAVO
+CPLX0-3361	NADH:quinone oxidoreductase I, peripheral arm	nuoB	nuoC	nuoE	nuoF	nuoG	nuoI																							EG12083	EG12084	EG12086	EG11774	EG12087	EG12089																							1*NUOB-MONOMER,1*NUOC-MONOMER,1*NUOE-MONOMER,1*NUOF-MONOMER,1*NUOG-MONOMER,1*NUOI-MONOMER
+CPLX0-8120	predicted ABC transporter ArtPQMI	artI	artM	artQ	artP																									EG11625	EG11627	EG11626	EG11624																									1*ARTI-MONOMER,1*ARTM-MONOMER,1*ARTQ-MONOMER,2*ARTP-MONOMER
+CPLX0-3102	ClpX ATP-dependent protease specificity component and chaperone	clpX																												EG10159																												6*EG10159-MONOMER
+CPLX0-8098	UDP-glucose 6-dehydrogenase	ugd																												G7091																												2*UGD-MONOMER
+UDPGLUCEPIM-CPLX	UDP-glucose 4-epimerase	galE																												EG10362																												2*UDPGLUCEPIM-MONOMER
+CPLX0-2802	chaperone with DnaK; curved DNA-binding protein	cbpA																												EG12193																												2*EG12193-MONOMER
+CPLX0-2641	molecular chaperone, HSP90 family	htpG																												EG10461																												2*EG10461-MONOMER
+CPLX0-8013	UDP-<i>N</i>-acetyl-D-mannosamine dehydrogenase	wecC																												EG11452																												2*UDPMANNACADEHYDROG-MONOMER
+THRS-CPLX	threonyl-tRNA synthetase	thrS																												EG11001																												2*THRS-MONOMER
+CPLX0-2441	transcription termination factor Rho	rho																												EG10845																												6*EG10845-MONOMER
+CPLX0-7990	dTDP-4-dehydro-6-deoxy-D-glucose transaminase	wecE																												EG11456																												4*RFFTRANS-MONOMER
+SORB6PDEHYDROG-CPLX	sorbitol-6-phosphate dehydrogenase	srlD																												EG10971																												4*SORB6PDEHYDROG-MONOMER
+CPLX0-234	4-diphosphocytidyl-2C-methyl-D-erythritol synthase	ispD																												G7423																												2*G7423-MONOMER
+CPLX0-7973	cell division factor ZapD	zapD																												EG12313																												2*EG12313-MONOMER
+RHAMNULPALDOL-CPLX	rhamnulose-1-phosphate aldolase	rhaD																												EG11866																												4*RHAMNULPALDOL-MONOMER
+CPLX0-201	fructose 6-phosphate aldolase 1	fsaA																												G6428																												10*G6428-MONOMER
+CPLX0-7946	ribosomal protein S6 modification protein	rimK																												EG10852																												4*EG10852-MONOMER
+PPPGPPHYDRO-CPLX	guanosine-5'-triphosphate, 3'-diphosphate pyrophosphatase	gpp																												EG10413																												2*PPPGPPHYDRO-MONOMER
+CPLX0-1666	FadJ component of anaerobic fatty acid oxidation complex	fadJ																												G7212																												2*G7212-MONOMER
+CPLX0-7922	cell division inhibitor, nucleoid occlusion	slmA																												EG11191																												2*EG11191-MONOMER
+PGLYCDEHYDROG-CPLX	2-oxoglutarate reductase ((S)-2-hydroxyglutarate-forming) [multifunctional]	serA																												EG10944																												4*PGLYCDEHYDROG-MONOMER
+CPLX0-1242	MazE-MazF antitoxin/toxin complex and DNA-binding transcriptional repressor	mazF	mazE																											EG11249	EG10571																											4*EG11249-MONOMER,2*EG10571-MONOMER
+CPLX0-7882	1,4-dihydroxy-2-naphthoyl-CoA synthase	menB																												EG11368																												6*NAPHTHOATE-SYN-MONOMER
+PC00004	CRP transcriptional dual regulator	crp																												EG10164																												2*PD00257
+CPLX-7524	allantoate amidohydrolase	allC																												G6285																												2*G6285-MONOMER
+CPLX0-7837	PEP synthetase regulatory protein	ppsR																												EG11132																												4*EG11132-MONOMER
+NRDF-CPLX	ribonucleoside-diphosphate reductase 2, &beta; subunit dimer	nrdF																												EG12381																												2*NRDF-MONOMER
+CPLX-160	predicted PTS permease FrwCBD	frwC	frwB	frwD	ptsA																									EG11908	EG11909	EG11912	EG11906																									1*FRWC-MONOMER,1*FRWB-MONOMER,1*EG11912-MONOMER,1*EG11906-MONOMER
+CPLX0-7807	SdsRQP multidrug efflux system	mdtP	mdtO	mdtN																										EG11952	EG11953	EG11954																										1*EG11952-MONOMER,1*YJCQ-MONOMER,1*EG11954-MONOMER
+MUTHLS-CPLX	MutHLS complex, methyl-directed mismatch repair	mutL	mutS	mutH																										EG11281	EG10625	EG10624																										1*EG11281-MONOMER,2*EG10625-MONOMER,1*EG10624-MONOMER
+CFA-CPLX	cyclopropane fatty acyl phospholipid synthase	cfa																												EG11531																												2*CFA-MONOMER
+CPLX0-7760	aconitate hydratase 1	acnA																												EG11325																												2*ACONITASE-MONOMER
+LYSDECARBOX-CPLX	lysine decarboxylase 1	cadA																												EG10131																												10*LYSDECARBOX-MONOMER
+ATPASE-1-CPLX	K<sup>+</sup> transporting ATPase	kdpF	kdpA	kdpB	kdpC																									G0-10439	EG10513	EG10514	EG10515																									1*MONOMER0-12,1*EG10513-MONOMER,1*KDPB-MONOMER,1*EG10515-MONOMER
+CPLX0-7731	PaaX DNA-binding transcriptional repressor	paaX																												G6720																												2*G6720-MONOMER
+HYDROG3-CPLX	hydrogenase 3	hycD	hycC	hycF	hycG	hycB	hycE																							EG10477	EG10476	EG10479	EG10480	EG10475	EG10478																							1*HYCD-MONOMER,1*HYCC-MONOMER,1*HYCF-MONOMER,1*HYCG-MONOMER,1*HYCBSMALL-MONOMER,1*HYCELARGE-MONOMER
+ASNS-CPLX	asparaginyl-tRNA synthetase	asnS																												EG10094																												2*ASNS-MONOMER
+CPLX0-7710	MarR DNA-binding transcriptional repressor	marR																												EG11435																												2*PD00364
+GMP-SYN-CPLX	GMP synthetase	guaA																												EG10420																												2*GMP-SYN-MONOMER
+ANGLYC3PDEHYDROG-CPLX	glycerol-3-phosphate dehydrogenase, anaerobic	glpA	glpB	glpC																										EG10391	EG10392	EG10393																										1*ANGLYC3PDEHYDROGSUBUNITA-MONOMER,1*ANGLYC3PDEHYDROGSUBUNITB-MONOMER,1*ANGLYC3PDEHYDROGSUBUNITC-MONOMER
+CPLX0-7686	cell division factor ZapB	zapB																												EG11878																												2*EG11878-MONOMER
+GLUTATHIONE-REDUCT-NADPH-CPLX	glutathione reductase	gor																												EG10412																												2*GLUTATHIONE-REDUCT-NADPH-MONOMER
+ADENPRIBOSYLTRAN-CPLX	adenine phosphoribosyltransferase	apt																												EG10051																												2*ADENPRIBOSYLTRAN-MONOMER
+CPLX0-7659	fused diaminohydroxyphosphoribosylaminopyrimidine deaminase / 5-amino-6-(5-phosphoribosylamino)uracil reductase	ribD																												EG11321																												2*RIBOFLAVINSYNDEAM-MONOMER
+GALACTURIDYLYLTRANS-CPLX	galactose-1-phosphate uridylyltransferase	galT																												EG10366																												2*GALACTURIDYLYLTRANS-MONOMER
+ABC-9-CPLX	ferric citrate ABC transporter	fecE	fecC	fecD	fecB																									EG10290	EG10288	EG10289	EG10287																									2*FECE-MONOMER,1*FECC-MONOMER,1*FECD-MONOMER,1*FECB-MONOMER
+CPLX0-7639	Fur-Fe<sup>2+</sup> DNA-binding transcriptional dual regulator	fur																												EG10359																												2*PD00260
+FOLD-CPLX	bifunctional 5,10-methylene-tetrahydrofolate dehydrogenase/ 5,10-methylene-tetrahydrofolate cyclohydrolase	folD																												EG10328																												2*FOLD-MONOMER
+ABC-53-CPLX	LptBFG ABC transporter	lptG	lptB	lptF																										G7889	EG11680	G7888																										1*G7889-MONOMER,2*YHBG-MONOMER,1*G7888-MONOMER
+CPLX0-7614	ATP phosphoribosyltransferase	hisG																												EG10449																												2*ATPPHOSRIBOSTRANS-MONOMER
+ENTA-CPLX	2,3-dihydro-2,3-dihydroxybenzoate dehydrogenase	entA																												EG10259																												8*ENTA-MONOMER
+ABC-304-CPLX	leucine ABC transporter	livK	livM	livH	livG	livF																								EG10540	EG10541	EG10538	EG10537	EG10536																								1*LIVK-MONOMER,1*LIVM-MONOMER,1*LIVH-MONOMER,1*LIVG-MONOMER,1*LIVF-MONOMER
+CPLX0-7529	capsular polysaccharide export apparatus	wza	wzc																											G7107	G7105																											8*G7107-MONOMER,4*G7105-MONOMER
+DIMESULFREDUCT-CPLX	dimethyl sulfoxide reductase	dmsA	dmsB	dmsC																										EG10232	EG10233	EG10234																										1*DMSA-MONOMER,1*DMSB-MONOMER,1*DMSC-MONOMER
+ABC-15-CPLX	branched chain amino acid ABC transporter	livF	livG	livH	livM	livJ																								EG10536	EG10537	EG10538	EG10541	EG10539																								1*LIVF-MONOMER,1*LIVG-MONOMER,1*LIVH-MONOMER,1*LIVM-MONOMER,1*LIVJ-MONOMER
+CPLX0-7422	predicted rRNA methyltransferase	yjtD																												EG12309																												2*EG12309-MONOMER
+DAPASYN-CPLX	7,8-diaminopelargonic acid synthase	bioA																												EG10117																												2*DAPASYN-MONOMER
+1-PFK	1-phosphofructokinase	fruK																												EG10337																												2*1-PFK-MONOMER
+CPLX0-3961	hydroxyisourate hydrolase / transthyretin-related protein	yedX																												G7058																												4*G7058-MONOMER
+CPLX0-901	tRNA-specific adenosine deaminase	tadA																												EG11372																												2*EG11372-MONOMER
+CPLX0-3941	phenylacetyl-CoA thioesterase	paaI																												G6717																												4*G6717-MONOMER
+CPLX0-8200	cyclic di-GMP phosphodiesterase	pdeF																												G7314																												2*G7314-MONOMER
+CPLX0-3921	heat shock protein, hemimethylated DNA-binding protein	hspQ																												G6500																												2*G6500-MONOMER
+CPLX0-8180	ClpB chaperone	clpB																												EG10157																												6*EG10157-MONOMER
+CPLX0-3621	replicative DNA helicase	dnaB																												EG10236																												6*EG10236-MONOMER
+CPLX0-8157	osmotically inducible peroxiredoxin	osmC																												EG10680																												2*EG10680-MONOMER
+CPLX0-3281	RNase III	rnc																												EG10857																												2*EG10857-MONOMER
+CPLX0-3061	aminopeptidase A/I and DNA-binding transcriptional repressor	pepA																												EG10694																												6*EG10694-MONOMER
+CPLX0-8095	CP4-57 prophage; RNase LS, toxin of the RnlAB toxin-antitoxin system	rnlA																												G7365																												2*G7365-MONOMER
+TYRB-DIMER	tyrosine aminotransferase	tyrB																												EG11040																												2*TYRB-MONOMER
+CPLX0-2561	bacterial condensin MukBEF	mukB	mukF	mukE																										EG10618	EG12165	EG11252																										2*EG10618-MONOMER,2*EG12165-MONOMER,4*EG11252-MONOMER
+CPLX0-8010	carboxy-<i>S</i>-adenosyl-L-methionine synthase	cmoA																												G7020																												2*G7020-MONOMER
+THREDEHYDCAT-CPLX	catabolic threonine dehydratase	tdcB																												EG10990																												4*THREDEHYDCAT-MONOMER
+CPLX0-2425	DNA gyrase	gyrA	gyrB																											EG10423	EG10424																											2*EG10423-MONOMER,2*EG10424-MONOMER
+CPLX0-7987	predicted enamine/imine deaminase	tdcF																												G7626																												3*G7626-MONOMER
+SECE-G-Y-CPLX	SecYEG translocase	secE	secG	secY																										EG10939	EG12095	EG10766																										1*SECE,1*SECG,1*SECY
+CPLX0-230	isocitrate dehydrogenase phosphatase / isocitrate dehydrogenase kinase	aceK																												EG10026																												2*ICITDEHASE-KIN-PHOSPHA
+CPLX0-7963	multidrug / betaine / choline efflux transporter EmrE	emrE																												EG10629																												2*EMRE-MONOMER
+QUINOPRIBOTRANS-CPLX	quinolinate phosphoribosyltransferase	nadC																												EG11546																												2*QUINOPRIBOTRANS-MONOMER
+CPLX0-1942	ferrichrome outer membrane transport complex	exbD	exbB	tonB	fhuA																									EG10272	EG10271	EG11012	EG10302																									1*EG10272-MONOMER,1*EG10271-MONOMER,1*EG11012-MONOMER,1*EG10302-MONOMER
+CPLX0-7942	Grx4-BolA complex	bolA	grxD																											EG10125	EG12181																											1*EG10125-MONOMER,1*EG12181-MONOMER
+PKII-CPLX	pyruvate kinase II	pykA																												EG10803																												4*PKII-MONOMER
+CPLX0-1601	putative selenate reductase	ynfE	ynfF	ynfG	ynfH																									G6845	G6846	G6847	G6848																									1*G6845-MONOMER,1*G6846-MONOMER,1*G6847-MONOMER,1*G6848-MONOMER
+CPLX0-7916	RcsB-BglJ DNA-binding transcriptional activator	bglJ	rcsB																											G7948	EG10821																											1*G7948-MONOMER,1*RCSB-MONOMER
+PDXK-CPLX	pyridoxal kinase I / hydroxymethylpyrimidine kinase	pdxK																												G7259																												2*PDXK-MONOMER
+CPLX0-1163	HslVU protease	hslU	hslV																											EG11881	EG11676																											12*EG11881-MONOMER,12*EG11676-MONOMER
+CPLX0-7877	phosphoglucose isomerase	pgi																												EG10702																												2*PGLUCISOM
+PANTOTHENATE-KIN-CPLX	pantothenate kinase	coaA																												EG10922																												2*PANTOTHENATE-KIN-MONOMER
+CPLX-64	allantoinase	allB																												G6281																												4*G6281-MONOMER
+CPLX0-7827	carboxylate-amine ligase	ybdK																												G6326																												2*G6326-MONOMER
+NQOR-CPLX	NADH dehydrogenase (quinone)																																																									2*NQOR-MONOMER
+CPLX-157	glucose PTS permease	ptsG	crr																											EG10787	EG10165																											2*PTSG-MONOMER,1*CRR-MONOMER
+CPLX0-7802	diguanylate cyclase	dgcZ																												EG11643																												2*EG11643-MONOMER
+METHYLENETHFREDUCT-CPLX	5,10-methylenetetrahydrofolate reductase	metF																												EG10585																												4*METHYLENETHFREDUCT-MONOMER
+CARBODEHYDRAT-CPLX	carbonic anhydrase 1	cynT																												EG10176																												2*CARBODEHYDRAT-MONOMER
+CPLX0-7757	HipB antitoxin and DNA-binding transcriptional repressor	hipB																												EG10442																												2*EG10442-MONOMER
+LTAA-CPLX	low-specificity L-threonine aldolase	ltaE																												G6455																												4*LTAA-MONOMER
+ATOA-CPLX	&beta; complex	atoA																												EG11670																												2*ATOA-MONOMER
+CPLX0-7726	23S rRNA m<sup>5</sup>C1962 methyltransferase	rlmI																												G6501																												2*G6501-MONOMER
+HOLO-ACP-SYNTH-CPLX	holo-[acyl-carrier-protein] synthase	acpS																												EG10247																												2*HOLO-ACP-SYNTH-MONOMER
+AROF-CPLX	2-dehydro-3-deoxyphosphoheptonate aldolase	aroF																												EG10078																												2*AROF-MONOMER
+CPLX0-7707	NikR-Ni DNA binding transcriptional repressor	nikR																												EG11519																												4*EG11519-MONOMER
+GLYOXI-CPLX	glyoxalase I	gloA																												G6891																												2*GLYOXI-MONOMER
+ALPHAGALACTOSID-CPLX	&alpha;-galactosidase	melA																												EG10577																												2*ALPHAGALACTOSID-MONOMER
+CPLX0-7683	sulfoquinovose isomerase	yihS																												EG11845																												6*EG11845-MONOMER
+GLUTAMINA-CPLX	glutaminase																																																									4*GLUTAMINA-MONOMER
+ACSERLYB-CPLX	cysteine synthase B	cysM																												EG10193																												2*ACSERLYB-MONOMER
+CPLX0-7655	maltose outer membrane porin / phage lambda receptor protein	lamB																												EG10528																												3*EG10528-MONOMER
+FUMARATE-REDUCTASE	fumarate reductase	frdA	frdB	frdC	frdD																									EG10330	EG10331	EG10332	EG10333																									1*FUM-FLAVO,1*FUM-FE-S,1*FUM-MEMB1,1*FUM-MEMB2
+ABC-7-CPLX	sulfate / thiosulfate / selenite / selenate  ABC transporter  CysAUWCysP	cysA	cysW	cysU	cysP																									EG10183	EG10198	EG10197	EG10195																									2*CYSA-MONOMER,1*CYSW-MONOMER,1*CYST-MONOMER,1*CYSP-MONOMER
+CPLX0-7631	L-fucose isomerase	fucI																												EG10349																												6*FUCISOM-MONOMER
+FAO-CPLX	aerobic fatty acid oxidation complex	fadB	fadA																											EG10279	EG10278																											2*FADB-MONOMER,2*FADA-MONOMER
+ABC-5-CPLX	vitamin B<sub>12</sub> ABC transporter	btuD	btuC	btuF																										EG10128	EG10127	EG12334																										2*BTUD-MONOMER,2*BTUC-MONOMER,1*EG12334-MONOMER
+CPLX0-761	xanthine dehydrogenase	xdhA	xdhB	xdhC																										G7485	G7486	G7487																										1*G7485-MONOMER,1*G7486-MONOMER,1*G7487-MONOMER
+EIISGA	L-ascorbate PTS permease	ulaC	ulaB	ulaA																										EG12495	EG12494	G7856																										1*YJFU-MONOMER,1*YJFT-MONOMER,2*SGAT-MONOMER
+ABC-28-CPLX	ribose ABC transporter	rbsA	rbsC	rbsB																										EG10814	EG10816	EG10815																										2*RBSA-MONOMER,2*RBSC-MONOMER,1*RBSB-MONOMER
+CPLX0-7520	cyanase	cynS																												EG10175																												10*CYANLY-MONOMER
+DIHYDROPICRED-CPLX	4-hydroxy-tetrahydrodipicolinate reductase	dapB																												EG10206																												4*DIHYDROPICRED-MONOMER
+ABC-12-CPLX	glutamine ABC transporter	glnQ	glnP	glnH																										EG10389	EG10388	EG10386																										2*GLNQ-MONOMER,2*GLNP-MONOMER,1*GLNH-MONOMER
+CPLX0-7418	MprA DNA-binding transcriptional repressor	mprA																												EG10603																												2*EG10603-MONOMER
+CYTIDEAM-CPLX	cytidine deaminase	cdd																												EG10137																												2*CYTIDEAM-MONOMER
+CPLX0-841	MazE antitoxin of the MazF-MazE toxin-antitoxin system and DNA-binding transcriptional repressor	mazE																												EG10571																												2*EG10571-MONOMER
+CPLX0-3937	evolved &beta;-D-galactosidase	ebgA	ebgC																											EG10252	EG10253																											4*EG10252-MONOMER,4*EG10253-MONOMER
+CPLX0-8196	effector protein of the MinC-MinD-MinE system that regulates septum placement	minC																												EG10596																												2*EG10596-MONOMER
+CPLX0-3861	fructoselysine 3-epimerase	frlC																												G7724																												8*G7724-MONOMER
+CPLX0-8177	predicted regulator of phosphatidylethanolamine synthesis	gnsA																												G0-9662																												2*MONOMER0-1701
+CPLX0-3581	D-Tyr-tRNA<sup>Tyr</sup> deacylase	dtd																												EG11852																												2*EG11852-MONOMER
+CPLX0-8154	c-di-GMP binding protein involved in biofilm dispersal	bdcA																												G7880																												2*G7880-MONOMER
+CPLX0-322	inosine-guanosine kinase	gsk																												EG11102																												2*GSK-MONOMER
+CPLX0-8111	ssDNA translocase and dsDNA helicase - DNA helicase II	uvrD																												EG11064																												2*EG11064-MONOMER
+CPLX0-3021	isoaspartyl dipeptidase	iadA																												G7925																												8*G7925-MONOMER
+CPLX0-8089	protein translocation ATPase	secA																												EG10936																												2*SECA
+TRPS-CPLX	tryptophanyl-tRNA synthetase	trpS																												EG11030																												2*TRPS-MONOMER
+CPLX0-254	methylmalonyl-CoA decarboxylase	scpB																												G7516																												6*G7516-MONOMER
+CPLX0-8008	UDP-<i>N</i>-acetylglucosamine 2-epimerase	wecB																												EG11451																												2*UDPGLCNACEPIM-MONOMER
+TATABCE-CPLX	twin arginine protein translocation system	tatB	tatC	tatE	tatA																									G7808	EG11479	EG11305	G7806																									1*G7808-MONOMER,1*EG11479-MONOMER,1*EG11305-MONOMER,1*TATA
+CPLX0-242	thiosulfate sulfurtransferase	glpE																												EG10395																												2*EG10395-MONOMER
+CPLX0-7984	S-glutathionyl-(chloro)hydroquinone reductase	yqjG																												G7616																												2*G7616-MONOMER
+SAMDECARB-CPLX	adenosylmethionine decarboxylase	speD																												EG10962																												4*SAMDC-ALPHA-MONOMER,4*SAMDC-BETA-MONOMER
+CPLX0-225	alkanesulfonate monooxygenase, FMNH<sub>2</sub>-dependent	ssuD																												G6477																												4*MONOMER-162
+CPLX0-7960	amino acid deglycase	yajL																												G198																												2*HMP-KIN-MONOMER
+PYRUVATEDEH-CPLX	pyruvate dehydrogenase	aceE	aceF	lpd																										EG10024	EG10025	EG10543																										24*E1P-MONOMER,24*E2P-MONOMER,12*E3-MONOMER
+CPLX0-1923	TonB energy transducing system	tonB	exbB	exbD																										EG11012	EG10271	EG10272																										1*EG11012-MONOMER,1*EG10271-MONOMER,1*EG10272-MONOMER
+CPLX0-7938	PTS enzyme I	ptsI																												EG10789																												2*PTSI-MONOMER
+PII2-CPLX	nitrogen regulatory protein GlnK	glnK																												EG12191																												3*PROTEIN-PII2
+CPLX0-1521	Dps complex; stationary phase nucleoid component that sequesters iron and protects DNA from damage	dps																												EG11415																												12*EG11415-MONOMER
+CPLX0-7912	phosphate acetyltransferase	eutD																												G7288																												2*G7288-MONOMER
+PC00086	RhaS transcriptional activator	rhaS																												EG10843																												2*PD00221
+CPLX0-1142	formyl-CoA transferase	frc																												G7237																												2*G7237-MONOMER
+CPLX0-7853	GAP-like protein that activates GTPase activity of Der	yihI																												EG11835																												2*EG11835-MONOMER
+PABASYN-CPLX	4-amino-4-deoxychorismate synthase	pabB	pabA																											EG10683	EG10682																											1*PABASYN-COMPI-MONOMER,1*PABASYN-COMPII-MONOMER
+CPLX-3945	curli secretion and assembly complex	csgE	csgG																											G6545	G6543																											9*G6545-MONOMER,9*G6543-MONOMER
+CPLX0-7823	DosC-DosP complex	dosP	dosC																											G6783	G6784																											1*G6783-MONOMER,1*G6784-MONOMER
+NITRATREDUCTA-CPLX	nitrate reductase A	narG	narH	narI																										EG10638	EG10639	EG10640																										2*NARG-MONOMER,2*NARH-MONOMER,2*NARI-MONOMER
+CPLX-154	&beta;-glucoside PTS permease BglF / BglG kinase / BglG phosphatase (cryptic)	bglF																												EG10115																												2*BGLF-MONOMER
+CPLX0-7796	MetJ-S-adenosylmethionine DNA-binding transcriptional repressor	metJ																												EG10588																												2*PD04032
+MENF-CPLX	isochorismate synthase 2	menF																												EG12362																												2*MENF-MONOMER
+BIOTIN-CARBOXYL-CPLX	biotin carboxylase	accC																												EG10276																												2*BIOTIN-CARBOXYL-MONOMER
+CPLX0-7754	UhpA-Phosphorylated DNA-binding transcriptional activator	uhpA																												EG11051																												2*PHOSPHO-UHPA
+L-GLN-FRUCT-6-P-AMINOTRANS-CPLX	L-glutamine:D-fructose-6-phosphate aminotransferase	glmS																												EG10382																												2*L-GLN-FRUCT-6-P-AMINOTRANS-MONOMER
+ASPKINIIHOMOSERDEHYDROGII-CPLX	aspartate kinase / homoserine dehydrogenase	metL																												EG10590																												2*ASPKINIIHOMOSERDEHYDROGII-MONOMER
+CPLX0-7723	2-keto-3-deoxy-L-rhamnonate aldolase	yfaU																												G7158																												6*G7158-MONOMER
+HISTDEHYD-CPLX	histidinal dehydrogenase / histidinol dehydrogenase	hisD																												EG10447																												2*HISTDEHYD-MONOMER
+ARGDECARBOXDEG-CPLX	arginine decarboxylase, degradative	adiA																												EG11501																												10*ARGDECARBOXDEG-MONOMER
+CPLX0-7698	MukF dimer	mukF																												EG12165																												2*EG12165-MONOMER
+GLYCPDIESTER-PERI-CPLX	glycerophosphoryl diester phosphodiesterase, periplasmic	glpQ																												EG10399																												2*GLYCPDIESTER-PERI-MONOMER
+ALD-CPLX	aldehyde dehydrogenase A, NAD-linked	aldA																												EG10035																												4*LACTALDDEHYDROG-MONOMER
+CPLX0-7678	ZntR-Zn<sup>2+</sup> DNA-binding transcriptional activator	zntR																												EG11969																												2*EG11969-MONOMER
+GLUTAMATESYN-CPLX	glutamate synthase	gltB	gltD																											EG10403	EG10404																											4*GLUSYNLARGE-MONOMER,4*GLUSYNSMALL-MONOMER
+ACNEULY-CPLX	<i>N</i>-acetyl-&beta;-neuraminate lyase / <i>N</i>-acetylneuraminate lyase	nanA																												EG10637																												4*ACNEULY-MONOMER
+CPLX0-7652	L-rhamnose isomerase	rhaA																												EG11867																												4*RHAMNISOM-MONOMER
+FUMARASE-A	fumarase A	fumA																												EG10356																												2*FUMA-MONOMER
+ABC-62-CPLX	LolCDE ABC lipoprotein transporter	lolE	lolD	lolC																										G6575	G6574	G6573																										1*YCFW-MONOMER,2*YCFV-MONOMER,1*YCFU-MONOMER
+CPLX0-7628	cplx0-7628	lptD	lptE																											EG11569	EG10855																											1*EG11569-MONOMER,1*EG10855-MONOMER
+FABZ-CPLX	3-hydroxy-acyl-[acyl-carrier-protein] dehydratase	fabZ																												EG11284																												6*FABZ-MONOMER
+ABC-46-CPLX	galactofuranose / galactopyranose ABC transporter	yjfF	ytfR	ytfT	ytfQ																									EG12439	EG12518	EG12520	EG12517																									1*YJFF-MONOMER,1*YTFR-MONOMER,2*YTFT-MONOMER,1*YTFQ-MONOMER
+CPLX0-7597	protein involved in modification of U34 in tRNA	mnmG																												EG10375																												2*EG10375-MONOMER
+E1P-CPLX	pyruvate dehydrogenase	aceE																												EG10024																												2*E1P-MONOMER
+ABC-25-CPLX	putrescine ABC transporter	potG	potH	potI	potF																									EG11630	EG11631	EG11632	EG11629																									2*POTG-MONOMER,1*POTH-MONOMER,1*POTI-MONOMER,1*POTF-MONOMER
+CPLX0-7462	shikimate dehydrogenase / quinate dehydrogenase	ydiB																												EG11234																												2*EG11234-MONOMER
+DIAMINOPIMDECARB-CPLX	diaminopimelate decarboxylase	lysA																												EG10549																												2*DIAMINOPIMDECARB-MONOMER
+7KAPSYN-CPLX	8-amino-7-oxononanoate synthase	bioF																												EG10121																												2*7KAPSYN-MONOMER
+CPLX0-721	2C-methyl-D-erythritol 2,4-cyclodiphosphate synthase	ispF																												EG11816																												3*EG11816-MONOMER
+CYSTATHIONINE-BETA-LYASE-CPLX	cystathionine-&beta;-lyase / L-cysteine desulfhydrase	metC																												EG10583																												4*CYSTATHIONINE-BETA-LYASE-MONOMER
+CPLX0-3957	ATP dependent structure specific DNA nuclease	sbcC	sbcD																											EG10927	EG11094																											1*EG10927-MONOMER,1*EG11094-MONOMER
+CPLX0-8212	erythronate-4-phosphate dehydrogenase	pdxB																												G0-9461																												2*ERYTHRON4PDEHYDROG-MONOMER
+CPLX0-3933	Outer Membrane Protein Assembly Complex	bamE	bamC	bamD	bamA	bamB																								EG10952	EG10658	G7352	G6093	G7320																								1*EG10952-MONOMER,1*EG10658-MONOMER,1*G7352-MONOMER,1*G6093-MONOMER,1*G7320-MONOMER
+CPLX0-8190	tRNA U34 carboxymethyltransferase	cmoB																												G7021																												4*G7021-MONOMER
+CPLX0-3803	DNA polymerase III, holoenzyme	holE	dnaQ	dnaE	holA	holB	dnaX	dnaN	holD	holC																				EG11505	EG10243	EG10238	EG11412	EG11500	EG10245	EG10242	EG11414	EG11413																				3*EG11505-MONOMER,3*EG10243-MONOMER,3*EG10238-MONOMER,1*EG11412-MONOMER,1*EG11500-MONOMER,5*EG10245-MONOMER,4*EG10242-MONOMER,4*EG11414-MONOMER,4*EG11413-MONOMER
+CPLX0-8174	Cas1-Cas2 complex	cas2	cas1																											EG12845	G7425																											2*EG12845-MONOMER,2*G7425-MONOMER
+CPLX0-3521	polynucleotide phosphorylase	pnp																												EG10743																												3*EG10743-MONOMER
+CPLX0-8128	1,4-dihydroxy-2-naphthoyl-CoA thioesterase	menI																												G6912																												4*G6912-MONOMER
+CPLX0-3181	tetrahydrodipicolinate succinylase	dapD																												EG10207																												2*MONOMER0-2001
+CPLX0-8108	small heat shock protein IbpA homodimer	ibpA																												EG11534																												2*EG11534-MONOMER
+XANTHOSINEPHOSPHORY-CPLX	xanthosine phosphorylase	xapA																												G85																												6*XANTHOSINEPHOSPHORY-MONOMER
+CPLX0-3	primosomal replication protein N	priB																												EG10764																												2*EG10764-MONOMER
+CPLX0-8045	molybdopterin molybdenumtransferase	moeA																												EG10153																												2*EG10153-MONOMER
+TRANSALDOLB-CPLX	transaldolase	talB																												EG11556																												2*TRANSALDOLB-MONOMER
+TRANS-CPLX-202	MdtABC-TolC multidrug efflux system	tolC	mdtC	mdtB	mdtA																									EG11009	G7115	G7114	G7113																									3*EG11009-MONOMER,1*B2076-MONOMER,2*B2075-MONOMER,1*MDTA
+CPLX0-252	KASIII	fabH																												EG10277																												2*FABH-MONOMER
+SULFITE-REDUCT-CPLX	assimilatory sulfite reductase (NADPH)	cysJ	cysI																											EG10191	EG10190																											8*ALPHACOMP-MONOMER,4*BETACOMP-MONOMER
+CPLX0-240	tagatose-1,6-bisphosphate aldolase 1	kbaY	kbaZ																											EG12768	G7631																											4*TAGAALDOL1-MONOMER,1*G7631-MONOMER
+CPLX0-7981	mechanosensitive channel of miniconductance YbdG	ybdG																												G6323																												7*G6323-MONOMER
+RUVABC-CPLX	resolvasome	ruvC	ruvB	ruvA																										EG10925	RUVB	RUVA																										2*EG10925-MONOMER,12*EG10924-MONOMER,4*EG10923-MONOMER
+CPLX0-2201	The Tol-Pal Cell Envelope Complex	pal	tolA	tolB	tolR	tolQ																								EG10684	EG11007	EG11008	EG11011	EG11010																								1*EG10684-MONOMER,1*EG11007-MONOMER,1*EG11008-MONOMER,1*EG11011-MONOMER,1*EG11010-MONOMER
+CPLX0-7957	selenide, water dikinase	selD																												EG10943																												2*EG10943-MONOMER
+PUTA-CPLX	fused PutA DNA-binding transcriptional repressor / proline dehydrogenase / 1-pyrroline-5-carboxylate dehydrogenase	putA																												EG10801																												2*PUTA-MONOMER
+CPLX0-1841	predicted xanthine dehydrogenase	xdhD	ygfM																											G7500	G7499																											1*G7500-MONOMER,1*G7499-MONOMER
+CPLX0-7934	FtsLBQ cell division complex	ftsQ	ftsB	ftsL																										EG10342	G7424	EG11086																										1*EG10342-MONOMER,1*G7424-MONOMER,1*EG11086-MONOMER
+PHOSPHASERDECARB-DIMER	phosphatidylserine decarboxylase, heterodimer	psd																												EG10775																												1*PHOSPHASERDECARB-BETA-MONOMER,1*PHOSPHASERDECARB-ALPHA-MONOMER
+CPLX0-1421	bacterioferritin	bfr																												EG10113																												24*EG10113-MONOMER
+CPLX0-7908	iron-sulfur cluster assembly protein	iscA																												EG12132																												4*EG12132-MONOMER
+PC00061	Cra DNA-binding transcriptional dual regulator	cra																												EG10338																												4*PD00521
+CPLX0-1101	tRNA-guanine transglycosylase	tgt																												EG10996																												3*EG10996-MONOMER
+CPLX0-7848	L-ascorbate 6-phosphate lactonase	ulaG																												G7855																												6*G7855-MONOMER
+ORNDECARBOXDEG-CPLX	ornithine decarboxylase, degradative	speF																												EG10964																												2*ORNDECARBOXDEG-MONOMER
+CPLX-171	hydroxypyruvate isomerase	hyi																												G6277																												2*G6277-MONOMER
+CPLX0-782	lipoyl synthase	lipA																												EG11306																												2*EG11306-MONOMER
+NARQ-CPLX	NarQ sensory histidine kinase	narQ																												EG11460																												2*NARQ-MONOMER
+COADTRI-CPLX	phosphopantetheine adenylyltransferase	coaD																												EG11190																												6*PANTEPADENYLYLTRAN-MONOMER
+CPLX0-7791	RelB-RelE antitoxin/toxin complex and DNA-binding transcriptional repressor	relB	relE																											EG10836	EG11131																											4*EG10836-MONOMER,4*EG11131-MONOMER
+MALIC-NADP-CPLX	malate dehydrogenase	maeB																												G7293																												6*MALIC-NADP-MONOMER
+BADH-CPLX	betaine aldehyde dehydrogenase	betB																												EG10110																												4*BADH-MONOMER
+CPLX0-7745	MurR DNA-binding transcriptional dual regulator	murR																												G7262																												4*G7262-MONOMER
+KDO-8PSYNTH-CPLX	3-deoxy-D-<i>manno</i>-octulosonate 8-phosphate synthase	kdsA																												EG10518																												4*KDO-8PSYNTH-MONOMER
+ASPCARBREG-DIMER	aspartate carbamoyltransferase, regulatory subunit	pyrI																												EG10811																												2*ASPCARBREG-MONOMER
+CPLX0-7720	undecaprenyl-phosphate-&alpha;-L-Ara4N flippase	arnE	arnF																											G0-10460	G7171																											1*MONOMER0-2682,1*G7171-MONOMER
+H2PTEROATESYNTH-CPLX	dihydropteroate synthase	folP																												EG50011																												2*H2PTEROATESYNTH-MONOMER
+ARABISOM-CPLX	L-arabinose isomerase	araA																												EG10052																												6*ARABISOM-MONOMER
+CPLX0-7695	glutaminase	yneH																												G6810																												2*G6810-MONOMER
+GLYCDEH-CPLX	L-1,2-propanediol dehydrogenase / glycerol dehydrogenase	gldA																												EG11904																												8*GLYCDEH-MONOMER
+AIRS-CPLX	phosphoribosylformylglycinamide cyclo-ligase	purM																												EG10798																												2*AIRS-MONOMER
+CPLX0-7672	MntR-Mn<sup>2+</sup> DNA-binding transcriptional dual regulator	mntR																												G6420																												2*G6420-MONOMER
+GLUCONOKINII-CPLX	D-gluconate kinase, thermostable	gntK																												EG12629																												2*GLUCONOKINII-MONOMER
+ACETYLGLUTKIN-CPLX	acetylglutamate kinase	argB																												EG10064																												2*ACETYLGLUTKIN-MONOMER
+CPLX0-7647	ribokinase	rbsK																												EG10818																												2*RIBOKIN-MONOMER
+FORMYLTHFDEFORMYL-CPLX	formyltetrahydrofolate deformylase	purU																												EG11819																												6*FORMYLTHFDEFORMYL-MONOMER
+ABC-6-CPLX	glutathione / L-cysteine  efflux transporter CydDC	cydD	cydC																											EG11405	EG10012																											1*CYDD-MONOMER,1*CYDC-MONOMER
+CPLX0-7625	dCMP phosphohydrolase	yfbR																												G7185																												2*G7185-MONOMER
+F16B-CPLX	fructose-1,6-bisphosphatase I	fbp																												EG10283																												4*F16B-MONOMER
+ABC-41-CPLX	peptide ABC transporter YejABEF	yejF	yejB	yejE	yejA																									EG12041	EG12038	EG12040	EG12037																									2*YEJF-MONOMER,1*YEJB-MONOMER,1*YEJE-MONOMER,1*YEJA-MONOMER
+CPLX0-7538	cell division factor ZapA, localizes to the cytokinetic ring	zapA																												EG12878																												4*EG12878-MONOMER
+DUTP-PYROP-CPLX	deoxyuridine triphosphatase	dut																												EG10251																												3*DUTP-PYROP-MONOMER
+ABC-22-CPLX	peptide ABC transporter OppABCDF	oppC	oppD	oppF	oppB	oppA																								EG10676	EG10677	EG10678	EG10675	EG10674																								1*OPPC-MONOMER,1*OPPD-MONOMER,1*OPPF-MONOMER,1*OPPB-MONOMER,1*OPPA-MONOMER
+CPLX0-7451	Flagellar Export Apparatus	flhA	flhB	fliO	fliP	fliQ	fliR	fliH	fliI	fliJ																				G370	G7028	EG11224	EG11975	EG11976	EG11977	EG11656	G377	G378																				1*G370-MONOMER,1*G7028-MONOMER,1*EG11224-MONOMER,1*EG11975-MONOMER,1*EG11976-MONOMER,1*EG11977-MONOMER,12*EG11656-MONOMER,6*G377-MONOMER,1*G378-MONOMER
+DHHB-METHYLTRANSFER-CPLX	bifunctional 3-demethylubiquinone-<i>8</i> 3-<i>O</i>-methyltransferase and 2-octaprenyl-6-hydroxyphenol methylase	ubiG																												EG11143																												2*DHHB-METHYLTRANSFER-MONOMER
+6PFK-2-CPX	6-phosphofructokinase II	pfkB																												EG10700																												2*6PFK-2-MONOMER
+CPLX0-661	predicted hydrolase	ycaC																												EG11241																												8*EG11241-MONOMER
+CTPSYN-CPLX	CTP synthase	pyrG																												EG10810																												4*CTPSYN-MONOMER
+CPLX0-3954	<i>S</i>-formylglutathione hydrolase / <i>S</i>-lactoylglutathione hydrolase	yeiG																												EG12026																												4*EG12026-MONOMER
+CPLX0-8208	S6:S18 ribosomal subunit complex	rpsR	rpsF																											EG10917	EG10905																											1*EG10917-MONOMER,1*EG10905-MONOMER
+CPLX0-3930	FlhDC DNA-binding transcriptional dual regulator	flhD	flhC																											EG10320	EG10319																											4*EG10320-MONOMER,2*MONOMER0-2488
+CPLX0-8187	serine endoprotease, periplasmic	degQ																												G7682																												12*G7682-MONOMER
+CPLX0-3781	YefM-YoeB antitoxin/toxin complex and DNA-binding transcriptional repressor	yoeB	yefM																											G0-9121	EG12844																											1*MONOMER0-1041,2*EG12844-MONOMER
+CPLX0-8167	hydrogenase 1, oxygen tolerant hydrogenase	hyaC	hyaB	hyaA																										EG10470	EG10469	EG10468																										2*HYAC-MONOMER,4*HYAB-MONOMER,4*HYAA-MONOMER
+CPLX0-3461	ribonuclease E	rne																												EG10859																												4*EG10859-MONOMER
+CPLX0-8124	tRNA C32 thiolase	ttcA																												G6675																												2*G6675-MONOMER
+CPLX0-3121	chromate reductase	yieF																												EG11723																												2*EG11723-MONOMER
+CPLX0-8105	methyl accepting chemotaxis protein - ribose/galactose/glucose sensing	trg																												EG11018																												2*TRG-MONOMER
+URACIL-PRIBOSYLTRANS-CPLX	uracil phosphoribosyltransferase	upp																												EG11332																												3*URACIL-PRIBOSYLTRANS-MONOMER
+CPLX0-2921	serine protease Do	degP																												EG10463																												12*EG10463-MONOMER
+CPLX0-8034	dTDP-glucose pyrophosphorylase	rfbA																												EG11978																												4*DTDPGLUCOSEPP-MONOMER
+TPI	triosephosphate isomerase	tpiA																												EG11015																												2*TPI-MONOMER
+CPLX0-250	hydrogenase 4	hyfG	hyfI	hyfA	hyfB	hyfC	hyfD	hyfE	hyfF	hyfH																				G7304	G7306	EG11150	EG11282	G7300	G7301	G7302	G7303	G7305																				1*MONOMER0-150,1*MONOMER0-151,1*MONOMER0-152,1*MONOMER0-153,1*MONOMER0-154,1*MONOMER0-141,1*MONOMER0-142,1*MONOMER0-143,1*MONOMER0-144
+CPLX0-7997	diaminopimelate epimerase	dapF																												EG10209																												2*DIAMINOPIMEPIM-MONOMER
+SUCCCOASYN	succinyl-CoA synthetase	sucD	sucC																											EG10982	EG10981																											2*SUCCCOASYN-ALPHA,2*SUCCCOASYN-BETA
+CPLX0-237	serine acetyltransferase	cysE																												EG10187																												6*SERINE-O-ACETTRAN-MONOMER
+CPLX0-7977	16S rRNA m<sup>4</sup>C1402 methyltransferase	rsmH																												EG11085																												2*EG11085-MONOMER
+RIBONUCLEOSIDE-DIP-REDUCTII-CPLX	ribonucleoside-diphosphate reductase 2	nrdE	nrdF																											EG20257	EG12381																											2*NRDE-MONOMER,2*NRDF-MONOMER
+CPLX0-2121	EmrAB-TolC multidrug efflux transport system	emrA	emrB	tolC																										EG11354	EG11439	EG11009																										1*EG11354-MONOMER,1*EMRB-MONOMER,3*EG11009-MONOMER
+CPLX0-7952	ferric coprogen outer membrane transport complex	fhuE	exbD	exbB	tonB																									EG10306	EG10272	EG10271	EG11012																									1*EG10306-MONOMER,1*EG10272-MONOMER,1*EG10271-MONOMER,1*EG11012-MONOMER
+PSERTRANSAM-CPLX	3-phosphoserine aminotransferase [multifunctional]	serC																												EG10946																												2*PSERTRANSAM-MONOMER
+CPLX0-1721	copper / silver efflux system	cusC	cusB	cusF	cusA																									G6320	G6322	G6321	EG12367																									3*G6320-MONOMER,6*G6322-MONOMER,1*G6321-MONOMER,3*YBDE-MONOMER
+CPLX0-7929	YefM-antitoxin DNA-binding transcriptional repressor	yefM																												EG12844																												2*EG12844-MONOMER
+PHOSACETYLTRANS-CPLX	phosphate acetyltransferase / phosphate propionyltransferase	pta																												EG20173																												6*PHOSACETYLTRANS-MONOMER
+CPLX0-1341	SufBC<sub>2</sub>D Fe-S cluster scaffold complex	sufB	sufC	sufD																										G6909	G6908	G6907																										1*G6909-MONOMER,2*G6908-MONOMER,1*G6907-MONOMER
+CPLX0-7889	EF-P-lysine lysyltransferase	epmA																												EG11211																												2*EG11211-MONOMER
+PC00027	IHF DNA-binding transcriptional dual regulator	ihfA	ihfB																											EG10440	EG10441																											1*PD00347,1*PD00348
+CPLX0-0	primosomal protein DnaT	dnaT																												EG10244																												3*EG10244-MONOMER
+CPLX0-7843	formate channel FocA	focA																												EG11258																												5*FOCA-MONOMER
+ORNCARBAMTRANSFERF-CPLX	ornithine carbamoyltransferase chain F	argF																												EG10067																												3*CHAINF-MONOMER
+CPLX-168	trehalose PTS permease	treB	crr																											EG12127	EG10165																											2*TREB-MONOMER,1*CRR-MONOMER
+CPLX0-7816	conserved DNA-binding protein	ybaB																												EG11100																												2*EG11100-MONOMER
+NAG1P-URIDYLTRANS-CPLX	fused N-acetylglucosamine-1-phosphate uridyltransferase and glucosamine-1-phosphate acetyltransferase	glmU																												EG11198																												3*NAG1P-URIDYLTRANS-MONOMER
+CITRATE-SI-SYNTHASE	citrate synthase	gltA																												EG10402																												6*CITSYN-MONOMER
+CPLX0-7787	DinJ-YafQ antitoxin/toxin complex and DNA-binding transcriptional repressor	yafQ	dinJ																											G6109	G6110																											2*G6109-MONOMER,2*G6110-MONOMER
+MALATE-DEHASE	malate dehydrogenase	mdh																												EG10576																												2*MALATE-DEHASE-MONOMER
+ATPSYN-CPLX	ATP synthase / thiamin triphosphate synthase	atpB	atpF	atpE	atpD	atpG	atpA	atpH	atpC																					EG10099	EG10103	EG10102	EG10101	EG10104	EG10098	EG10105	EG10100																					1*ATPB-MONOMER,2*ATPF-MONOMER,10*ATPE-MONOMER,3*ATPD-MONOMER,1*ATPG-MONOMER,3*ATPA-MONOMER,1*ATPH-MONOMER,1*ATPC-MONOMER
+CPLX0-7740	CytR DNA-binding transcriptional repressor	cytR																												EG10200																												2*PD04028
+IMP-DEHYDROG-CPLX	IMP dehydrogenase	guaB																												EG10421																												4*IMP-DEHYDROG-MONOMER
+ASPAMINOTRANS-DIMER	aspartate aminotransferase, PLP-dependent	aspC																												EG10096																												2*ASPAMINOTRANS-MONOMER
+CPLX0-7717	peptidoglycan glycosyltransferase / peptidoglycan D,D-transpeptidase - MrcA	mrcA																												EG10748																												2*EG10748-MONOMER
+GST-CPLX	glutathione S-transferase	gstA																												G6878																												2*GST-MONOMER
+APHA-CPLX	acid phosphatase / phosphotransferase	aphA																												EG11934																												4*APHA-MONOMER
+CPLX0-7692	nucleoside triphosphate pyrophosphohydrolase	mazG																												EG10572																												2*EG10572-MONOMER
+GLUTKIN-CPLX	glutamate 5-kinase	proB																												EG10768																												4*GLUTKIN-MONOMER
+ADHE-CPLX	aldehyde-alcohol dehydrogenase	adhE																												EG10031																												40*ADHE-MONOMER
+CPLX0-7667	NADPH-dependent aldehyde reductase	yqhD																												G7564																												2*G7564-MONOMER
+GDHA-CPLX	glutamate dehydrogenase	gdhA																												EG10372																												6*GDHA-MONOMER
+ACETOLACTSYNIII-CPLX	acetolactate synthase / acetohydroxybutanoate synthase	ilvI	ilvH																											EG10500	EG10499																											2*ACETOLACTSYNIII-ICHAIN-MONOMER,2*ACETOLACTSYNIII-HCHAIN-MONOMER
+CPLX0-7644	EfeU/EfeO/EfeB ferrous iron transporter; cryptic	efeU_1	efeO	efeB																										G6525	G6527	EG11735																										1*G6525-MONOMER,1*G6527-MONOMER,1*EG11735-MONOMER
+FORMATEDEHYDROGO-CPLX	formate dehydrogenase	fdoG	fdoH	fdoI																										EG11858	EG11857	EG11856																										1*FDOG-MONOMER,1*FDOH-MONOMER,1*FDOI-MONOMER
+ABC-57-CPLX	putative transport complex, ABC superfamily	ybhS	ybhR	ybhF																										G6410	G6409	G6411																										1*YBHS-MONOMER,1*YBHR-MONOMER,1*YBHF-MONOMER
+CPLX0-7622	L-serine deaminase III	tdcG																												G7624																												2*LSERINEDEAM3-MONOMER
+ETHAMLY-CPLX	ethanolamine ammonia-lyase	eutB	eutC																											EG50006	EG50007																											6*EUTB-MONOMER,6*EUTC-MONOMER
+ABC-35-CPLX	ABC complex for formation and release of holoCcmE	ccmD	ccmB	ccmA	ccmE	ccmC																								EG12169	EG12058	EG12059	EG12055	EG12057																								1*EG12169-MONOMER,1*CCMB-MONOMER,2*CCMA-MONOMER,1*CCME-MONOMER,1*CCMC-MONOMER
+CPLX0-7534	outer membrane porin F	ompF																												EG10671																												3*EG10671-MONOMER
+DSBG-CPLX	DsbG<sub>reduced</sub>	dsbG																												G6333																												2*DSBG-MONOMER
+ABC-2-CPLX	arabinose ABC transporter	araG	araH	araF																										EG10058	EG10059	EG10057																										2*ARAG-MONOMER,2*ARAH-MONOMER,1*ARAF-MONOMER
+CPLX0-743	1-deoxyxylulose-5-phosphate synthase	dxs																												G6237																												2*DXS-MONOMER
+DEOD-CPLX	purine nucleoside phosphorylase	deoD																												EG10222																												6*DEOD-MONOMER
+3-METHYL-2-OXOBUT-OHCH3XFER-CPLX	3-methyl-2-oxobutanoate hydroxymethyltransferase	panB																												EG11675																												10*3-CH3-2-OXOBUTANOATE-OH-CH3-XFER-MONOMER
+CPLX0-3976	Enterobacterial Common Antigen Biosynthesis Protein Complex	wzxE	wzyE	wzzE																										EG11486	EG11457	EG11295																										1*EG11486-MONOMER,1*FUC4NACTRANS-MONOMER,1*EG11295-MONOMER
+CPLX0-981	PspF DNA-binding transcriptional dual regulator	pspF																												EG12344																												6*EG12344-MONOMER
+CPLX0-3950	tRNA m<sup>1</sup>G37 methyltransferase	trmD																												EG11023																												2*EG11023-MONOMER
+CPLX0-8205	UTP:glucose-1-phosphate uridylyltransferase	galU																												EG11319																												4*GLUC1PURIDYLTRANS-MONOMER
+CPLX0-3925	DNA polymerase V	umuC	umuD																											EG11056	EG11057																											1*EG11056-MONOMER,2*EG11057-MONOMER
+CPLX0-8184	nonspecific DNA binding protein	ybiB																												EG11580																												2*EG11580-MONOMER
+CPLX0-3721	ADP-sugar pyrophosphatase	nudF																												EG12633																												2*EG12633-MONOMER
+CPLX0-8163	molybdopterin adenylyltransferase	mog																												EG11511																												3*EG11511-MONOMER
+CPLX0-3382	GspC-O secreton  complex	gspC	gspD	gspE	gspF	gspG	gspH	gspI	gspJ	gspK	gspL	gspM	gspO																	G7702	G7703	G7704	G7705	G7706	G7707	G7708	G7709	G7710	G7711	EG12173	EG11359																	1*G7702-MONOMER,1*G7703-MONOMER,1*G7704-MONOMER,1*G7705-MONOMER,1*G7706-MONOMER,1*G7707-MONOMER,1*G7708-MONOMER,1*G7709-MONOMER,1*G7710-MONOMER,1*G7711-MONOMER,1*EG12173-MONOMER,1*EG11359-MONOMER
+CPLX0-8121	acrylyl-CoA reductase	yhdH																												EG11315																												2*EG11315-MONOMER
+CPLX0-3104	ClpAP	clpP	clpA																											EG10158	EG10156																											14*EG10158-MONOMER,12*EG10156-MONOMER
+CPLX0-8102	methyl accepting chemotaxis protein Tar	tar																												EG10988																												2*TAR-MONOMER
+UDPNACETYLGLUCOSAMACYLTRANS-CPLX	UDP-N-acetylglucosamine acyltransferase	lpxA																												EG10545																												3*UDPNACETYLGLUCOSAMACYLTRANS-MONOMER
+CPLX0-2861	BglG transcriptional antiterminator	bglG																												EG10116																												2*EG10116-MONOMER
+CPLX0-8031	pyridoxal kinase 2	pdxY																												G6879																												2*PDXY-MONOMER
+CPLX0-2661	McrBC restriction endonuclease	mcrB	mcrC																											EG10574	EG10575																											1*EG10574-MONOMER,1*EG10575-MONOMER
+CPLX0-8014	UDP-<i>N</i>-acetylmuramate-alanine ligase	murC																												EG10619																												2*UDP-NACMUR-ALA-LIG-MONOMER
+THYMIDYLATESYN-CPLX	thymidylate synthase	thyA																												EG11002																												2*THYMIDYLATESYN-MONOMER
+CPLX0-245	alkyl hydroperoxide reductase	ahpC	ahpF																											EG11384	EG11385																											10*EG11384-MONOMER,2*EG11385-MONOMER
+CPLX0-7992	lipopolysaccharide transport system	lptE	lptD	lptF	lptB	lptG	lptC	lptA																						EG10855	EG11569	G7888	EG11680	G7889	G7664	G7665																						1*EG10855-MONOMER,1*EG11569-MONOMER,1*G7888-MONOMER,2*YHBG-MONOMER,1*G7889-MONOMER,1*G7664-MONOMER,1*YHBN-MONOMER
+SPERMACTRAN-CPLX	spermidine acetyltransferase	speG																												G6842																												4*SPERMACTRAN-MONOMER
+CPLX0-235	glyoxylate reductase [multifunctional]	ghrB																												EG12272																												2*MONOMER-43
+CPLX0-7974	NADH pyrophosphatase	nudC																												EG11702																												2*EG11702-MONOMER
+RIB5PISOMA-CPLX	ribose-5-phosphate isomerase A	rpiA																												EG11443																												2*RIB5PISOMA-MONOMER
+CPLX0-2021	HU DNA-binding transcriptional dual regulator	hupA	hupB																											EG10466	EG10467																											1*EG10466-MONOMER,1*EG10467-MONOMER
+CPLX0-7947	succinylarginine dihydrolase	astB																												G6941																												2*SUCCARGDIHYDRO-MONOMER
+PPX-CPLX	exopolyphosphatase	ppx																												EG11403																												2*PPX-MONOMER
+CPLX0-1667	Fad I component of anaerobic fatty acid oxidation complex	fadI																												G7213																												2*G7213-MONOMER
+CPLX0-7923	ATP independent periplasmic chaperone	spy																												G6939																												2*G6939-MONOMER
+PHENDEHYD-CPLX	phenylacetaldehyde dehydrogenase	feaB																												G7961																												2*PHENDEHYD-MONOMER
+CPLX0-1261	transketolase II	tktB																												EG12100																												1*TRANSKETOII-MONOMER
+CPLX0-7885	&gamma;-glutamyltranspeptidase	ggt																												EG10374																												1*MONOMER0-4196,1*MONOMER0-4195
+PC00005	ArgR transcriptional dual regulator	argR																												EG10070																												6*PD00194
+CPLX-8331	MoaC dimer	moaC																												EG11666																												2*EG11666-MONOMER
+CPLX0-7838	cysteine sulfinate desulfinase	csdA																												G7454																												2*G7454-MONOMER
+NRFMULTI-CPLX	formate dependent nitrite reductase	nrfD	nrfC	nrfB	nrfA																									EG11947	EG11946	EG11945	EG11781																									1*NRFD-MONOMER,1*NRFC-MONOMER,1*CYTOCHROMEC-MONOMER,1*CYTOCHROMEC552-MONOMER
+CPLX-165	mannose PTS permease	manZ	manY	manX																										EG10569	EG10568	EG10567																										2*MANZ-MONOMER,1*MANY-MONOMER,2*MANX-MONOMER
+CPLX0-7808	coproporphyrinogen III oxidase	hemF																												EG12189																												2*COPROGENOXI-MONOMER
+N-ACETYLTRANSFER-CPLX	N-acetylglutamate synthase	argA																												EG10063																												6*N-ACETYLTRANSFER-MONOMER
+CHEZ-CPLX	CheZ	cheZ																												EG10151																												2*CHEZ-MONOMER
+CPLX0-7761	bifunctional aconitate hydratase 2 and 2-methylisocitrate dehydratase	acnB																												EG12316																												2*ACONITATEDEHYDRB-MONOMER
+LYSS-CPLX	lysyl-tRNA synthetase, constitutive	lysS																												EG10552																												2*LYSS-MONOMER
+ATPD-CPLX	ATP synthase F<sub>1</sub> complex - beta subunit	atpD																												EG10101																												3*ATPD-MONOMER
+CPLX0-7732	<i>N</i>-acetylmuramic acid 6-phosphate etherase	murQ																												G7263																												2*G7263-MONOMER
+HYDROPEROXIDI-CPLX	hydroperoxidase I	katG																												EG10511																												4*HYDROPEROXIDI-MONOMER
+ASNSYNA-CPLX	asparagine synthetase A	asnA																												EG10091																												2*ASNSYNA-MONOMER
+CPLX0-7711	Skp periplasmic chaperone	skp																												EG10455																												3*EG10455-MONOMER
+GPT-CPLX	xanthine-guanine phosphoribosyltransferase	gpt																												EG10414																												4*GPT-MONOMER
+ANSA-CPLX	asparaginase I	ansA																												EG10045																												4*ANSA-MONOMER
+CPLX0-7687	NAD<sup>+</sup>-dependent succinate semialdehyde dehydrogenase	sad																												G6811																												2*G6811-MONOMER
+GLUTATHIONE-SYN-CPLX	glutathione synthetase	gshB																												EG10419																												4*GLUTATHIONE-SYN-MONOMER
+ADENYLOSUCCINATE-SYN-DIMER	adenylosuccinate synthetase	purA																												EG10790																												2*ADENYLOSUCCINATE-SYN-MONOMER
+CPLX0-7660	D-sedoheptulose 7-phosphate isomerase	lpcA																												G6106																												4*G6106-MONOMER
+GAPDH-A-CPLX	glyceraldehyde 3-phosphate dehydrogenase	gapA																												EG10367																												4*GAPDH-A-MONOMER
+ACETOACETYL-COA-TRANSFER-CPLX	acetoacetyl-CoA transferase	atoA	atoD																											EG11670	EG11669																											2*ATOA-MONOMER,2*ATOD-MONOMER
+CPLX0-7641	Zn<sup>2+</sup> / Fe<sup>2+</sup> / Cd<sup>2+</sup> efflux transporter FieF	fieF																												EG11873																												2*YIIP-MONOMER
+FOLE-CPLX	GTP cyclohydrolase I	folE																												EG11375																												10*GTP-CYCLOHYDRO-I-MONOMER
+ABC-54-CPLX	protein complex, putative transporter, ABC superfamily	ftsE	ftsX																											EG10340	EG10345																											2*FTSE-MONOMER,1*FTSX-MONOMER
+CPLX0-7615	&alpha;-dehydro-&beta;-deoxy-<i>D</i>-glucarate aldolase	garL																												EG10016																												6*KDGALDOL-MONOMER
+ENTE-CPLX	2,3-dihydroxybenzoate-AMP ligase	entE																												EG10263																												2*ENTE-MONOMER
+ABC-32-CPLX	thiamin ABC transporter	thiQ	thiP	tbpA																										EG11572	EG11573	EG11574																										2*SFUC-MONOMER,2*SFUB-MONOMER,1*SFUA-MONOMER
+CPLX0-7530	outer membrane porin E	phoE																												EG10729																												3*MONOMER0-282
+DIOHBUTANONEPSYN-CPLX	3,4-dihydroxy-2-butanone 4-phosphate synthase	ribB																												EG10465																												2*DIOHBUTANONEPSYN-MONOMER
+ABC-16-CPLX	maltose ABC transporter	malK	malF	malG	malE																									EG10558	EG10555	EG10556	EG10554																									2*MALK-MONOMER,1*MALF-MONOMER,1*MALG-MONOMER,1*MALE-MONOMER
+CPLX0-7423	23S rRNA m<sup>3</sup>&Psi;1915 methyltransferase	rlmH																												EG11254																												2*EG11254-MONOMER
+DCTP-DEAM-CPLX	dCTP deaminase	dcd																												EG11418																												3*DCTP-DEAM-MONOMER
+2OXOGLUTARATEDEH-CPLX	2-oxoglutarate dehydrogenase complex	sucA	sucB	lpd																										EG10979	EG10980	EG10543																										12*E1O-MONOMER,24*E2O-MONOMER,2*E3-MONOMER
+CPLX0-3969	ferritin iron-storage complex	ftnA																												EG10921																												24*EG10921-MONOMER
+CPLX0-902	probable 4-oxalocrotonate tautomerase (4-OT)	pptA																												EG11761																												2*EG11761-MONOMER
+CPLX0-3943	&gamma;-glutamyl-&gamma;-aminobutyrate hydrolase	puuD																												G6645																												2*G6645-MONOMER
+CPLX0-8201	predicted protein	csiD																												G7394																												4*G7394-MONOMER
+CPLX0-3922	primosome	dnaB	dnaT	priB	priA	priC	dnaG																							EG10236	EG10244	EG10764	EG10763	EG10765	EG10239																							6*EG10236-MONOMER,3*EG10244-MONOMER,2*EG10764-MONOMER,1*EG10763-MONOMER,1*EG10765-MONOMER,1*EG10239-MONOMER
+CPLX0-8181	N<sup>6</sup>-L-threonylcarbamoyladenine synthase, TsaB-TsaD dimer subunit	tsaB	tsaD																											G6991	EG11171																											1*G6991-MONOMER,1*EG11171-MONOMER
+CPLX0-3641	&gamma;-aminobutyraldehyde dehydrogenase	patD																												G6755																												4*G6755-MONOMER
+CPLX0-8158	D-lactate dehydrogenase - fermentative	ldhA																												G592																												4*DLACTDEHYDROGNAD-MONOMER
+CPLX0-3301	DNA replication inhibitor	cspD																												EG11111																												2*EG11111-MONOMER
+CPLX0-3081	proline aminopeptidase P II	pepP																												EG10697																												4*EG10697-MONOMER
+CPLX0-8096	ribonuclease E inhibitor protein B	rraB																												G7885																												2*G7885-MONOMER
+TYRS-CPLX	tyrosyl-tRNA synthetase	tyrS																												EG11043																												2*TYRS-MONOMER
+CPLX0-2621	Gef dimer	hokC																												G0-9563																												2*MONOMER0-1564
+CPLX0-8011	undecaprenyl-phosphate &alpha;-N-acetylglucosaminyl transferase	rfe																												EG10840																												2*GLCNACPTRANS-MONOMER
+THREDEHYDSYN-CPLX	threonine deaminase	ilvA																												EG10493																												4*THREDEHYDSYN-MONOMER
+CPLX0-243	inorganic pyrophosphatase	ppa																												EG10755																												6*INORGPYROPHOSPHAT-MONOMER
+CPLX0-7988	PaaF-PaaG hydratase-isomerase complex	paaG	paaF																											G6715	G6714																											6*G6715-MONOMER,6*G6714-MONOMER
+SERS-CPLX	seryl-tRNA synthetase	serS																												EG10947																												2*SERS-MONOMER
+CPLX0-231	galactitol / sorbitol PTS permease	gatC	gatB	gatA																										EG12416	EG12415	EG12414																										2*GATC-MONOMER,1*GATB-MONOMER,1*GATA-MONOMER
+CPLX0-7964	TolC outer membrane channel	tolC																												EG11009																												3*EG11009-MONOMER
+RECBCD	RecBCD	recD	recC	recB																										EG10826	EG10825	EG10824																										1*EG10826-MONOMER,1*EG10825-MONOMER,1*EG10824-MONOMER
+CPLX0-1943	ferric citrate outer membrane transport complex	fecA	exbD	exbB	tonB																									EG10286	EG10272	EG10271	EG11012																									1*EG10286-MONOMER,1*EG10272-MONOMER,1*EG10271-MONOMER,1*EG11012-MONOMER
+CPLX0-7944	outer membrane phospholipase	pldA																												EG10738																												2*MONOMER0-341
+PORPHOBILSYNTH-CPLX	porphobilinogen synthase	hemB																												EG10428																												8*PORPHOBILSYNTH-MONOMER
+CPLX0-1621	ribonuclease G	rng																												EG11299																												2*EG11299-MONOMER
+CPLX0-7917	disulfide reductase / organic hydroperoxide reductase	yghU																												G7553																												2*G7553-MONOMER
+PEPCARBOX-CPLX	phosphoenolpyruvate carboxylase	ppc																												EG10756																												4*PEPCARBOX-MONOMER
+CPLX0-1221	ADP-sugar pyrophosphorylase	nudE																												G7740																												2*G7740-MONOMER
+CPLX0-7878	oxalyl-CoA decarboxylase	oxc																												G7236																												4*G7236-MONOMER
+PAPSSULFOTRANS-CPLX	3'-phospho-adenylylsulfate reductase	cysH																												EG10189																												2*PAPSSULFOTRANS-MONOMER
+CPLX-7	arsenite/antimonite:H<sup>+</sup> antiporter	arsB																												EG12236																												2*ARSF-MONOMER
+CPLX0-7835	predicted structural protein, ethanolamine utilization microcompartment	eutM																												G7287																												6*G7287-MONOMER
+NRDACTMULTI-CPLX	anaerobic nucleoside-triphosphate reductase activating system	nrdD	nrdG	fpr																										EG11417	G812	EG10628																										2*RIBONUCLEOSIDE-TRIP-REDUCT-MONOMER,2*RNTRACTIV-MONOMER,1*FLAVONADPREDUCT-MONOMER
+CPLX-158	fructose PTS permease	fruB	fruA																											G7990	EG10336																											1*FRUB-MONOMER,2*FRUA-MONOMER
+CPLX0-7805	aldehyde dehydrogenase	paoA	paoB	paoC																										G6157	G6156	G6155																										1*G6157-MONOMER,1*G6156-MONOMER,1*G6155-MONOMER
+METNIQ-METHIONINE-ABC-CPLX	L-methionine / D-methionine ABC transporter	metN	metI	metQ																										EG11621	EG11737	EG11504																										2*ABC-MONOMER,1*METI-MONOMER,1*METQ-MONOMER
+CARBPSYN-CPLX	carbamoyl phosphate synthetase	carB	carA																											EG10135	EG10134																											2*CARBPSYN-LARGE,2*CARBPSYN-SMALL
+CPLX0-7758	<i>O</i>-acetyl-ADP-ribose deacetylase, regulator of RNase III activity	ymdB																												G6550																												2*G6550-MONOMER
+LTARTDEHYDRA-CPLX	L-tartrate dehydratase	ttdA	ttdB																											EG11168	EG11169																											2*TTDA-MONOMER,2*TTDB-MONOMER
+ATOD-CPLX	&alpha; complex	atoD																												EG11669																												2*ATOD-MONOMER
+CPLX0-7727	16S rRNA m<sup>3</sup>U1498 methyltransferase	rsmE																												EG12366																												2*EG12366-MONOMER
+HOMOSERKIN-CPLX	homoserine kinase	thrB																												EG10999																												2*HOMOSERKIN-MONOMER
+AROG-CPLX	2-dehydro-3-deoxyphosphoheptonate aldolase	aroG																												EG10079																												4*AROG-MONOMER
+CPLX0-7708	CueR-Cu<sup>+</sup> DNA-binding transcriptional dual regulator	cueR																												G6263																												2*G6263-MONOMER
+GLYS-CPLX	glycyl-tRNA synthetase	glyS	glyQ																											EG10410	EG10409																											2*GLYS-MONOMER,2*GLYQ-MONOMER
+AMINEOXID-CPLX	copper-containing amine oxidase	tynA																												EG13139																												2*AMINEOXID-MONOMER
+CPLX0-7684	L-valine efflux transporter	ygaZ	ygaH																											G7405	G7406																											1*G7405-MONOMER,1*G7406-MONOMER
+GLUTAMINB-CPLX	glutaminase B																																																									4*GLUTAMINB-MONOMER
+ACYLCOASYN-CPLX	fatty acyl-CoA synthetase	fadD																												EG11530																												2*ACYLCOASYN-MONOMER
+GABATRANSAM-CPLX	4-aminobutyrate aminotransferase	gabT																												EG10361																												2*GABATRANSAM-MONOMER
+ABC-70-CPLX	sulfate / thiosulfate / selenate / selenite ABC transporter CysAUWSbp	sbp	cysW	cysU	cysA																									EG10929	EG10198	EG10197	EG10183																									1*SBP-MONOMER,1*CYSW-MONOMER,1*CYST-MONOMER,2*CYSA-MONOMER
+CPLX0-7632	NAD(P)H:quinone oxidoreductase	wrbA																												EG11540																												4*PD01343
+FHLMULTI-CPLX	formate hydrogenlyase complex	fdhF	hycE	hycB	hycG	hycF	hycC	hycD																						EG10285	EG10478	EG10475	EG10480	EG10479	EG10476	EG10477																						1*FORMATEDEHYDROGH-MONOMER,1*HYCELARGE-MONOMER,1*HYCBSMALL-MONOMER,1*HYCG-MONOMER,1*HYCF-MONOMER,1*HYCC-MONOMER,1*HYCD-MONOMER
+ABC-51-CPLX	putative transport complex, ABC superfamily	ydcS	ydcT	ydcV	ydcU																									G6751	G6752	G6754	G6753																									1*YDCS-MONOMER,1*YDCT-MONOMER,1*YDCV-MONOMER,1*YDCU-MONOMER
+CPLX0-7610	<I>N</I>-acetyl-D-galactosamine PTS permease (cryptic)	agaV	agaW																											G7632	G7633																											1*G7632-MONOMER,1*G7633-MONOMER
+EIISGC	predicted PTS permease SgcBCA	sgcB	sgcC	sgcA																										G0-10241	EG12556	EG12554																										1*MONOMER0-2121,1*SGCC-MONOMER,1*SGCA-MONOMER
+ABC-29-CPLX	putative ABC transporter SapABCDF	sapF	sapD	sapB	sapC	sapA																								EG12305	EG12304	G2001	G2000	G2002																								1*SAPF-MONOMER,1*SAPD-MONOMER,1*SAPB-MONOMER,1*SAPC-MONOMER,1*SAPA-MONOMER
+CPLX0-7521	carbonic anhydrase 2	can																												EG12319																												4*EG12319-MONOMER
+DIHYDROPTERIREDUCT-CPLX	NAD(P)H nitroreductase NfsB	nfsB																												EG50005																												2*DIHYDROPTERIREDUCT-MONOMER
+ABC-13-CPLX	glutamate / aspartate ABC transporter	gltI	gltK	gltJ	gltL																									G6359	EG12662	EG12661	EG12663																									1*G6359-MONOMER,1*GLTK-MONOMER,1*GLTJ-MONOMER,1*GLTL-MONOMER
+CPLX0-7420	tRNA Um32 methyltransferase / tRNA Cm32 methyltransferase	trmJ																												G7327																												2*G7327-MONOMER
+DALADALALIGB-CPLX	D-alanine-D-alanine ligase B	ddlB																												EG10214																												2*DALADALALIGB-MONOMER
+CPLX0-861	amino acid deglycase Hsp31	hchA																												G7055																												2*G7055-MONOMER
+CPLX0-3938	copper binding protein CutA	cutA																												EG12177																												3*EG12177-MONOMER
+CPLX0-8198	lipoprotein adaptor	nlpI																												EG12371																												2*EG12371-MONOMER
+CPLX0-3881	GDP-fucose synthase	fcl																												EG11788																												2*FCL-MONOMER
+CPLX0-8178	peptidoglycan glycosyltransferase / peptidoglycan D,D-transpeptidase	mrcB	lpoB																											EG10605	G6565																											1*EG10605-MONOMER,1*G6565-MONOMER
+CPLX0-3601	RNase BN	rbn																												G7175																												2*G7175-MONOMER
+CPLX0-8155	periplasmic adaptor protein for DegP mediated proteolysis / negative regulator of the Cpx stress reponse	cpxP																												G7816																												2*G7816-MONOMER
+CPLX0-3221	DnaA initiator-associating factor for replication initiation	diaA																												EG12780																												4*YRAO-MONOMER
+CPLX0-8112	ribosomal protein-arginine oxygenase	roxA																												EG11430																												2*EG11430-MONOMER
+CPLX0-303	fructose 1,6-bisphosphatase II	glpX																												EG11517																												2*EG11517-MONOMER
+CPLX0-8090	diguanylate cyclase	dgcM																												G6673																												4*G6673-MONOMER
+TRYPSYN	tryptophan synthase	trpA	trpB																											EG11024	EG11025																											2*TRYPSYN-APROTEIN,2*TRYPSYN-BPROTEIN
+CPLX0-2541	ModE transcriptional dual regulator	modE																												G6395																												2*MONOMER0-185
+CPLX0-8009	outer membrane protein; export and assembly of type 1 fimbriae	fimD																												EG10311																												2*EG10311-MONOMER
+THIOESTERII-CPLX	thioesterase II	tesB																												EG10995																												4*THIOESTERII-MONOMER
+CPLX0-2423	dimer of topoisomerase IV subunit A	parC																												EG10686																												2*EG10686-MONOMER
+CPLX0-7985	mechanosensitive channel of miniconductance	mscM																												G7840																												7*G7840-MONOMER
+SEC-SECRETION-CPLX	Sec Holo-Translocon	secD	secF	yajC	yidC	secY	secG	secE																						EG10938	EG10940	EG11096	EG11197	EG10766	EG12095	EG10939																						1*SECD,1*SECF,1*EG11096-MONOMER,1*YIDC,1*SECY,1*SECG,1*SECE
+CPLX0-227	taurine dioxygenase	tauD																												EG12423																												2*MONOMER0-147
+CPLX0-7961	chloride:H<sup>+</sup> antiporter ClcA	clcA																												EG12331																												2*YADQ-MONOMER
+PYRUVOXID-CPLX	pyruvate oxidase	poxB																												EG10754																												4*PYRUVOXID-MONOMER
+CPLX0-1924	vitamin B12 outer membrane transport complex	btuB	exbD	exbB	tonB																									EG10126	EG10272	EG10271	EG11012																									1*EG10126-MONOMER,1*EG10272-MONOMER,1*EG10271-MONOMER,1*EG11012-MONOMER
+CPLX0-7939	regulator of KefC-mediated potassium transport and quinone oxidoreductase	kefF																												EG11568																												2*EG11568-MONOMER
+PIIPROTEIN-CPLX	regulatory protein P-II; regulation of nitrogen metabolism and fatty acid biosynthesis	glnB																												EG10384																												3*PROTEIN-PII
+CPLX0-1541	5'-methylthioadenosine/<i>S</i>-adenosylhomocysteine nucleosidase	mtn																												EG11090																												2*EG11090-MONOMER
+CPLX0-7913	tellurite methyltransferase	tehB																												EG11884																												2*EG11884-MONOMER
+PC00103	MngR DNA-binding transcriptional repressor	mngR																												EG11109																												2*PD01103
+CPLX0-1161	HslU hexamer	hslU																												EG11881																												6*EG11881-MONOMER
+CPLX0-7854	TreR DNA-binding transcriptional repressor	treR																												EG12202																												2*EG12202-MONOMER
+PABSYNMULTI-CPLX	<i>para</i>-aminobenzoate synthase multi-enzyme complex	pabA	pabB	pabC																										EG10682	EG10683	EG11493																										1*PABASYN-COMPII-MONOMER,1*PABASYN-COMPI-MONOMER,2*ADCLY-MONOMER
+CPLX-3946	exonuclease VII	xseA	xseB																											EG11072	EG11098																											1*EG11072-MONOMER,4*EG11098-MONOMER
+CPLX0-7824	Fe-S transport protein in Fe-S cluster assembly	sufA																												EG11378																												2*EG11378-MONOMER
+NITRATREDUCTZ-CPLX	nitrate reductase Z	narY	narZ	narV																										EG10647	EG10648	EG10644																										1*NARY-MONOMER,1*NARZ-MONOMER,1*NARV-MONOMER
+CPLX-155	chitobiose PTS permease	chbA	chbC	chbB																										EG10142	EG10141	EG10140																										1*CELC-MONOMER,1*CELB-MONOMER,1*CELA-MONOMER
+CPLX0-7797	FNR DNA-binding transcriptional dual regulator	fnr																												EG10325																												2*PD00197
+METG-CPLX	methionyl-tRNA synthetase	metG																												EG10586																												2*METG-MONOMER
+BIOTIN-SYN-CPLX	biotin synthase	bioB																												EG10118																												2*BIOTIN-SYN-MONOMER
+CPLX0-7755	purine nucleoside phosphoramidase	hinT																												EG12172																												2*EG12172-MONOMER
+LACTALDREDUCT-CPLX	L-1,2-propanediol oxidoreductase	fucO																												EG10351																												2*LACTALDREDUCT-MONOMER
+ASPKINIII-CPLX	aspartate kinase III	lysC																												EG10550																												2*ASPKINIII-MONOMER
+CPLX0-7724	formate dehydrogenase formation protein	fdhE																												EG10284																												2*EG10284-MONOMER
+HISTPHOSTRANS-CPLX	histidinol-phosphate aminotransferase	hisC																												EG10446																												2*HISTPHOSTRANS-MONOMER
+AROC-CPLX	chorismate synthase	aroC																												EG10075																												4*AROC-MONOMER
+CPLX0-7704	lipopolysaccharide ABC transporter	msbA																												EG10613																												2*EG10613-MONOMER
+GLYOCARBOLIG-CPLX	glyoxylate carboligase	gcl																												EG11583																												2*GLYOCARBOLIG-MONOMER
+ALKAPHOSPHA-CPLX	alkaline phosphatase	phoA																												EG10727																												2*ALKAPHOSPHA-MONOMER
+CPLX0-7679	Zur transcriptional repressor	zur																												EG11929																												2*EG11929-MONOMER
+GLUTAMATESYN-DIMER	glutamate synthase	gltD	gltB																											EG10404	EG10403																											1*GLUSYNSMALL-MONOMER,1*GLUSYNLARGE-MONOMER
+ACPSUB-CPLX	citrate lyase [acyl carrier protein] component	citD																												G6343																												6*ACPSUB-MONOMER
+CPLX0-7653	water channel AqpZ	aqpZ																												EG13270																												4*AQPZ-MONOMER
+FUMARASE-B	fumarase B	fumB																												EG10357																												2*FUMB-MONOMER
+ABC-63-CPLX	Zn<sup>2+</sup> ABC transporter	znuC	znuB	znuA																										G7018	EG12368	G7017																										2*ZNUC-MONOMER,2*ZNUB-MONOMER,1*ZNUA-MONOMER
+CPLX0-7629	Na<sup>+</sup>:H<sup>+</sup> antiporter NhaA	nhaA																												EG10652																												2*NHAA-MONOMER
+FADA-CPLX	fatty acid oxidation complex, &beta; component	fadA																												EG10278																												2*FADA-MONOMER
+ABC-48-CPLX	putative transport complex, ABC superfamily	ynjC	ynjD																											G6950	G6951																											1*YNJC-MONOMER,1*YNJD-MONOMER
+CPLX0-7608	GTPase, involved in modification of U34 in tRNA	mnmE																												EG10997																												2*EG10997-MONOMER
+E2O	dihydrolipoyltranssuccinylase	sucB																												EG10980																												24*E2O-MONOMER
+ABC-26-CPLX	glycine betaine / proline ABC transporter	proV	proW	proX																										EG10771	EG10772	EG10773																										2*PROV-MONOMER,2*PROW-MONOMER,1*PROX-MONOMER
+CPLX0-7465	alanine racemase 2, PLP-binding	dadX																												EG11408																												2*ALARACECAT-MONOMER
+DIHYDRODIPICSYN-CPLX	4-hydroxy-tetrahydrodipicolinate synthase	dapA																												EG10205																												4*DIHYDRODIPICSYN-MONOMER
+ABC-10-CPLX	ferric enterobactin ABC transporter	fepC	fepD	fepG	fepB																									EG10295	EG10296	EG10298	EG10294																									2*FEPC-MONOMER,1*FEPD-MONOMER,1*FEPG-MONOMER,1*FEPB-MONOMER
+CPLX0-7415	lipid A disaccharide synthase	lpxB																												EG10546																												8*LIPIDADISACCHARIDESYNTH-MONOMER
+CYT-D-UBIOX-CPLX	cytochrome <i>bd</i>-I terminal oxidase	cydA	cydB	cydX																										EG10173	EG10174	G0-10441																										1*CYDA-MONOMER,1*CYDB-MONOMER,1*MONOMER0-2663
+CPLX0-3958	<I>Eco</I>KI restriction-modification system	hsdM	hsdR	hsdS																										EG10458	EG10459	EG10460																										2*EG10458-MONOMER,2*EG10459-MONOMER,1*EG10460-MONOMER
+CPLX0-8213	periplasmic protein-L-methionine sulfoxide reducing system	msrQ	msrP																											G7060	G7059																											1*G7060-MONOMER,1*G7059-MONOMER
+CPLX0-3934	GroEL-GroES chaperonin complex	groL	groS																											EG10599	EG10600																											14*EG10599-MONOMER,14*EG10600-MONOMER
+CPLX0-8191	chaperone protein DnaJ	dnaJ																												EG10240																												2*EG10240-MONOMER
+CPLX0-3821	HypA-HypB heterodimer	hypA	hypB																											EG10483	EG10484																											1*EG10483-MONOMER,1*EG10484-MONOMER
+CPLX0-8175	sulfurtransferase for molybdenum cofactor sulfuration	fdhD																												EG11859																												2*EG11859-MONOMER
+CPLX0-3541	RhlB, ATP-dependent RNA helicase of the RNA degradosome	rhlB																												EG10844																												2*EG10844-MONOMER
+CPLX0-8129	DLP12 prophage; DNA base-flipping protein	ybcN																												G6303																												2*G6303-MONOMER
+CPLX0-3201	murein DD-endopeptidase, penicillin-insensitive	mepA																												EG10580																												2*EG10580-MONOMER
+CPLX0-8109	phosphodiesterase, c-di-GMP-specific	pdeL																												EG11236																												2*EG11236-MONOMER
+XYLISOM-CPLX	xylose isomerase	xylA																												EG11074																												4*XYLISOM-MONOMER
+CPLX0-3001	peptidase D	pepD																												EG10695																												2*EG10695-MONOMER
+CPLX0-8046	SecB chaperone	secB																												EG10937																												4*SECB
+TRANSENOYLCOARED-CPLX	trans-2-enoyl-CoA reductase																																																									2*TRANSENOYLCOARED-MONOMER
+CPLX0-2521	MoaB protein	moaB																												EG11596																												6*MONOMER0-1501
+CPLX0-8005	3-oxoacyl-[acyl-carrier-protein] reductase	fabG																												EG11318																												4*3-OXOACYL-ACP-REDUCT-MONOMER
+SUPEROX-DISMUTFE-CPLX	superoxide dismutase (Fe)	sodB																												EG10954																												2*SUPEROX-DISMUTFE-MONOMER
+CPLX0-2401	tryptophan synthase, &beta; subunit dimer	trpB																												EG11025																												2*TRYPSYN-BPROTEIN
+CPLX0-7982	mechanosensitive channel YnaI	ynaI																												G6666																												7*MONOMER0-82
+S-ADENMETSYN-CPLX	methionine adenosyltransferase	metK																												EG10589																												4*S-ADENMETSYN-MONOMER
+CPLX0-2221	Colicin E9 translocon	tolB	ompF																											EG11008	EG10671																											1*EG11008-MONOMER,3*EG10671-MONOMER
+CPLX0-7958	methylphosphonate degradation complex	phnL	phnH	phnG	phnI																									EG10721	EG10717	EG10716	EG10718																									1*PHNL-MONOMER,1*EG10717-MONOMER,1*EG10716-MONOMER,1*EG10718-MONOMER
+PYRNUTRANSHYDROGEN-CPLX	pyridine nucleotide transhydrogenase	pntB	pntA																											EG10745	EG10744																											2*PNTB-MONOMER,2*PNTA-MONOMER
+CPLX0-1863	conserved metal-binding protein	ybgI																												G6379																												6*G6379-MONOMER
+CPLX0-7935	carbon-phosphorus lyase core complex	phnJ	phnI	phnH	phnG																									EG10719	EG10718	EG10717	EG10716																									2*EG10719-MONOMER,2*EG10718-MONOMER,2*EG10717-MONOMER,2*EG10716-MONOMER
+PHOSPHASERSYN-CPLX	phosphatidylserine synthase	pssA																												EG10781																												1*PHOSPHASERSYN-MONOMER
+CPLX0-1441	ecotin homodimer; serine protease inhibitor	eco																												EG10255																												2*EG10255-MONOMER
+CPLX0-7909	RnlA-RnlB toxin-antitoxin complex	rnlB	rnlA																											G7366	G7365																											1*G7366-MONOMER,1*G7365-MONOMER
+PC00063	GatR DNA-binding transcriptional repressor	gatR_2	gatR_1																											EG12162	G8207																											1*PD00338,1*PD02366
+CPLX0-1121	23S rRNA 2'-<i>O</i>-ribose G2251 methyltransferase	rlmB																												G7845																												2*G7845-MONOMER
+OROPRIBTRANS-CPLX	orotate phosphoribosyltransferase	pyrE																												EG10808																												2*OROPRIBTRANS-MONOMER
+CPLX-3942	sulfur transfer protein complex	tusB	tusC	tusD																										G7712	G7713	G7714																										2*G7712-MONOMER,2*G7713-MONOMER,2*G7714-MONOMER
+CPLX0-7820	3-hydroxy-2,4-pentadione 5-phosphate thiolase	lsrF																												G6804																												10*G6804-MONOMER
+NARX-CPLX	NarX sensory histidine kinase	narX																												EG10646																												2*NARX-MONOMER
+COBU-CPLX	cobinamide-P guanylyltransferase / cobinamide kinase	cobU																												EG13238																												2*COBU-MONOMER
+CPLX0-7794	3-sulfolactaldehyde reductase	yihU																												EG11847																												4*EG11847-MONOMER
+MALTACETYLTRAN-CPLX	maltose <i>O</i>-acetyltransferase	maa																												G58																												3*MALTACETYLTRAN-MONOMER
+BCCP-CPLX	biotin carboxyl carrier protein (dimer)	accB																												EG10275																												2*BCCP-BIOTIN
+CPLX0-7747	lipid hydroperoxide peroxidase	tpx																												G6660																												2*G6660-MONOMER
+KDPD-CPLX	KdpD sensory histidine kinase / protein phosphatase	kdpD																												EG10516																												2*KDPD-MONOMER
+ASPCARBTRANS-CPLX	aspartate transcarbamylase	pyrB	pyrI																											EG10805	EG10811																											6*ASPCARBCAT-MONOMER,6*ASPCARBREG-MONOMER
+CPLX0-7721	DcuR-Phosphorylated DNA-binding transcriptional activator	dcuR																												G7826																												2*PHOSPHO-DCUR-MONOMER
+HCAMULTI-CPLX	3-phenylpropionate dioxygenase system	hcaC	hcaD	hcaF	hcaE																									G7334	G7336	M015	M009																									1*HCAC-MONOMER,1*HCAD-MONOMER,1*HCAA2-MONOMER,1*PHENYLPRODIOXY-MONOMER
+ARCB-CPLX	ArcB sensory histidine kinase	arcB																												EG10062																												2*ARCB-MONOMER
+CPLX0-7696	cell division protein involved in chromosome partitioning	mukB																												EG10618																												2*EG10618-MONOMER
+GLYCEROL-KIN-CPLX	glycerol kinase	glpK																												EG10398																												4*GLYCEROL-KIN-MONOMER
+AKBLIG-CPLX	2-amino-3-ketobutyrate CoA ligase	kbl																												EG10512																												2*AKBLIG-MONOMER
+CPLX0-7674	K<sup>+</sup> channel Kch	kch																												EG11606																												4*KCH-MONOMER
+GLUCOSAMINE-6-P-DEAMIN-CPLX	glucosamine-6-phosphate deaminase	nagB																												EG10633																												6*GLUCOSAMINE-6-P-DEAMIN-MONOMER
+ACETYLORNDEACET-CPLX	acetylornithine deacetylase	argE																												EG11286																												2*ACETYLORNDEACET-MONOMER
+CPLX0-7648	anti-sigma factor	rseB																												G7348																												2*G7348-MONOMER
+FRUCBISALD-CLASSI	fructose bisphosphate aldolase class I	fbaB																												G7129																												10*FRUCBISALD-CLASSI-MONOMER
+ABC-60-CPLX	putative transport complex, ABC superfamily	yphD	yphF	yphE																										G7340	G7342	G7341																										1*YPHD-MONOMER,1*G7342-MONOMER,1*YPHE-MONOMER
+CPLX0-7626	mechanosensitive channel MscS	mscS																												EG11160																												7*EG11160-MONOMER
+FABA-CPLX	&beta;-hydroxyacyl-ACP dehydratase/isomerase	fabA																												EG10273																												2*FABA-MONOMER
+ABC-42-CPLX	D-allose ABC transporter	alsA	alsC	alsB																										EG11959	EG11958	EG12458																										2*YJCW-MONOMER,2*YJCV-MONOMER,1*YJCX-MONOMER
+CPLX0-7561	ChpB-ChpS complex	chpB	chpS																											EG12096	EG11250																											1*EG12096-MONOMER,1*EG11250-MONOMER
+DXPREDISOM-CPLX	1-deoxy-D-xylulose 5-phosphate reductoisomerase	dxr																												EG12715																												2*DXPREDISOM-MONOMER
+ABC-23-CPLX	phosphonate ABC transporter	phnC	phnE_1	phnD																										EG10713	EG11283	EG10714																										2*PHNC-MONOMER,2*PHNE-MONOMER,1*PHND-MONOMER
+CPLX0-7452	Flagellum	fliL	fliE	fliF	flgI	flgG	flgF	flgC	flgB	motB	motA	flgH	fliG	fliM	fliN	fliJ	fliI	fliH	fliR	fliQ	fliP	fliO	flhB	flhA	flgE	flgK	flgL	fliC	fliD	EG10322	EG11346	EG11347	G365	G363	G362	G359	G358	EG10602	EG10601	G364	EG11654	EG10323	EG10324	G378	G377	EG11656	EG11977	EG11976	EG11975	EG11224	G7028	G370	G361	EG11967	EG11545	EG10321	EG10841	2*EG10322-MONOMER,1*EG11346-MONOMER,1*FLIF-FLAGELLAR-MS-RING,1*FLGI-FLAGELLAR-P-RING,1*FLGG-FLAGELLAR-MOTOR-ROD-PROTEIN,1*FLGF-FLAGELLAR-MOTOR-ROD-PROTEIN,1*FLGC-FLAGELLAR-MOTOR-ROD-PROTEIN,1*FLGB-FLAGELLAR-MOTOR-ROD-PROTEIN,1*MOTB-FLAGELLAR-MOTOR-STATOR-PROTEIN,1*MOTA-FLAGELLAR-MOTOR-STATOR-PROTEIN,1*FLGH-FLAGELLAR-L-RING,26*FLIG-FLAGELLAR-SWITCH-PROTEIN,34*FLIM-FLAGELLAR-C-RING-SWITCH,1*FLIN-FLAGELLAR-C-RING-SWITCH,1*G378-MONOMER,6*G377-MONOMER,12*EG11656-MONOMER,1*EG11977-MONOMER,1*EG11976-MONOMER,1*EG11975-MONOMER,1*EG11224-MONOMER,1*G7028-MONOMER,1*G370-MONOMER,120*G361-MONOMER,1*EG11967-MONOMER,1*EG11545-MONOMER,1*EG10321-MONOMER,5*EG10841-MONOMER
+DHPDIOXYGEN-CPLX	2,3-dihydroxyphenylpropionate 1,2-dioxygenase	mhpB																												M011																												4*DHPDIOXYGEN-MONOMER
+6PGLUCONDEHYDROG-CPLX	6-phosphogluconate dehydrogenase	gnd																												EG10411																												2*6PGLUCONDEHYDROG-MONOMER
+CPLX0-682	NAD kinase	nadK																												EG12192																												6*MONOMER0-541
+CYANLY-CPLX	cyanase dimer	cynS																												EG10175																												2*CYANLY-MONOMER
+CPLX0-3955	50S ribosomal subunit protein L7/L12 dimer	rplL																												EG10873																												2*EG10873-MONOMER
+CPLX0-821	fructoselysine 6-phosphate deglycase	frlB																												G7723																												12*G7723-MONOMER
+CPLX0-3931	Rep helicase, a single-stranded DNA dependent ATPase	rep																												EG10837																												2*EG10837-MONOMER
+CPLX0-8188	MinCD complex that regulates septum placement	minD	minC																											EG10597	EG10596																											2*EG10597-MONOMER,2*EG10596-MONOMER
+CPLX0-3801	DNA polymerase III, preinitiation complex	dnaX	holB	holA																										EG10245	EG11500	EG11412																										3*EG10245-MONOMER,1*EG11500-MONOMER,1*EG11412-MONOMER
+CPLX0-8168	PhoQ sensory histidine kinase	phoQ																												EG10732																												2*PHOQ-MONOMER
+CPLX0-3482	acetaldehyde dehydrogenase	aldB																												EG12292																												4*ALDDEHYDROGB-MONOMER
+CPLX0-8125	cellulose synthase	bcsB	bcsA																											EG12259	EG12260																											1*EG12259-MONOMER,1*EG12260-MONOMER
+CPLX0-3141	quinol monooxygenase	ygiN																												EG12657																												2*EG12657-MONOMER
+CPLX0-8106	nucleoside triphosphate pyrophosphatase	yhdE																												EG11298																												2*EG11298-MONOMER
+URPHOS-CPLX	uridine phosphorylase	udp																												EG11045																												6*URPHOS-MONOMER
+CPLX0-2941	protease IV, a signal peptide peptidase	sppA																												EG10968																												4*EG10968-MONOMER
+CPLX0-8043	LsrR DNA-binding transcriptional repressor	lsrR																												G6799																												4*G6799-MONOMER
+TRANS-CPLX-203	2,3-diketo-L-gulonate:Na<sup>+</sup> symporter	yiaO	yiaN	yiaM																										EG12283	EG12282	EG12281																										1*EG12283-MONOMER,1*EG12282-MONOMER,1*MONOMER0-422
+TRANS-200-CPLX	MacAB-TolC macrolide efflux transport system	tolC	macB	macA																										EG11009	G6462	G6461																										3*EG11009-MONOMER,2*MACB,6*MACA
+CPLX0-2502	molybdopterin synthase	moaD	moaE																											EG11597	EG11598																											2*EG11597-MONOMER,2*EG11598-MONOMER
+CPLX0-7998	RNase adaptor protein	rapZ																												EG12146																												3*EG12146-MONOMER
+SUCCORNTRANSAM-CPLX	succinylornithine transaminase	astC																												G6944																												2*SUCCORNTRANSAM-MONOMER
+CPLX0-238	argininosuccinate synthase	argG																												EG10068																												4*ARGSUCCINSYN-MONOMER
+RIBULOKIN-CPLX	L-ribulokinase	araB																												EG10053																												2*RIBULOKIN-MONOMER
+CPLX0-2141	AcrEF-TolC multidrug efflux system	acrE	acrF	tolC																										EG10266	EG10267	EG11009																										1*EG10266-MONOMER,3*ACRF-MONOMER,3*EG11009-MONOMER
+CPLX0-7955	acetate / glycolate : cation symporter	actP																												EG11942																												2*YJCG-MONOMER
+PURE-CPLX	<i>N<sup>5</sup></i>-carboxyaminoimidazole ribonucleotide mutase	purE																												EG10793																												8*PURE-MONOMER
+CPLX0-1762	ring 1,2-phenylacetyl-CoA epoxidase	paaE	paaA	paaC	paaB																									G6713	G6709	G6711	G6710																									1*G6713-MONOMER,1*G6709-MONOMER,1*G6711-MONOMER,1*G6710-MONOMER
+CPLX0-7932	cytosine deaminase	codA																												EG11326																												6*CYTDEAM-MONOMER
+PHOSGLYCMUTASE	2,3-bisphosphoglycerate-dependent phosphoglycerate mutase	gpmA																												EG11699																												2*GPMA-MONOMER
+CPLX0-1342	sulfur acceptor for SufS cysteine desulfurase	sufE																												G6905																												2*G6905-MONOMER
+CPLX0-7904	ribonucleoside hydrolase 2 (pyrimidine-specific)	rihB																												EG12030																												4*EG12030-MONOMER
+PC00033	PurR transcriptional repressor	purR																												EG10800																												2*PD00219
+CPLX0-1021	2-methylisocitrate lyase	prpB																												G6196																												4*G6196-MONOMER
+CPLX0-7844	<i>p</i>-aminobenzoyl-glutamate hydrolase	abgB	abgA																											G6669	G6670																											2*G6669-MONOMER,2*G6670-MONOMER
+ORNCARBAMTRANSFERI-CPLX	ornithine carbamoyltransferase chain I	argI																												EG10069																												3*CHAINI-MONOMER
+CPLX-169	sorbitol PTS permease	srlA	srlB	srlE																										G8210	EG10970	EG10969																										1*G8210-MONOMER,1*GUTB-MONOMER,1*GUTA-MONOMER
+CPLX0-7817	glutaredoxin 4	grxD																												EG12181																												2*EG12181-MONOMER
+NAG6PDEACET-CPLX	<i>N</i>-acetylglucosamine-6-phosphate deacetylase	nagA																												EG10632																												4*NAG6PDEACET-MONOMER
+CITRYLY-CPLX	citrate lyase, citryl-ACP lyase component	citE																												G6342																												6*CITRYLY-MONOMER
+CPLX0-7788	NAD-dependent dihydropyrimidine dehydrogenase	preT	preA																											G7145	EG11289																											2*G7145-MONOMER,2*EG11289-MONOMER
+MALDEXPHOSPHORYL-CPLX	maltodextrin phosphorylase	malP																												EG10560																												2*MALDEXPHOSPHORYL-MONOMER
+B1-CPLX	ribonucleoside diphosphate reductase 1, &alpha; subunit dimer	nrdA																												EG10660																												2*NRDA-MONOMER
+CPLX0-7741	methylmalonyl-CoA mutase	scpA																												EG11444																												2*METHYLMALONYL-COA-MUT-MONOMER
+ISOCIT-LYASE	isocitrate lyase	aceA																												EG10022																												4*ISOCIT-LYASE-MONOMER
+ASPARTASE-CPLX	aspartate ammonia-lyase	aspA																												EG10095																												4*ASPARTASE-MONOMER
+CPLX0-7718	UDP-L-Ara4N formyltransferase / UDP-GlcA dehydrogenase	arnA																												G7168																												6*G7168-MONOMER
+GTP-CYCLOHYDRO-II-CPLX	GTP cyclohydrolase II	ribA																												EG11331																												2*GTP-CYCLOHYDRO-II-MONOMER
+APORNAP-CPLX	RNA polymerase, core enzyme	rpoA	rpoC	rpoB																										EG10893	EG10895	EG10894																										2*EG10893-MONOMER,1*RPOC-MONOMER,1*RPOB-MONOMER
+CPLX0-7693	NADH:quinone reductase, FMN dependent / NADH-azoreductase	azoR																												G6731																												2*G6731-MONOMER
+GLUTSEMIALDEHYDROG-CPLX	glutamate-5-semialdehyde dehydrogenase	proA																												EG10767																												4*GLUTSEMIALDEHYDROG-MONOMER
+AERGLYC3PDEHYDROG-CPLX	glycerol-3-phosphate dehydrogenase, aerobic	glpD																												EG10394																												2*AERGLYC3PDEHYDROG-MONOMER
+CPLX0-7668	predicted oxidoreductase	ydjA																												EG11134																												2*EG11134-MONOMER
+GDPMANDEHYDRA-CPLX	GDP-mannose 4,6-dehydratase	gmd																												EG11787																												2*GDPMANDEHYDRA-MONOMER
+ACETYL-COA-ACETYLTRANSFER-CPLX	acetyl-CoA acetyltransferase	atoB																												EG11672																												4*ACETYL-COA-ACETYLTRANSFER-MONOMER
+CPLX0-7645	L-fucose mutarotase	fucU																												EG10355																												6*EG10355-MONOMER
+FORMHYDROG2-CPLX	hydrogenase 2	hybA	hybB	hybO	hybC																									EG11799	EG11800	G7554	EG11801																									1*HYBA-MONOMER,1*EG11800-MONOMER,1*MONOMER0-145,1*HYBC-MONOMER
+ABC-58-CPLX	autoinducer-2 ABC transporter	lsrB	lsrD	lsrC	lsrA																									G6803	G6802	G6801	G6800																									1*YNEA-MONOMER,1*YDEZ-MONOMER,1*YDEY-MONOMER,2*YDEX-MONOMER
+CPLX0-7623	regulator of acid resistance, influenced by indole	ariR																												G6606																												2*G6606-MONOMER
+F-1-CPLX	ATP synthase F<sub>1</sub> complex	atpC	atpH	atpA	atpG	atpD																								EG10100	EG10105	EG10098	EG10104	EG10101																								1*ATPC-MONOMER,1*ATPH-MONOMER,3*ATPA-MONOMER,1*ATPG-MONOMER,3*ATPD-MONOMER
+ABC-4-CPLX	L-arginine ABC transporter	artJ	artQ	artM	artP																									EG11628	EG11626	EG11627	EG11624																									1*ARTJ-MONOMER,1*ARTQ-MONOMER,1*ARTM-MONOMER,2*ARTP-MONOMER
+CPLX0-7535	AdiC arginine:agmatine antiporter	adiC																												EG12462																												2*YJDE-MONOMER
+DTDPGLUCDEHYDRAT-CPLX	dTDP-glucose 4,6-dehydratase	rfbB																												EG12412																												2*DTDPGLUCDEHYDRAT-MONOMER
+ABC-20-CPLX	nickel ABC transporter	nikD	nikE	nikB	nikC	nikA																								EG12078	EG12079	EG12076	EG12077	EG12075																								1*NIKD-MONOMER,1*NIKE-MONOMER,1*NIKB-MONOMER,1*NIKC-MONOMER,1*NIKA-MONOMER
+CPLX0-7444	putative structural protein	yciF																												EG11126																												2*EG11126-MONOMER
+DETHIOBIOTIN-SYN-CPLX	dethiobiotin synthetase	bioD																												EG10120																												2*DETHIOBIOTIN-SYN-MONOMER
+3-OXOACYL-ACP-SYNTHII-CPLX	KASII	fabF																												EG12606																												2*3-OXOACYL-ACP-SYNTHII-MONOMER
+CPLX0-4	hydroxylated aromatic carboxylic acid efflux transporter	aaeA	aaeB																											G7686	G7685																											1*G7686-MONOMER,1*G7685-MONOMER
+CPLXECOLI-7943	NMN amidohydrolase	pncC																												G7409																												2*G7409-MONOMER
+CPLX0-3951	peptidoglycan glycosyltransferase / peptidoglycan D,D-transpeptidase - MrcB	mrcB																												EG10605																												2*EG10605-MONOMER
+CPLX0-8206	dihydroxyacetone kinase, phosphotransferase component, and protein-acetyllysine deacetylase	dhaM																												EG12399																												2*EG12399-MONOMER
+CPLX0-3927	regulatory ATPase	ravA																												EG11731																												6*EG11731-MONOMER
+CPLX0-8185	conserved protein	ydiE																												EG12391																												2*EG12391-MONOMER
+CPLX0-3741	glutamyl-tRNA reductase	hemA																												EG10427																												2*GLUTRNAREDUCT-MONOMER
+CPLX0-8164	molybdopterin-synthase adenylyltransferase	moeB																												EG10154																												2*EG10154-MONOMER
+CPLX0-3401	fimbrial complex	fimA	fimF	fimG	fimH																									EG10308	EG10313	EG10314	EG10315																									1*EG10308-MONOMER,1*EG10313-MONOMER,1*EG10314-MONOMER,1*EG10315-MONOMER
+CPLX0-8122	aminopeptidase B	pepB																												EG12310																												6*EG12310-MONOMER
+CPLX0-3107	ClpXP	clpP	clpX																											EG10158	EG10159																											14*EG10158-MONOMER,12*EG10159-MONOMER
+CPLX0-8103	methyl accepting chemotaxis protein - serine sensing	tsr																												EG11034																												2*TSR-MONOMER
+UMPKI-CPLX	UMP kinase	pyrH																												EG11539																												6*UMPKI-MONOMER
+CPLX0-2881	DNA-binding, ATP-dependent protease La	lon																												EG10542																												6*EG10542-MONOMER
+CPLX0-8032	acetyl-CoA:oxalate CoA-transferase	yfdE																												G7234																												2*G7234-MONOMER
+CPLX0-7849	2,3-dihydroxybenzoyl-EntB	entB																												EG10260																												2*HOLO-ENTB
+CPLX0-7978	RcsB-P-phosphate																																																									
+CPLX0-8115	&beta;-glucoside PTS permease BglF - cys24 phosphorylated (cryptic)	bglF																												EG10115																												2*BGLF-MONOMER
+CPLX0-8002	protein disulfide isomerase/protein disulfide oxidoreductase - DsbC<sub>oxidised</sub>	dsbC																												EG11070																												2*DSBC-MONOMER
+CPLX0-8117	BglG - his208 phosphorylated	bglG																												EG10116																												2*EG10116-MONOMER
+MONOMER0-2863	oxidized ribonucleoside-triphosphate reductase	nrdD																												EG11417																												2*RIBONUCLEOSIDE-TRIP-REDUCT-MONOMER
+CPLX0-8004	DsbG<sub>oxidized</sub>	dsbG																												G6333																												2*DSBG-MONOMER
+CPLX0-7657	BglG - his101 phosphorylated	bglG																												EG10116																												2*EG10116-MONOMER
+PHOSPHO-OMPR	OmpR-Phosphorylated DNA-binding transcriptional dual regulator	ompR																												EG10672																												2*PHOSPHO-OMPR-MONOMER
+CPLX0-8075	HypT-[Met-oxidized] DNA-binding transcriptional dual regulator	hypT																												G7924																												2*G7924-MONOMER
+CHEA-CPLX	CheA(L) histidine kinase	cheA																												EG10146																												2*PROTEIN-CHEA
+TORR-CPLX	TorR transcriptional dual regulator	torR																												EG12615																												2*TORR-MONOMER
+PHOSPHO-TORR	TorR-Phosphorylated DNA-binding transcriptional dual regulator	torR																												EG12615																												2*TORR-MONOMER
+CPLX0-2821	TorR-TorI	torR																												EG12615																												2*TORR-MONOMER
+ACETYL-COA-CARBOXYLMULTI-CPLX	acetyl-CoA carboxylase	accD	accA	accC	accB																									EG10217	EG11647	EG10276	EG10275																									2*CARBOXYL-TRANSFERASE-BETA-MONOMER,2*CARBOXYL-TRANSFERASE-ALPHA-MONOMER,2*BIOTIN-CARBOXYL-MONOMER,2*BCCP-BIOTIN
+TAP-CPLX	chemotaxis signaling complex - dipeptide sensing	cheA	cheW	tap																										EG10146	EG10149	EG10987																										2*PROTEIN-CHEA,2*CHEW-MONOMER,6*TAP-MONOMER
+TAP-GLN	Tap<SUP>gln</SUP>	cheA	cheW	tap																										EG10146	EG10149	EG10987																										2*PROTEIN-CHEA,2*CHEW-MONOMER,6*TAP-MONOMER
+TAP-GLU	Tap<SUP>glu</SUP>	cheA	cheW	tap																										EG10146	EG10149	EG10987																										2*PROTEIN-CHEA,2*CHEW-MONOMER,6*TAP-MONOMER
+TAP-GLUME	Tap<SUP>glu-Me</SUP>	cheA	cheW	tap																										EG10146	EG10149	EG10987																										2*PROTEIN-CHEA,2*CHEW-MONOMER,6*TAP-MONOMER
+RIBONUCLEOSIDE-TRIP-REDUCT-CPLX	ribonucleoside-triphosphate reductase	nrdD																												EG11417																												2*RIBONUCLEOSIDE-TRIP-REDUCT-MONOMER
+CPLX0-1	reduced flavorubredoxin	norV																												G7413																												4*G7413-MONOMER
+CPLX0-2	oxidized flavorubredoxin	norV																												G7413																												4*G7413-MONOMER
+RNAP70-CPLX	RNA polymerase sigma 70	rpoB	rpoC	rpoA	rpoD																									EG10894	EG10895	EG10893	EG10896																									1*RPOB-MONOMER,1*RPOC-MONOMER,2*EG10893-MONOMER,1*RPOD-MONOMER
+CPLX0-222	RNA polymerase sigma 28	fliA	rpoB	rpoC	rpoA																									EG11355	EG10894	EG10895	EG10893																									1*EG11355-MONOMER,1*RPOB-MONOMER,1*RPOC-MONOMER,2*EG10893-MONOMER
+RNAPE-CPLX	RNA polymerase sigma 24	rpoB	rpoC	rpoA	rpoE																									EG10894	EG10895	EG10893	EG11897																									1*RPOB-MONOMER,1*RPOC-MONOMER,2*EG10893-MONOMER,1*RPOE-MONOMER
+RNAP32-CPLX	RNA polymerase sigma 32	rpoB	rpoC	rpoA	rpoH																									EG10894	EG10895	EG10893	EG10897																									1*RPOB-MONOMER,1*RPOC-MONOMER,2*EG10893-MONOMER,1*RPOH-MONOMER
+RNAPS-CPLX	RNA polymerase sigma S	rpoB	rpoC	rpoA	rpoS																									EG10894	EG10895	EG10893	EG10510																									1*RPOB-MONOMER,1*RPOC-MONOMER,2*EG10893-MONOMER,1*RPOS-MONOMER
+RNAP54-CPLX	RNA polymerase sigma 54	rpoB	rpoC	rpoA	rpoN																									EG10894	EG10895	EG10893	EG10898																									1*RPOB-MONOMER,1*RPOC-MONOMER,2*EG10893-MONOMER,1*RPON-MONOMER
+CPLX0-221	RNA polymerase sigma 19	rpoB	rpoC	rpoA	fecI																									EG10894	EG10895	EG10893	EG10291																									1*RPOB-MONOMER,1*RPOC-MONOMER,2*EG10893-MONOMER,1*PD00440
+TRG-CPLX	chemotaxis signaling complex - ribose/galactose/glucose sensing	cheA	cheW	trg																										EG10146	EG10149	EG11018																										2*PROTEIN-CHEA,2*CHEW-MONOMER,6*TRG-MONOMER
+TRG-GLN	Trg<SUP>gln</SUP>	cheA	cheW	trg																										EG10146	EG10149	EG11018																										2*PROTEIN-CHEA,2*CHEW-MONOMER,6*TRG-MONOMER
+TRG-GLU	Trg<SUP>glu</SUP>	cheA	cheW	trg																										EG10146	EG10149	EG11018																										2*PROTEIN-CHEA,2*CHEW-MONOMER,6*TRG-MONOMER
+TRG-GLUME	Trg<SUP>glu-Me</SUP>	cheA	cheW	trg																										EG10146	EG10149	EG11018																										2*PROTEIN-CHEA,2*CHEW-MONOMER,6*TRG-MONOMER
+ENTB-CPLX	<i>holo</i>-EntB dimer	entB																												EG10260																												2*HOLO-ENTB
+TAR-CPLX	chemotaxis signaling complex - aspartate sensing	cheA	cheW	tar																										EG10146	EG10149	EG10988																										2*PROTEIN-CHEA,2*CHEW-MONOMER,6*TAR-MONOMER
+TAR-GLN	Tar<SUP>gln</SUP>	cheA	cheW	tar																										EG10146	EG10149	EG10988																										2*PROTEIN-CHEA,2*CHEW-MONOMER,6*TAR-MONOMER
+TAR-GLU	Tar<SUP>glu</SUP>	cheA	cheW	tar																										EG10146	EG10149	EG10988																										2*PROTEIN-CHEA,2*CHEW-MONOMER,6*TAR-MONOMER
+TAR-GLUME	Tar<SUP>glu-Me</SUP>	cheA	cheW	tar																										EG10146	EG10149	EG10988																										2*PROTEIN-CHEA,2*CHEW-MONOMER,6*TAR-MONOMER
+GLNG-CPLX	NtrC transcriptional dual regulator	glnG																												EG10385																												2*PROTEIN-NRI
+PROTEIN-NRIP	NtrC-Phosphorylated DNA-binding transcriptional dual regulator	glnG																												EG10385																												8*MONOMER0-4198
+ISOCITHASE-CPLX	isocitrate dehydrogenase	icd																												EG10489																												2*ISOCITDEH-SUBUNIT
+TSR-CPLX	chemotaxis signaling complex - serine sensing	cheW	cheA	tsr																										EG10149	EG10146	EG11034																										2*CHEW-MONOMER,2*PROTEIN-CHEA,6*TSR-MONOMER
+TSR-GLU	Tsr<SUP>glu</SUP>	cheW	cheA	tsr																										EG10149	EG10146	EG11034																										2*CHEW-MONOMER,2*PROTEIN-CHEA,6*TSR-MONOMER
+TSR-GLUME	Tsr<SUP>glu-Me</SUP>	cheW	cheA	tsr																										EG10149	EG10146	EG11034																										2*CHEW-MONOMER,2*PROTEIN-CHEA,6*TSR-MONOMER
+TSR-GLN	Tsr<SUP>gln</SUP>	cheW	cheA	tsr																										EG10149	EG10146	EG11034																										2*CHEW-MONOMER,2*PROTEIN-CHEA,6*TSR-MONOMER
+PYRUVFORMLY-INACTIVE-CPLX	pyruvate formate-lyase (inactive)	pflB																												EG10701																												2*PYRUVFORMLY-MONOMER
+PYRUVFORMLY-CPLX	pyruvate formate-lyase / 2-ketobutyrate formate-lyase	pflB																												EG10701																												2*PYRUVFORMLY-MONOMER
+ISOCITHASE-P	isocitrate dehydrogenase-P	icd																												EG10489																												2*ISOCITDEH-SUBUNIT
+ENVZ-CPLX	EnvZ sensory histidine kinase	envZ																												EG10269																												2*ENVZ-MONOMER
+PHOSPHO-ENVZ	EnvZ sensory histidine kinase - phosphorylated	envZ																												EG10269																												2*ENVZ-MONOMER
+GLNL-CPLX	NtrB sensory histidine kinase	glnL																												EG10387																												2*PROTEIN-NRII
+PROTEIN-NRIIP	NtrB sensory histidine kinase - phosphorylated	glnL																												EG10387																												2*PROTEIN-NRII
+ACECITLY-CPLX	citrate lyase	citD	citF	citE																										G6343	G6341	G6342																										6*ACPSUB-MONOMER,6*CITTRANS-MONOMER,6*CITRYLY-MONOMER
+CITLY-CPLX	citrate lyase, inactive	citD	citF	citE																										G6343	G6341	G6342																										6*ACPSUB-MONOMER,6*CITTRANS-MONOMER,6*CITRYLY-MONOMER

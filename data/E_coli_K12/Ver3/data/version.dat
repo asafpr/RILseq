@@ -1,0 +1,15 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Lines starting with ; are comment lines. Each non-comment line is of the form:
+;; ATTRIBUTE	value
+;; The separator character is the Tab character.
+;; Valid attributes are:
+;;
+;; ORGID [BioCyc database unique id for the organism]
+;; ORGANISM [full species and strain name]
+;; VERSION [current database version of the organism]
+;; RELEASE-DATE [flat file creation date]
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ORGID	ECOLI
+ORGANISM	E. coli K-12 substr. MG1655
+VERSION	20.0
+RELEASE-DATE	Mon Apr 18, 2016

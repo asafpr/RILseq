@@ -1,0 +1,2513 @@
+# Copyright SRI International 1999-2016, Marine Biological Laboratory 1998-2001, DoubleTwist Inc 1998-1999.  All Rights Reserved.
+#
+# Authors:
+#    Peter D. Karp
+#    Ingrid Keseler
+#    Carol Fulcher
+#    Anamika Kothari
+#    Suzanne Paley
+#    Markus Krummenacker
+#    Dan Weaver
+#    Ian Paulsen
+#    Amanda Mackie
+#    Julio Collado-Vides
+#    Cesar Bonavides-Martinez
+#    Socorro Gama-Castro
+#    Alberto Santos-Zavaleta
+#    Verena Weiss
+#    John L Ingraham
+#    Robert Gunsalus
+#    Robert LaRossa
+#
+# Please see the license agreement regarding the use of and distribution of this file.
+# The format of this file is defined at http://bioinformatics.ai.sri.com/ptools/flatfile-format.html .
+#
+# Species: Escherichia coli K-12 substr. MG1655
+# Database: EcoCyc
+# Version: 20.0
+# File Name: protligandcplxes.dat
+# Date and time generated: April 18, 2016, 20:05:28
+#
+# Attributes:
+#    UNIQUE-ID
+#    TYPES
+#    COMMON-NAME
+#    ABBREV-NAME
+#    AROMATIC-RINGS
+#    ATOM-CHARGES
+#    CATALYZES
+#    CITATIONS
+#    COFACTORS-OF
+#    COFACTORS-OR-PROSTHETIC-GROUPS-OF
+#    COMMENT
+#    COMPONENT-COEFFICIENTS
+#    COMPONENT-OF
+#    COMPONENTS
+#    CONSENSUS-SEQUENCE
+#    CREDITS
+#    DATA-SOURCE
+#    DBLINKS
+#    DNA-FOOTPRINT-SIZE
+#    DOCUMENTATION
+#    ENZYME-NOT-USED-IN
+#    GO-TERMS
+#    HAS-NO-STRUCTURE?
+#    HIDE-SLOT?
+#    IN-MIXTURE
+#    ISOZYME-SEQUENCE-SIMILARITY
+#    LOCATIONS
+#    MEMBER-SORT-FN
+#    MODIFIED-FORM
+#    MOLECULAR-WEIGHT
+#    MOLECULAR-WEIGHT-EXP
+#    MOLECULAR-WEIGHT-KD
+#    MOLECULAR-WEIGHT-SEQ
+#    N+1-NAME
+#    N-1-NAME
+#    N-NAME
+#    NEIDHARDT-SPOT-NUMBER
+#    NON-STANDARD-INCHI
+#    PATHOLOGIC-NAME-MATCHER-EVIDENCE
+#    PATHOLOGIC-PWY-EVIDENCE
+#    PI
+#    RADICAL-ATOMS
+#    REGULATED-BY
+#    REGULATES
+#    SPECIES
+#    STRUCTURE-BONDS
+#    SUPERATOMS
+#    SYMMETRY
+#    SYNONYMS
+#
+UNIQUE-ID - MONOMER0-2261
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - NagC-NAcGlc-6-P
+COMPONENTS - N-ACETYL-D-GLUCOSAMINE-6-P
+COMPONENTS - PD00266
+DBLINKS - (PFAM "PF00480" IN-FAMILY |pkarp| 3346700319 NIL NIL)
+SYNONYMS - NagR
+SYNONYMS - B0676
+SYNONYMS - NagC
+//
+UNIQUE-ID - MONOMER0-157
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - MetJ-S-adenosylmethionine
+COMPONENT-OF - CPLX0-7796
+COMPONENTS - PD04032
+COMPONENTS - S-ADENOSYLMETHIONINE
+CONSENSUS-SEQUENCE - AGACGTCTAGACGTCT
+DBLINKS - (PFAM "PF01340" IN-FAMILY PKARP 3346700426 NIL NIL)
+DBLINKS - (PDB "1CMC" STRUCTURE PALEY 3439827725 NIL NIL)
+DNA-FOOTPRINT-SIZE - 8
+MOLECULAR-WEIGHT-KD - 12.140735999999995    
+MOLECULAR-WEIGHT-SEQ - 12.140735999999995    
+SPECIES - ECOLI
+SYMMETRY - :ASYMMETRIC
+SYMMETRY - :INVERTED-REPEAT
+SYNONYMS - B3938
+SYNONYMS - MetJ
+SYNONYMS - MetJ-SAM
+//
+UNIQUE-ID - CPLX0-8210
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - ExuR-&alpha;-D-galacturonate, &alpha;-D-glucuronate-DNA-binding transcriptional repressor
+COMPONENTS - PD03270
+COMPONENTS - CPD-12523
+CREDITS - O0-9
+CREDITS - |santos-zavaleta|
+REGULATES - REG0-12392
+REGULATES - REG0-12391
+SYMMETRY - :INVERTED-REPEAT
+//
+UNIQUE-ID - CPLX0-8058
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - RutR-thymine
+CITATIONS - 17919280
+COMPONENTS - PD01352
+COMPONENTS - THYMINE
+//
+UNIQUE-ID - CPLX0-7742
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - MprA-2,4-dinitrophenol
+CITATIONS - 10438794
+COMPONENTS - EG10603-MONOMER
+COMPONENTS - CPD-8179
+//
+UNIQUE-ID - CPLX0-7651
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - RutR-uracil
+CITATIONS - 20472642:EV-EXP-IDA-PART-PURIFIED-PROTEIN-NH:3487441772:asantos
+COMPONENTS - PD01352
+COMPONENTS - URACIL
+//
+UNIQUE-ID - CPLX-124
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - RhaS-L-rhamnose DNA-binding transcriptional activator
+CITATIONS - 10940041:EV-EXP-IMP:3421307478:martin
+CITATIONS - 10940041:EV-EXP-IEP:3421307478:martin
+CITATIONS - 10464186:EV-COMP-HINF-FN-FROM-SEQ:3421307478:martin
+CITATIONS - 17513476:EV-EXP-IDA-PURIFIED-PROTEIN:3421307478:martin
+CITATIONS - 15342598:EV-COMP-HINF-FN-FROM-SEQ:3491318497:martin
+CITATIONS - 15342598:EV-EXP-IPI:3491318497:martin
+CITATIONS - 15342598:EV-EXP-IMP:3491318497:martin
+CITATIONS - 17513476:EV-EXP-IMP:3491318497:martin
+CITATIONS - 10464186:EV-EXP-IMP:3491318497:martin
+CITATIONS - 18366439:EV-EXP-IMP:3491318497:martin
+COMMENT - The "<b>Rha</b>mno<b>s</b>e regulator," RhaS, is a transcription factor involved in l-rhamnose degradation and transport |CITS:[8230210][7966303][8757746]|. RhaS alone is able to activate transcription of <i>rha</i> operons, but in the presence of CRP, transcription increases. On the other hand, CRP alone is unable to activate transcription of <i>rha</i> operons in the absence of RhaS. Therefore, these two regulators bind cooperatively to fully activate the operons related with transport and degradation of l-rhamnose |CITS:[16166533][8230210][8757746][10852886]|. Additionally, synthesis of <i>rha</i> operons is induced when <i>E. coli</i> is grown on l-rhamnose in the absence of glucose and when cellular cyclic AMP levels are high |CITS:[16166533]|.
+/
+/RhaS is part of the unusual <i>rhaSR</i> operon that encodes two transcriptional regulators, RhaS and RhaR (30% identical), both members of the AraC/XylS family of transcriptional regulators |CITS:[10464186][17071764]|. Apparently, expression of operons involved in transport and degradation of l-rhamnose first requires expression of RhaR, which induces transcription of the <i>rhaSR</i> operon. In this way, RhaS activates transcription of l-rhamnose gene clusters.
+/
+/This transcription factor is composed of two domains, a C-terminal domain that contains two potential helix-turn-helix DNA-binding motifs and an N-terminal domain involved in l-rhamnose binding and dimerization of the protein |CITS:[15342598][18366439][17513476]|. Mutational studies carried out to define interactions between RhaS and &sigma;<sup>70</sup> suggest the existence of two interaction regions in both. The contact regions through which both proteins interact are represented by two amino acid residues in the C-terminal domains of RhaS (D241 and D250) and &sigma;<sup>70</sup> (R599 and K593) |CITS:[10940041][15342598]|.
+/
+/In the presence of l-rhamnose, RhaS binds in tandem to repeat sequences upstream of the <i>rhaA</i>p and <i>rhaT</i>p intergenic regions. The binding site for RhaS overlaps the -35 region of both <i>rhaB</i>p and <i>rhaT</i>p promoters in 4 bp. The binding targets for RhaS consist of 17-nucleotide-long sequences that possess conserved motifs; each monomer binds to one of these conserved sequences |CITS:[15342598][10852886]|. It seems the binding sites of RhaS are on a different face of the DNA relative to the <i>rhaBAD</i> operon |CITS:[7966303][17513476]|.
+COMPONENTS - PC00086
+COMPONENTS - RHAMNOSE
+CONSENSUS-SEQUENCE - GgCaaccAgggaAAGat
+DNA-FOOTPRINT-SIZE - 17
+REGULATES - REG0-10576
+REGULATES - REG0-10575
+REGULATES - REG0-5987
+REGULATES - REG0-5986
+REGULATES - REG0-5373
+REGULATES - REG0-5372
+SYMMETRY - :ASYMMETRIC
+SYNONYMS - RhaS-rhamnose
+//
+UNIQUE-ID - MONOMER0-2162
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - UlaR-L-ascorbate-6P
+CITATIONS - 18844374:EV-EXP-IPI:3497629953:paley
+COMPONENTS - G7854-MONOMER
+COMPONENTS - L-ASCORBATE-6-PHOSPHATE
+DBLINKS - (PFAM "PF00455" IN-FAMILY |pkarp| 3346700440 NIL NIL)
+SYNONYMS - YjfQ
+SYNONYMS - B4191
+SYNONYMS - UlaR
+//
+UNIQUE-ID - MONOMER0-1301
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - IdnR-5-ketogluconate DNA-binding transcriptional dual regulator
+CITATIONS - 14973046:EV-EXP-IEP:3421244057:martin
+COMMENT - "L-<b>id</b>o<b>n</b>ate <b>r</b>egulator," IdnR, is a transcription factor that regulates genes involved in L-idonate metabolism, which are organized in two coordinately regulated transcription units |CITS: [9658018][14973046]|. This regulator is positively autoregulated and co-regulates with CRP, a global transcriptional regulator; these regulators bind cooperatively to activate transcription of an operon related to transport and catabolism of L-idonate |CITS: [14973046]|. Synthesis of this operon is induced when <i>Escherichia coli</i> is grown on L-idonate/5KG in the absence of glucose and gluconate. In addition, this regulator represses transcription of genes related to gluconate metabolism |CITS: [9658018]|.
+/
+/In the presence of L-idonate, IdnR binds to 16-nucleotide-long DNA-target sites in the <i>idnK</i>/<i>idnDOTR</i> intergenic region to coordinately activate transcription of  <i>idnK</i>p and <i>idnD</i>p |CITS: [14973046]|. 
+/
+/IdnR exhibits a high similarity to GntR (53%) and belongs to the LacI/GalR family of transcriptional regulators |CITS: [11115104]|. It is part of the <i>idnDOTR</i> operon, yet it can also be transcribed as an independent (<i>idnR</i>) transcription unit |CITS: [14973046]|.
+COMPONENTS - G7891-MONOMER
+COMPONENTS - 5-DEHYDROGLUCONATE
+CONSENSUS-SEQUENCE - atGTTACgcgTAACat
+DBLINKS - (PFAM "PF00356" IN-FAMILY |pkarp| 3346700444 NIL NIL)
+DNA-FOOTPRINT-SIZE - 16
+GO-TERMS - |GO:0045893|
+MOLECULAR-WEIGHT-KD - 37.567143999999956    
+MOLECULAR-WEIGHT-SEQ - 37.567143999999956    
+REGULATES - REG0-5267
+REGULATES - REG0-5266
+REGULATES - REG0-6241
+SYMMETRY - :INVERTED-REPEAT
+SYNONYMS - B4264
+SYNONYMS - YjgS
+SYNONYMS - GntH
+SYNONYMS - IdnR
+//
+UNIQUE-ID - CPLX0-8162
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - YebK-2-dehydro-3-deoxy-D-gluconate 6-phosphate
+COMPONENTS - EG12860-MONOMER
+COMPONENTS - 2-KETO-3-DEOXY-6-P-GLUCONATE
+//
+UNIQUE-ID - CPLX0-8055
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - AcrR-ethidium
+CITATIONS - 17644067
+COMPONENTS - EG12116-MONOMER
+COMPONENTS - CPD0-1938
+//
+UNIQUE-ID - CPLX0-7735
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - AsnC-L-asparagine
+COMPONENTS - CPLX0-7733
+COMPONENTS - ASN
+//
+UNIQUE-ID - CPLX0-7619
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - RcnR-Co<SUP>2+</SUP>
+COMPONENTS - G7137-MONOMER
+COMPONENTS - CO+2
+//
+UNIQUE-ID - MONOMER0-183
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - FhlA-Formate DNA-binding transcriptional activator
+CITATIONS - 8034727
+CITATIONS - 8034727:EV-EXP-IDA-PURIFIED-PROTEIN:3342461042:martin
+CITATIONS - 8034727:EV-EXP-IGI-FUNC-COMPLEMENTATION:3342461680:martin
+COMMENT - The transcription factor FhlA, for "<b>F</b>ormate <b>h</b>ydrogen <b>l</b>yase <b>A</b>ctivator," is positively autoregulated and controls the transcription of the operons involved in  formate metabolism to produce dihydrogen and carbon dioxide |CITS:[2118503][3056900][2280686][1779767][8412675][8034728][17938909][17668201][8034727]|. Transcription of this operon is induced when <i>E. coli</i> is grown under anaerobic growth conditions and when the physiological inducer, formate, binds to the FhlA protein |CITS:[1779767][8412675][2118503][8034727]|. When formate binds to FhlA, the protein becomes active as the binding affinity of FhlA increases, and it activates the transcription of &sigma;<sup>54</sup>-dependent promoters. 
+/
+/HycA may inactivate the function of the FhlA protein and prevent the binding of FhlA to target sequences, but the mechanism of the negative regulation by HycA is unknown |CITS:[1625581][17938909]|.
+/
+/FhlA is subject to posttranscriptional regulation by the sRNA OxyS |CITS:[12753181][10903857][9774350]|. This sRNA binds to FhlA mRNA and inhibits translation by interfering with the binding of the mRNA and the ribosome  |CITS:[9230301][10903857][9774350]|.
+/
+/As a member of the group of &sigma;<sup>54</sup>-dependent transcriptional regulators, FhlA contains three domains: a possible sensory domain located in the N terminus that probably modulates the activity of the C-terminal domain |CITS:[11700359][7751289]|; the central domain, which is probably involved in open complex formation, ATP hydrolysis, and interaction with &sigma;<sup>54</sup> and formate |CITS:[1833069][7751289][8981978]|; and the C-terminal domain, which contains a helix-turn-helix motif for DNA binding |CITS:[10848985]|. FhlA shows 46% identity to the HyfR protein, a member of the same group. These proteins are dissimilar in their N-terminal regions, which in FhlA recognizes formate. However, they show only one different residue in their helix-turn-helix motifs, suggesting that they recognize similar DNA-binding sites |CITS:[9387241]|.
+/
+/Leonhartsberger <i>et al</i> suggested that this protein binds to degenerate regions 16 bp in length (CATTTCGTACGAAATG) |CITS: [10848985]|. However, alignments made by the curators of this database showed that the sequence is less conserved in the upstream regions regulated. This result also showed that the motif TGTCGnnnnTGACA is conserved in the sequences examined, and for this reason the binding sites for FhlA regulation have been relocated, reassigned, and corrected.
+/
+/The consensus sequence TGTCGnnnnTGACA is in agreement with alignments determined by the curator for these upstream regions and with the corresponding evidence obtained in the bibliography of every operon, including similarity to the consensus sequence and the data from footprinting assays, computational analysis, and profiling of FhlA-dependent gene expression |CITS: [8034728][14702328]|. The FhlA-binding sites are represented by an inverted 14-bp repeat motif.
+/
+/Review: |CITS: [12753181]|.
+COMPONENTS - PD02936
+COMPONENTS - FORMATE
+CONSENSUS-SEQUENCE - TGTCGaaaaTGACA
+DBLINKS - (PFAM "PF01590" IN-FAMILY |pkarp| 3346700372 NIL NIL)
+DNA-FOOTPRINT-SIZE - 14
+GO-TERMS - |GO:2000144|
+GO-TERMS - |GO:0000986|
+MOLECULAR-WEIGHT-KD - 78.46782599999979    
+MOLECULAR-WEIGHT-SEQ - 78.46782599999979    
+REGULATES - REG0-10804
+REGULATES - REG0-10803
+REGULATES - REG0-10802
+REGULATES - REG0-5778
+REGULATES - REG0-5776
+REGULATES - REG0-5773
+REGULATES - REG0-5017
+REGULATES - REG0-4853
+SYMMETRY - :INVERTED-REPEAT
+SYNONYMS - Fhl
+SYNONYMS - FhlA
+SYNONYMS - FhlA-formate
+SYNONYMS - B2731
+//
+UNIQUE-ID - MONOMER-58
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - MarR-salicylate
+COMPONENTS - PD00364
+COMPONENTS - CPD-110
+DBLINKS - (PFAM "PF01047" IN-FAMILY |pkarp| 3346700337 NIL NIL)
+DBLINKS - (PDB "1JGS" |Structure| |paley| 3439827725 NIL NIL)
+MOLECULAR-WEIGHT-KD - 13.898426000000015    
+MOLECULAR-WEIGHT-SEQ - 13.898426000000015    
+SYNONYMS - B1530
+SYNONYMS - SoxQ
+SYNONYMS - InaR
+SYNONYMS - CfxB
+SYNONYMS - MarR
+//
+UNIQUE-ID - CPLX0-8083
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - IscR-2Fe-2S DNA binding transcriptional repressor
+CITATIONS - 23075318
+CITATIONS - 23075318:EV-EXP-IMP:3568132991:sgama
+CITATIONS - 23075318:EV-EXP-IDA-PURIFIED-PROTEIN-NH:3568139259:sgama
+COMPONENTS - CPD-6
+COMPONENTS - G7326-MONOMER
+CREDITS - O0-9
+CREDITS - |sgama|
+REGULATES - REG0-6403
+REGULATES - REG0-6404
+SYMMETRY - :INVERTED-REPEAT
+//
+UNIQUE-ID - CPLX0-8048
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - Dan-L-tartrate DNA-binding transcriptional activator
+CITATIONS - 19661178:EV-EXP-IDA-PART-PURIFIED-PROTEIN-NH:3483055201:asantos
+CITATIONS - 20156994:EV-EXP-IDA-PURIFIED-PROTEIN-NH:3483055201:asantos
+COMMENT - "<b>D</b>NA-binding protein under <b>an</b>aerobic conditions," Dan |CITS: [20156994]|, formerly TtdR or YgiP, is an LysR-type transcriptional regulator for L-tartrate fermentation.  Dan belongs to the same family of growth phase-specific nucleoid proteins as Fis, Dps, HU, IHF, and H-NS |CITS: [20156994]|.  More specifically, Dan belongs to the group II nucleoid proteins, which include Fis, Rob (CbpB), CbpA, and IciA and show irregular distribution within the nucleoid |CITS: [20156994]|.  Dan may have a functional dichotomy, controlling both the structure and function of the nucleoid |CITS: [20156994]|.
+/
+/In the presence of L- and <i>meso</i>-tartrate, Dan stimulates expression of the divergently transcribed <i>ttdABT</i> operon, encoding L-tartrate dehydratase and the L-tartrate:succinate antiporter |CITS: [19661178][16804186]|. 
+/
+/The <i>ttd</i> pathway for L-tartate fermentation and the <i>dcu</i> pathway for general C<sub>4</sub>-dicarboxylate metabolism interact at the regulatory level |CITS: [19661178]|.  Expression of <i>ttdR</i> (<i>dan</i> gene) is positively autoregulated in response to L-tartrate |CITS: [19661178][16804186]| and activated by the two-component system DcuSR in the presence of L-tartrate, <i>meso</i>-tartrate, D-malate or fumarate |CITS: [19661178]|.  <i>ttdR</i> (<i>dan</i> gene) is repressed by FNR and the nitrate and nitrite two-component systems NarXL and NarPQ |CITS: [19661178]|.
+/
+/In an electrophoretic mobility shift assay it was shown that Dan binds to the <i>ttdA-ttdR</i> intergenic region |CITS: [19661178]|.
+/
+/Based on genomic SELEX analysis, of a total of 688 Dan-binding sites, 504 were located within intergenic noncoding regions and 184 were within coding regions |CITS: [20156994]|.
+/
+/Dan is a DNA-binding protein with recognition preference for the GTTNATT sequence.  This motif suggests a role for Dan in resistance to a metal, as with Dps against iron |CITS: [20156994]|.  Dan contains two sets of Cys-Cys pairs: one consisting of Cys170 and Cys193, and other of Cys288 and Cys296 |CITS: [20156994]|.
+/
+/Dan is highly expressed in cells grown under hypoxic or anaerobic conditions, and it plays a role in local folding of DNA |CITS: [20156994]|.
+COMPONENTS - EG12694-MONOMER
+COMPONENTS - TARTRATE
+CONSENSUS-SEQUENCE - GTTaATT
+DNA-FOOTPRINT-SIZE - 7
+GO-TERMS - |GO:0003700|
+GO-TERMS - |GO:0045893|
+REGULATES - REG0-10712
+REGULATES - REG0-10711
+REGULATES - REG0-10710
+REGULATES - REG0-10709
+REGULATES - REG0-10466
+REGULATES - REG0-10465
+SYMMETRY - :ASYMMETRIC
+//
+UNIQUE-ID - CPLX0-7715
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - IlvY-2-acetolactate DNA binding transcriptional dual regulator
+CITATIONS - 3062177:EV-EXP-IPI:3424007806:sgama
+CITATIONS - 3413113:EV-COMP-AINF-FN-FROM-SEQ:3424007806:sgama
+COMMENT - In the presence of &alpha;-acetolactate or &alpha;-acetohydroxybutyrate, the "<b>i</b>so<b>l</b>eucine-<b>v</b>aline" protein,  IlvY,  participates in activating a gene  involved in isoleucine and valine biosynthesis. In the absence of the metabolites, it is autorepressed |CITS: [9556617] [3062177]|. 
+/
+/IlvY binds cooperatively to two inverted repeat DNA-binding sites of 21 bp in the divergent regulatory region of the <i>ilvY</i> and <i>ilvC</i> genes for autorepression. When the inducer is bound to  the IlvY-DNA complex,  IlvY binding at the same DNA position activates  the transcription of <i>ilvC</i> by inducing a conformational  change in the structure of the complex that is correlated with the relief of a protein-induced bend in the DNA that  enhances the recruitment of RNA polymerase |CITS: [9556617][ 3062177]|.
+/
+/The transcription of the divergent genes <i>ilvY</i> and <i>ilvC</i> is coupled in a DNA supercoiling-dependent manner |CITS: [11123701]|.
+/
+/The protein belongs to the LysR family and contains a helix-turn-helix motif for DNA binding near its N terminus |CITS: [3413113]|.
+COMPONENTS - PD00200
+COMPONENTS - 2-ACETO-LACTATE
+CONSENSUS-SEQUENCE - aTTGCaaaatttGCAAt
+CREDITS - O0-9
+CREDITS - |sgama|
+DNA-FOOTPRINT-SIZE - 17
+GO-TERMS - |GO:0006355|
+REGULATES - REG0-4709
+REGULATES - REG0-5470
+SYMMETRY - :INVERTED-REPEAT
+//
+UNIQUE-ID - CPLX0-7605
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - IclR-pyruvate DNA-binding transcriptional repressor
+CITATIONS - 8550439:EV-EXP-IDA-PURIFIED-PROTEIN:3491313973:martin
+CITATIONS - 2185227:EV-COMP-HINF-FN-FROM-SEQ:3491313973:martin
+CITATIONS - 1447784:EV-COMP-HINF-FN-FROM-SEQ:3491313973:martin
+CITATIONS - 12492863:EV-EXP-IDA-PURIFIED-PROTEIN:3491313973:martin
+CITATIONS - 12492863:EV-EXP-IEP:3491313973:martin
+CITATIONS - 2001680:EV-EXP-IDA-PURIFIED-PROTEIN:3491313973:martin
+CITATIONS - 2001680:EV-EXP-IGI-FUNC-COMPLEMENTATION:3491313973:martin
+COMMENT - The transcription factor IclR, for "<b>I</b>so<b>c</b>itrate <b>l</b>yase <b>R</b>egulator," is negatively autoregulated |CITS:[8550439]| and it regulates the expression of the glyoxylate bypass operon  |CITS:[18942160][8626344][1995429][2512996][7033207][2001680]|. Transcription of this operon is induced when <i>E. coli</i> is grown during acetate accumulation in the exponential phase. Glyoxylate and pyruvate have been identified as effectors of IclR and show antagonistic effects. While glyoxylate favors the inactive dimeric state of IclR, pyruvate increases the binding of IclR to the aceBp promoter by stabilizing the active tetrameric form of the protein |CITS:[17426033]|.
+/
+/On other hand, the genes of the <i>aceBAK</i> operon are expressed to varied degrees due to two facts: first, they are differentially regulated at the translational level, and second, there is a putative premature transcriptional termination in the region preceding the <i>aceK</i> gene |CITS:[16415587]|. 
+/
+/
+/IclR represses <i>aceBAK</i> transcription through two mechanisms |CITS:[12492863]|: (1) binding to the proximal site, overlapping the -35 promoter box, and preventing RNA polymerase binding |CITS:[8682810][1447784][2001680]|, and (2) binding to the distal site after the RNA polymerase has bound to the promoter and formed the open complex, avoiding the polymerase escape of the promoter through its interaction with the &alpha;-subunits. Perhaps the IclR binding at both sites forms an intermolecular bridge that leads to a DNA loop structure and thus enhances the <i>aceBAK</i>  repression |CITS:[12492863]|.
+/
+/This regulator belongs to the IclR family of repressors. IclR is composed of two domains: the amino-terminal domain, which contains the DNA-binding region, and the carboxy-terminal domain, which is responsible for inducer binding |CITS:[1447784][2185227][17426033][8844850][1995431]|.
+/
+/The crystal structure of the C-terminal domain of IclR (2.3&Aring;) has been solved  |CITS:[17426033]|.
+/
+/An <i>iclR</i> mutation affects the carbon flow in the metabolism |CITS:[15543598][15885621]|.
+/
+/Review: |CITS: [22382436]|.
+COMPONENTS - PD04099
+COMPONENTS - PYRUVATE
+CONSENSUS-SEQUENCE - TGGAAAT 
+CONSENSUS-SEQUENCE - TGGAAATtATTTCCA
+CREDITS - O0-9
+CREDITS - |santos-zavaleta|
+DNA-FOOTPRINT-SIZE - 7
+DNA-FOOTPRINT-SIZE - 15
+GO-TERMS - |GO:0010944|
+GO-TERMS - |GO:0001046|
+GO-TERMS - |GO:0010629|
+REGULATES - REG0-6255
+REGULATES - REG0-4748
+REGULATES - REG0-4749
+REGULATES - REG0-4750
+REGULATES - REG0-4751
+REGULATES - REG0-4752
+REGULATES - REG0-4753
+REGULATES - REG0-4756
+SYMMETRY - :ASYMMETRIC
+SYMMETRY - :INVERTED-REPEAT
+//
+UNIQUE-ID - MONOMER0-562
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - GlcC-Glycolate DNA-binding transcriptional dual regulator
+CITATIONS - 8606183:EV-EXP-IDA-PURIFIED-PROTEIN:3491333014:martin
+CITATIONS - 8606183:EV-COMP-HINF-FN-FROM-SEQ:3491333014:martin
+CITATIONS - 9880556:EV-EXP-IDA-PART-PURIFIED-PROTEIN-NH:3491333014:martin
+CITATIONS - 9880556:EV-EXP-IEP:3491333014:martin
+COMPONENTS - G7546-MONOMER
+COMPONENTS - GLYCOLLATE
+DBLINKS - (PFAM "PF00392" IN-FAMILY |pkarp| 3346700381 NIL NIL)
+DNA-FOOTPRINT-SIZE - 15
+MOLECULAR-WEIGHT-KD - 28.82613199999999    
+MOLECULAR-WEIGHT-SEQ - 28.82613199999999    
+REGULATES - REG0-6036
+REGULATES - REG0-6030
+SYMMETRY - :INVERTED-REPEAT
+SYNONYMS - B2980
+SYNONYMS - YghN
+SYNONYMS - GlcC
+SYNONYMS - GlcC-glycolate
+//
+UNIQUE-ID - MONOMER0-164
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - CynR-Cyanate DNA-binding transcriptional dual regulator
+CITATIONS - 7961413
+CITATIONS - 7961413:EV-EXP-IEP:3421094180:sgama
+CITATIONS - 7961413:EV-EXP-IPI:3421094180:sgama
+CITATIONS - 1592818:EV-COMP-AINF-FN-FROM-SEQ:3421094330:sgama
+COMMENT - The transcriptional dual regulator CynR, "<b>cy</b>a<b>n</b>ate <b>r</b>egulator," activates the expression of the <i>cyn</i> operon, which is involved in use of cyanate as a sole nitrogen source, in the presence of the inducer cyanate |CITS:[3049588][1592818]|. It negatively regulates its own transcription independently of cyanate |CITS:[1592818]|.
+/
+/CynR belongs to the family of LysR-type transcriptional regulators (LTTRs) |CITS:[1592818][8253686]|. Members of this family have a conserved structure with an N-terminal DNA-binding helix-turn-helix motif and a C-terminal cofactor-binding domain. They typically form tetramers in solution that can be regarded as dimers of dimers |CITS:[12706716][19047729]|. In accordance with this, the CynR regulatory domain is sufficient for dimerization, whereas the full-length protein behaves as a higher-order oligomer |CITS:[19760662]|. In systematic studies of oligomerization, it was shown that some members of the LysR family, like CynR, interact with other members of the family to form heterodimers, but the physiological significance of this is unknown |CITS:[ 21187915]|.
+/
+/The promoter regions for the divergently transcribed <i>cynR</i> and <i>cyn</i> operons overlap. CynR binds cooperatively to a 60-bp region that contains two 9-bp repeats separated by 34 bp. The binding region overlaps the -35 region of the promoter for the <i>cyn</i> operon and both the -10 and -35 region of its own promoter |CITS:[8253686][7961413]|. CynR binds to DNA in the presence or absence of cyanate and induces bending of the DNA |CITS:[7961413]|. Cyanate decreases the amount of bending, suggesting that the change in bending acts as a transcriptional switch.
+/
+/Reviews: |CITS:[2094285][19047729]|.
+COMPONENTS - PD00291
+COMPONENTS - CPD-69
+CREDITS - O0-9
+CREDITS - |sgama|
+DBLINKS - (PFAM "PF00126" IN-FAMILY |pkarp| 3346700316 NIL NIL)
+DNA-FOOTPRINT-SIZE - 9
+GO-TERMS - |GO:0045893|
+GO-TERMS - |GO:0000986|
+GO-TERMS - |GO:0044374|
+MOLECULAR-WEIGHT-KD - 32.96085099999996    
+MOLECULAR-WEIGHT-SEQ - 32.96085099999996    
+REGULATES - REG0-5845
+REGULATES - REG0-5844
+SYMMETRY - :INVERTED-REPEAT
+SYNONYMS - B0338
+SYNONYMS - CynR
+SYNONYMS - CynR-Cyanate
+//
+UNIQUE-ID - MONOMER-54
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - GlpR-glycerol-3-phosphate
+COMMENT - When glycerol-3-phosphate is bound to GlpR, the affinity of the protein for the operators is reduced  |CITS: [15380549]|.
+COMPONENTS - PD03576
+COMPONENTS - GLYCEROL-3P
+DBLINKS - (PFAM "PF00455" IN-FAMILY |pkarp| 3346700400 NIL NIL)
+MOLECULAR-WEIGHT-KD - 28.04779399999998    
+MOLECULAR-WEIGHT-SEQ - 28.04779399999998    
+SYNONYMS - B3423
+SYNONYMS - GlpR
+//
+UNIQUE-ID - CPLX0-8071
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - AllR-allantoin
+COMPONENTS - ALLANTOIN
+COMPONENTS - G6276-MONOMER
+CONSENSUS-SEQUENCE - TTGGAAaAaTaTTCCAA
+DNA-FOOTPRINT-SIZE - 17
+REGULATES - REG0-6079
+REGULATES - REG0-6077
+REGULATES - REG0-6080
+SYMMETRY - :INVERTED-REPEAT
+//
+UNIQUE-ID - CPLX0-8026
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - MetJ-MTA
+CITATIONS - 22890386
+CITATIONS - 22890386:EV-EXP-IPI:3584127153:sgama
+COMMENT - MetJ binds to the metabolite 5´-deoxy-5´-(methylthio)adenosine with high affinity, but the biological effect of this binding is not known |CITS:[ 22890386]|.
+COMPONENTS - 5-METHYLTHIOADENOSINE
+COMPONENTS - PD04032
+CREDITS - O0-9
+CREDITS - |sgama|
+SPECIES - ECOLI
+//
+UNIQUE-ID - CPLX0-7701
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - MntR-Mn<sup>2+</sup>
+CITATIONS - 11466284
+COMPONENT-OF - CPLX0-7672
+COMPONENTS - G6420-MONOMER
+COMPONENTS - MN+2
+//
+UNIQUE-ID - CPLX0-2781
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - CysB-O-acetyl-L-serine DNA-binding transcriptional dual regulator
+CITATIONS - 15255893:EV-EXP-IMP:3491338267:martin
+CITATIONS - 15255893:EV-EXP-IDA-PURIFIED-PROTEIN:3491338267:martin
+CITATIONS - 15255893:EV-COMP-HINF-FN-FROM-SEQ:3491338267:martin
+CITATIONS - 15255893:EV-EXP-IEP:3491338267:martin
+CITATIONS - 9401024:EV-EXP-IDA-PURIFIED-PROTEIN:3491338267:martin
+CITATIONS - 3032952:EV-COMP-HINF-FN-FROM-SEQ:3491338267:martin
+CITATIONS - 6792186:EV-EXP-IEP:3491338267:martin
+CITATIONS - 14663078:EV-COMP-HINF-FN-FROM-SEQ:3491338267:martin
+CITATIONS - 14663078:EV-EXP-IEP:3491338267:martin
+CITATIONS - 14663078:EV-EXP-IDA-PART-PURIFIED-PROTEIN:3491338267:martin
+CITATIONS - 2182030:EV-COMP-HINF-FN-FROM-SEQ:3491338267:martin
+COMPONENTS - PC00040
+COMPONENTS - ACETYLSERINE
+DNA-FOOTPRINT-SIZE - 42
+REGULATES - REG0-12127
+REGULATES - REG0-12125
+REGULATES - REG0-12124
+REGULATES - REG0-12123
+REGULATES - REG0-12122
+REGULATES - REG0-12121
+REGULATES - REG0-12120
+REGULATES - REG0-6126
+REGULATES - REG0-6009
+REGULATES - REG0-6016
+REGULATES - REG0-5848
+REGULATES - REG0-5828
+REGULATES - REG0-5816
+REGULATES - REG0-5559
+REGULATES - REG0-5111
+REGULATES - REG0-5110
+REGULATES - REG0-5109
+//
+UNIQUE-ID - MONOMER0-2482
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - AlsR-allose
+CITATIONS - 10559180:EV-EXP-IEP:3421244834:martin
+CITATIONS - 8576032:EV-COMP-HINF:3421244834:martin
+COMPONENTS - ALLOSE
+COMPONENTS - G7821-MONOMER
+DBLINKS - (PFAM "PF01418" IN-FAMILY |pkarp| 3346700434 NIL NIL)
+GO-TERMS - |GO:0045892|
+SYNONYMS - RpiR
+SYNONYMS - YjcY
+SYNONYMS - AlsR
+//
+UNIQUE-ID - MONOMER0-161
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - MelR-Melibiose transcriptional activator
+CITATIONS - 18346968:EV-EXP-IDA-PURIFIED-PROTEIN:3421305863:martin
+CITATIONS - 10760179:EV-EXP-IDA-PURIFIED-PROTEIN:3421305863:martin
+CITATIONS - 16621812:EV-EXP-IEP:3421305863:martin
+CITATIONS - 10760179:EV-EXP-IEP:3421305863:martin
+CITATIONS - 16621812:EV-EXP-IMP:3421305863:martin
+CITATIONS - 10747919:EV-EXP-IMP:3421305863:martin
+COMMENT - MelR, "<b>mel</b>ibiose <b>r</b>egulator," is a transcription factor involved in disaccharide melibiose degradation.  It coregulates with CRP, a global transcriptional regulator |CITS:[11742992][10760178][2851497]|. These regulators bind cooperatively to activate transcription of the operon involved in transport and catabolism of melibiose. Synthesis of this operon is induced when <i>Escherichia coli</i> is grown on melibiose in the absence of glucose. Gene induction occurs when the physiological inducer, melibiose, binds to the MelR regulator and when cellular cyclic AMP levels are high.
+/
+/In the presence of melibiose, MelR binds in tandem to repeat sequences in the <i>melR</i>/<i>melAB</i> intergenic region to activate transcription by overlapping the -35 box of the promoter <i>melA</i>p. The binding targets for MelR consist of 18-nucleotide-long repeat sequences that possess conserved motifs; each monomer binds to one of these conserved sequences |CITS:[10760178][11742992][10747919]|. 
+/
+/MelR binds to five target sites in the <i>melA</i>p region. MelR binds to the less-conserved site (-42.5) with less strength; this binding occurs only in the presence of melibiose, and it is absolutely required for expression of <i>melA</i>p |CITS:[10760178]|. MelR binding to the distal site (-237.5) has been shown to down-regulate the expression of <i>melR</i>p and <i>melA</i>p |CITS:[16621812][10760179]|. 
+/
+/In the absence of melibiose, MelR is unable to activate <i>melA</i>p, but it regulates its own expression by repressing <i>melR</i>p and <i>melA</i>p simultaneously |CITS:[10760178][11752325][9409145]|. Melibiose triggers MelR-dependent activation of <i>melA</i>p and relieves MelR-dependent repression of <i>melR</i>p |CITS:[9409145][11752325]|. The <i>melAB</i> operon is located upstream of <i>melR</i> and in the opposite direction.
+/
+/This regulator belongs to the AraC/XylS family of activators and occurs as both a monomer and a homodimer. It is composed of two domains: the carboxy-terminal domain, which contains the DNA-binding region, and the amino-terminal domain, which is responsible for dimerization and l-arabinose binding |CITS:[7784205][2684786][1445207][9108148][12675795]|. 
+/
+COMPONENTS - PD00208
+COMPONENTS - MELIBIOSE
+CONSENSUS-SEQUENCE - ATTCCCATAAACTCAGAT
+DBLINKS - (PFAM "PF00165" IN-FAMILY |pkarp| 3346700436 NIL NIL)
+DNA-FOOTPRINT-SIZE - 18
+GO-TERMS - |GO:2000144|
+MOLECULAR-WEIGHT-KD - 34.927832999999985    
+MOLECULAR-WEIGHT-SEQ - 34.927832999999985    
+REGULATES - REG0-5707
+REGULATES - REG0-5705
+REGULATES - REG0-5704
+REGULATES - REG0-5703
+REGULATES - REG0-4497
+REGULATES - REG0-4496
+REGULATES - REG0-4493
+SYMMETRY - :ASYMMETRIC
+SYNONYMS - B4118
+SYNONYMS - MelR
+SYNONYMS - MelR-melibiose
+//
+UNIQUE-ID - MONOMER-51
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - FadR-acyl-CoA
+CITATIONS - 10592242:EV-COMP-AINF-FN-FROM-SEQ:3370697919:asantos
+COMPONENTS - PD01520
+COMPONENTS - ACYL-COA
+DBLINKS - (PFAM "PF00392" IN-FAMILY PKARP 3346700329 NIL NIL)
+DBLINKS - (PDB "1HW2" STRUCTURE PALEY 3439827725 NIL NIL)
+MOLECULAR-WEIGHT-KD - 26.968570999999994    
+MOLECULAR-WEIGHT-SEQ - 26.968570999999994    
+REGULATES - REG0-11617
+SYNONYMS - B1187
+SYNONYMS - Ole
+SYNONYMS - Dec
+SYNONYMS - ThdB
+SYNONYMS - OleR
+SYNONYMS - FadR
+//
+UNIQUE-ID - CPLX0-8062
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - CaiF-L-carnitine DNA-binding Transcriptional Activator
+COMPONENTS - CPLX0-7666
+COMPONENTS - CARNITINE
+CONSENSUS-SEQUENCE - AAAGTTATAACcAcTc
+DNA-FOOTPRINT-SIZE - 16
+REGULATES - REG0-10761
+REGULATES - REG0-5161
+REGULATES - REG0-5162
+REGULATES - REG0-10760
+REGULATES - REG0-5652
+REGULATES - REG0-10763
+REGULATES - REG0-5653
+REGULATES - REG0-10762
+SYMMETRY - :ASYMMETRIC
+//
+UNIQUE-ID - CPLX0-7750
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - LsrR-P-DPD
+COMPONENTS - G6799-MONOMER
+COMPONENTS - CPD-10551
+//
+UNIQUE-ID - CPLX0-7680
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - Zur-Zn<sup>2+</sup> DNA-binding transcriptional repressor
+CITATIONS - 11523983
+CITATIONS - 9680209
+CITATIONS - 10816566
+CITATIONS - 10816566:EV-COMP-AINF-FN-FROM-SEQ:3421186246:sgama
+CITATIONS - 10816566:EV-EXP-IPI:3421186246:sgama
+CITATIONS - 9680209:EV-EXP-IEP:3421186246:sgama
+COMMENT - Zur, "<b>z</b>inc <b>u</b>ptake <b>r</b>egulator," regulates genes involved in the Zn<sup>2+</sup> ABC transporter uptake system and genes involved in the expression of alternative ribosomal proteins |CITS:[9680209][10816566][12904577]|. 
+/
+/The active conformation of Zur is observed when it is in a reduced form and when it is bound to Zn(II). The oxidized form of Zur does not bind to DNA or zinc. |CITS [9680209][10816566][11931550]|. Zur is not autoregulated |CITS:[11931550]|.
+/
+/Zur, which belongs to the Fur family |CITS: [9680209]|, appears to have a DNA-binding site in the N-terminal domain, around residue 65, and a signal-recognition site in the C-terminal domain. This protein has two Zn(II)-binding sites: site A, which only binds to Zn(II), and site B (the sensor site), which binds to Zn(II) and Co(II) with high and low affinities, respectively |CITS:[11523983]|. Zur is able to form dimers, even in the absence of zinc |CITS: [10816566]|.
+/
+/The 23-bp palindrome consensus sequence for Zur-binding sites of gamma-proteobacteria, including <i>Escherichia coli</i>, has been determined by computational analysis |CITS [12904577]|.
+/
+/The thermodynamic profile of Zur-DNA interactions directly correlates with the physiological response at different promoters |CITS:[25369000]|.
+/ 
+/Tyr45 and Arg65 interactions with Zur-box purines define the recognition motif |CITS:[25369000]|.
+/
+COMPONENTS - CPLX0-7679
+COMPONENTS - ZN+2
+^COEFFICIENT - 4
+CONSENSUS-SEQUENCE - GaaaTGTtAtAatATAACAtttC 
+CREDITS - |santos-zavaleta|
+CREDITS - O0-9
+CREDITS - |sgama|
+DNA-FOOTPRINT-SIZE - 23
+GO-TERMS - |GO:0044212|
+GO-TERMS - |GO:0008270|
+GO-TERMS - |GO:0071580|
+REGULATES - REG0-12214
+REGULATES - REG0-9412
+REGULATES - REG0-6230
+REGULATES - REG0-6233
+REGULATES - REG0-9413
+SYMMETRY - :INVERTED-REPEAT
+//
+UNIQUE-ID - CPLX-172
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - AraC-L-arabinose DNA-binding transcriptional activator
+CITATIONS - 8516313:EV-EXP-IDA-PURIFIED-PROTEIN:3421370278:martin
+CITATIONS - 8980677:EV-EXP-IDA-PURIFIED-PROTEIN:3421370278:martin
+CITATIONS - 2231717:EV-EXP-IDA-PURIFIED-PROTEIN:3421370278:martin
+CITATIONS - 8510144:EV-EXP-IEP:3421370278:martin
+COMMENT - The "<b>ara</b>binose regulator," AraC, is a transcription factor that regulates transcription of several genes and operons involved in arabinose catabolism and transport. It coregulates with another transcriptional regulator, CRP; both are transcription factors involved in l-arabinose degradation. These regulators bind cooperatively to activate transcription of five operons related to transport, catabolism, and autoregulation of l-arabinose. Transcription of these operons is induced when <i>E. coli</i> is grown in the absence of glucose and when the physiological inducer, l-arabinose, binds to the AraC regulator. In the absence of glucose, cellular cyclic AMP levels are high and cyclic AMP forms a dimeric complex with CRP to coregulate with AraC |CITS:[9409145][1744033][6319708][1400237][9600836][2231717][6377308]|. 
+/
+/AraC binds to five target sites in the <i>araB</i>p region. AraC binds to the less-conserved site (-42.5) with less strength; this binding occurs only in the presence of arabinose, and it is absolutely required for expression of <i>araB</i>p |CITS:[2237403][3279415][2962192][3520549][8428590]|. AraC binding to the distal site (-123.5) has been shown to down-regulate expression of <i>araB</i>p and <i>araC</i>p |CITS:[1560456][3279415]|. 
+/
+/In the absence of arabinose, AraC is unable to activate <i>araB</i>p, but it regulates its own expression by repressing <i>araC</i>p and <i>araB</i>p simultaneously |CITS:[2237403][3279415][3520549]|. Arabinose triggers AraC-dependent activation of <i>araB</i>p and relieves AraC-dependent repression of <i>araC</i>p |CITS:[3279415][3520549]|. The <i>araBAD</i> operon is located upstream of <i>araC</i> and in the opposite direction.
+/
+/In the presence of arabinose, this regulator activates transcription by overlapping the -35 box of the core promoters, and the central position of the binding site is located near bp -41.5. The binding targets for AraC consist of 17-nucleotide-long direct repeat sequences that possess conserved motifs; each monomer binds to one of these conserved sequences |CITS:[9409145][8980677]|. 
+/
+/The AraC regulator belongs to the AraC/XylS family and occurs as both a monomer and a homodimer. It is composed of two domains. The solution structure of the C-terminal DNA-binding domain has been solved. It consists of two helix-turn-helix regions connected by an &alpha;-helix |CITS:[19422057]|. The N-terminal domain is responsible for dimerization and L-arabinose binding |CITS:[9409145][8451183]|. Its crystal structure |CITS:[9367758][9103202]| reveals that the sugar molecule is bound within a &beta;-barrel, buried by the N-terminal arm of the protein. It has been suggested that this N-terminal arm plays a key role in the regulation of the arabinose-dependent DNA-binding properties of the protein. In the absence of arabinose it interacts with the DNA-binding domain and constrains this domain, and it releases it in the presence of arabinose |CITS:[9103202][18561170][19815018]|. This interaction appears to be affected by a mutation in the interdomain linker |CITS: [21840981]|. Mutations at position 15 in the N-terminal arm of AraC do not activate transcription in the presence of arabinose, and this was confirmed by using a molecular dynamic (MD) simulation, which revealed that preservation of the shape of the arm is critical to inducibility |CITS:[23150197]|.
+/
+/A negative autoregulation network motif increases the input dynamic range of the arabinose system by coupling the transcription factor protein level to the input signal |CITS:[21749723]|.
+COMPONENTS - PC00003
+COMPONENTS - ARABINOSE
+CONSENSUS-SEQUENCE - TAGCaaaatagTCCATA
+DNA-FOOTPRINT-SIZE - 17
+GO-TERMS - |GO:2000143|
+GO-TERMS - |GO:0000986|
+GO-TERMS - |GO:2000144|
+REGULATES - REG0-12019
+REGULATES - REG0-10593
+REGULATES - REG0-10592
+REGULATES - REG0-4766
+REGULATES - REG0-4770
+REGULATES - REG0-4771
+REGULATES - REG0-4760
+REGULATES - REG0-4763
+REGULATES - REG0-4762
+REGULATES - REG0-5556
+REGULATES - REG0-5557
+REGULATES - REG0-5489
+REGULATES - REG0-5493
+REGULATES - REG0-5490
+REGULATES - REG0-5491
+REGULATES - REG0-5494
+REGULATES - REG0-5495
+REGULATES - REG0-4767
+REGULATES - REG0-4759
+SYMMETRY - :ASYMMETRIC
+SYNONYMS - AraC-arabinose
+//
+UNIQUE-ID - MONOMER0-2341
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - NanR-NANA
+COMPONENTS - N-ACETYLNEURAMINATE
+COMPONENTS - G7678-MONOMER
+DBLINKS - (PFAM "PF00392" IN-FAMILY |pkarp| 3346700392 NIL NIL)
+SYNONYMS - B3226
+SYNONYMS - YhcK
+SYNONYMS - NanR
+//
+UNIQUE-ID - MONOMER0-158
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - MalT-Maltotriose-ATP DNA-binding transcriptional activator
+CITATIONS - 7830577:EV-EXP-IDA-PURIFIED-PROTEIN:3421370617:martin
+CITATIONS - 2538630:EV-EXP-IDA-PURIFIED-PROTEIN:3421370617:martin
+CITATIONS - 2664421:EV-EXP-IDA-PURIFIED-PROTEIN:3421370617:martin
+COMMENT - The "<b>Mal</b>tose regulator," MalT, is a transcription factor that activates transcription of several genes and operons involved in maltose catabolism and transport |CITS:[10973069][1918057][1544897][7040340][7830577]|. This regulator is sensitive to catabolite control and is induced when <i>Escherichia coli</i> is grown on maltodextrin in the absence of glucose |CITS:[6315676][8952481][8895588]|. MalT is a STAND transcription factor,  <b>S</b>ignal <b>T</b>ransduction <b>A</b>TP bases with <b>n</b>umerous <b>d</b>omains |CITS:[20545845]||CITS: [24134781]|. A novel regulatory role for the MalT regulon in glycolysis-associated utilization of carbon sources has been identified |CITS:[21912786]|. 
+/
+/MalT is monomeric in solution, but in the presence of maltodextrin and ATP it forms multiple complexes (oligomers) in its target promoters and activates transcription by overlapping the -35 box of promoters |CITS:[1544897][1918057]|. The binding targets of MalT consist of 10-nucleotide-long direct repeat sequences that possess conserved motifs; each monomer binds to one of these conserved sequences |CITS:[1918057]|.
+/
+/The gene <i>malT</i> is located upstream of the operon <i>malPQ</i> and in the opposite direction |CITS:[9529892][10973069][11931562]|. This transcriptional activator |CITS:[3015733]| belongs to the LuxR family of activators. MalT subunits consist of four domains: the C-terminal DNA-binding domain, the N-terminal ATP-binding domain, and two domains (DT2 and DT3) involved in effector recognition (maltotriose) |CITS:[15733913] [11209048][11709169][8227007][12003949]|. Based on an alanine-scanning mutagenesis approach, it was shown that the inducer maltotriose binds inside the cavity of the tetratricopeptide-like sensor domain of MalT, a bacterial STAND transcription factor |CITS:[20545845]|. Maltotriose plays a dual role in signal transduction by MalT; it triggers nucleotide-binding oligomerization domain (NOD) opening and renders the MalT multimeric platform competent for downstream signaling |CITS:[24134781]|.
+/
+/MalT activity is negatively regulated by Aes and MalY through direct protein-protein interactions and competition with maltotriose for MalT binding |CITS:[12374803][11867639][12003949][10692154]|. These characteristics point toward identical modes of action for MalY and Aes. However, the identification of an amino acid substitution in MalT that suppresses Aes inhibition without interfering with MalY inhibition suggests that the binding sites of the two inhibitory proteins are not the same |CITS:[11867639][12003949]|. In addition, MalK inhibits maltotriose binding by MalT; interestingly, however, MalK interacts directly with MalT in the absence of maltotriose but not in the presence of maltotriose |CITS:[15180985][15733913]|.
+/
+COMPONENTS - PD00237
+COMPONENTS - MALTOTRIOSE
+COMPONENTS - ATP
+CONSENSUS-SEQUENCE - GGGGAGGAGG
+DNA-FOOTPRINT-SIZE - 10
+GO-TERMS - |GO:0048031|
+GO-TERMS - |GO:0044212|
+GO-TERMS - |GO:2000144|
+GO-TERMS - |GO:0005524|
+MOLECULAR-WEIGHT-KD - 103.11831999999967    
+MOLECULAR-WEIGHT-SEQ - 103.11831999999967    
+REGULATES - REG0-6161
+REGULATES - REG0-6160
+REGULATES - REG0-6159
+REGULATES - REG0-5595
+REGULATES - REG0-5593
+REGULATES - REG0-5592
+REGULATES - REG0-4744
+REGULATES - REG0-4743
+REGULATES - REG0-4740
+REGULATES - REG0-4738
+REGULATES - REG0-4737
+REGULATES - REG0-4735
+REGULATES - REG0-4734
+REGULATES - REG0-4733
+REGULATES - REG0-4728
+REGULATES - REG0-4727
+REGULATES - REG0-4492
+REGULATES - REG0-4491
+REGULATES - REG0-4490
+REGULATES - REG0-4489
+SYMMETRY - :ASYMMETRIC
+SYNONYMS - MalA
+SYNONYMS - B3418
+SYNONYMS - MalT
+SYNONYMS - MalT-maltotriose-ATP
+//
+UNIQUE-ID - MONOMER-2720
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - Cbl-APS
+COMMENT - The activity of Cbl transcriptional regulator is inhibited by adenosine-5' -phosphosulphate (APS) . It was suggested that this inhibition is a result of a change in Cbl conformation that is unfavorable for the recruitment of the RNA polymerase|CITS: [11918818]|.
+COMPONENTS - G7071-MONOMER
+COMPONENTS - APS
+SYNONYMS - MetC
+SYNONYMS - B1987
+SYNONYMS - Cbl
+//
+UNIQUE-ID - CPLX0-8059
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - DgsA-EII
+COMPONENTS - PD01896
+COMPONENTS - CPD0-2342
+//
+UNIQUE-ID - CPLX0-7743
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - MprA-CCCP
+CITATIONS - 10438794
+COMPONENTS - EG10603-MONOMER
+COMPONENTS - CPD-7970
+//
+UNIQUE-ID - CPLX0-7670
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - ArgP-lysine
+COMPONENTS - CPLX0-7669
+COMPONENTS - LYS
+//
+UNIQUE-ID - CPLX-125
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - TrpR-Tryptophan DNA-binding transcriptional repressor
+CITATIONS - 8613990
+CITATIONS - 3315853
+CITATIONS - 8613990:EV-COMP-HINF-FN-FROM-SEQ:3491502363:asantos
+CITATIONS - 3315853:EV-EXP-IDA-PURIFIED-PROTEIN-NH:3491502363:asantos
+COMMENT - TrpR, "tryptophan (<b>trp</b>) transcriptional <b>r</b>epressor," negatively regulates expression of the <i>trp</i> regulon in response to intracellular levels of tryptophan |CITS:[7012834]|. The TrpR regulon is involved in tryptophan biosynthesis, transport, and regulation. This regulon partially overlaps with the TyrR regulon, since expression of several genes is regulated by TrpR and TyrR, the transcriptional regulator of the TyrR regulon |CITS:[7961453][1904443][2061290]|.
+/
+/TrpR represses transcription by interfering with the ability of RNA polymerase to interact with the promoter |CITS:[1097702]|. The aporepressor is activated as a DNA-binding protein by noncooperative binding of two L-tryptophan molecules to the homodimer |CITS:[1097702][3519217][3549712]|. The consensus sequence for TrpR is described as two symmetrically arranged half-sites with the sequence GNACT separated by a spacer of 8 bp |CITS:[8613990]|.
+/
+/X-ray crystallography of the aporepressor |CITS:[3600756]|, the holorepressor |CITS:[3903514]|, and repressor bound to the operator oligonucleotide |CITS:[3419502]| as well as NMR studies of the repressor and aporepressor in solution |CITS:[8433368]| and bound to an operator oligonucleotide |CITS:[7957174]| reveal that the small 25-kDa protein belongs to the helix-turn-helix (HTH) family. The dimer is composed of two identical six-helical subunits, where four of the helices intertwine with the corresponding helices from the other subunit. Binding of tryptophan stabilizes the HTH and alters the orientation of the HTH such that the repressor fits into the major grooves |CITS:[3600756]|.
+/
+/The crystal structure of the repressor-operator complex reveals that specific binding is mostly mediated by contacts to the phosphate backbone and water-mediated hydrogen bonds, suggesting that the intrinsic DNA structure rather than the specific base pairs are recognized, a mechanism which has been termed indirect readout |CITS:[3419502]|.
+COMPONENTS - TRP
+COMPONENTS - PC00007
+CONSENSUS-SEQUENCE - GtACTAGTTAACTAGTaC 
+DNA-FOOTPRINT-SIZE - 18
+REGULATES - REG0-5539
+REGULATES - REG0-5538
+REGULATES - REG0-5537
+REGULATES - REG0-5536
+REGULATES - REG0-5482
+REGULATES - REG0-5481
+REGULATES - REG0-4794
+REGULATES - REG0-4790
+REGULATES - REG0-4789
+REGULATES - REG0-4788
+SYMMETRY - :INVERTED-REPEAT
+SYNONYMS - TrpR-trp
+//
+UNIQUE-ID - MONOMER0-2201
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - AllR-glyox
+COMPONENTS - G6276-MONOMER
+COMPONENTS - GLYOX
+DBLINKS - (PDB "1T9L" |Structure| |keseler| 3351980870 NIL NIL)
+DBLINKS - (PFAM "PF01614" IN-FAMILY |pkarp| 3346700318 NIL NIL)
+SYNONYMS - YbbU
+SYNONYMS - B0506
+SYNONYMS - AllR
+//
+UNIQUE-ID - MONOMER0-1441
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - MhpR-3HPP DNA-binding transcriptional activator
+CITATIONS - 9098055
+CITATIONS - 12748194
+CITATIONS - 9098055:EV-COMP-HINF-FN-FROM-SEQ:3421073382:sgama
+CITATIONS - 12748194:EV-EXP-IEP:3421073515:sgama
+COMMENT - MhpR, "<b>h</b>ydroxy<b>p</b>henylpropionate <b>r</b>egulator," participates in controlling the expression of several genes involved in degradation of phenylpropionate (PP) |CITS:[9098055][12748194]|. MhpR is able to bind to its DNA-binding site even in the absence of inducer; however, increasing concentrations of inducer improve the binding strength of MhpR. 3-(2,3-Dihydroxyphenyl)propionate (DHPP) and 3-hydroxyphenylpropionate (3HPP), two intermediates of the metabolic pathways, are the principal inducers of MhpR. The third inducer, phenylpropionate (PP), acts synergistically with DHPP and 3HPP |CITS:[12748194][19520845]|. 
+/
+/This protein, which belongs to the IclR family of transcriptional regulators, has a helix-turn-helix motif to bind DNA in its N-terminal domain and a 22-residue motif, specific to an IclR subfamily, in its C-terminal domain |CITS:[9098055]|.
+/
+/MhpR is necessary to recruit CRP to the regulatory region of the <i>mhp</i> operon, where both proteins activate transcription |CITS:[12748194]|.
+/
+/The <i>mhpR</i> gene, which is located downstream of the genes it regulates and in the opposite direction, appears to be expressed constitutively |CITS:[12748194]|.
+/
+COMPONENTS - G6201-MONOMER
+COMPONENTS - 3-HYDROXYPHENYL-PROPIONATE
+CONSENSUS-SEQUENCE - GTGCACCTGGTGCAC
+CREDITS - O0-9
+CREDITS - |sgama|
+DBLINKS - (PFAM "PF01614" IN-FAMILY |pkarp| 3346700316 NIL NIL)
+DNA-FOOTPRINT-SIZE - 15
+GO-TERMS - |GO:0000976|
+GO-TERMS - |GO:0045893|
+MOLECULAR-WEIGHT-KD - 35.578098999999945    
+MOLECULAR-WEIGHT-SEQ - 35.578098999999945    
+REGULATES - REG0-6372
+SYMMETRY - :INVERTED-REPEAT
+SYNONYMS - B0346
+SYNONYMS - MhpR
+//
+UNIQUE-ID - CPLX0-8203
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - AcnB-4Fe-4S
+COMPONENTS - ACONITATEDEHYDRB-MONOMER
+COMPONENTS - CPD-7
+//
+UNIQUE-ID - CPLX0-8056
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - TreR-trehalose 6-phosphate
+CITATIONS - 9148912
+COMPONENTS - EG12202-MONOMER
+COMPONENTS - TREHALOSE-6P
+//
+UNIQUE-ID - CPLX0-7736
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - ArsR-arsenite
+COMPONENTS - EG12235-MONOMER
+COMPONENTS - CPD-763
+//
+UNIQUE-ID - CPLX0-7620
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - Fur-Fe+2
+COMPONENT-OF - CPLX0-7639
+COMPONENTS - PD00260
+COMPONENTS - FE+2
+SPECIES - ECOLI
+//
+UNIQUE-ID - MONOMER0-2081
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - HcaR-HCA DNA-binding transcriptional dual regulator
+CITATIONS - 11200225
+CITATIONS - 9603882
+CITATIONS - 9603882:EV-COMP-HINF-FN-FROM-SEQ:3464449096:sgama
+CITATIONS - 11200225:EV-EXP-IEP:3421187110:sgama
+COMMENT - HcaR, "<b>h</b>ydro<b>c</b>innamic <b>a</b>cid <b>r</b>egulator," directly regulates genes involved in 3-phenylpropionate (also called hydrocinnamic acid) catabolism. Proteome analyses have shown that HcaR regulates the production of 30 proteins involved in several processes; however, it is unknown whether this regulation is direct or indirect |CITS: [15808934]|.
+/
+/HcaR, which belongs to the LysR family, shows a helix-turn-helix motif in the N-terminal domain and a multimerization motif in the C-terminal domain |CITS: [9603882]|. It is not currently known how many monomers form the multimeric complex. A putative HcaR DNA-binding site sequence of 13 bp, matching the binding motif of LysR-type regulators, has been identified |CITS: [9603882]|.
+/
+/Homologous proteins 100% identical to HcaR have been found in pathogenic <i>Escherichia coli</i> strains, including  O157:H7, and in <i>Shigella flexneri</i> |CITS: [15808934]|. 
+/
+/The <i>hcaR</i> gene, which is transcribed divergently from an HcaR-regulated operon, is induced during stationary phase in an RpoS-independent manner, whereas it is repressed in the presence of glucose |CITS:[11200225]| and in the absence of oxygen through the indirect effect of ArcA |CITS:[15808934]|.
+COMPONENTS - G7331-MONOMER
+COMPONENTS - 3-PHENYLPROPIONATE
+CONSENSUS-SEQUENCE - TAGttAaTttCTA
+CREDITS - O0-9
+CREDITS - |sgama|
+DBLINKS - (PFAM "PF00126" IN-FAMILY |pkarp| 3346700365 NIL NIL)
+DNA-FOOTPRINT-SIZE - 13
+MOLECULAR-WEIGHT-KD - 32.83822599999994    
+MOLECULAR-WEIGHT-SEQ - 32.83822599999994    
+REGULATES - REG0-6099
+SYMMETRY - :INVERTED-REPEAT
+SYNONYMS - B2537
+SYNONYMS - YfhT
+SYNONYMS - PhdR
+SYNONYMS - HcaR
+//
+UNIQUE-ID - MONOMER-59
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - PdhR-pyruvate
+CITATIONS - 7783622
+COMPONENTS - EG11088-MONOMER
+COMPONENTS - PYRUVATE
+DBLINKS - (PFAM "PF00392" IN-FAMILY |pkarp| 3346700315 NIL NIL)
+MOLECULAR-WEIGHT-KD - 29.42541900000001    
+MOLECULAR-WEIGHT-SEQ - 29.42541900000001    
+SYNONYMS - B0113
+SYNONYMS - YacB
+SYNONYMS - GenA
+SYNONYMS - PdhR
+//
+UNIQUE-ID - CPLX0-8085
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - PuuR-putrescine
+COMPONENTS - EG12431-MONOMER
+COMPONENTS - PUTRESCINE
+//
+UNIQUE-ID - CPLX0-8051
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - CytR-cytidine
+COMPONENTS - CPLX0-7740
+COMPONENTS - CYTIDINE
+//
+UNIQUE-ID - CPLX0-7716
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - NemR-methylglyoxal
+COMPONENTS - G6889-MONOMER
+COMPONENTS - METHYL-GLYOXAL
+//
+UNIQUE-ID - CPLX0-7606
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - IclR-glyox
+COMPONENTS - PD04099
+COMPONENTS - GLYOX
+//
+UNIQUE-ID - MONOMER0-941
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - GcvR-gly
+CITATIONS - 11495998:EV-EXP-IPI:3421303840:martin
+CITATIONS - 11495998:EV-EXP-IEP:3421303840:martin
+CITATIONS - 12101307:EV-EXP-IEP:3421303840:martin
+COMMENT - "<b>G</b>lycine <b>c</b>lea<b>v</b>age <b>r</b>epressor," GcvR, is an accessory protein that binds directly to GcvA, bending DNA to form a repression complex (GcvA/GcvR) in the regulatory region of the <i>gcvT</i> operon |CITS:[7665475] [11495998]|. 
+/
+/Glycine binds directly to GcvR to disrupt or block the association of the GcvA/GcvR complex, whereas purines appear to promote the formation of the repression complex through an unknown mechanism |CITS:[12101307][11495998]|. In the absence of glycine and the presence of GcvR, the GcvA/GcvR complex represses the operon involved in the glycine cleavage enzyme system |CITS:[11495998]|.
+COMPONENTS - EG11149-MONOMER
+COMPONENTS - GLY
+DBLINKS - (PFAM "PF01842" IN-FAMILY |pkarp| 3346700363 NIL NIL)
+GO-TERMS - |GO:0008134|
+GO-TERMS - |GO:0016594|
+GO-TERMS - |GO:0010629|
+MOLECULAR-WEIGHT-KD - 20.76861800000001    
+MOLECULAR-WEIGHT-SEQ - 20.76861800000001    
+SYNONYMS - YffD
+SYNONYMS - B2479
+SYNONYMS - GcvR
+//
+UNIQUE-ID - MONOMER0-165
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - XylR-Xylose DNA-binding transcriptional dual regulator
+CITATIONS - 9371449:EV-EXP-IDA-PURIFIED-PROTEIN:3421306055:martin
+CITATIONS - 9371449:EV-EXP-IEP:3421306055:martin
+CITATIONS - 26527647:EV-EXP-IDA-PURIFIED-PROTEIN:3662143350:asantos
+COMMENT - "<b>Xyl</b>ose <b>r</b>egulator," XylR, is a transcription factor involved in d-xylose degradation. It coregulates with CRP, a global transcriptional regulator |CITS:[9371449]|. These regulators bind cooperatively to activate transcription of  operons involved in transport and catabolism of d-xylose. Synthesis of these operons is induced when <i>Escherichia coli</i> is grown on d-xylose in the absence of glucose. Gene induction occurs when the physiological inducer, d-xylose, binds to XylR and when cellular cyclic AMP levels are high |CITS:[9371449]|.
+/
+/In the presence of d-xylose, XylR binds in tandem to four inverted repeat sequences in the <i>xylAB</i>/<i>xylFGHR</i> intergenic region to activate transcription by overlapping the ?35 boxes of <i>xylAB</i>p and <i>xylFGHR</i>p |CITS:[9371449]|. The binding targets for XylR consist of 18-nucleotide-long directed repeat sequences that possess conserved motifs; each monomer binds to one of these conserved sequences |CITS:[9371449][11750821]|. XylR belongs to the AraC/XylS family |CITS:[9409145][11752325]|.
+COMPONENTS - EG20253-MONOMER
+COMPONENTS - XYLOSE
+CONSENSUS-SEQUENCE - TGTGAAatatcgTAATTG 
+DBLINKS - (PFAM "PF00532" IN-FAMILY |pkarp| 3346700407 NIL NIL)
+DNA-FOOTPRINT-SIZE - 18
+MOLECULAR-WEIGHT-KD - 44.8691229999999    
+MOLECULAR-WEIGHT-SEQ - 44.8691229999999    
+REGULATES - REG0-12387
+REGULATES - REG0-12386
+REGULATES - REG0-5047
+REGULATES - REG0-5046
+REGULATES - REG0-5042
+REGULATES - REG0-5041
+SYMMETRY - :ASYMMETRIC
+SYNONYMS - B3569
+SYNONYMS - XylR
+SYNONYMS - XylR-xylose
+//
+UNIQUE-ID - MONOMER-55
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - GntR-gluconate
+COMPONENTS - PD03585
+COMPONENTS - GLUCONATE
+DBLINKS - (PFAM "PF00356" IN-FAMILY |pkarp| 3346700401 NIL NIL)
+DBLINKS - (REFSEQ "NP_417895" NIL NIL NIL NIL NIL)
+MOLECULAR-WEIGHT-KD - 34.606810999999965    
+MOLECULAR-WEIGHT-SEQ - 34.606810999999965    
+SYNONYMS - B3438
+SYNONYMS - GntR
+//
+UNIQUE-ID - CPLX0-8074
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - ComR-Cu(I)
+COMPONENTS - G6569-MONOMER
+COMPONENTS - CU+
+//
+UNIQUE-ID - CPLX0-8027
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - MetJ-adenine
+CITATIONS - 22890386
+CITATIONS - 22890386:EV-EXP-IPI:3584127627:sgama
+COMMENT - MetJ binds to the metabolite adenine with high affinity, but the biological effect of this binding is not known |CITS:[ 22890386]|.
+COMPONENTS - ADENINE
+COMPONENTS - PD04032
+CREDITS - O0-9
+CREDITS - |sgama|
+SPECIES - ECOLI
+//
+UNIQUE-ID - CPLX0-7702
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - CueR-Cu(I)
+CITATIONS - 14518983
+COMPONENT-OF - CPLX0-7708
+COMPONENTS - G6263-MONOMER
+COMPONENTS - CU+
+SPECIES - ECOLI
+//
+UNIQUE-ID - CPLX0-6
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - ModE-MoO<sub>4</sub><sup>2-</sup> DNA-binding transcriptional dual regulator
+CITATIONS - 9466267
+CITATIONS - 9721306
+CITATIONS - 14641908
+CITATIONS - 9044285
+CITATIONS - 13129959
+CITATIONS - 14641908:EV-COMP-HINF-FN-FROM-SEQ:3491337029:asantos
+CITATIONS - 9044285:EV-EXP-IDA-PURIFIED-PROTEIN-NH:3491337419:asantos
+CITATIONS - 13129959:EV-EXP-IDA-UNPURIFIED-PROTEIN-NH:3491337419:asantos
+COMMENT - The transcription factor ModE, for "<b>Mo</b>lyb<b>d</b>enum," is the principal regulator that controls the transcription of operons involved in  the transport of molybdenum and synthesis of molybdoenzymes and molybdate-related functions, among others |CITS: [8564363][8931336][8550508][9210473][10446207][10206709][9851041][11092866][12029041][16205910]|.  The regulatory effect of ModE is induced when <i>E. coli</i> is grown under anaerobic growth conditions and when the physiological inducer, molybdenum, binds to ModE and promotes the dimerization of the ModE-Mo complex |CITS: [10446207][10206709][9210473][12583917]|.  The ModE dimer binds two molecules of molybdenum with a <i>K<sub>d</sub></i> of 0.8 mM.  Tungsten can act as a substitute for Mo in ModE binding to the <i>modABCD</i> promoter <i>in vitro</i>, but the complex may be biologically inactive |CITS: [11092866]|.
+/
+/The binding targets for ModE consist of inverted repeat sequences that possess conserved motifs; each monomer binds to one of these conserved sequences |CITS: [14641908][10446207][9210473][10206709]|. 
+/
+/A crystal structure of ModE has been solved at 2.1&Aring; resolution |CITS: [10075916]|.
+/
+/The monomer of this transcription factor contains two domains: the N-terminal domain is responsible for binding DNA and the dimerization and also contains a winged helix-turn-helix motif |CITS: [10075916]|.  The C-terminal domain is indispensable for molybdate binding and possibly is involved in the DNA binding |CITS: [11259434][8931336][10075916][12581638]|.  Tentatively, this transcription factor is classified as a member of the LysR family |CITS:[9210473]|. 
+/
+/A microarray analysis for ModE of <i>E. coli</i> was done by |CITS: [16205910]|.
+COMPONENTS - CPLX0-2541
+COMPONENTS - CPD-3
+CONSENSUS-SEQUENCE - CGtTATATaattaatTATATAaCG
+DNA-FOOTPRINT-SIZE - 24
+GO-TERMS - |GO:0030151|
+GO-TERMS - |GO:2000143|
+GO-TERMS - |GO:0000986|
+REGULATES - REG0-6498
+REGULATES - REG0-6495
+REGULATES - REG0-5775
+REGULATES - REG0-5560
+REGULATES - REG0-5393
+REGULATES - REG0-5124
+REGULATES - REG0-5059
+REGULATES - REG0-4875
+REGULATES - REG0-4812
+SYMMETRY - :INVERTED-REPEAT
+SYNONYMS - ModE
+//
+UNIQUE-ID - MONOMER0-46
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - NhaR-Na<SUP>+</SUP> DNA-binding transcriptional activator
+CITATIONS - 3413113:EV-COMP-HINF-FN-FROM-SEQ:3491314817:martin
+CITATIONS - 8168494:EV-EXP-IMP:3491314817:martin
+CITATIONS - 1316901:EV-COMP-HINF-FN-FROM-SEQ:3491314817:martin
+CITATIONS - 9312050:EV-EXP-IDA-PURIFIED-PROTEIN:3491314817:martin
+CITATIONS - 12867437:EV-EXP-IDA-PURIFIED-PROTEIN:3491314817:martin
+CITATIONS - 16997959:EV-EXP-IMP:3491314817:martin
+CITATIONS - 16997959:EV-EXP-IDA-PURIFIED-PROTEIN:3491314817:martin
+CITATIONS - 11577158:EV-EXP-IMP:3491314817:martin
+COMMENT - The transcription factor NhaR, for "<b>N</b>a<sup>+</sup>/<b>H</b><sup>+</sup> <b>a</b>ntiporter <b>R</b>egulator," is dependent on Na<sup>+</sup> and it controls the transcription of the gene involved in  adaptation to Na<sup>+</sup> and alkaline pH |CITS:[1316901][8168494][8144493][10207920][9312050][7823039][8017942][7823039]|, response to adverse conditions |CITS:[12867437][11577158]|,  and biofilm formation |CITS:[16997959][18445167]|. 
+/
+/This regulator belongs to the LysR family. NhaR is composed of two domains: the amino-terminal domain, which contains the DNA-binding region, and the carboxy-terminal domain, which is possibly responsible for inducer binding |CITS:[3413113]|. In systematic studies of oligomerization, it was shown that some members of the LysR family, like NhaR, interact with other members of the family to form heterodimers, but the physiological significance of this is unknown |CITS:[ 21187915]|.
+/
+/The binding targets for NhaR are 17 nucleotides long. Each dimer binds to one of these conserved sequences. The lengths of the degenerate binding sites of NhaR were defined according to the matrix shown for this regulator in the database RegPrecise, which contains matrices generated from alignments of orthologous regions |CITS: [19884135]|.
+COMPONENTS - PD00474
+COMPONENTS - NA+
+CONSENSUS-SEQUENCE - cTTCGGTAnTACCGAAg
+DBLINKS - (PFAM "PF00126" IN-FAMILY |pkarp| 3346700315 NIL NIL)
+DNA-FOOTPRINT-SIZE - 17
+MOLECULAR-WEIGHT-KD - 34.28436699999993    
+MOLECULAR-WEIGHT-SEQ - 34.28436699999993    
+REGULATES - REG0-10801
+REGULATES - REG0-10800
+REGULATES - REG0-10797
+REGULATES - REG0-6598
+REGULATES - REG0-6597
+REGULATES - REG0-5964
+REGULATES - REG0-5612
+SYMMETRY - :INVERTED-REPEAT
+SYNONYMS - YaaB
+SYNONYMS - AntO
+SYNONYMS - B0020
+SYNONYMS - NhaR
+SYNONYMS - NhaR-Na<SUP>+</SUP>
+//
+UNIQUE-ID - MONOMER0-162
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - TyrR-Tyrosine DNA-binding transcriptional repressor
+CITATIONS - 4887504:EV-EXP-IMP:3491325986:sgama
+CITATIONS - 7961453:EV-EXP-IDA-PURIFIED-PROTEIN-NH:3491326448:sgama
+CITATIONS - 7961453:EV-EXP-IMP:3491326448:sgama
+COMPONENTS - PD00413
+COMPONENTS - TYR
+CONSENSUS-SEQUENCE - TGTAAAtATTTnTTTACa 
+DNA-FOOTPRINT-SIZE - 18
+MOLECULAR-WEIGHT-KD - 57.65605499999977    
+MOLECULAR-WEIGHT-SEQ - 57.65605499999977    
+REGULATES - REG0-9036
+REGULATES - REG0-9035
+REGULATES - REG0-5478
+REGULATES - REG0-5477
+REGULATES - REG0-5467
+REGULATES - REG0-5463
+REGULATES - REG0-5462
+REGULATES - REG0-5361
+REGULATES - REG0-5360
+REGULATES - REG0-4921
+REGULATES - REG0-4920
+REGULATES - REG0-4793
+REGULATES - REG0-4792
+REGULATES - REG0-4791
+REGULATES - REG0-4785
+REGULATES - REG0-4784
+REGULATES - REG0-4783
+SYMMETRY - :INVERTED-REPEAT
+SYNONYMS - B1323
+SYNONYMS - TyrR
+SYNONYMS - TyrR-tyr
+//
+UNIQUE-ID - MONOMER-52
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - GalR-galactose
+CITATIONS - 9325090:EV-EXP-IPI:3491320055:martin
+CITATIONS - 9325090:EV-EXP-IDA-PURIFIED-PROTEIN:3491320055:martin
+CITATIONS - 15807530:EV-EXP-IPI:3491320055:martin
+CITATIONS - 17630975:EV-EXP-IPI:3491320055:martin
+CITATIONS - 9218807:EV-EXP-IPI:3491320055:martin
+CITATIONS - 9218807:EV-EXP-IDA-PURIFIED-PROTEIN:3491320055:martin
+CITATIONS - 15533432:EV-EXP-IMP:3491320055:martin
+CITATIONS - 15533432:EV-EXP-IEP:3491320055:martin
+CITATIONS - 12169637:EV-EXP-IPI:3491320055:martin
+CITATIONS - 12169637:EV-EXP-IEP:3491320055:martin
+COMMENT - The "<b>Gal</b>actose <b>r</b>epressor," GalR, is a DNA-binding transcription factor that represses transcription of the operons involved in transport and catabolism of D-galactose |CITS: [17630975][7934815][8416900][8982002]|. Synthesis of these operons is induced when <i>E. coli</i> is grown in the presence of inducer (D-galactose) and the absence glucose |CITS:[8982002][7934815][1619663][8416900]|. The expression of <i>galR</i> is increased only in the presence of inducer |CITS:[8416900][8982002]|. 
+/
+/In particular, in the absence of D-galactose, GalR represses the <i>galETKM</i> operon |CITS:[9218807]|. In this repression system, GalR binds to two operators in the presence of HU, resulting in the formation of a repressor loop |CITS:[9218807][12169637][15289461]|. This repressor binds in tandem to inverted repeat sequences that are 16 nucleotides long and possess conserved motifs; each dimer binds to one of these conserved sequences |CITS:[7934815][8416900]|. 
+/
+/On the other hand, GalR is highly homologous in its amino acid sequence to GalS (55% identical and 88% similar); apparently both act together and are capable of cross-talk to regulate expression of the <i>gal</i> regulon |CITS:[1619663][8982002]|. For this reason these regulators bind the same operators, in the <i>cis</i> regulatory regions, with different affinities |CITS:[8175668]|. In the presence of inductor, GalR undergoes a conformational change that reduces its affinity for the operator. Golding et al. showed that GalR is the major repressor of the <i>gal</i> operon |CITS:[1655705]|.
+/
+/GalR belongs to the GalR/LacI family of transcriptional regulators. Accordingly, this transcriptional repressor family protein is composed of two domains: a conserved N-terminal domain which contains the DNA-binding region, and the carboxy-terminal domain, which is involved in effector binding and dimerization |CITS:[1619663][8982002]|. GalR and GalS have only two substitutions in the first helix of the N-terminal domain |CITS:[1619663]|.
+COMPONENTS - PD03028
+COMPONENTS - GALACTOSE
+CONSENSUS-SEQUENCE - gTGTAAnCGaTTaCac 
+DBLINKS - (PFAM "PF00356" IN-FAMILY |pkarp| 3346700376 NIL NIL)
+DNA-FOOTPRINT-SIZE - 16
+MOLECULAR-WEIGHT-KD - 37.093997999999914    
+MOLECULAR-WEIGHT-SEQ - 37.093997999999914    
+REGULATES - REG0-10090
+REGULATES - REG0-10088
+REGULATES - REG0-10086
+REGULATES - REG0-10084
+REGULATES - REG0-9091
+REGULATES - REG0-4660
+SYMMETRY - :INVERTED-REPEAT
+SYNONYMS - B2837
+SYNONYMS - GalR
+//
+UNIQUE-ID - CPLX0-8069
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - YqjI-nickel
+COMPONENTS - G7594-MONOMER
+COMPONENTS - NI+2
+//
+UNIQUE-ID - CPLX0-7751
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - NsrR-nitric oxide
+COMPONENTS - EG11212-MONOMER
+COMPONENTS - NITRIC-OXIDE
+//
+UNIQUE-ID - CPLX0-7681
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - XapR-xanthosine DNA-binding transcriptional activator
+CITATIONS - 2201776
+CITATIONS - 7559336
+CITATIONS - 2201776:EV-COMP-HINF-FN-FROM-SEQ:3465249190:sgama
+CITATIONS - 7559336:EV-EXP-IEP:3421185810:sgama
+COMMENT - XapR, "<b>xa</b>nthosine <b>p</b>hosphorylase <b>r</b>egulator," activates transcription of genes involved in xanthosine metabolism when xanthosine is present |CITS:[10400599][7559336]|. Deoxyinosine can also induce XapR activity, although not to the same extent as xanthosine |CITS: [10400599]|.
+/
+/XapR, which belongs to the LysR family, has a DNA-binding site in the N-terminal domain |CITS: [2201776]| and a signal-recognition site separated in two regions in the amino acid sequence. In the three-dimensional structure of an XapR homolog (CysB from <i>Klebsiella aerogenes</i>), these two regions appear close to each other, forming one signal-binding site. XapR is homologous to AlsR; they show 68% of identity in an amino-terminal region of 60 amino acids |CITS: [10400599]|.
+/
+/The <i>xapR</i> gene is located downstream of the genes it regulates and in the same direction, but in an independent transcription unit that appears to be expressed constitutively |CITS: [7559336]|.
+/
+COMPONENTS - EG11146-MONOMER
+COMPONENTS - XANTHOSINE
+CONSENSUS-SEQUENCE - AAAAnTGTATTGG
+CREDITS - O0-9
+CREDITS - |sgama|
+DNA-FOOTPRINT-SIZE - 13
+GO-TERMS - |GO:0010628|
+GO-TERMS - |GO:0010468|
+REGULATES - REG0-5106
+REGULATES - REG0-5107
+SYMMETRY - :ASYMMETRIC
+//
+UNIQUE-ID - CPLX0-226
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - CRP-cAMP DNA-binding transcriptional dual regulator
+CITATIONS - 15659676:EV-EXP-IEP:3491476453:martin
+CITATIONS - 15520470:EV-EXP-IEP:3491476453:martin
+CITATIONS - 15150239:EV-EXP-IEP:3491476453:martin
+CITATIONS - 19439203:EV-EXP-IPI:3491476453:martin
+CITATIONS - 19439203:EV-COMP-HINF-FN-FROM-SEQ:3491476453:martin
+CITATIONS - 8735277:EV-EXP-IMP:3491476844:martin
+CITATIONS - 8735277:EV-EXP-IPI:3491476844:martin
+CITATIONS - :EV-EXP-IEP:3491477067:martin
+CITATIONS - 10564497:EV-EXP-IDA-PURIFIED-PROTEIN:3491477194:martin
+CITATIONS - 10564497:EV-EXP-IPI:3491477194:martin
+CITATIONS - 11742992:EV-EXP-IDA-PART-PURIFIED-PROTEIN:3491477265:martin
+CITATIONS - 11742992:EV-EXP-IPI:3491477265:martin
+CITATIONS - 11742992:EV-EXP-IEP:3491477265:martin
+CITATIONS - 10852886:EV-EXP-IMP:3491477427:martin
+CITATIONS - 10852886:EV-EXP-IEP:3491477427:martin
+CITATIONS - 14638413:EV-COMP-HINF:3491477427:martin
+COMMENT - The transcriptional dual regulator CRP, "<b>c</b>AMP <b>r</b>eceptor <b>p</b>rotein," also called CAP, "catabolite gene activator protein," regulates the expression of over 180 genes |CITS: [16301522][9813115][15520470]| in <i>E. coli</i>. Many of these genes are involved in the catabolism of secondary carbon sources (for reviews, see |CITS: [19033675][18359269][18628769][8394684]|. In addition, CRP is involved in many other processes, such as osmoregulation |CITS: [10601034][16885462]|, stringent response |CITS: [10966109]|, biofilm formation |CITS: [12029060]|, virulence |CITS: [16885462]|, nitrogen assimilation |CITS: [17284458][17233899][11532153]|, iron uptake |CITS: [15659676]|, competence |CITS: [19502395]|, multidrug resistance to antibiotics |CITS: [18503189][16885453]|, and expression of CyaR sRNA |CITS: [18978044]|. Transcriptome analyses have been performed |CITS: [19703305][17559662][15520470][15150239]|. Expression of <i>crp</i> is positively and negatively autoregulated |CITS: [6297782][1328816]|; repression of <i>crp</i> requires Fis |CITS: [9582281]|. CRP activates a gene potentially related to persistence |CITS: [24509317]|. 
+/
+/CRP was the first purified transcriptional regulator and the first regulator for which the structure was solved |CITS: [4320461][4317918][6261152][6280140][03051048]|. CRP is activated as a DNA-binding protein via binding of its allosteric effector, cAMP |CITS: [4320461][6261152][11890200]|. The hydrogen bonding abilities of the Thr<sup>127</sup> and Ser<sup>128</sup> residues at the cAMP pocket play a key role in stabilizing the CRP inactive form and providing high cAMP affinity. However, these residues are not critical for cAMP-induced CRP activation |CITS:[ 26378231]|. cAMP-dependent catabolite repression plays a role in the regulation of biofilm growth in response to sugars |CITS:[ 26159080]|.
+/
+/<b>Protein structure and allosteric activation</b>
+/
+/CRP belongs to the CRP-FNR superfamily of transcription factors |CITS: [14638413][11407111]|. The crystal structures of cAMP-CRP |CITS: [6286624][2828639][11124031]|, cAMP-CRP bound to DNA |CITS: [1653449][8757802][9096308][23695578]|, the cAMP-CRP-&alpha;-CTD-DNA complex |CITS: [12202833]|, and the solution structure |CITS: [19359484]|, as well as the crystal structure of apo-CRP |CITS: [19805344]|, have been solved. CRP is a homodimer and consists of two domains connected by a short hinge region. The C-terminal &alpha;-helical DNA-binding domain carries a characteristic helix-turn-helix motif. It dimerizes in apo-CRP, with the DNA recognition helix F buried within its core |CITS: [19805344]|. The N-terminal dimerization domain mainly consists of &beta;-sheets and carries a hydrophobic pocket for binding of cAMP. A long &alpha;-helix, termed the C-helix, forms an intersubunit coiled-coil. This helix plays a central role in the allosteric activation of CRP. Allostery arises as a natural consequence of changes in global low-frequency protein fluctuations on ligand binding, and there are conserved residues crucial for allosteric control |CITS: [24058293]|. After binding of cAMP, the signal is propagated through a lengthening and reorientation of the C-helix to the DNA-binding domain, resulting in the liberation of the DNA recognition helix |CITS: [19359484][19805344]|.
+/
+/<b>Mechanism of transcriptional regulation</b>
+/
+/CRP binds to a 22-bp symmetrical site |CITS: [2557589]| and induces a severe bend upon binding, with an angle of ~80&deg; |CITS: [1653449][8757802][6323997][11724533]|. Two regions of CRP, AR1 ("activation region 1"), located in the C-terminal domain |CITS: [8392187][7966284]|, and AR2 |CITS: [8978616]|, located in the N-terminal domain, are known to interact with RNA polymerase (RNAP). 
+/
+/Promoters that are activated by cAMP-CRP can be grouped into three classes, termed class I, class II, and class III promoters |CITS: [10550204]|. Class I- and class II-dependent promoters require one cAMP-CRP for activation and have a single DNA-binding site located upstream of the RNAP-binding site, centered near position -93, -83, -72, or -62 of class I promoters |CITS: [2173826][2167178][12023077]| and overlapping the RNAP-binding site of class II promoters |CITS: [10550204]|. At class I promoters, AR1 of the downstream subunit of the CRP dimer interacts with the &alpha;-CTD of RNAP |CITS: [7925296]|, thereby increasing the affinity of RNAP for the promoter DNA |CITS: [1646077][8735277][8394979]|.
+/
+/Class II-dependent promoters require AR1 of the upstream subunit and AR2 of the downstream subunit of CRP. AR1 recruits &alpha;-CTD to the DNA region upstream of the bound CRP dimer, while AR2 interacts with &alpha;-NTD of RNAP |CITS: [8735277][8978616][9628879]|. Class III promoters require multiple activator molecules, that is, either two or more CAP dimers or one CRP dimer and additional activator proteins synergistically activate transcription |CITS: [15063844][12923087]|. Dependent on the localization of its binding site, CRP functions by a class I or class II mechanism at class III promoters or by a more complex mechanism which can involve direct interactions with the second activator |CITS: [10760178][11742992][16166533]|, or CRP exerts its function by DNA bending |CITS: [8735277][10550204][1848302]|.
+/
+/CRP represses transcription by promoter occlusion |CITS:[8394684]|, by exclusion of an activator protein |CITS: [2454912]|, through the interaction with a repressor protein in an antiactivation mechanism |CITS: [8394345][8736525][17158559][8969182]| or by hindering promoter clearance |CITS: [15385551][10760580]|.  
+/
+/<b>Catabolite repression and inducer exclusion</b>
+/
+/Catabolite repression in <i>E. coli</i> is mediated by the interplay of CRP, adenylate cyclase, cAMP, and the glucose-specific enzyme IIA (EIIA<sup>Glc</sup>) of the phosphoenolpyruvate:sugar phosphotransferase system |CITS: [18359269][17158705][18628769]|. Catabolite repression by cAMP/CRP regulates the total carbon uptake flux through a negative feedback loop |CITS:[25862745]|. In the absence of rapidly metabolizable carbon sources, such as glucose, EIIA<sup>Glc</sup> is phosphorylated |CITS: [9822815]| and activates adenylate cyclase |CITS: [6245052][9457881]|, resulting in an elevated level of cAMP |CITS: [16407219][17675376]|. Due to the autoregulation of <i>crp</i> |CITS: [6297782][7518773][1328816]|, cAMP-CRP levels increase. In addition, in the presence of unphosphorylated EIIA<sup>Glc</sup>, inducer is transported into the cell, leading to the inactivation of the corresponding repressor molecules |CITS: [2651862]|[<b>Magasanik70</b>*]. Therefore, transcription of catabolic genes is switched on by cAMP-CRP.
+/
+/If glucose is available, EIIA<sup>Glc</sup> is predominantly dephosphorylated |CITS: [9822815]|. As a consequence, adenylate cyclase is not activated, resulting in a reduced level of cAMP. Due to the autoregulation of <i>crp</i>, cAMP-CRP levels decrease |CITS: [1715982]|. In addition, EIIA<sup>Glc</sup> blocks the uptake of inducer by blocking the transport systems ("inducer exclusion") |CITS: [16453452][7041121][7040431][11969416]|. Thus, transcription of catabolic genes is switched off. cAMP not only mediates carbon metabolism but also plays a physiological role to ensure that proteomic resources are spent on distinct metabolic pathways as needed in different nutrient environments |CITS: [23925119]|. &alpha;-Keto-acids inhibit cAMP production |CITS: [23925119]|. 
+/
+/CRP has been adapted to respond to different external and internal stimuli according to the particular ecological niches occupied by the bacterium |CITS: [24509484]|. CRP has an important role during growth at low temperatures |CITS:[25637299]|.
+/
+/<b>Mutants</b>
+/
+/CRP was engineered to prove the enhanced strain osmotolerance phenotype based on several random mutagenesis studies. All variants showed much higher osmotolerance towards NaCl and others osmotic stressors, such as KCl, glucose, and sucrose, than the wild type |CITS: [22179860]|. Using DNA microarray analysis, genes involved in colonic acid biosynthesis were identified as upregulated in the absence of salt stress, whereas carbohydrate metabolism genes were differentially expressed under NaCl stress in an MT6 (CRP mutant with the best osmotolerance towards NaCl) mutant compared to the wild type |CITS: [22179860]|.
+/
+/Magasanik: doi:10.1101/087969100.1.189
+/
+/*Magasanik, 1970. B. Magasanik, Glucose effects: inducer exclusion and repression. In: J. Beckwith and D. Zipser, Editors, The Lactose Operon, Cold Spring Harbor Laboratory, New York (1970), pp. 189-219.
+/
+COMPONENTS - PC00004
+COMPONENTS - CAMP
+CONSENSUS-SEQUENCE - AAATGTGAtctagaTCACATTT
+DNA-FOOTPRINT-SIZE - 22
+GO-TERMS - |GO:0043565|
+GO-TERMS - |GO:0045893|
+REGULATES - REG0-12226
+REGULATES - REG0-12208
+REGULATES - REG0-12043
+REGULATES - REG0-12042
+REGULATES - REG0-12039
+REGULATES - REG0-12036
+REGULATES - REG0-11992
+REGULATES - REG0-11979
+REGULATES - REG0-11978
+REGULATES - REG0-11952
+REGULATES - REG0-11826
+REGULATES - REG0-11825
+REGULATES - REG0-11824
+REGULATES - REG0-11823
+REGULATES - REG0-11813
+REGULATES - REG0-11621
+REGULATES - REG0-11620
+REGULATES - REG0-11618
+REGULATES - REG0-11605
+REGULATES - REG0-11604
+REGULATES - REG0-11603
+REGULATES - REG0-11572
+REGULATES - REG0-11590
+REGULATES - REG0-11589
+REGULATES - REG0-11588
+REGULATES - REG0-11587
+REGULATES - REG0-11586
+REGULATES - REG0-11585
+REGULATES - REG0-11441
+REGULATES - REG0-11435
+REGULATES - REG0-11434
+REGULATES - REG0-11378
+REGULATES - REG0-11376
+REGULATES - REG0-11353
+REGULATES - REG0-11352
+REGULATES - REG0-11310
+REGULATES - REG0-11241
+REGULATES - REG0-11110
+REGULATES - REG0-11108
+REGULATES - REG0-11107
+REGULATES - REG0-11106
+REGULATES - REG0-11105
+REGULATES - REG0-11104
+REGULATES - REG0-11103
+REGULATES - REG0-11102
+REGULATES - REG0-11101
+REGULATES - REG0-11100
+REGULATES - REG0-11099
+REGULATES - REG0-11098
+REGULATES - REG0-11097
+REGULATES - REG0-11096
+REGULATES - REG0-10948
+REGULATES - REG0-10903
+REGULATES - REG0-10825
+REGULATES - REG0-10777
+REGULATES - REG0-10599
+REGULATES - REG0-10574
+REGULATES - REG0-10573
+REGULATES - REG0-10572
+REGULATES - REG0-10564
+REGULATES - REG0-10536
+REGULATES - REG0-10472
+REGULATES - REG0-10384
+REGULATES - REG0-10383
+REGULATES - REG0-10382
+REGULATES - REG0-10259
+REGULATES - REG0-10181
+REGULATES - REG0-9883
+REGULATES - REG0-9882
+REGULATES - REG0-9815
+REGULATES - REG0-9608
+REGULATES - REG0-9588
+REGULATES - REG0-9584
+REGULATES - REG0-9571
+REGULATES - REG0-9510
+REGULATES - REG0-9509
+REGULATES - REG0-9508
+REGULATES - REG0-9478
+REGULATES - REG0-9051
+REGULATES - REG0-9050
+REGULATES - REG0-9049
+REGULATES - REG0-9013
+REGULATES - REG0-9012
+REGULATES - REG0-9008
+REGULATES - REG0-9007
+REGULATES - REG0-9006
+REGULATES - REG0-9005
+REGULATES - REG0-9002
+REGULATES - REG0-9001
+REGULATES - REG0-8999
+REGULATES - REG0-8998
+REGULATES - REG0-8991
+REGULATES - REG0-8990
+REGULATES - REG0-8989
+REGULATES - REG0-8988
+REGULATES - REG0-8984
+REGULATES - REG0-8981
+REGULATES - REG0-6532
+REGULATES - REG0-6531
+REGULATES - REG0-6517
+REGULATES - REG0-6503
+REGULATES - REG0-6502
+REGULATES - REG0-6481
+REGULATES - REG0-6433
+REGULATES - REG0-6428
+REGULATES - REG0-6419
+REGULATES - REG0-6410
+REGULATES - REG0-6407
+REGULATES - REG0-6390
+REGULATES - REG0-6382
+REGULATES - REG0-6371
+REGULATES - REG0-6369
+REGULATES - REG0-6357
+REGULATES - REG0-6317
+REGULATES - REG0-6307
+REGULATES - REG0-6288
+REGULATES - REG0-6287
+REGULATES - REG0-6258
+REGULATES - REG0-6257
+REGULATES - REG0-6250
+REGULATES - REG0-6247
+REGULATES - REG0-6246
+REGULATES - REG0-6242
+REGULATES - REG0-6240
+REGULATES - REG0-6236
+REGULATES - REG0-6234
+REGULATES - REG0-6227
+REGULATES - REG0-6223
+REGULATES - REG0-6220
+REGULATES - REG0-6219
+REGULATES - REG0-6218
+REGULATES - REG0-6214
+REGULATES - REG0-6211
+REGULATES - REG0-6206
+REGULATES - REG0-6192
+REGULATES - REG0-6187
+REGULATES - REG0-6183
+REGULATES - REG0-6176
+REGULATES - REG0-6163
+REGULATES - REG0-6127
+REGULATES - REG0-6125
+REGULATES - REG0-6115
+REGULATES - REG0-6100
+REGULATES - REG0-6092
+REGULATES - REG0-6029
+REGULATES - REG0-6014
+REGULATES - REG0-6012
+REGULATES - REG0-6011
+REGULATES - REG0-5996
+REGULATES - REG0-5988
+REGULATES - REG0-5985
+REGULATES - REG0-5982
+REGULATES - REG0-5981
+REGULATES - REG0-5950
+REGULATES - REG0-5938
+REGULATES - REG0-5937
+REGULATES - REG0-5920
+REGULATES - REG0-5917
+REGULATES - REG0-5914
+REGULATES - REG0-5913
+REGULATES - REG0-5911
+REGULATES - REG0-5903
+REGULATES - REG0-5901
+REGULATES - REG0-5896
+REGULATES - REG0-5889
+REGULATES - REG0-5879
+REGULATES - REG0-5875
+REGULATES - REG0-5866
+REGULATES - REG0-5858
+REGULATES - REG0-5850
+REGULATES - REG0-5849
+REGULATES - REG0-5838
+REGULATES - REG0-5821
+REGULATES - REG0-5819
+REGULATES - REG0-5818
+REGULATES - REG0-5814
+REGULATES - REG0-5809
+REGULATES - REG0-5780
+REGULATES - REG0-5767
+REGULATES - REG0-5756
+REGULATES - REG0-5755
+REGULATES - REG0-5739
+REGULATES - REG0-5729
+REGULATES - REG0-5728
+REGULATES - REG0-5726
+REGULATES - REG0-5725
+REGULATES - REG0-5719
+REGULATES - REG0-5718
+REGULATES - REG0-5717
+REGULATES - REG0-5716
+REGULATES - REG0-5715
+REGULATES - REG0-5710
+REGULATES - REG0-5706
+REGULATES - REG0-5702
+REGULATES - REG0-5701
+REGULATES - REG0-5697
+REGULATES - REG0-5693
+REGULATES - REG0-5691
+REGULATES - REG0-5690
+REGULATES - REG0-5689
+REGULATES - REG0-5659
+REGULATES - REG0-5658
+REGULATES - REG0-5654
+REGULATES - REG0-5629
+REGULATES - REG0-5626
+REGULATES - REG0-5625
+REGULATES - REG0-5610
+REGULATES - REG0-5602
+REGULATES - REG0-5599
+REGULATES - REG0-5597
+REGULATES - REG0-5596
+REGULATES - REG0-5594
+REGULATES - REG0-5582
+REGULATES - REG0-5579
+REGULATES - REG0-5577
+REGULATES - REG0-5576
+REGULATES - REG0-5572
+REGULATES - REG0-5571
+REGULATES - REG0-5567
+REGULATES - REG0-5558
+REGULATES - REG0-5554
+REGULATES - REG0-5516
+REGULATES - REG0-5514
+REGULATES - REG0-5513
+REGULATES - REG0-5512
+REGULATES - REG0-5509
+REGULATES - REG0-5508
+REGULATES - REG0-5497
+REGULATES - REG0-5496
+REGULATES - REG0-5492
+REGULATES - REG0-5473
+REGULATES - REG0-5458
+REGULATES - REG0-5452
+REGULATES - REG0-5451
+REGULATES - REG0-5447
+REGULATES - REG0-5445
+REGULATES - REG0-5444
+REGULATES - REG0-5443
+REGULATES - REG0-5438
+REGULATES - REG0-5429
+REGULATES - REG0-5424
+REGULATES - REG0-5423
+REGULATES - REG0-5422
+REGULATES - REG0-5407
+REGULATES - REG0-5406
+REGULATES - REG0-5387
+REGULATES - REG0-5374
+REGULATES - REG0-5370
+REGULATES - REG0-5364
+REGULATES - REG0-5350
+REGULATES - REG0-5349
+REGULATES - REG0-5342
+REGULATES - REG0-5340
+REGULATES - REG0-5339
+REGULATES - REG0-5338
+REGULATES - REG0-5336
+REGULATES - REG0-5333
+REGULATES - REG0-5330
+REGULATES - REG0-5295
+REGULATES - REG0-5289
+REGULATES - REG0-5288
+REGULATES - REG0-5277
+REGULATES - REG0-5276
+REGULATES - REG0-5273
+REGULATES - REG0-5272
+REGULATES - REG0-5271
+REGULATES - REG0-5270
+REGULATES - REG0-5265
+REGULATES - REG0-5264
+REGULATES - REG0-5258
+REGULATES - REG0-5249
+REGULATES - REG0-5236
+REGULATES - REG0-5234
+REGULATES - REG0-5228
+REGULATES - REG0-5224
+REGULATES - REG0-5221
+REGULATES - REG0-5181
+REGULATES - REG0-5176
+REGULATES - REG0-5164
+REGULATES - REG0-5163
+REGULATES - REG0-5157
+REGULATES - REG0-5147
+REGULATES - REG0-5143
+REGULATES - REG0-5142
+REGULATES - REG0-5141
+REGULATES - REG0-5140
+REGULATES - REG0-5139
+REGULATES - REG0-5138
+REGULATES - REG0-5123
+REGULATES - REG0-5120
+REGULATES - REG0-5117
+REGULATES - REG0-5116
+REGULATES - REG0-5115
+REGULATES - REG0-5104
+REGULATES - REG0-5098
+REGULATES - REG0-5096
+REGULATES - REG0-5051
+REGULATES - REG0-5050
+REGULATES - REG0-5045
+REGULATES - REG0-5040
+REGULATES - REG0-5038
+REGULATES - REG0-5026
+REGULATES - REG0-5025
+REGULATES - REG0-5019
+REGULATES - REG0-5018
+REGULATES - REG0-5015
+REGULATES - REG0-5010
+REGULATES - REG0-4991
+REGULATES - REG0-4987
+REGULATES - REG0-4981
+REGULATES - REG0-4980
+REGULATES - REG0-4979
+REGULATES - REG0-4977
+REGULATES - REG0-4972
+REGULATES - REG0-4966
+REGULATES - REG0-4927
+REGULATES - REG0-4924
+REGULATES - REG0-4912
+REGULATES - REG0-4905
+REGULATES - REG0-4904
+REGULATES - REG0-4858
+REGULATES - REG0-4857
+REGULATES - REG0-4856
+REGULATES - REG0-4852
+REGULATES - REG0-4849
+REGULATES - REG0-4846
+REGULATES - REG0-4841
+REGULATES - REG0-4839
+REGULATES - REG0-4831
+REGULATES - REG0-4829
+REGULATES - REG0-4811
+REGULATES - REG0-4810
+REGULATES - REG0-4805
+REGULATES - REG0-4801
+REGULATES - REG0-4797
+REGULATES - REG0-4768
+REGULATES - REG0-4761
+REGULATES - REG0-4755
+REGULATES - REG0-4742
+REGULATES - REG0-4741
+REGULATES - REG0-4739
+REGULATES - REG0-4736
+REGULATES - REG0-4732
+REGULATES - REG0-4731
+REGULATES - REG0-4730
+REGULATES - REG0-4729
+REGULATES - REG0-4714
+REGULATES - REG0-4707
+REGULATES - REG0-4696
+REGULATES - REG0-4695
+REGULATES - REG0-4693
+REGULATES - REG0-4686
+REGULATES - REG0-4679
+REGULATES - REG0-4676
+REGULATES - REG0-4675
+REGULATES - REG0-4667
+REGULATES - REG0-4665
+REGULATES - REG0-4650
+REGULATES - REG0-4645
+REGULATES - REG0-4628
+REGULATES - REG0-4626
+REGULATES - REG0-4625
+REGULATES - REG0-4604
+REGULATES - REG0-4601
+REGULATES - REG0-4586
+REGULATES - REG0-4585
+REGULATES - REG0-4584
+REGULATES - REG0-4565
+REGULATES - REG0-4557
+REGULATES - REG0-4545
+REGULATES - REG0-4544
+REGULATES - REG0-4513
+REGULATES - REG0-4512
+REGULATES - REG0-4495
+REGULATES - REG0-4494
+REGULATES - REG0-4478
+SPECIES - ECOLI
+SYMMETRY - :INVERTED-REPEAT
+SYNONYMS - CRP-cAMP
+//
+UNIQUE-ID - MONOMER0-2421
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - PrpR-2-methylcitrate DNA-binding transcriptional dual regulator
+CITATIONS - 15805526:EV-EXP-IEP:3421307067:martin
+COMMENT - The "<b>Pr</b>o<b>p</b>ionate <b>R</b>egulator," PrpR, is a transcription factor that controls expression of genes involved in catabolism of propionate |CITS:[15805526]|. It is negatively autoregulated, sensitive to catabolite control, and coordinately activates transcription of a divergent operon related to propionate catabolism |CITS:[15805526]|. Synthesis of this operon is induced when <i>E. coli</i> is grown in the absence of glucose or glycerol. 
+/
+/PrpR belongs to the NtrC family of activators, which interact directly with the RpoN RNA polymerase |CITS:[ 7934866]|. PrpR is a &sigma;<sup>54</sup>-dependent activator and belongs to the AAA+ superfamily of mechano-chemical ATPases. It consists of three domains, an amino-terminal domain involved in effector recognition, a catalytic domain, and a carboxy-terminal DNA-binding domain |CITS:[15528672]|. This regulator binds to a palindromic sequence (5'-GTTTCAT-10n-ATGAAAC-3') that overlaps <i>prpR</i>p |CITS:[15805526]|.
+/
+COMPONENTS - G6195-MONOMER
+COMPONENTS - CPD-622
+CONSENSUS-SEQUENCE - GTTTCAtTnaAcgttTnAtGaAAc
+DBLINKS - (PFAM "PF06506" IN-FAMILY |pkarp| 3346700316 NIL NIL)
+DNA-FOOTPRINT-SIZE - 24
+REGULATES - REG0-6316
+REGULATES - REG0-6101
+REGULATES - REG0-6315
+REGULATES - REG0-6102
+SYMMETRY - :INVERTED-REPEAT
+SYNONYMS - B0330
+SYNONYMS - YahP
+SYNONYMS - PrpR
+//
+UNIQUE-ID - MONOMER0-159
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - LacI-allolactose
+COMPONENTS - PD00763
+COMPONENTS - ALLOLACTOSE
+DBLINKS - (PFAM "PF00356" IN-FAMILY |pkarp| 3346700316 NIL NIL)
+DBLINKS - (PDB "1LBI" |Structure| |paley| 3439827725 NIL NIL)
+MOLECULAR-WEIGHT-KD - 38.59011599999995    
+MOLECULAR-WEIGHT-SEQ - 38.59011599999995    
+SYNONYMS - B0345
+SYNONYMS - LacI
+//
+UNIQUE-ID - MONOMER-47
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - RhaR-L-rhamnose DNA-binding transcriptional activator
+CITATIONS - 10464186:EV-COMP-HINF-FN-FROM-SEQ:3421307779:martin
+CITATIONS - 17513476:EV-EXP-IDA-PURIFIED-PROTEIN:3421307779:martin
+CITATIONS - 17513476:EV-EXP-IEP:3421307779:martin
+COMMENT - The "<b>Rha</b>mnose <b>r</b>egulator," RhaR, is a transcription factor that regulates genes involved in l-rhamnose degradation and coregulates with the global transcriptional regulator CRP. These regulators bind cooperatively to activate transcription of the unusual operon <i>rhaSR</i>, which encodes two transcriptional regulators, RhaS and RhaR (30% identical), both members of the AraC/XylS family of transcriptional regulators and involved in l-rhamnose transport and degradation |CITS:[16166533][11073923]|. In vitro transcription assays indicate that the &alpha;-CTD of the RNA polymerase is partially dispensable for RhaR activation and is required for CRP activation of the <i>rhaSR</i> operon |CITS: [16166533][11073923]|.
+/
+/Apparently, expression of the operons involved in transport and degradation of l-rhamnose first requires expression of RhaR, which induces transcription of the <i>rhaSR</i> operon. In this way, RhaS activates transcription of l-rhamnose gene clusters.
+/
+/Transcription of the <i>rhaSR</i> operon is induced when <i>E. coli</i> is grown on l-rhamnose in the absence of glucose. Gene induction occurs when the physiological inducer, l-rhamnose, binds to RhaR and when cellular cyclic AMP levels are high |CITS: [16166533][11073923]|.
+/
+/This transcription factor is composed of two domains, a C-terminal domain that contains two potential helix-turn-helix DNA-binding motifs and an N-terminal domain involved in l-rhamnose binding and dimerization of the protein |CITS: [15342598][18366439][17513476]|. 
+/
+/In the presence of l-rhamnose, RhaR binds in tandem to two repeat sequences upstream of the <i>rhaS</i> intergenic region to activate transcription by overlapping the -35 box of <i>rhaS</i>p. The binding targets for RhaR consist of 17-nucleotide-long sequences that possess conserved motifs; each monomer binds to one of these conserved sequences located on different faces of the DNA |CITS:[16166533]|.
+COMPONENTS - PD00222
+COMPONENTS - RHAMNOSE
+CONSENSUS-SEQUENCE - CGTCGAnnnTTnAAGnT
+DBLINKS - (PFAM "PF02311" IN-FAMILY |pkarp| 3346700424 NIL NIL)
+DNA-FOOTPRINT-SIZE - 17
+MOLECULAR-WEIGHT-KD - 35.66736999999999    
+MOLECULAR-WEIGHT-SEQ - 35.66736999999999    
+REGULATES - REG0-5511
+REGULATES - REG0-5510
+SYMMETRY - :ASYMMETRIC
+SYNONYMS - B3906
+SYNONYMS - RhaR
+SYNONYMS - RhaR-rhamnose
+//
+UNIQUE-ID - CPLX0-8060
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - GcvA-gly
+COMPONENTS - PD00339
+COMPONENTS - GLY
+//
+UNIQUE-ID - CPLX0-7746
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - MurR-MurNAc-6-P
+COMPONENTS - G7262-MONOMER
+COMPONENTS - CPD0-881
+//
+UNIQUE-ID - CPLX0-7671
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - ArgP-arginine  DNA binding transcriptional dual regulator
+CITATIONS - 2034653:EV-COMP-AINF-FN-FROM-SEQ:3421094708:sgama
+CITATIONS - 17504942:EV-EXP-IPI:3421095405:sgama
+CITATIONS - 17504942
+COMMENT - ArgP, "<b>arg</b>inine <b>p</b>rotein," controls the transcription of genes involved in the arginine transport system and genes involved in DNA replication. DNA replication is also regulated directly by ArgP when it binds to three 13-mers located in the origin of replication (OriC), blocking the DNA opening by DnaA and inhibiting this cellular process |CITS: [2034653][2208289][1733927]|. DNA binding by ArgP is prevented when the serine protease Do (DegP) hydrolyzes this transcriptional regulator |CITS: [8335089]|.
+/
+/ArgP was first identified as an inhibitor of <i>oriC</i>-initiated DNA replication <i>in vitro</i>. It has also subsequently been described as a nucleoid-associated protein that shows apparently sequence-nonspecific DNA-binding activity |CITS: [10551881]|.
+/
+/ArgP is a noncanonical regulator, as it binds to a number of additional sites in the genome without an apparent direct regulatory effect, exhibiting low-affinity binding to these sites |CITS: [21890697][1733927][ 21441513]|.
+/
+/To activate transcription, ArgP recognizes AT-rich DNA-binding sites, but no consensus sequence has been identified. When this protein activates genes involved in replication, it appears to bind to their regulatory regions without a coeffector |CITS: [9254708][9819053]|. However, the activity of ArgP depends on arginine and lysine to regulate genes involved in arginine metabolism. These amino acids, which bind to ArgP, do not seem to help the protein to form dimers or to bind to DNA, but they contribute to recruitment of the RNA polymerase and in forming the open complex. However, only the ArgP-arginine complex can produce transcripts, whereas ArgP-lysine appears to inhibit transcription |CITS: [17504942][15150242]|.
+/
+/ArgP is a dimer with an estimated concentration of  100 to 400 molecules per cell (that is, around 200 to 800 nM monomers) |CITS: [10515926][1733927]|.
+/
+/ArgP, which belongs to the LysR family, has a helix-turn-helix motif located close to the N terminus. Members of the LysR family that show considerable homology to ArgP are AmpR from <i>Citrobacter freundii</i>, MetR from <i>Salmonella enterica</i> serovar Typhimurium, and NhaR from <i>Pseudomonas putida</i> |CITS: [2034653]|.
+/
+/The expression of <i>argP</i> is induced by PhoB under phosphate starvation |CITS: [10589831]|. Contrary to the suggestion made by |CITS: [10600368]|, |CITS: [15150242]| has suggested that <i>argP</i> is not autoregulated.
+/
+/ArgP is also called IciA ( for "<b>i</b>nhibitor of <b>c</b>hromosome <b>i</b>nitiation") |CITS: [2034653]|.
+COMPONENTS - CPLX0-7669
+COMPONENTS - ARG
+CONSENSUS-SEQUENCE - TTTnTGnnATAtnnCAnAAA
+CREDITS - O0-9
+CREDITS - |sgama|
+DNA-FOOTPRINT-SIZE - 20
+REGULATES - REG0-11319
+REGULATES - REG0-11318
+REGULATES - REG0-11317
+REGULATES - REG0-9402
+SYMMETRY - :INVERTED-REPEAT
+//
+UNIQUE-ID - CPLX-127
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - Cra-fructose-1-phosphate
+COMPONENTS - PC00061
+COMPONENTS - FRU1P
+SYNONYMS - FruR-fructose-1-phosphate
+//
+UNIQUE-ID - MONOMER0-2221
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - AllS-allantoin DNA-binding transcriptional activator
+CITATIONS - 12460564
+CITATIONS - 12460564:EV-COMP-AINF-FN-FROM-SEQ:3421096413:sgama
+CITATIONS - 12460564:EV-EXP-IEP:3421096413:sgama
+COMMENT - AllS, "<b>all</b>antoin", transcriptional activator participates in controlling genes involved in the utilization of allantoin as a nitrogen source. Although AllS binding does not depend on the presence of allantoin, this compound appears to be necessary for activation, perhaps by interacting with AllS |CITS:[12460564]|.
+/
+/AllS belongs to the LysR family of transcriptional regulators, and like other members of this family, it has a putative helix-turn-helix motif in the N-terminal domain |CITS:[12460564]|.
+/
+/Expression of the <i>allS</i> gene is negligible under aerobic conditions and is increased under anaerobic conditions in the presence of glyoxylate or allantoin. In the absence of its repressor, AllR, <i>allS</i> is expressed under nitrogen-limiting growth conditions, but its induction is independent of the regulators Nac and NtrC, which are active under these conditions |CITS:[12460564]|.
+COMPONENTS - G6274-MONOMER
+COMPONENTS - S-ALLANTOIN
+CREDITS - O0-9
+CREDITS - |sgama|
+DBLINKS - (PFAM "PF00126" IN-FAMILY |pkarp| 3346700318 NIL NIL)
+REGULATES - REG0-6081
+SYNONYMS - YbbS
+SYNONYMS - B0504
+SYNONYMS - AllS
+//
+UNIQUE-ID - MONOMER0-155
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - Lrp-Leucine DNA-binding transcriptional dual regulator
+CITATIONS - 8636076
+CITATIONS - 12675791
+CITATIONS - 2040596
+CITATIONS - 7901196
+CITATIONS - 8636076:EV-COMP-HINF-FN-FROM-SEQ:3491494554:asantos
+CITATIONS - 12675791:EV-COMP-HINF-FN-FROM-SEQ:3491494554:asantos
+CITATIONS - 2040596:EV-EXP-IDA-PURIFIED-PROTEIN-NH:3491494554:asantos
+CITATIONS - 7901196:EV-EXP-IDA-PURIFIED-PROTEIN-NH:3491494554:asantos
+COMMENT - Lrp, "<b>L</b>eucine-responsive <b>r</b>egulatory <b>p</b>rotein," is a dual transcriptional regulator for at least 10% of the genes in <i>Escherichia coli</i> |CITS:[12374860]|. These genes are involved in amino acid biosynthesis and catabolism, nutrient transport, pili synthesis, and other cellular functions, including 1-carbon metabolism |CITS:[1346534][12675791][7968922]|. In addition, Lrp affects nearly three-fourths of the genes induced upon entry into stationary phase |CITS:[12374860][19052235]|. Lrp might also play a topological role in dynamic DNA packaging |CITS:[8212136]|.
+/
+/Lrp can act as a repressor or activator for its target genes. Binding of leucine can affect these activities in three different ways: leucine either potentiates, antagonizes, or has no discernible effect upon Lrp action |CITS:[1532173][8432705][8561478]|. It is believed that Lrp senses the presence of rich nutrition based on the concentration of leucine and positively regulates genes that function during famine and negatively regulates genes that function during a feast |CITS:[7968922]|.
+/
+/Lrp forms a mixture of octamers and hexadecamers |CITS:[11575919]|. In the presence of leucine the octamer configuration is favored. It is believed that the switch between the octameric and hexadecameric states modulated by leucine affects the binding and the activity of Lrp at its target genes |CITS:[12054800]|. The structure of Lrp from <i>Escherichia coli</i> bound to DNA as an octamer has been solved |CITS:[17223133]|. Lrp forms an open ring structure, in which the DNA is wrapped around the octamer in a nucleosome-like structure. The monomer chain contains two domains, an N-terminal helix-turn-helix motif and a C-terminal &alpha;&beta;-sandwich fold. 
+/
+/Lrp-regulated promoters commonly contain multiple adjacent binding sites for the protein with low sequence specificity. A consensus recognition sequence has been described |CITS:[8636076]|. The identified 15-bp sequence motif is structured with flanking CAG/CTG triplets and a central AT-rich signal. Leucine has two effects upon binding to DNA <i>in vitro</i>: the affinity of Lrp is reduced but the cooperativity of binding to multiple sites is increased |CITS:[15571719]|.
+/
+/Lrp belongs to the Lrp/AsnC family of transcriptional regulatory proteins, which is widely distributed throughout the eubacterial and archaeal domains. Lrp appears to be very well conserved in members of the &gamma;-proteobacteria |CITS:[12675791]|.
+COMPONENTS - PD00353
+COMPONENTS - LEU
+DBLINKS - (PFAM "PF01037" IN-FAMILY |pkarp| 3346700325 NIL NIL)
+DNA-FOOTPRINT-SIZE - 12
+GO-TERMS - |GO:0010468|
+MOLECULAR-WEIGHT-KD - 18.88675200000001    
+MOLECULAR-WEIGHT-SEQ - 18.88675200000001    
+REGULATES - REG0-11754
+REGULATES - REG0-11753
+REGULATES - REG0-11752
+REGULATES - REG0-11751
+REGULATES - REG0-11532
+REGULATES - REG0-11528
+REGULATES - REG0-11527
+REGULATES - REG0-10887
+REGULATES - REG0-10886
+REGULATES - REG0-10614
+REGULATES - REG0-10613
+REGULATES - REG0-10612
+REGULATES - REG0-10187
+REGULATES - REG0-10186
+REGULATES - REG0-10185
+REGULATES - REG0-10184
+REGULATES - REG0-10183
+REGULATES - REG0-10182
+REGULATES - REG0-9557
+REGULATES - REG0-9556
+REGULATES - REG0-9555
+REGULATES - REG0-9408
+REGULATES - REG0-9407
+REGULATES - REG0-9406
+REGULATES - REG0-9405
+REGULATES - REG0-9404
+REGULATES - REG0-9403
+REGULATES - REG0-6479
+REGULATES - REG0-6472
+REGULATES - REG0-6466
+REGULATES - REG0-6462
+REGULATES - REG0-6455
+REGULATES - REG0-6451
+REGULATES - REG0-6370
+REGULATES - REG0-6306
+REGULATES - REG0-6027
+REGULATES - REG0-5252
+REGULATES - REG0-5217
+REGULATES - REG0-5076
+REGULATES - REG0-4948
+REGULATES - REG0-4579
+SYMMETRY - :INVERTED-REPEAT
+SYNONYMS - Lss
+SYNONYMS - Lrs
+SYNONYMS - LivR
+SYNONYMS - Ihb
+SYNONYMS - AlsB
+SYNONYMS - B0889
+SYNONYMS - LstR
+SYNONYMS - Mbf
+SYNONYMS - OppI
+SYNONYMS - RblA
+SYNONYMS - Lrp
+SYNONYMS - Lrp-leu
+//
+UNIQUE-ID - CPLX0-8209
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - UxuR-&alpha;-D-galacturonate,&alpha;-D-glucuronate-DNA-binding transcriptional repressor
+COMPONENTS - CPD-14488
+COMPONENTS - EG20249-MONOMER
+COMPONENTS - CPD-12523
+CREDITS - O0-9
+CREDITS - |santos-zavaleta|
+REGULATES - REG0-11215
+SYMMETRY - :INVERTED-REPEAT
+//
+UNIQUE-ID - CPLX0-8057
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - GlpR-glycerol
+CITATIONS - 825019
+COMPONENTS - PD03576
+COMPONENTS - GLYCEROL
+//
+UNIQUE-ID - CPLX0-7739
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - ArsR-antimonite
+COMPONENTS - EG12235-MONOMER
+COMPONENTS - ANTIMONITE
+//
+UNIQUE-ID - CPLX0-7650
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - FucR-L-fuculose-1-phosphate DNA-binding transcriptional activator
+CITATIONS - 3005235:EV-EXP-IEP:3421304658:martin
+CITATIONS - 8955387:EV-COMP-HINF-FN-FROM-SEQ:3421304658:martin
+COMMENT - "<b>Fuc</b>ose <b>r</b>egulator," FucR, acts as an activator of operons involved in fucose transport and degradation |CITS:[3325779]|. During induction by fuculose 1-phosphate, FucR binds to DNA, positively autoregulating itself and simultaneously activating transcription of the divergent <i>fucAO</i> operon. Expression of this operon requires growth on l-fucose or l-rhamnose under anaerobic conditions |CITS:[3005235][2834341]|. The repressor gene of this operon is positioned at the 3? end of the operon itself |CITS:[2664711]|. 
+/
+/As a member of the DeoR family, FucR features an N-terminal domain containing a putative helix-turn-helix motif |CITS:[8955387]|.
+COMPONENTS - PD00444
+COMPONENTS - FUCULOSE-1P
+GO-TERMS - |GO:0043468|
+REGULATES - REG0-5598
+REGULATES - REG0-5580
+SYMMETRY - :INVERTED-REPEAT
+//
+UNIQUE-ID - CPLX-123
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - PurR-Hypoxanthine DNA-binding transcriptional repressor
+CITATIONS - 12598694
+CITATIONS - 3058704
+CITATIONS - 1971620
+CITATIONS - 1729205
+CITATIONS - 12598694:EV-COMP-HINF-FN-FROM-SEQ:3491338560:asantos
+CITATIONS - 3058704:EV-COMP-HINF-FN-FROM-SEQ:3491338560:asantos
+CITATIONS - 8106311:EV-EXP-IDA-PURIFIED-PROTEIN-NH:3491338560:asantos
+CITATIONS - 1729205:EV-EXP-IDA-PURIFIED-PROTEIN-NH:3491338560:asantos
+CITATIONS - 1971620:EV-EXP-IDA-PURIFIED-PROTEIN-NH:3491338560:asantos
+COMPONENTS - PC00033
+COMPONENTS - HYPOXANTHINE
+CONSENSUS-SEQUENCE - ACGCAAACGTTTGCGT
+DNA-FOOTPRINT-SIZE - 16
+REGULATES - REG0-6208
+REGULATES - REG0-6209
+REGULATES - REG0-5884
+REGULATES - REG0-5952
+REGULATES - REG0-5945
+REGULATES - REG0-5944
+REGULATES - REG0-5930
+REGULATES - REG0-5826
+REGULATES - REG0-5824
+REGULATES - REG0-5747
+REGULATES - REG0-5735
+REGULATES - REG0-5644
+REGULATES - REG0-5643
+REGULATES - REG0-5469
+REGULATES - REG0-5448
+REGULATES - REG0-5344
+REGULATES - REG0-5309
+REGULATES - REG0-5275
+REGULATES - REG0-4623
+REGULATES - REG0-4622
+REGULATES - REG0-4621
+REGULATES - REG0-4619
+SYMMETRY - :INVERTED-REPEAT
+SYNONYMS - PurR-hypoxanthine
+//
+UNIQUE-ID - MONOMER0-2101
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - UxuR-fructuronate
+CITATIONS - 3079718
+COMPONENTS - FRUCTURONATE
+COMPONENTS - EG20249-MONOMER
+DBLINKS - (PFAM "PF00392" IN-FAMILY |pkarp| 3346700447 NIL NIL)
+SYNONYMS - B4324
+SYNONYMS - UxuR
+//
+UNIQUE-ID - MONOMER-60
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - RbsR-D-ribose
+COMPONENTS - RIBOSE
+COMPONENTS - PD03867
+DBLINKS - (PFAM "PF00356" IN-FAMILY |pkarp| 3346700416 NIL NIL)
+MOLECULAR-WEIGHT-KD - 36.61185899999994    
+MOLECULAR-WEIGHT-SEQ - 36.61185899999994    
+REGULATES - REG0-11821
+REGULATES - REG0-11820
+SYMMETRY - :INVERTED-REPEAT
+SYNONYMS - B3753
+SYNONYMS - RbsR
+//
+UNIQUE-ID - CPLX0-8088
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - LsrR-AI-2
+CITATIONS - 23589368
+CITATIONS - 23589368:EV-EXP-IPI:3587490492:sgama
+COMMENT - The phosphorylated form of AI-2 [(2<i>R</i>,4<i>S</i>)-2-methyl-2,3,3,4-tetrahydroxytetrahydrofuran] binds to LsrR. This binding causes the dissociation of the LsrR tetramer into dimers, leading to the dissociation of the LsrR-DNA interaction |CITS:[ 23589368]|.
+COMPONENTS - G6799-MONOMER
+COMPONENTS - CPD-10774
+CREDITS - O0-9
+CREDITS - |sgama|
+//
+UNIQUE-ID - CPLX0-8054
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - MurR-<i>N</i>-acetylmuramate 6-phosphate
+COMPONENTS - CPLX0-7745
+COMPONENTS - CPD0-881
+//
+UNIQUE-ID - CPLX0-7729
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - PaaX-phenylacetyl-CoA
+CITATIONS - 10766858
+COMPONENTS - G6720-MONOMER
+COMPONENTS - CPD-207
+//
+UNIQUE-ID - CPLX0-7618
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - RcnR-nickel
+COMPONENTS - G7137-MONOMER
+COMPONENTS - NI+2
+//
+UNIQUE-ID - MONOMER0-1781
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - NikR-Ni transcriptional repressor
+COMPONENT-OF - CPLX0-7707
+COMPONENTS - EG11519-MONOMER
+COMPONENTS - NI+2
+CREDITS - O0-9
+CREDITS - |santos-zavaleta|
+DBLINKS - (PDB "2HZA" |Structure| |keseler| 3376247248 NIL NIL)
+DBLINKS - (PDB "2HZV" |Structure| |keseler| 3376247248 NIL NIL)
+DBLINKS - (PFAM "PF01402" IN-FAMILY |pkarp| 3346700403 NIL NIL)
+DNA-FOOTPRINT-SIZE - 28
+MOLECULAR-WEIGHT-KD - 15.09376200000001    
+MOLECULAR-WEIGHT-SEQ - 15.09376200000001    
+SPECIES - ECOLI
+SYMMETRY - :INVERTED-REPEAT
+SYNONYMS - B3481
+SYNONYMS - YhhG
+SYNONYMS - NikR
+//
+UNIQUE-ID - MONOMER-56
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - GutR-sorbitol
+CITATIONS - 3062173:EV-EXP-IEP:3421306306:martin
+CITATIONS - 3062173:EV-COMP-HINF-FN-FROM-SEQ:3421306306:martin
+COMMENT - The "<b>g</b>l<b>u</b>ci<b>t</b>ol <b>r</b>epressor," GutR, is a DNA-binding transcription factor that represses an operon (<i>gut</i>) involved in transport and utilization of glucitol |CITS:[3062173][3036766]|. This regulator is located in the unusual <i>gut</i> operon, which contains two glucitol-specific transcription factors, GutR and GutM, that regulate this operon negatively and positively, respectively; both regulators control transcription of glucitol PTS permease |CITS:[3062173]|.
+/
+/Expression of <i>gutR</i> is activated in the presence of glucitol and in the absence of glucose. Although DNA binding by GutM does not depend on the presence of glucitol, this compound appears to be necessary for derepressing <i>gutM</i>, perhaps by interacting with GutR |CITS:[3062173]|. 
+/
+/In addition, Yamada et al. suggested that these regulators have contrary effects, but in the presence of glucitol, GutR interacts with this carbohydrate to dissociate from DNA, causing increments of GutM in sufficient amounts to increase transcription of the <i>gut</i> operon |CITS:[3062173]|. To repress transcription, GutR recognizes DNA-binding sites, but no consensus sequence has been identified. When this protein represses genes involved in glucitol transport and utilization, it appears to bind to their regulatory regions without a coeffector |CITS:[3062173]|.
+/This regulator belongs to the DeoR family of repressors. GutR is composed of two domains: the amino-terminal domain, which contains the DNA-binding region, and the carboxy-terminal domain, which is responsible for dimerization and inducer binding |CITS:[3062173]|.
+COMPONENTS - PD00283
+COMPONENTS - SORBITOL
+DBLINKS - (PFAM "PF00455" IN-FAMILY |pkarp| 3346700371 NIL NIL)
+MOLECULAR-WEIGHT-KD - 28.23610799999998    
+MOLECULAR-WEIGHT-SEQ - 28.23610799999998    
+SYNONYMS - B2707
+SYNONYMS - GutR
+SYNONYMS - SrlR
+//
+UNIQUE-ID - CPLX0-8079
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - ChbR-<i>N</i>-monoacetylchitobiose-6-phosphate
+CITATIONS - 22797760
+COMPONENTS - EG10143-MONOMER
+COMPONENTS - DIACETYLCHITOBIOSE-6-PHOSPHATE
+REGULATES - REG0-5118
+REGULATES - REG0-5119
+SYMMETRY - :INVERTED-REPEAT
+//
+UNIQUE-ID - CPLX0-8047
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - NsrR-nitric oxide
+CITATIONS - 16428390
+CITATIONS - 17720788
+CITATIONS - 20472787
+CITATIONS - 16428390:EV-COMP-AINF-FN-FROM-SEQ:3491504749:asantos
+CITATIONS - 17720788:EV-COMP-HINF-FN-FROM-SEQ:3491504749:asantos
+CITATIONS - 20472787:EV-EXP-IDA-PURIFIED-PROTEIN-NH:3491504749:asantos
+CITATIONS - 20472787:EV-EXP-IPI:3491504749:asantos
+COMPONENTS - CPLX0-7756
+COMPONENTS - NITRIC-OXIDE
+REGULATES - REG0-10490
+REGULATES - REG0-10491
+REGULATES - REG0-10483
+REGULATES - REG0-10482
+REGULATES - REG0-10504
+REGULATES - REG0-10506
+REGULATES - REG0-10495
+REGULATES - REG0-10494
+REGULATES - REG0-10513
+REGULATES - REG0-10484
+REGULATES - REG0-10518
+REGULATES - REG0-10501
+REGULATES - REG0-10508
+REGULATES - REG0-10486
+REGULATES - REG0-10480
+REGULATES - REG0-10488
+REGULATES - REG0-10509
+REGULATES - REG0-10515
+REGULATES - REG0-10502
+REGULATES - REG0-10487
+REGULATES - REG0-10514
+REGULATES - REG0-10507
+REGULATES - REG0-10492
+REGULATES - REG0-10511
+REGULATES - REG0-10510
+REGULATES - REG0-10493
+REGULATES - REG0-10512
+REGULATES - REG0-10481
+REGULATES - REG0-10489
+REGULATES - REG0-10503
+REGULATES - REG0-10519
+REGULATES - REG0-10517
+REGULATES - REG0-10516
+REGULATES - REG0-10485
+REGULATES - REG0-10505
+REGULATES - REG0-10464
+SYMMETRY - :INVERTED-REPEAT
+//
+UNIQUE-ID - CPLX0-7714
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - DsdC-D-serine DNA binding transcriptional dual regulator
+CITATIONS - :EV-EXP-IEP:3423582365:sgama
+CITATIONS - 3275618:EV-COMP-AINF-FN-FROM-SEQ:3423582365:sgama
+COMMENT - In the presence of d-serine, the "<b>D</b>-<b>s</b>erine <b>d</b>eaminase" protein, DsdC, activates the transcription of genes involved in d-serine detoxification, and in the absence of the metabolite it is autorepressed |CITS: [6296057]|.
+/
+/DsbC  belongs to the LysR family of bacterial transcriptional regulators and contains a possible helix-turn-helix motif for DNA binding  in the C-terminal domain. This protein shows 50% similarity to the GcvA protein |CITS:[7592420] [3275618]|.
+/
+/The <i>dsbC</i> gene is located next to an operon (<i> dsdXA </i>) regulated by DsbC, but facing in the opposite direction. The activation effect of DsdC on this operon is enhanced by CRP, but CRP cannot act alone on the operon |CITS:[7592420]|.
+/
+/A DNA-binding site recognized by the dimer of DsbC has not been identified.
+COMPONENTS - CPLX0-7713
+COMPONENTS - D-SERINE
+CREDITS - O0-9
+CREDITS - |sgama|
+GO-TERMS - |GO:0070905|
+GO-TERMS - |GO:0045893|
+REGULATES - REG0-5688
+REGULATES - REG0-5278
+REGULATES - REG0-5822
+SYMMETRY - :INVERTED-REPEAT
+//
+UNIQUE-ID - CPLX0-7541
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - AlaS-L-alanine
+CITATIONS - 6264314
+CITATIONS - 6264314:EV-COMP-HINF-FN-FROM-SEQ:3491319298:asantos
+CITATIONS - 6264314:EV-EXP-IDA-PURIFIED-PROTEIN-NH:3491319298:asantos
+CITATIONS - 6264314:EV-EXP-IEP:3491319298:asantos
+COMPONENTS - ALAS-MONOMER
+COMPONENTS - L-ALPHA-ALANINE
+REGULATES - REG0-6157
+SYMMETRY - :INVERTED-REPEAT
+//
+UNIQUE-ID - MONOMER0-49
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - BetI-choline
+CITATIONS - 1956285:EV-COMP-HINF-FN-FROM-SEQ:3421245181:martin
+COMPONENTS - PD00251
+COMPONENTS - CHOLINE
+DBLINKS - (PFAM "PF00440" IN-FAMILY |pkarp| 3346700316 NIL NIL)
+MOLECULAR-WEIGHT-KD - 21.814980000000006    
+MOLECULAR-WEIGHT-SEQ - 21.814980000000006    
+SYNONYMS - B0313
+SYNONYMS - BetI
+//
+UNIQUE-ID - MONOMER0-163
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - TyrR-Phenylalanine DNA-binding transcriptional repressor
+CITATIONS - 1970563:EV-EXP-IDA-PURIFIED-PROTEIN-NH:3491319566:sgama
+COMPONENTS - PD00413
+COMPONENTS - PHE
+CONSENSUS-SEQUENCE - TGTAAAtATTTnTTTACa 
+DBLINKS - (PFAM "PF01842" IN-FAMILY |pkarp| 3346700332 NIL NIL)
+DNA-FOOTPRINT-SIZE - 18
+MOLECULAR-WEIGHT-KD - 57.65605499999977    
+MOLECULAR-WEIGHT-SEQ - 57.65605499999977    
+REGULATES - REG0-5464
+REGULATES - REG0-4787
+SYMMETRY - :INVERTED-REPEAT
+SYNONYMS - B1323
+SYNONYMS - TyrR
+SYNONYMS - TyrR-phe
+//
+UNIQUE-ID - MONOMER-53
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - GalS-galactose
+CITATIONS - 1619663:EV-COMP-HINF-FN-FROM-SEQ:3491321044:martin
+CITATIONS - 1619663:EV-EXP-IGI:3491321044:martin
+CITATIONS - 8982002:EV-EXP-IEP:3491321044:martin
+CITATIONS - 8982002:EV-EXP-IPI:3491321044:martin
+CITATIONS - 8982002:EV-EXP-IDA-PURIFIED-PROTEIN:3491321044:martin
+CITATIONS - 8416900:EV-EXP-IEP:3491321044:martin
+COMMENT - The "<b>Gal</b>actose i<b>s</b>orepressor," GalS, is a DNA-binding transcription factor that represses transcription of the operons involved in transport and catabolism of D-galactose |CITS: [17630975][7934815][8416900][1619663][8982002]|. Synthesis of these operons is induced when <i>E. coli</i> is grown in the presence of the inducer (D-galactose) and  the absence glucose |CITS:[8982002][7934815][1619663][8416900]|. GalS is negatively autoregulated, and its expression is increased in the presence of inducer and glucose |CITS:[8416900][8982002]|. 
+/
+/On the other hand, GalS is highly homologous in its amino acid sequence to GalR (55% identical and 88% similar); apparently both act together and are capable of cross-talking to regulate expression of the <i>gal</i> regulon |CITS:[1619663][8982002]|. For this reason these regulators bind the same operators, in the <i>cis</i> regulatory regions, with different affinities. 
+/
+/In the presence of an inductor, GalS undergoes a conformational change that reduces its affinity for the operator. Golding et al. showed that GalR is the major repressor of the <i>gal</i> operon |CITS:[1655705]|. This repressor binds in tandem to inverted repeat sequences that are 16 nucleotides long and possess conserved motifs; each dimer binds to one of these conserved sequences |CITS:[7934815][8416900]|. 
+/
+/GalS belongs to the GalR/LacI family of transcriptional regulators. Accordingly, this transcriptional repressor family protein is composed of two domains: a conserved N-terminal domain which contains the DNA-binding region, and the carboxy-terminal domain, which is involved in effector binding and dimerization |CITS:[1619663][8982002]|. GalS and GalR have only two substitutions in the first helix of the N-terminal domain |CITS:[1619663]|.
+/
+COMPONENTS - PD00261
+COMPONENTS - GALACTOSE
+CONSENSUS-SEQUENCE - gTGTAAnCGaTTaCac 
+DBLINKS - (PFAM "PF00356" IN-FAMILY |pkarp| 3346700353 NIL NIL)
+MOLECULAR-WEIGHT-KD - 37.35676399999992    
+MOLECULAR-WEIGHT-SEQ - 37.35676399999992    
+REGULATES - REG0-10091
+REGULATES - REG0-10089
+REGULATES - REG0-10087
+REGULATES - REG0-10085
+REGULATES - REG0-9414
+REGULATES - REG0-4659
+SYMMETRY - :INVERTED-REPEAT
+SYNONYMS - B2151
+SYNONYMS - MglD
+SYNONYMS - GalS
+//
+UNIQUE-ID - CPLX0-8070
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - DksA-ppGpp
+COMPONENTS - EG10230-MONOMER
+COMPONENTS - GUANOSINE-5DP-3DP
+REGULATES - REG0-12324
+REGULATES - REG0-11948
+REGULATES - REG0-11947
+REGULATES - REG0-11388
+REGULATES - REG0-11386
+REGULATES - REG0-11187
+REGULATES - REG0-11186
+REGULATES - REG0-11185
+REGULATES - REG0-11184
+REGULATES - REG0-11183
+REGULATES - REG0-11182
+REGULATES - REG0-11181
+REGULATES - REG0-11180
+REGULATES - REG0-11179
+REGULATES - REG0-11178
+REGULATES - REG0-11177
+REGULATES - REG0-11176
+REGULATES - REG0-11175
+REGULATES - REG0-11174
+REGULATES - REG0-11173
+REGULATES - REG0-11172
+REGULATES - REG0-11171
+REGULATES - REG0-11170
+REGULATES - REG0-11169
+REGULATES - REG0-11168
+REGULATES - REG0-11167
+REGULATES - REG0-11166
+REGULATES - REG0-11163
+REGULATES - REG0-11148
+REGULATES - REG0-11147
+REGULATES - REG0-11146
+REGULATES - REG0-11145
+REGULATES - REG0-11144
+REGULATES - REG0-11121
+REGULATES - REG0-11120
+//
+UNIQUE-ID - CPLX0-7752
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - MetR-L-homocysteine
+CITATIONS - 8757744
+CITATIONS - 8257110
+CITATIONS - 2543976
+CITATIONS - 7608086
+CITATIONS - 2656646
+CITATIONS - 8257110:EV-COMP-HINF-FN-FROM-SEQ:3491495378:asantos
+CITATIONS - 2543976:EV-EXP-IDA-PURIFIED-PROTEIN-NH:3491495517:asantos
+CITATIONS - 7608086:EV-EXP-IDA-PURIFIED-PROTEIN-NH:3491495651:asantos
+CITATIONS - 2656646:EV-EXP-IEP:3491495887:asantos
+COMPONENTS - CPLX0-7759
+COMPONENTS - HOMO-CYS
+CONSENSUS-SEQUENCE - aTGAAaaattTTCAt
+DNA-FOOTPRINT-SIZE - 15
+REGULATES - REG0-11347
+REGULATES - REG0-11337
+REGULATES - REG0-11336
+REGULATES - REG0-11335
+REGULATES - REG0-6059
+REGULATES - REG0-6062
+REGULATES - REG0-6056
+REGULATES - REG0-5928
+REGULATES - REG0-5929
+SYMMETRY - :INVERTED-REPEAT
+//
+UNIQUE-ID - CPLX0-7689
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - LldR-L-lactose DNA-binding transcriptional dual regulator
+COMPONENTS - EG11962-MONOMER
+COMPONENTS - L-LACTATE
+CONSENSUS-SEQUENCE - aAgAATTGGCanTgCCAaTTcTt
+DNA-FOOTPRINT-SIZE - 23
+REGULATES - REG0-9479
+SYMMETRY - :INVERTED-REPEAT
+//
+UNIQUE-ID - CPLX0-228
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - ArgR-L-arginine DNA-binding transcriptional dual regulator
+CITATIONS - 11580241
+CITATIONS - 3116542
+CITATIONS - 1640456
+CITATIONS - 1640457
+CITATIONS - 17850814
+CITATIONS - 3116542:EV-COMP-HINF-FN-FROM-SEQ:3491319163:asantos
+CITATIONS - 8594204:EV-COMP-HINF-FN-FROM-SEQ:3491319163:asantos
+CITATIONS - 1640456:EV-EXP-IDA-PURIFIED-PROTEIN-NH:3491319163:asantos
+CITATIONS - 1640457:EV-EXP-IDA-PURIFIED-PROTEIN-NH:3491319163:asantos
+CITATIONS - 17850814:EV-EXP-IPI:3491319163:asantos
+COMMENT - ArgR complexed with L-arginine represses the transcription of several genes involved in biosynthesis and transport of arginine, transport  of histidine, and its own synthesis |CITS:[17074904][3116542][1640456]| and activates genes for arginine catabolism |CITS:[12003934]|. ArgR is also essential for a site-specific recombination reaction that resolves plasmid ColE1 multimers to monomers and is necessary for plasmid stability |CITS[3149585]|. The role of ArgR in this latter reaction may be structural |CITS[3149585]|.
+/
+/The hexamer is the active form of ArgR, and L-arginine binds to ArgR and stabilizes the hexamer |CITS:[ 8594204]|and increases its DNA affinity by allosteric activation |CITS:[ 8594204][15663926 ]|.
+/
+/ArgR belongs to the ArgR/AhrC family, whose members are widely distributed in bacteria |CITS:[11305941]|. The DNA sequence which the proteins of the family recognize and to which they bind are also well-conserved among genomes |CITS:[ 11305941]|.  This DNA sequence consists of  a palindromic sequence of 18 bp,  called the ARG box |CITS:[ 11305941][ 1640456]|. An ArgR hexamer binds to a pair of these boxes that are generally separated by 3 bp |CITS:[1640456][1640457]|.  The repressor can bind to a single box but with a greatly reduced affinity |CITS:[1640456][ 1640457]|. The ARG box generally overlaps the promoter sequence and the transcriptional start site |CITS:[1640456]|; therefore, it was suggested that it represses the transcription by steric exclusion of RNA polymerase binding |CITS:[ 17850814]|.
+/
+/ArgR has two domains: the N-terminal domain, which contains a winged helix-turn-helix DNA-binding motif |CITS:[ 9334747]|,  and the C-terminal domain, which contains a motif that binds L-arginine and a motif for oligomerization |CITS:[ 8594204]|. Based on cross-linking analysis of wild-type and mutant ArgR proteins, it has been shown that the C-terminus is more important in cer/Xer site-specific recombination than in DNA binding |CITS:[20659168]|.
+/
+COMPONENTS - PC00005
+COMPONENTS - ARG
+DNA-FOOTPRINT-SIZE - 18
+REGULATES - REG0-12228
+REGULATES - REG0-12227
+REGULATES - REG0-11504
+REGULATES - REG0-9161
+REGULATES - REG0-5248
+REGULATES - REG0-5247
+REGULATES - REG0-9160
+REGULATES - REG0-9162
+REGULATES - REG0-6536
+REGULATES - REG0-6485
+REGULATES - REG0-6484
+REGULATES - REG0-6483
+REGULATES - REG0-6482
+REGULATES - REG0-6166
+REGULATES - REG0-6165
+REGULATES - REG0-6164
+REGULATES - REG0-6055
+REGULATES - REG0-6054
+REGULATES - REG0-5835
+REGULATES - REG0-5671
+REGULATES - REG0-5669
+REGULATES - REG0-4845
+REGULATES - REG0-4844
+REGULATES - REG0-4843
+REGULATES - REG0-4796
+REGULATES - REG0-4795
+REGULATES - REG0-4782
+REGULATES - REG0-4781
+REGULATES - REG0-4780
+REGULATES - REG0-4779
+REGULATES - REG0-4778
+REGULATES - REG0-4777
+REGULATES - REG0-4776
+REGULATES - REG0-4775
+REGULATES - REG0-4774
+REGULATES - REG0-4773
+SYMMETRY - :INVERTED-REPEAT
+SYNONYMS - ArgR-arg
+//
+UNIQUE-ID - MONOMER0-2461
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - MtlR-mannitol
+COMPONENTS - PD00369
+COMPONENTS - MANNITOL
+DBLINKS - (PFAM "PF05068" IN-FAMILY |pkarp| 3346700409 NIL NIL)
+SYNONYMS - B3601
+SYNONYMS - MtlR
+//
+UNIQUE-ID - MONOMER0-160
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - DnaA-ATP transcriptional dual regulator
+CITATIONS - 2540187:EV-EXP-IDA-PURIFIED-PROTEIN:3491479206:martin
+CITATIONS - 2540187:EV-EXP-IEP:3491479206:martin
+CITATIONS - 8825783:EV-EXP-IPI:3491479357:martin
+CITATIONS - 8825783:EV-EXP-IDA-PURIFIED-PROTEIN:3491479357:martin
+CITATIONS - 20487274:EV-EXP-IDA-PURIFIED-PROTEIN:3491479525:martin
+CITATIONS - 20487274:EV-EXP-IPI:3491479525:martin
+CITATIONS - 20487274:EV-EXP-IEP:3491479525:martin
+CITATIONS - 11160809:EV-EXP-IDA-PURIFIED-PROTEIN:3491479646:martin
+CITATIONS - 11160809:EV-EXP-IPI:3491479646:martin
+COMMENT - DnaA plays an important role in initiating chromosomal replication to bind sequences in the chromosomal origin. 
+/It belongs to the DnaA family of transcriptional regulators.
+/
+/DnaA also binds to sites at the datA locus and this binding serves to limit excess DnaA activity, but other DnaA-binding sites are shown not to share this function |CITS:[12068813]|. 
+/
+/Regulation has been described |CITS:[11483528][9674428][16077105]|. IdaB is a member of the AAA chaperone-like family of ATPases |CITS:[11483528]| that is required for the inhibition of the initiation of DNA synthesis via antagonism of DnaA activity by the DNA polymerase III beta subunit (sliding clamp) |CITS:[9674428][11483528]|.  IdaB and the sliding clamp stimulate ATP hydrolysis within the DnaA-ATP complex, which renders it inactive, and DNA replication activity also contributes to this downregulation |CITS:[9674428]|.
+/
+/DnaA also can inhibit the gene expression of other genes such as guaA, dam, rpoH, ftsA, and mioC. 
+/
+COMPONENTS - PD03831
+COMPONENTS - ATP
+CONSENSUS-SEQUENCE - TTATCCACA
+DBLINKS - (PFAM "PF00308" IN-FAMILY |pkarp| 3346700414 NIL NIL)
+DNA-FOOTPRINT-SIZE - 9
+MOLECULAR-WEIGHT-KD - 52.55074699999977    
+MOLECULAR-WEIGHT-SEQ - 52.55074699999977    
+REGULATES - REG0-11668
+REGULATES - REG0-11667
+REGULATES - REG0-11666
+REGULATES - REG0-11665
+REGULATES - REG0-11662
+REGULATES - REG0-11661
+REGULATES - REG0-11664
+REGULATES - REG0-11663
+REGULATES - REG0-10766
+REGULATES - REG0-10327
+REGULATES - REG0-10326
+REGULATES - REG0-6001
+REGULATES - REG0-5951
+REGULATES - REG0-5657
+REGULATES - REG0-5450
+REGULATES - REG0-5449
+REGULATES - REG0-4922
+REGULATES - REG0-4910
+REGULATES - REG0-4909
+REGULATES - REG0-4563
+REGULATES - REG0-4562
+SYMMETRY - :ASYMMETRIC
+SYNONYMS - B3702
+SYNONYMS - DnaA
+SYNONYMS - DnaA-ATP
+//
+UNIQUE-ID - MONOMER-48
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - BirA-bio-5'-AMP DNA-binding transcriptional repressor
+CITATIONS - 3536662:EV-COMP-HINF-FN-FROM-SEQ:3491258934:asantos
+COMMENT - The "<b>b</b>iotin <b>r</b>epressor," BirA, coordinately represses transcription of the divergent genes that are necessary for the synthesis of biotin |CITS:[6177001][366433]|. BirA is a bifunctional protein that possesses both regulatory and enzymatic activities: it acts as the DNA-binding transcriptional repressor of the biotin operon and also exhibits biotin ligase activity |CITS:[6129246]|.
+/
+/The specific inducer for BirA is  biotinyl-5'-adenylate (bio-5'-AMP). In the presence of bio-5'-AMP, BirA binds to 40-nucleotide-long DNA target sites in the <i>bioA</i>/<i>bioBFCD</i> intergenic region to coordinately repress transcription of <i>bioA</i>p and <i>bioB</i>p |CITS:[9485476][1659455]|. BirA-bio-5'-AMP has been observed to be predominantly monomeric in solution |CITS:[6129246][8373769][9485476]|, whereas more recent studies indicate that dimerization occurs before DNA binding |CITS:[12527300]|. Biotinyl-5'-adenylate |CITS:[10529178]| and biotin |CITS:[11353844][350835]| stimulate dimerization and DNA binding. 
+/
+/The effector bio-5'-AMP is also a substrate in the BirA-mediated biotinylation of the biotin carboxyl carrier protein monomer (apoBCCP), and this relationship results in repression of the biotin operon when the abundance of apoBCCP (and therefore the cellular demand for biotin) is reduced |CITS:[9750231]|. This repression is controlled by the rate of the competing protein:protein interaction. The rate of heterodimerization with apoBCCP controls the holoBirA monomer supply, and the equilibrium constant of homodimerization tunes the bioO occupancy and, consequently, transcription initiation at the biotin operon |CITS: [23896299]|.
+/
+/The crystal structure of BirA has been determined by X-ray crystallography to a resolution of 2.3 &Aring; |CITS:[1409631]|, and that of a BirA-biotin complex |CITS:[11353844]| has been solved by several research groups. Crystallization has been described |CITS:[2642476]|, and the implications of the structure with respect to the binding of biotin and ATP have been discussed |CITS:[1409631]|.  
+/
+/The BirA monomer contains three domains: an amino-terminal domain that contains a helix-turn-helix DNA-binding motif; the central domain, which is important for DNA binding and catalysis and contains the binding site for bio-5'-AMP; and the C-terminal domain, the funtion of which has yet to be determinded. Disordered loop structures on the protein surface appear to be involved in binding to biotin, bio-5'-AMP, and/or DNA |CITS:[10497026]| and in protein dimerization |CITS:[11353844]|. A model of binding and reaction progression is presented elsewhere |CITS:[11847279]|.
+COMPONENTS - BIOTINLIG-MONOMER
+COMPONENTS - BIO-5-AMP
+CONSENSUS-SEQUENCE - GACTTGTAAACCtAAaTcttttcAaTTtGGTTTACAAGTC
+DBLINKS - (PFAM "PF03099" IN-FAMILY |pkarp| 3346700428 NIL NIL)
+DBLINKS - (PDB "1HXD" |Structure| |paley| 3439827725 NIL NIL)
+DNA-FOOTPRINT-SIZE - 40
+GO-TERMS - |GO:0005829|
+LOCATIONS - CCI-CYTOSOL-GN
+MOLECULAR-WEIGHT-KD - 35.31194799999994    
+MOLECULAR-WEIGHT-SEQ - 35.31194799999994    
+REGULATES - REG0-5888
+REGULATES - REG0-5645
+SYMMETRY - :INVERTED-REPEAT
+SYNONYMS - DhbB
+SYNONYMS - BioR
+SYNONYMS - BirA
+SYNONYMS - BirA-bio-5'-AMP
+//
+UNIQUE-ID - CPLX0-8061
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - NrdR-Zn<sup>2+</sup> DNA-binding transcriptional repressor
+CITATIONS - 17496099:EV-COMP-HINF-FN-FROM-SEQ:3491256462:sgama
+CITATIONS - 17496099:EV-EXP-IMP:3491256462:sgama
+CITATIONS - 17496099:EV-EXP-IDA-PURIFIED-PROTEIN-NH:3491256462:sgama
+COMPONENTS - EG11320-MONOMER
+COMPONENTS - ZN+2
+CONSENSUS-SEQUENCE - ACACTATATATAGTGT
+DNA-FOOTPRINT-SIZE - 16
+REGULATES - REG0-9043
+REGULATES - REG0-9040
+REGULATES - REG0-9041
+REGULATES - REG0-9039
+REGULATES - REG0-9038
+REGULATES - REG0-9042
+SYMMETRY - :INVERTED-REPEAT
+//
+UNIQUE-ID - CPLX0-7749
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - LsrR-DHPD
+COMPONENTS - G6799-MONOMER
+COMPONENTS - DIHYDROXYPENTANEDIONE
+//
+UNIQUE-ID - CPLX0-7677
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - ZntR-Zn<sup>2+</sup> transcriptional activator
+COMPONENT-OF - CPLX0-7678
+COMPONENTS - EG11969-MONOMER
+COMPONENTS - ZN+2
+SPECIES - ECOLI
+//
+UNIQUE-ID - CPLX-128
+TYPES - Protein-Small-Molecule-Complexes
+COMMON-NAME - Cra-fructose-1,6-bisphosphate
+COMPONENTS - PC00061
+COMPONENTS - FRUCTOSE-16-DIPHOSPHATE
+SYNONYMS - FruR-fructose-1,6-bisphosphate
+//

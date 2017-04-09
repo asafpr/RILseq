@@ -1,0 +1,3418 @@
+# Copyright © 1996-2005 SRI International, Marine Biological Laboratory, DoubleTwist Inc., The Institute for Genomic Research, University of California at San Diego, and UNAM.  All Rights Reserved.
+#
+# Authors:
+#    P.D. Karp, SRI International
+#    I. Keseler, SRI International
+#    A. Shearer, SRI International
+#    S. Paley, SRI International
+#    J. Pick, SRI International
+#    I. Paulsen, The Institute for Genomic Research
+#    A. Johnson, The Institute for Genomic Research
+#    Q. Ren, The Institute for Genomic Research
+#    J. Collado-Vides, Centro de Ciencias Genomicas, UNAM
+#    C. Bonavides-Martinez, UNAM
+#    B. Contreras Moreira, UNAM
+#    S. Gama-Castro, UNAM
+#    M. Peralta, UNAM
+#    A. Santos-Zavaleta, UNAM
+#    J. Ingraham, University of California, Davis
+#
+# Please see the license agreement regarding the use of and distribution of this file.
+# The format of this file is defined at http://bioinformatics.ai.sri.com/ptools/flatfile-format.html .
+#
+# Species: E. coli K-12
+# Database: EcoCyc
+# Version: 9.5
+# File Name: func-associations.col
+# Date and time generated: May 11, 2005, 16:29:51
+#
+# This file lists functionally associated genes in the EcoCyc Pathway/Genome Database.
+# These functional associations include:
+#   1) Genes coding for enzymes in the same metabolic pathway,
+#   2) Genes whose products are components in heteromultimeric protein complexes,
+#   3) Pairs of genes, A and B, where the product of gene A is a component of
+#      a transcription factor that regulates gene B,
+#   4) Pairs of genes, A and B, where the product of gene A is a component of a 
+#      transporter of a substrate that the product of gene B catabolizes.
+#
+# Each of these types of functional associations are listed in a separate section of this file.
+# The sections are separated by two rows each starting with a '#'.
+#
+#
+#
+# Pathway Functional Associations
+# Each entry is a tab-delimited list of the pathway's EcoCyc ID, the pathway name and the list of genes in the pathway
+ARCB-PWY	ArcAB Two-Component Signal Transduction System	b2340	b3210	b4401
+ATO-PWY	AtoSC Two-Component Signal Transduction System	b2220	b2219
+BAE-PWY	BaeSR Two-Component Signal Transduction System	b2079	b2078
+BAS-PWY	BasSR Two-Component Signal Transduction System	b4113	b4112
+CHE-PWY	Chemotactic Signal Transduction System	b1882	b1884	b1888	b1883
+CPX-PWY	CpxAR Two-Component Signal Transduction System	b3911	b3912
+CRE-PWY	CreCB Two-Component Signal Transduction System	b0399	b4398	b4399
+EVG-PWY	EvgSA Two-Component Signal Transduction System	b2369	b2370
+HYD-PWY	ZraSR Two-Component Signal Transduction System	b4004	b4003
+KDP-PWY	KdpDE Two-Component Signal Transduction System	b0694	b0695
+NARQ-PWY	NarQ Nitrate/Nitrite-Dependent Two-Component Regulatory System	b2193	b1221	b2469
+NARX-PWY	NarX Nitrate/Nitrite-Dependent Two-Component Regulatory System	b2193	b1221	b1222
+NRI-PWY	Nitrogen Regulation Two-Component System	b0167	b3053	b3870	b0450	b3868	b3869
+OMP-PWY	Osmoregulatory Two-Component Signal Transduction System	b3404	b3405	b2786
+PHOQ-PWY	PhoQP Two-Component Signal Transduction System	b1130	b1129
+PHOR-PWY	PhoRB Two-Component Signal Transduction System	b0399	b0400
+PWY0-21	BarA-UvrY Two-Component Signal Transduction System	b1914	b2786
+RCS-PWY	RcsCB Two-Component Signal Transduction System	b2217	b2218	b0196
+RST-PWY	RstBA Two-Component Signal Transduction System	b1608	b1609
+TOR-PWY	TorSR Two-Component Signal Transduction System	b0994	b0995	b0993
+UHP-PWY	UhpBA Two-Component Signal Transduction System	b3667	b3669	b3668
+ARO-PWY	chorismate biosynthesis	b0908	b1692	b3281	b3389	b0754	b1704	b2601	b1693	b0388	b3390	b2329
+HOMOSERSYN-PWY	homoserine biosynthesis	b3433	b0002	b3940	b4024
+PWY0-901	selenocysteine biosynthesis	b3591	b0893	b1764
+ALANINE-SYN2-PWY	alanine biosynthesis II	
+ALANINE-VALINESYN-PWY	alanine biosynthesis I	b4053	b1190	b3572	b3770
+PWY0-1021	alanine biosynthesis III	b2530
+ARGSYN-PWY	arginine biosynthesis I	b3960	b3957	b3359	b3959	b0033	b0032	b2818	b3958	b4254	b0273	b3172
+ASPARAGINESYN-PWY	asparagine biosynthesis III	b3744	b0674
+ASPARTATESYN-PWY	aspartate biosynthesis and degradation	b0928
+GLUTDEG-PWY	glutamate degradation V	b0928
+CYSTSYN-PWY	cysteine biosynthesis I	b2414	b3607
+GLUTSYN-PWY	glutamate biosynthesis I	b3213	b3212
+GLUTSYNIII-PWY	glutamate biosynthesis III	b1761
+GLNSYN-PWY	glutamine biosynthesis I	b3870
+GLYSYN-PWY	glycine biosynthesis I	b2551	b4388
+THREOCAT-PWY	threonine degradation I	b1386	b3617	b2297	b3115	b2296	b3114	b0903	b3616	b3939	b2797	b3117	b1814
+HISTSYN-PWY	histidine biosynthesis I	b2021	b2023	b2025	b2026	b2019	b2024	b2022	b2020
+ILEUSYN-PWY	isoleucine biosynthesis I	b3770	b4488	b3769	b3671	b3670	b0077	b0078	b3772	b3774	b3771
+LEUSYN-PWY	leucine biosynthesis	b4054	b3770	b0074	b0071	b0072	b0073
+DAPLYSINESYN-PWY	lysine biosynthesis I	b2838	b3359	b0031	b3433	b4024	b2478	b0166	b2472	b3809
+HOMOSER-METSYN-PWY	methionine biosynthesis I	b3829	b1622	b3008	b3939	b4019	b4013
+PHESYN	phenylalanine biosynthesis I	b2599	b2600	b4054
+PROSYN-PWY	proline biosynthesis I	b0386	b0242	b1761	b0243
+SERSYN-PWY	serine biosynthesis	b4388	b2913	b0907
+HOMOSER-THRESYN-PWY	threonine biosynthesis from homoserine	b0004	b0003
+TRPSYN-PWY	tryptophan biosynthesis	b1264	b1261	b1260	b1263	b1262
+TYRSYN	tyrosine biosynthesis I	b2600	b2599	b4054
+VALSYN-PWY	valine biosynthesis	b3770	b0077	b0078	b4488	b3769	b3671	b3670	b3774	b3771
+TRNA-CHARGING-PWY	tRNA charging pathway	b0526	b2400	b0642	b2697	b1866	b3384	b0893	b1714	b1713	b2890	b4129	b3559	b3560	b2514	b2114	b0194	b1719	b1637	b0930	b4258	b0026	b0680	b1876
+GLUCONEO-PWY	gluconeogenesis	b3925	b4232	b1779	b3612	b4395	b0755	b3403	b1702	b2463	b3956	b1479	b3236	b2779	b2926	b2925	b2097	b4025
+GLYCOGENSYNTH-PWY	glycogen biosynthesis	b3432	b3430	b3429
+TRESYN-PWY	trehalose biosynthesis I	b1897	b1896
+COLANSYN-PWY	colanic acid building blocks biosynthesis	b2048	b2053	b0758	b1236	b2052	b2028	b0759	b0757	b2049	b1613
+DTDPRHAMSYN-PWY	dTDP-rhamnose biosynthesis I	b2040	b2041	b2039	b2038
+ECASYN-PWY	enterobacterial common antigen biosynthesis	b3794	b4404	b3793	b3786	b3788	b3789	b3791	b3790	b3787	b3784
+KDOSYN-PWY	KDO biosynthesis -- including transfer to lipid IV_A_	b3633	b3198	b3197	b1215	b0918	b0915
+MANGDPMET-PWY	GDP-mannose metabolism	b2048	b1613	b2049	b2051
+NAGLIPASYN-PWY	lipid-A-precursor biosynthesis	b0915	b0179	b0181	b0918	b3633	b0096	b0524	b0182
+PEPTIDOGLYCANSYN-PWY	peptidoglycan biosynthesis	b3972	b0090	b0091	b3967	b0092	b0381	b0087	b0085	b0088	b0086	b3730	b3189
+UDPNAGSYN-PWY	UDP-N-acetylglucosamine biosynthesis	b3176	b3729	b3730
+1CMET2-PWY	formylTHF biosynthesis	b1232	b2551	b0116	b2903	b2904	b2905	b4019	b2827	b3941	b0048	b1606	b0529	b2315
+COBALSYN-PWY	cobalamin biosynthesis I	b1993	b0638	b1991	b1992	b1270
+NONMEVIPP-PWY	isopentenyl diphosphate biosynthesis -- mevalonate-independent	b0173	b1208	b2515	b0029	b2746	b2747	b0420
+POLYISOPRENSYN-PWY	polyisoprenoid biosynthesis	b0174	b2889	b3187	b0421
+PWY0-501	lipoate biosynthesis and modification	b0630	b1094	b0628
+PWY0-522	lipoate salvage and modification	b4386
+SAM-PWY	S-adenosylmethionine biosynthesis	b3829	b4019	b2942
+COA-PWY	coenzyme A biosynthesis	b0103	b3974	b3639	b3634
+P2-PWY	biosynthesis of 2'-(5"-triphosphoribosyl)-3'-dephospho-CoA	b0614	b0613
+PANTO-PWY	pantothenate biosynthesis	b0131	b0134	b0425	b0133
+HEMESYN2-PWY	biosynthesis of proto- and siroheme	b3804	b0475	b3805	b0154	b2400	b3867	b2436	b0428	b1210	b0369	b3997	b3850	b3368
+NADPHOS-DEPHOS-PWY	NAD phosphorylation and dephosphorylation	b3916	b2615	b1603	b1602
+PYRIDNUCSYN-PWY	NAD biosynthesis I (from aspartate)	b1740	b0109	b2574	b0750	b0639
+PYRNUCYC-PWY	pyridine nucleotide cycling	b1740	b0931	b1768	b3996	b0639
+MENAQUINONESYN-PWY	menaquinone biosynthesis	b3833	b2260	b2264	b2265	b2261	b2262	b3930
+UBISYN-PWY	ubiquinone biosynthesis	b2232	b2907	b3835	b4040	b4039	b3843	b2311	b3833	b0662
+GLUT-REDOX-PWY	glutathione-glutaredoxin redox reactions	b0849	b3500
+GLUTATHIONESYN-PWY	glutathione biosynthesis	b2947	b2688
+THIOREDOX-PWY	thioredoxin pathway	b0888
+FOLSYN-PWY	tetrahydrofolate biosynthesis	b3177	b0529	b1606	b0048	b3058	b2500	b2153	b0142	b2315	b3360	b1812	b1096
+PLPSAL-PWY	pyridoxal 5'-phosphate salvage pathway	b1636	b1638	b2418
+PWY-2161	folate polyglutamylation I	b2551	b2315
+PYRIDOXSYN-PWY	pyridoxal 5'-phosphate biosynthesis	b1638	b0420	b2320	b0907	b2564	b2927	b0052
+RIBOSYN2-PWY	riboflavin and FMN and FAD biosynthesis	b0415	b3041	b1277	b0414	b1662	b0025
+THISYN-PWY	thiamin biosynthesis	b0417	b2103	b3994	b0420	b3990	b3991	b2104	b3993	b1106
+BIOTIN-SYNTHESIS-PWY	biotin biosynthesis I	b0775	b0776	b0774	b0778
+FASYN-ELONG-PWY	fatty acid elongation -- saturated	b1288	b1093	b2323	b1095	b0954	b0180
+FASYN-INITIAL-PWY	fatty acid biosynthesis -- initial steps	b1092	b1091	b3475	b2563	b3973	b3255	b3256	b2316	b0185	b1095	b2323
+PHOSLIPSYN-PWY	phospholipid biosynthesis I	b1912	b2585	b3018	b3608	b4041	b4160	b0175	b1249	b0418	b1278
+PWY0-541	cyclopropane fatty acid (CFA) biosynthesis	b1661
+PWY0-862	fatty acid  elongation -- unsaturated	b0180	b0954	b2323	b1093	b1288
+PPGPPMET-PWY	ppGpp biosynthesis	b3650	b2784	b3779
+DENOVOPURINE2-PWY	purine nucleotides _de novo_ biosynthesis I	b4005	b1849	b2499	b1131	b2508	b2518	b0522	b2676	b2675	b4238	b0523	b2235	b2234	b3648	b2507	b0474	b4177	b4006	b2476	b2557	b2500	b2312
+PWY0-162	de novo biosynthesis of pyrimidine ribonucleotides	b4245	b4244	b0945	b1281	b2518	b2780	b0171	b3642	b1062	b0032	b0033
+PWY0-163	salvage pathways of pyrimidine ribonucleotides	b2518	b3831	b0337	b2066	b2143	b0910	b2498
+PWY0-166	de novo biosynthesis of pyrimidine deoxyribonucleotides	b2065	b3640	b1098	b2234	b2235	b2675	b2676	b4238	b2827	b2518
+PWY0-181	salvage pathways of pyrimidine deoxyribonucleotides	b1238	b4382	b2143
+SALVADEHYPOX-PWY	salvage pathways of adenine, hypoxanthine, and their nucleosides	b0469	b1623	b0477	b2868	b2867	b2866	b0238	b4384	b1982
+SALVPURINE2-PWY	salvage pathways of guanine, xanthine, and their nucleosides	b2407	b0477	b0125	b4384	b2883	b0238
+PWY0-661	PRPP biosynthesis II	b4383	b4094
+PWY0-662	PRPP biosynthesis I	b1207
+POLYAMSYN-PWY	polyamine biosynthesis I	b0121	b2938	b2965	b0120	b2937
+BETSYN-PWY	betaine biosynthesis I	b0312	b0311
+ENTBACSYN-PWY	enterobactin biosynthesis	b0593	b0596	b0594	b0586	b0583	b0595
+ETOH-ACETYLCOA-ANA-PWY	ethanol degradation	b0351	b1241	b1478
+GLYCEROLMETAB-PWY	glycerol degradation II	b3945
+PWY0-381	glycerol and glycerophosphodiester degradation	b3926	b2239	b3449	b2243	b2242	b2241	b3426
+2PHENDEG-PWY	phenylethylamine degradation	b1385	b1386
+4AMINOBUTMETAB-PWY	4-aminobutyrate degradation	b2661		b1385	b1415	b2662
+CARNMET-PWY	carnitine metabolism -- CoA-linked	b0038	b0036	b0039
+GLUAMCAT-PWY	glucosamine degradation	b0677	b0678
+PUTDEG-PWY	putrescine degradation			b1385	b3588
+PWY0-41	allantoin degradation I	b0517	b0516	b0514	b0509	b0507	b0512	b0505
+ALADEG-PWY	alanine degradation I	b1189	b1190	b4053
+AST-PWY	arginine degradation VI	b1745	b1746	b1744	b1748	b1747
+PWY0-823	arginine degradation XII	b2937	b2938	b4117
+LCYSDEG-PWY	L-cysteine degradation II	b3708	b3008
+GLUTAMINDEG-PWY	glutamine degradation IV	b1524	b0485
+GLYCLEAV-PWY	glycine cleavage	b2905	b2904	b2903	b0116
+HISTDEG-PWY	histidine degradation IV
+PWY0-461	lysine degradation I	b4131	b0186
+PWY0-981	taurine degradation IV	b0368
+PROUT-PWY	proline degradation I	b1014
+SERDEG-PWY	L-serine degradation	b1814	b2797	b3112
+TRYPDEG-PWY	tryptophan degradation II (via pyruvate)	b3708
+HCAMHPDEG-PWY	3-phenylpropionate and 3-(3-hydroxyphenyl)propionate degradation	b0349	b0347	b2539	b2538	b0351	b2540	b2542	b0350	b2541	b0348	b0352
+PWY0-321	phenylacetate degradation I	b1397	b1387	b1394	b1392	b1391	b1390	b1389	b1388	b1393	b1395	b1398
+ACETATEUTIL-PWY	acetate utilization		b4069	b2297
+GLYCOLATEMET-PWY	glycolate degradation I	b0514	b2799	b1415	b0507	b3125	b0509
+GLYOXDEG-PWY	glyoxylate degradation	b0114	b0115	b0116	b2976	b3236	b1850
+PWY0-301	L-ascorbate degradation	b3581	b4196	b0061	b3583	b4198	b3580	b4197
+PROPIONMET-PWY	methylmalonyl pathway	b2917
+PWY0-42	methylcitrate cycle	b0333	b0118	b0331	b0334	b4069
+PWY0-43	conversion of succinate to propionate	b2919	b2920	b2917
+ACETOACETATE-DEG-PWY	degradation of short-chain fatty acids	b2222	b2221	b2224
+FAO-PWY	fatty acid oxidation pathway I	b2342	b3845	b1701	b1805	b1387	b0221	b1695	b4187	b3846	b2341
+AMMASSIM-PWY	ammonia assimilation cycle	b3212	b3213	b3870
+CYANCAT-PWY	cyanate degradation	b0340	b0339	b0126
+ALKANEMONOX-PWY	alkanesulfonate monooxygenase two-component system	b0937	b0935
+SO4ASSIM-PWY	sulfate assimilation	b2764	b2763	b2752	b2751	b2750	b2762
+DRIBOPMET-PWY	(deoxy)ribose phosphate degradation	b4383	b2143	b4381	b4382	b2935	b2465	b3831
+DETOX1-PWY	removal of superoxide radicals	b3942	b1732	b3908	b1656	b1646
+PWY0-521	fructoselysine degradation	b3374	b3371
+GALACTARDEG-PWY	D-galactarate degradation	b0509	b3125	b3124	b3128	b3126
+GALACTCAT-PWY	galactonate degradation	b3692	b3692	b3693
+GALACTUROCAT-PWY	D-galacturonate degradation	b3526	b3092	b1521	b3091
+GLUCARDEG-PWY	D-glucarate degradation	b0509	b3125	b3124	b2787	b3126
+GLUCUROCAT-PWY	&beta;-D-glucuronide degradation	b3526	b3092	b1850	b1617	b4323	b4322
+IDNCAT-PWY	L-idonate degradation	b4266	b4268	b4267
+GALACTITOLCAT-PWY	galactitol degradation	b2096	b2095	b3137	b3132	b2091	b1723
+MANNIDEG-PWY	mannitol degradation	b2097	b2925	b3600	b1723	b3916
+SORBDEG-PWY	sorbitol degradation	b2097	b2925	b2705	b1723	b3916
+ARABCAT-PWY	L-arabinose degradation	b0062	b0061	b0063
+DARABCATK12-PWY	D-arabinose degradation I	b2803	b2800	b2802
+FUCCAT-PWY	fucose degradation	b3588	b1415	b2803	b2802	b2799	b2800
+GALACTMETAB-PWY	galactose degradation I	b0758	b1236	b0756	b0759	b0757
+GLUCOSE1PMETAB-PWY	glucose and glucose-1-phosphate degradation	b0124	b0688	b2388	b1002	b1236
+GLYCOCAT-PWY	glycogen degradation	b3416	b3571	b1927	b0688	b0403	b3417	b3428
+LYXMET-PWY	L-lyxose degradation	b3580	b3903
+MANNCAT-PWY	mannose degradation	b1613
+PWY0-1182	trehalose degradation II (high osmolarity)	b2388	b1197	b3519
+PWY0-44	D-allose degradation	b4085	b4090
+RHAMCAT-PWY	rhamnose degradation	b3588	b1415	b3904	b3903	b2799	b3902
+RIBOKIN-PWY	ribose degradation	b2914	b4090	b2935	b2465	b3752
+TREDEGLOW-PWY	trehalose degradation I (low osmolarity)	b2417	b2416	b2415	b4240	b2388	b4239
+XYLCAT-PWY	xylose degradation	b3565	b3564
+BGALACT-PWY	lactose degradation III	b0344
+ENTNER-DOUDOROFF-PWY	Entner-Doudoroff pathway I	b1851	b0767	b1852	b1850
+FERMENTATION-PWY	mixed acid fermentation	b0903	b3114	b1676	b1854	b1612	b4122	b1611	b4151	b4152	b4153	b4154	b3956	b0871	b2721	b2724	b2719	b2720	b4079	b3236	b1380	b1241	b1478	b2296		b2297
+GLYCOLYSIS	glycolysis I	b2779	b2926	b3919	b3916	b1723	b4025	b2925	b2097	b1779	b0755	b4395	b3612	b1854	b1676
+METHGLYUT-PWY	methylglyoxal pathway	b0212	b3588	b1415	b1651	b0963
+NONOXIPENT-PWY	non-oxidative branch of the pentose phosphate pathway	b2465	b2935	b3386	b4090	b2914	b0008	b2464
+OXIDATIVEPENT-PWY	oxidative branch of the pentose phosphate pathway	b2029	b1852	b0767
+AERESPDON-PWY	aerobic respiration -- electron donors reaction list	b3426	b2133	b2288	b2282	b2280	b2279	b2278	b2277	b2276	b2283	b2284	b2285	b2281	b2286	b2287	b1109	b3605	b0723	b0724	b0721	b0722
+ELECTRON-TRANSPORT-2	aerobic electron transfer
+ANA-ELECT-TRANS-PWY	electron transfer (anaerobic)
+ANARESP1-PWY	respiration (anaerobic)	b0114	b0115	b0116	b0720	b3956	b1612	b4122	b1611	b4151	b4152	b4153	b4154	b2779	b2721	b2724	b2719	b2720	b4079	b3114	b0903	b3236	b1136	b1276	b0118	b1854	b1676
+ANARESPACC-PWY	respiration (anaerobic)-- electron acceptors reaction list	b4151	b4152	b4153	b4154	b4070	b4073	b4072	b4071	b2203	b2206	b2202	b2204	b2205	b1873	b1872	b0997	b0996	b0896	b0895	b0894	b1590	b1589	b1588	b1587
+ANARESPDON-PWY	respiration (anaerobic)-- electron donors reaction list	b2243	b2242	b2241	b2288	b2282	b2280	b2279	b2278	b2277	b2276	b2283	b2284	b2285	b2281	b2286	b2287	b1109	b1474	b1475	b1476	b3894	b3893	b3892	b0972	b0973	b0974	b2997	b2994	b3605
+GLYOXYLATE-BYPASS	glyoxylate cycle	b4015	b0720	b1276	b0118	b4014	b3236
+PYRUVDEHYD-PWY	pyruvate dehydrogenase	b0115	b0116	b0114
+TCA	TCA cycle -- aerobic respiration	b1612	b4122	b1611	b0726	b0727	b0116	b0118	b1276	b0720	b0722	b0721	b0724	b0723	b2210	b1136	b0728	b0729	b3236
+#
+#
+# Protein Complex Functional Associations
+# Each entry is a tab-delimited list of the complex's EcoCyc ID, the complex name and the list of component genes
+TSR-GLUME	Tsr<SUP>glu-Me</SUP>	b1887	b1888	b4355
+TSR-GLU	Tsr<SUP>glu</SUP>	b1887	b1888	b4355
+TSR-GLN	Tsr<SUP>gln</SUP>	b1887	b1888	b4355
+TSR-CPLX	MCP-I	b1887	b1888	b4355
+TRG-GLUME	Trg<SUP>glu-Me</SUP>	b1888	b1887	b1421
+TRG-GLU	Trg<SUP>glu</SUP>	b1888	b1887	b1421
+TRG-GLN	Trg<SUP>gln</SUP>	b1888	b1887	b1421
+TRG-CPLX	MCP-III	b1888	b1887	b1421
+TAR-GLUME	Tar<SUP>glu-Me</SUP>	b1888	b1887	b1886
+TAR-GLU	Tar<SUP>glu</SUP>	b1888	b1887	b1886
+TAR-GLN	Tar<SUP>gln</SUP>	b1888	b1887	b1886
+TAR-CPLX	MCP-II	b1888	b1887	b1886
+TAP-GLUME	Tap<SUP>glu-Me</SUP>	b1888	b1887	b1885
+TAP-GLU	Tap<SUP>glu</SUP>	b1888	b1887	b1885
+TAP-GLN	Tap<SUP>gln</SUP>	b1888	b1887	b1885
+TAP-CPLX	MCP-IV	b1888	b1887	b1885
+RNAPS-CPLX	RNA polymerase sigma 38	b3987	b3988	b3295	b2741
+RNAPE-CPLX	RNA polymerase sigma 24	b3987	b3988	b3295	b2573
+RNAP70-CPLX	RNA polymerase sigma70	b3987	b3988	b3295	b3067
+RNAP54-CPLX	RNA polymerase sigma54	b3987	b3988	b3295	b3202
+RNAP32-CPLX	RNA polymerase sigma32	b3987	b3988	b3295	b3461
+CPLX0-222	RNA polymerase sigma 28	b1922	b3987	b3988	b3295
+CPLX0-221	RNA Polymerase sigma19	b3987	b3988	b3295	b4293
+CITLY-CPLX	citrate lyase, inactive	b0615	b0616	b0617
+ACECITLY-CPLX	citrate lyase / citrate-ACP transferase / citryl-ACP lyase	b0615	b0616	b0617
+YDGEF-CPLX	YdgEF-CPLX	b1600	b1599
+UVRABC-CPLX	UvrABC Nucleotide Excision Repair Complex	b3813	b4058	b1913	b0779
+TRYPSYN	tryptophan synthase	b1260	b1261
+TRANS-CPLX-204	YhiUV multidrug transporter	b3514	b3513
+TRANS-CPLX-203	YiaMNO Binding Protein-dependent Secondary (TRAP) Transporter	b3579	b3578	b3577
+TRANS-CPLX-202	MdtABC RND-type Drug Exporter	b3035	b2076	b2075	b2074
+TRANS-CPLX-201	AcrAB-MDR-CPLX	b0463	b3035	b0462
+TRANS-200-CPLX	MacAB macrolide efflux transporter complex	b3035	b0879	b0878
+TOL-PAL-CPLX	Tol-Pal Cell Envelope Complex	b0738	b0741	b0737	b0740	b0739	b0736	b0742
+TMAOREDUCTI-CPLX	trimethylamine N-oxide reductase I	b0996	b0997
+TATABCE-CPLX	TatABCE protein export complex	b3838	b3839	b0627	b3836
+SULFITE-REDUCT-CPLX	flavin reductase / sulfite reductase-(NADPH)	b2764	b2763
+SULFATE-ADENYLYLTRANS-CPLX	sulfate adenylyltransferase	b2752	b2751
+SUCCCOASYN	succinyl-CoA synthetase	b0729	b0728
+SUCC-DEHASE	succinate dehydrogenase	b0722	b0721	b0724	b0723
+SRP-CPLX	Signal recognition particle	b3464	b2610
+SECE-G-Y-CPLX	SecEGY-Secretion Complex	b3981	b3175	b3300
+SECD-SECF-YAJC-YIDC-CPLX	SecD-SecF-Yajc-YidC Secretion Complex	b3705	b0407	b0409	b0408
+SEC-SECRETION-CPLX	Sec Protein Secretion Complex	b3609	b0098	b3300	b3175	b3981	b0408	b0409	b0407	b3705
+RUVABC-CPLX	ruvabc-cplx	b1863	b1860	b1861
+RIBONUCLEOSIDE-DIP-REDUCTII-CPLX	ribonucleoside-diphosphate reductase II	b2675	b2676
+RIBONUCLEOSIDE-DIP-REDUCTI-CPLX	ribonucleoside-diphosphate reductase / CDP reductase / UDP reductase / ADP reductase / GDP reductase	b2234	b2235
+RECFOR-CPLX	recfor-cplx	b3700	b0472	b2565
+RECBCD	recbcd	b2819	b2822	b2820
+QUINOLINATE-SYNTHE-MULTI-CPLX	quinolinate synthetase	b2574	b0750
+PYRUVATEDEH-CPLX	pyruvate dehydrogenase multienzyme complex	b0114	b0115	b0116
+PYRNUTRANSHYDROGEN-CPLX	pyridine nucleotide transhydrogenase	b1602	b1603
+PROLINEMULTI-CPLX	gamma-glutamyl kinase-GP-reductase multienzyme complex	b0242	b0243
+PHES-CPLX	phenylalanyl-tRNA synthetase	b1714	b1713
+PHENYLPRODIOXY-CPLX	3-phenylpropionate dioxygenase	b2539	b2538
+PC00084	RcsB transcriptional activator	b2217	b1951
+PC00063	GatR transcriptional repressor	b2090	b2087
+PC00027	IHF transcriptional dual regulator	b1712	b0912
+PABSYNMULTI-CPLX	para-aminobenzoate synthase multi-enzyme complex / para-aminobenzoate synthase	b3360	b1812	b1096
+PABASYN-CPLX	aminodeoxychorismate synthase	b1812	b3360
+NRFMULTI-CPLX	nitrite reductase complex	b4073	b4072	b4071	b4070
+NRDACTMULTI-CPLX	anaerobic nucleoside-triphosphate reductase activating system	b4238	b4237	b3924
+NITRITREDUCT-CPLX	nitrite reductase	b3366	b3365
+NITRATREDUCTZ-CPLX	nitrate reductase Z	b1467	b1468	b1465
+NITRATREDUCTA-CPLX	nitrate reductase A	b1227	b1225	b1224
+NAPAB-CPLX	molybdoprotein complex	b2206	b2203
+NAP-CPLX	periplasmic nitrate reductase	b2203	b2206	b2202	b2204	b2205
+NADH-DHI-CPLX	NADH dehydrogenase I	b2288	b2282	b2280	b2279	b2278	b2277	b2276	b2283	b2284	b2285	b2281	b2286	b2287
+MUTHLS-CPLX	MutHLS complex, methyl-directed mismatch repair	b4170	b2733	b2831
+METNIQ-METHIONINE-ABC-CPLX	L- and D-methionine uptake ABC permease	b0199	b0198	b0197
+LTARTDEHYDRA-CPLX	L-tartrate dehydratase	b3061	b3062
+HYDROG3-CPLX	hydrogenase-3	b2721	b2724	b2719	b2720
+HSP70-CPLX	DnaJ/DnaK/GrpE	b0015	b0014	b2614
+HCAMULTI-CPLX	3-phenylpropionate dioxygenase system	b2538	b2539	b2540	b2542
+GLYS-CPLX	glycine-tRNA synthetase	b3559	b3560
+GLUTAMIDOTRANS-CPLX	imidazole glycerol phosphate synthase	b2023	b2025
+GLUTAMATESYN-DIMER	glutamate synthase	b3213	b3212
+GLUTAMATESYN-CPLX	glutamate synthase (NADPH)	b3212	b3213
+GCVMULTI-CPLX	gcv system	b0116	b2903	b2904	b2905
+FUMARATE-REDUCTASE	fumarate reductase	b4154	b4153	b4152	b4151
+FORMHYDROGI-CPLX	hydrogenase I	b0972	b0973	b0974
+FORMHYDROG2-CPLX	hydrogenase 2	b2997	b2994
+FORMATEDEHYDROGO-CPLX	formate dehydrogenase-O	b3894	b3893	b3892
+FORMATEDEHYDROGN-CPLX	formate dehydrogenase-N	b1474	b1475	b1476
+FLAGELLAR-MOTOR-COMPLEX	Flagellar Motor Complex	b1945	b1938	b1080	b1078	b1077	b1074	b1073	b1889	b1890
+FHLMULTI-CPLX	formate hydrogenlyase complex	b4079	b2720	b2719	b2724	b2721
+FAO-CPLX	fatty acid oxidation complex / 3-ketoacyl-CoA thiolase	b3846	b3845
+F-O-CPLX	ATP synthase, F0 complex	b3737	b3736	b3738
+F-1-CPLX	ATP synthase, F1 complex	b3731	b3735	b3734	b3733	b3732
+ETHAMLY-CPLX	ethanolamine ammonia-lyase	b2441	b2440
+ENTMULTI-CPLX	enterobactin synthase multienzyme complex	b0595	b0583	b0586	b0594
+EIISGC	eiisgc	b2416	b2415	b4302	b4304	b4305
+EIISGA	eiisga	b4193	b2416	b2415	b4194	b4195
+ECNAB-CPLX	ecnab-cplx	b4411	b4410
+DTDPRHAMSYNTHMULTI-CPLX	dTDP-L-rhamnose synthetase	b2038	b2040
+DIMESULFREDUCT-CPLX	dimethyl sulfoxide reductase	b0894	b0895	b0896
+CYT-O-UBIOX-CPLX	cytochrome <i>bo</i> terminal oxidase	b0429	b0432	b0431	b0430
+CYT-D-UBIOX-CPLX	cytochrome <i>bd</i>-I terminal oxidase	b0733	b0734
+CYSSYNMULTI-CPLX	cysteine synthase	b3607	b2414
+CPLX0-761	xanthine dehydrogenase	b2866	b2867	b2868
+CPLX0-647	membrane-bound subcomplex of succinate dehydrogenase	b0721	b0722
+CPLX0-646	catalytic subcomplex of succinate dehydrogenase	b0723	b0724
+CPLX0-3401	fimbrial complex	b4314	b4318	b4319	b4320
+CPLX0-3382	GspC-O secreton  complex	b3324	b3325	b3326	b3327	b3328	b3329	b3330	b3331	b3332	b3333	b3334	b3335
+CPLX0-3362	connecting fragment of NADH dehydrogenase I	b2287	b2286	b2281
+CPLX0-3361	soluble NADH dehydrogenase fragment	b2285	b2284	b2283
+CPLX0-3323	CcmABCDEFGH cytochrome <I>c</I> biogenesis system	b2198	b2197	b2196	b2195	b2194	b2199	b2200	b2201
+CPLX0-3261	NarGH catalytic dimer of nitrate reductase A	b1224	b1225
+CPLX0-3243	periplasmic nitrate reductase	b2202	b2203	b2206
+CPLX0-3241	NapGH, alternative quinol dehydrogenase	b2205	b2204
+CPLX0-3108	ClpAXP	b0437	b0882	b0438
+CPLX0-3107	ClpXP	b0437	b0438
+CPLX0-3104	ClpAP	b0437	b0882
+CPLX0-2982	FtsH, integral membrane peptidase	b4175	b4174	b3178
+CPLX0-2661	McrBC restriction endonuclease	b4346	b4345
+CPLX0-2561	MukB-MukE-MukF complex	b0924	b0923	b0922
+CPLX0-2502	molybdopterin synthase	b0784	b0785
+CPLX0-250	Hydrogenase-4	b2489	b2487	b2481	b2482	b2483	b2484	b2485	b2486	b2488
+CPLX0-249	hydrogenase 4	b2487	b2489
+CPLX0-245	alkylhydroperoxide reductase	b0605	b0606
+CPLX0-2425	DNA gyrase	b2231	b3699
+CPLX0-2424	Topoisomerase IV	b3030	b3019
+CPLX0-241	tagatose-1,6-bisphosphate aldolase 2	b2096	b2095
+CPLX0-240	tagatose-1,6-bisphosphate aldolase 1	b3137	b3132
+CPLX0-2381	degradosome	b1084	b3780	b3164
+CPLX0-2361	DNA polymerase III, core enzyme	b0184	b0215	b1842
+CPLX0-232	EIIBCGlv	b2416	b2415	b3682	b3683
+CPLX0-231	EIIGat	b2416	b2415	b2094	b2093	b2092
+CPLX0-2221	The Colicin A Import System	b0741	b0742	b0740	b0738	b0737	b0739	b0929	b3966
+CPLX0-2202	Colicin S4 Transport System	b0741	b0742	b0740	b0738	b0737	b0739	b1256
+CPLX0-2201	The TolA-TolQ-TolR system for energization of outer-membrane receptor-mediated active transport	b0739	b0737	b0738	b0740	b0742	b0741
+CPLX0-2161	EmrKY-TolC Putative Drug Efflux Transport System	b2368	b2367	b3035
+CPLX0-2141	AcrEF-TolC Drug Efflux Transport System	b3265	b3266	b3035
+CPLX0-2121	EmrAB-TolC Drug Efflux System	b2685	b2686	b3035
+CPLX0-2101	Maltose/Maltodextrin Transport System	b4036	b4034	b4032	b4033	b4035
+CPLX0-2081	dihydroxyacetone kinase	b1198	b1200	b1199
+CPLX0-2021	HU	b4000	b0440
+CPLX0-2001	ferric dicitrate uptake system	b4290	b4288	b4289	b4287	b1252	b3006	b3005	b4291
+CPLX0-1981	ferrichrome uptake system	b0152	b0153	b0151	b0150	b1252	b3006	b3005
+CPLX0-1944	Ferric Enterobactin Transport System	b0592	b0589	b0590	b0588	b0584	b1252	b3006	b3005
+CPLX0-1943	Outer Membrane Ferric Citrate Transport System	b4291	b3005	b3006	b1252
+CPLX0-1942	Outer Membrane Ferrichrome Transport System	b3005	b3006	b1252	b0150
+CPLX0-1941	Outer Membrane Ferric Enterobactin Transport System	b3005	b3006	b1252	b0584
+CPLX0-1924	vitamin B12 outer membrane transport complex	b3966	b3005	b3006	b1252
+CPLX0-1923	TonB energy transducing system	b1252	b3006	b3005
+CPLX0-1862	vitamin B12 transport system	b1252	b3006	b3005	b3966	b0158	b1711	b1709	b1710
+CPLX0-1841	putative selenate reductase	b2878	b2881	b2880
+CPLX0-1762	putative phenylacetate-CoA oxygenase	b1388	b1389	b1390	b1391	b1392
+CPLX0-1721	Copper Transporting Efflux System	b0572	b0574	b0573	b0575
+CPLX0-1668	fatty acid oxidation complex / acetyl-CoA C-acyltransferase	b2341	b2342
+CPLX0-1601	dimethyl sulfoxide reductase paralogue	b1587	b1588	b1589	b1590
+CPLX0-1341	SufB-SufC-SufD cysteine desulfurase (SufS) activator complex	b1683	b1682	b1681
+CPLX0-1321	HflK-HflC complex; regulator of FtsH protease	b4174	b4175
+CPLX0-1242	MazE-MazF complex	b2782	b2783
+CPLX0-1163	HslVU protease	b3931	b3932
+CPLX-63	trimethylamine N-oxide reductase III	b1872	b1873
+CPLX-6	arsenite Ars transporter		b3502
+CPLX-170	EIIAga	b0129	b3140	b2416	b2415	b3138	b3139
+CPLX-169	EIIGut	b2416	b2415	b2703	b2704
+CPLX-168	EIITre	b2417	b2416	b2415	b4240
+CPLX-167	EIINag	b2416	b2415	b0679
+CPLX-166	EIIMtl	b2416	b2415	b3599
+CPLX-165	EIIMan	b2416	b2415	b1817	b1818	b1819
+CPLX-164	EIIBCMalX	b2417	b2416	b2415	b1621
+CPLX-163	EIIHrsA	b2416	b2415	b0731
+CPLX-160	EIIBCFrw	b2416	b2415	b3950	b3949
+CPLX-159	EIIABCFrv	b2416	b2415	b3900	b3899
+CPLX-158	EIIFru	b2416	b2415	b2167	b2169
+CPLX-157	EIIGlc	b2416	b2415	b2417	b1101
+CPLX-156	EIIABCmt	b2416	b2415	b2933	b2934
+CPLX-155	EIIChb	b2416	b2415	b1738	b1737	b1736
+CPLX-154	EIIBgl	b2416	b2415	b3722
+CPLX-153	EIIAsc	b2416	b2415	b2715
+CARBPSYN-CPLX	carbamoyl phosphate synthetase	b0033	b0032
+ATPSYN-CPLX	ATP synthase	b3738	b3736	b3737	b3732	b3733	b3734	b3735	b3731
+ATPASE-1-CPLX	potassium ion P-type ATPase transporter	b0696	b0697	b0698
+ASPCARBTRANS-CPLX	aspartate carbamoyltransferase	b4245	b4244
+APP-UBIOX-CPLX	cytochrome <i>bd</i>-II terminal oxidase	b0978	b0979
+APORNAP-CPLX	RNA polymerase, core enzyme	b3295	b3988	b3987
+ANTHRANSYN-CPLX	anthranilate synthase	b1264	b1263
+ANGLYC3PDEHYDROG-CPLX	glycerol-3-phosphate-dehydrogenase, anaerobic	b2241	b2242	b2243
+ALPHA-SUBUNIT-CPLX	trimer complex of formate dehydrogenase-N alpha, beta and gamma subunits	b1476	b1475	b1474
+ACETYL-COA-CARBOXYLTRANSFER-CPLX	acetyl-CoA carboxyltransferase	b0185	b2316
+ACETYL-COA-CARBOXYLMULTI-CPLX	acetyl CoA carboxylase	b2316	b0185	b3256	b3255
+ACETOLACTSYNIII-CPLX	acetolactate synthase III / acetohydroxybutanoate synthase III	b0077	b0078
+ACETOLACTSYNII-CPLX	acetohydroxybutanoate synthase II / acetolactate synthase II	b4488	b3769
+ACETOLACTSYNI-CPLX	acetohydroxybutanoate synthase I / acetolactate synthase I	b3671	b3670
+ACETOACETYL-COA-TRANSFER-CPLX	acetoacetyl-CoA transferase	b2222	b2221
+ABC-9-CPLX	iron dicitrate ABC transporter	b4287	b4289	b4288	b4290
+ABC-8-CPLX	dipeptide ABC transporter	b3541	b3540	b3543	b3542	b3544
+ABC-70-CPLX	sulfate ABC transporter	b3917	b2423	b2424	b2422
+ABC-7-CPLX	thiosulfate ABC transporter	b2422	b2423	b2424	b2425
+ABC-64-CPLX	TauA/TauB/TauC ABC transporter	b0365	b0367	b0366
+ABC-63-CPLX	ZnuA/ZnuB/ZnuC ABC transporter	b1858	b1859	b1857
+ABC-62-CPLX	LolCDE ABC lipoprotein transporter	b1118	b1117	b1116
+ABC-61-CPLX	YbbA/YbbP ABC transporter	b0496	b0495
+ABC-60-CPLX	YphD/YphE/YphF ABC transporter	b2546	b2548	b2547
+ABC-6-CPLX	abc-6-cplx	b0887	b0886
+ABC-59-CPLX	YddO/YddP/YddQ/YddR/YddS ABC transporter	b1486	b1485	b1487	b1484	b1483
+ABC-58-CPLX	YdeX/YdeY/YdeZ/YneA ABC transporter	b1516	b1515	b1514	b1513
+ABC-57-CPLX	YbhF/YbhR/YbhS ABC transporter	b0793	b0792	b0794
+ABC-56-CPLX	YcbE/YcbM ABC transporter	b0936	b0934	b0933
+ABC-55-CPLX	YcjN/YcjO/YcjP ABC transporter	b1312	b1311	b1310
+ABC-54-CPLX	FtsE/FtsX ABC transporter	b3463	b3462
+ABC-53-CPLX	YhbG/YhbN ABC transporter	b3200	b3201
+ABC-52-CPLX	YhdW/YhdX/YhdY/YhdZ ABC transporter	b3271	b3270	b3269	b3268
+ABC-51-CPLX	YdcS/YdcT/YdcV/YdcU ABC transporter	b1440	b1441	b1443	b1442
+ABC-50-CPLX	YhiH/YhhJ ABC transporter	b3486	b3485
+ABC-5-CPLX	vitamin B12 ABC transporter	b1710	b1709	b1711	b0158
+ABC-49-CPLX	YliA/YliB/YliC/YliD ABC transporter	b0829	b0830	b0832	b0831
+ABC-48-CPLX	YnjC/YnjD ABC transporter	b1755	b1756
+ABC-46-CPLX	YtfQ/YtfR/YtfS/YtfT/YjfF ABC transporter	b4231	b4485	b4230	b4227
+ABC-45-CPLX	YrbF/YrbE ABC transporter	b3195	b3194
+ABC-42-CPLX	D-allose ABC transporter	b4087	b4086	b4088
+ABC-41-CPLX	YejA/YejB/YejE/YejF ABC transporter	b2180	b2178	b2179	b2177
+ABC-40-CPLX	YehW/YehX/YehY/YehZ ABC transporter	b2131	b2129	b2128	b2130
+ABC-4-CPLX	arginine ABC transporter	b0864	b0861	b0862	b0863	b0860
+ABC-35-CPLX	CcmABC ABC transporter	b2201	b2200	b2199
+ABC-34-CPLX	glycerol-3-P ABC transporter / tranport	b3450	b3452	b3451	b3453
+ABC-33-CPLX	xylose ABC transporter	b3567	b3568	b3566
+ABC-32-CPLX	thiamin ABC transporter	b0066	b0067	b0068
+ABC-304-CPLX	leucine ABC transporter	b3458	b3456	b3457	b3455	b3454
+ABC-3-CPLX	lysine/arginine/ornithine ABC Transporter	b2308	b2306	b2307	b2310
+ABC-29-CPLX	peptide uptake ABC transporter	b1290	b1291	b1293	b1292	b1294
+ABC-28-CPLX	ribose ABC transporter	b3749	b3750	b3751
+ABC-27-CPLX	phosphate ABC transporter	b3725	b3726	b3727	b3728
+ABC-26-CPLX	proline ABC transporter	b2677	b2678	b2679
+ABC-25-CPLX	putrescine ABC transporter	b0855	b0856	b0857	b0854
+ABC-24-CPLX	putrescine/spermidine ABC transporter	b1126	b1125	b1124	b1123
+ABC-23-CPLX	alkylphosphonate ABC transporter	b4106	b4104	b4105
+ABC-22-CPLX	oligopeptide ABC transporter	b1245	b1246	b1247	b1244	b1243
+ABC-21-CPLX	YadG/YadH ABC transporter	b0127	b0128
+ABC-20-CPLX	nickel ABC transporter	b3479	b3480	b3477	b3478	b3476
+ABC-2-CPLX	arabinose ABC transporter	b1900	b4460	b1901
+ABC-19-CPLX	molybdate ABC transporter	b0765	b0764	b0763
+ABC-18-CPLX	galactose ABC transporter	b2149	b2148	b2150
+ABC-16-CPLX	maltose ABC transporter	b4035	b4033	b4032	b4034
+ABC-15-CPLX	branched chain amino acids ABC transporter	b3454	b3455	b3457	b3456	b3460
+ABC-14-CPLX	histidine ABC transporter	b2306	b2307	b2308	b2309
+ABC-13-CPLX	glutamate ABC transporter	b0652	b0654	b0653
+ABC-12-CPLX	glutamine ABC transporter	b0809	b0810	b0811
+ABC-11-CPLX	iron (III) hydroxamate ABC transporter	b0151	b0153	b0152
+ABC-10-CPLX	ferric enterobactin ABC transporter	b0588	b0590	b0589	b0592
+3-ISOPROPYLMALISOM-CPLX	isopropylmalate isomerase	b0072	b0071
+2OXOGLUTARATEDEH-CPLX	2-oxoglutarate dehydrogenase complex	b0726	b0727	b0116
+#
+#
+# Transcription Factor - Regulated Gene Pairs
+# Each entry is a tab-delimited list of the transcription factor's EcoCyc ID, name, the transcription factor gene, and the regulated gene
+TORR-CPLX	TorR transcriptional dual regulator	b0995	b3707
+TORR-CPLX	TorR transcriptional dual regulator	b0995	b3708
+TORR-CPLX	TorR transcriptional dual regulator	b0995	b3709
+TORR-CPLX	TorR transcriptional dual regulator	b0995	b3509
+TORR-CPLX	TorR transcriptional dual regulator	b0995	b3510
+TORR-CPLX	TorR transcriptional dual regulator	b0995	b3516
+TORR-CPLX	TorR transcriptional dual regulator	b0995	b3517
+TORR-CPLX	TorR transcriptional dual regulator	b0995	b0995
+TORR-CPLX	TorR transcriptional dual regulator	b0995	b0996
+TORR-CPLX	TorR transcriptional dual regulator	b0995	b0997
+TORR-CPLX	TorR transcriptional dual regulator	b0995	b0998
+PC00029	OmpR transcriptional dual regulator	b3405	b1480
+PC00029	OmpR transcriptional dual regulator	b3405	b0435
+PC00029	OmpR transcriptional dual regulator	b3405	b0553
+PC00029	OmpR transcriptional dual regulator	b3405	b2684
+PC00029	OmpR transcriptional dual regulator	b3405	b2685
+PC00029	OmpR transcriptional dual regulator	b3405	b2686
+PC00029	OmpR transcriptional dual regulator	b3405	b2215
+PC00029	OmpR transcriptional dual regulator	b3405	b0929
+PC00029	OmpR transcriptional dual regulator	b3405	b2344
+PC00029	OmpR transcriptional dual regulator	b3405	b1037
+PC00029	OmpR transcriptional dual regulator	b3405	b1038
+PC00029	OmpR transcriptional dual regulator	b3405	b1039
+PC00029	OmpR transcriptional dual regulator	b3405	b1040
+PC00029	OmpR transcriptional dual regulator	b3405	b1891
+PC00029	OmpR transcriptional dual regulator	b3405	b1892
+PC00029	OmpR transcriptional dual regulator	b3405	b1480
+PC00029	OmpR transcriptional dual regulator	b3405	b0435
+PC00029	OmpR transcriptional dual regulator	b3405	b0553
+PC00029	OmpR transcriptional dual regulator	b3405	b2684
+PC00029	OmpR transcriptional dual regulator	b3405	b2685
+PC00029	OmpR transcriptional dual regulator	b3405	b2686
+PC00029	OmpR transcriptional dual regulator	b3405	b2215
+PC00029	OmpR transcriptional dual regulator	b3405	b0929
+PC00029	OmpR transcriptional dual regulator	b3405	b2344
+PC00029	OmpR transcriptional dual regulator	b3405	b1037
+PC00029	OmpR transcriptional dual regulator	b3405	b1038
+PC00029	OmpR transcriptional dual regulator	b3405	b1039
+PC00029	OmpR transcriptional dual regulator	b3405	b1040
+PC00029	OmpR transcriptional dual regulator	b3405	b1891
+PC00029	OmpR transcriptional dual regulator	b3405	b1892
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b0451
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b0450
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b1988
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b1012
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b1011
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b1010
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b1009
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b1008
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b1007
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b1006
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b1483
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b1484
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b1485
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b1486
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b1487
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b1488
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b3271
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b3270
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b3269
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b3268
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b1784
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b1783
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b2306
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b2307
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b2308
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b2309
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b2310
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b1987
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b0854
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b0855
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b0856
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b0857
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b1744
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b1745
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b1746
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b1747
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b1748
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b3073
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b3870
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b3868
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b3869
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b0809
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b0810
+GLNG-CPLX	NtrC transcriptional dual regulator	b3868	b0811
+PC00103	MngR transcriptional repressor	b0730	b0732
+PC00103	MngR transcriptional repressor	b0730	b0731
+PC00103	MngR transcriptional repressor	b0730	b0730
+PC00086	RhaS transcriptional activator	b3905	b3907
+PC00086	RhaS transcriptional activator	b3905	b3902
+PC00086	RhaS transcriptional activator	b3905	b3903
+PC00086	RhaS transcriptional activator	b3905	b3904
+PC00084	RcsB transcriptional activator	b2217	b1891
+PC00084	RcsB transcriptional activator	b2217	b1892
+PC00084	RcsB transcriptional activator	b2217	b1482
+PC00084	RcsB transcriptional activator	b2217	b0095
+PC00084	RcsB transcriptional activator	b2217	b0094
+PC00084	RcsB transcriptional activator	b2217	b1951
+PC00084	RcsB transcriptional activator	b2217	b2058
+PC00084	RcsB transcriptional activator	b2217	b2059
+PC00084	RcsB transcriptional activator	b2217	b2060
+PC00084	RcsB transcriptional activator	b2217	b2061
+PC00084	RcsB transcriptional activator	b2217	b2062
+PC00084	RcsB transcriptional activator	b1951	b1891
+PC00084	RcsB transcriptional activator	b1951	b1892
+PC00084	RcsB transcriptional activator	b1951	b1482
+PC00084	RcsB transcriptional activator	b1951	b0095
+PC00084	RcsB transcriptional activator	b1951	b0094
+PC00084	RcsB transcriptional activator	b1951	b1951
+PC00084	RcsB transcriptional activator	b1951	b2058
+PC00084	RcsB transcriptional activator	b1951	b2059
+PC00084	RcsB transcriptional activator	b1951	b2060
+PC00084	RcsB transcriptional activator	b1951	b2061
+PC00084	RcsB transcriptional activator	b1951	b2062
+PC00063	GatR transcriptional repressor	b2090	b2090
+PC00063	GatR transcriptional repressor	b2090	b2091
+PC00063	GatR transcriptional repressor	b2090	b2092
+PC00063	GatR transcriptional repressor	b2090	b2093
+PC00063	GatR transcriptional repressor	b2090	b2094
+PC00063	GatR transcriptional repressor	b2090	b2095
+PC00063	GatR transcriptional repressor	b2090	b2096
+PC00063	GatR transcriptional repressor	b2087	b2090
+PC00063	GatR transcriptional repressor	b2087	b2091
+PC00063	GatR transcriptional repressor	b2087	b2092
+PC00063	GatR transcriptional repressor	b2087	b2093
+PC00063	GatR transcriptional repressor	b2087	b2094
+PC00063	GatR transcriptional repressor	b2087	b2095
+PC00063	GatR transcriptional repressor	b2087	b2096
+PC00061	FruR transcriptional dual regulator	b0080	b3599
+PC00061	FruR transcriptional dual regulator	b0080	b3600
+PC00061	FruR transcriptional dual regulator	b0080	b3601
+PC00061	FruR transcriptional dual regulator	b0080	b2926
+PC00061	FruR transcriptional dual regulator	b0080	b2927
+PC00061	FruR transcriptional dual regulator	b0080	b1850
+PC00061	FruR transcriptional dual regulator	b0080	b1851
+PC00061	FruR transcriptional dual regulator	b0080	b1676
+PC00061	FruR transcriptional dual regulator	b0080	b2415
+PC00061	FruR transcriptional dual regulator	b0080	b2416
+PC00061	FruR transcriptional dual regulator	b0080	b2417
+PC00061	FruR transcriptional dual regulator	b0080	b1136
+PC00061	FruR transcriptional dual regulator	b0080	b1241
+PC00061	FruR transcriptional dual regulator	b0080	b4014
+PC00061	FruR transcriptional dual regulator	b0080	b4015
+PC00061	FruR transcriptional dual regulator	b0080	b4016
+PC00061	FruR transcriptional dual regulator	b0080	b1702
+PC00061	FruR transcriptional dual regulator	b0080	b2167
+PC00061	FruR transcriptional dual regulator	b0080	b2168
+PC00061	FruR transcriptional dual regulator	b0080	b2169
+PC00027	IHF transcriptional dual regulator	b1712	b4475
+PC00027	IHF transcriptional dual regulator	b1712	b3421
+PC00027	IHF transcriptional dual regulator	b1712	b3161
+PC00027	IHF transcriptional dual regulator	b1712	b3574
+PC00027	IHF transcriptional dual regulator	b1712	b4050
+PC00027	IHF transcriptional dual regulator	b1712	b4039
+PC00027	IHF transcriptional dual regulator	b1712	b4040
+PC00027	IHF transcriptional dual regulator	b1712	b2711
+PC00027	IHF transcriptional dual regulator	b1712	b2710
+PC00027	IHF transcriptional dual regulator	b1712	b4192
+PC00027	IHF transcriptional dual regulator	b1712	b4198
+PC00027	IHF transcriptional dual regulator	b1712	b4197
+PC00027	IHF transcriptional dual regulator	b1712	b4196
+PC00027	IHF transcriptional dual regulator	b1712	b4195
+PC00027	IHF transcriptional dual regulator	b1712	b4194
+PC00027	IHF transcriptional dual regulator	b1712	b4193
+PC00027	IHF transcriptional dual regulator	b1712	b3686
+PC00027	IHF transcriptional dual regulator	b1712	b1210
+PC00027	IHF transcriptional dual regulator	b1712	b2215
+PC00027	IHF transcriptional dual regulator	b1712	b4439
+PC00027	IHF transcriptional dual regulator	b1712	b1480
+PC00027	IHF transcriptional dual regulator	b1712	b4376
+PC00027	IHF transcriptional dual regulator	b1712	b4070
+PC00027	IHF transcriptional dual regulator	b1712	b4071
+PC00027	IHF transcriptional dual regulator	b1712	b4072
+PC00027	IHF transcriptional dual regulator	b1712	b4073
+PC00027	IHF transcriptional dual regulator	b1712	b4074
+PC00027	IHF transcriptional dual regulator	b1712	b4075
+PC00027	IHF transcriptional dual regulator	b1712	b4076
+PC00027	IHF transcriptional dual regulator	b1712	b4067
+PC00027	IHF transcriptional dual regulator	b1712	b4068
+PC00027	IHF transcriptional dual regulator	b1712	b4069
+PC00027	IHF transcriptional dual regulator	b1712	b3073
+PC00027	IHF transcriptional dual regulator	b1712	b1656
+PC00027	IHF transcriptional dual regulator	b1712	b3365
+PC00027	IHF transcriptional dual regulator	b1712	b3366
+PC00027	IHF transcriptional dual regulator	b1712	b3367
+PC00027	IHF transcriptional dual regulator	b1712	b3368
+PC00027	IHF transcriptional dual regulator	b1712	b1398
+PC00027	IHF transcriptional dual regulator	b1712	b1397
+PC00027	IHF transcriptional dual regulator	b1712	b1396
+PC00027	IHF transcriptional dual regulator	b1712	b1395
+PC00027	IHF transcriptional dual regulator	b1712	b1394
+PC00027	IHF transcriptional dual regulator	b1712	b1393
+PC00027	IHF transcriptional dual regulator	b1712	b1392
+PC00027	IHF transcriptional dual regulator	b1712	b1391
+PC00027	IHF transcriptional dual regulator	b1712	b1390
+PC00027	IHF transcriptional dual regulator	b1712	b1389
+PC00027	IHF transcriptional dual regulator	b1712	b1388
+PC00027	IHF transcriptional dual regulator	b1712	b1387
+PC00027	IHF transcriptional dual regulator	b1712	b2436
+PC00027	IHF transcriptional dual regulator	b1712	b2435
+PC00027	IHF transcriptional dual regulator	b1712	b3260
+PC00027	IHF transcriptional dual regulator	b1712	b3261
+PC00027	IHF transcriptional dual regulator	b1712	b3724
+PC00027	IHF transcriptional dual regulator	b1712	b3725
+PC00027	IHF transcriptional dual regulator	b1712	b3726
+PC00027	IHF transcriptional dual regulator	b1712	b3727
+PC00027	IHF transcriptional dual regulator	b1712	b3728
+PC00027	IHF transcriptional dual regulator	b1712	b0125
+PC00027	IHF transcriptional dual regulator	b1712	b0124
+PC00027	IHF transcriptional dual regulator	b1712	b2975
+PC00027	IHF transcriptional dual regulator	b1712	b2976
+PC00027	IHF transcriptional dual regulator	b1712	b2977
+PC00027	IHF transcriptional dual regulator	b1712	b2978
+PC00027	IHF transcriptional dual regulator	b1712	b2978
+PC00027	IHF transcriptional dual regulator	b1712	b2979
+PC00027	IHF transcriptional dual regulator	b1712	b1304
+PC00027	IHF transcriptional dual regulator	b1712	b1305
+PC00027	IHF transcriptional dual regulator	b1712	b1306
+PC00027	IHF transcriptional dual regulator	b1712	b1307
+PC00027	IHF transcriptional dual regulator	b1712	b1308
+PC00027	IHF transcriptional dual regulator	b1712	b0896
+PC00027	IHF transcriptional dual regulator	b1712	b0895
+PC00027	IHF transcriptional dual regulator	b1712	b0894
+PC00027	IHF transcriptional dual regulator	b1712	b2163
+PC00027	IHF transcriptional dual regulator	b1712	b4117
+PC00027	IHF transcriptional dual regulator	b1712	b1109
+PC00027	IHF transcriptional dual regulator	b1712	b1907
+PC00027	IHF transcriptional dual regulator	b1712	b3577
+PC00027	IHF transcriptional dual regulator	b1712	b3583
+PC00027	IHF transcriptional dual regulator	b1712	b3582
+PC00027	IHF transcriptional dual regulator	b1712	b3581
+PC00027	IHF transcriptional dual regulator	b1712	b3580
+PC00027	IHF transcriptional dual regulator	b1712	b3579
+PC00027	IHF transcriptional dual regulator	b1712	b3578
+PC00027	IHF transcriptional dual regulator	b1712	b3576
+PC00027	IHF transcriptional dual regulator	b1712	b3575
+PC00027	IHF transcriptional dual regulator	b1712	b3767
+PC00027	IHF transcriptional dual regulator	b1712	b3772
+PC00027	IHF transcriptional dual regulator	b1712	b3771
+PC00027	IHF transcriptional dual regulator	b1712	b3770
+PC00027	IHF transcriptional dual regulator	b1712	b3769
+PC00027	IHF transcriptional dual regulator	b1712	b4488
+PC00027	IHF transcriptional dual regulator	b1712	b3766
+PC00027	IHF transcriptional dual regulator	b1712	b4014
+PC00027	IHF transcriptional dual regulator	b1712	b4015
+PC00027	IHF transcriptional dual regulator	b1712	b4016
+PC00027	IHF transcriptional dual regulator	b1712	b0553
+PC00027	IHF transcriptional dual regulator	b1712	b4317
+PC00027	IHF transcriptional dual regulator	b1712	b4320
+PC00027	IHF transcriptional dual regulator	b1712	b4319
+PC00027	IHF transcriptional dual regulator	b1712	b4318
+PC00027	IHF transcriptional dual regulator	b1712	b4316
+PC00027	IHF transcriptional dual regulator	b1712	b4315
+PC00027	IHF transcriptional dual regulator	b1712	b4314
+PC00027	IHF transcriptional dual regulator	b1712	b3404
+PC00027	IHF transcriptional dual regulator	b1712	b3405
+PC00027	IHF transcriptional dual regulator	b1712	b0720
+PC00027	IHF transcriptional dual regulator	b1712	b0726
+PC00027	IHF transcriptional dual regulator	b1712	b0727
+PC00027	IHF transcriptional dual regulator	b1712	b0728
+PC00027	IHF transcriptional dual regulator	b1712	b0729
+PC00027	IHF transcriptional dual regulator	b1712	b2276
+PC00027	IHF transcriptional dual regulator	b1712	b2277
+PC00027	IHF transcriptional dual regulator	b1712	b2278
+PC00027	IHF transcriptional dual regulator	b1712	b2279
+PC00027	IHF transcriptional dual regulator	b1712	b2280
+PC00027	IHF transcriptional dual regulator	b1712	b2281
+PC00027	IHF transcriptional dual regulator	b1712	b2282
+PC00027	IHF transcriptional dual regulator	b1712	b2283
+PC00027	IHF transcriptional dual regulator	b1712	b2284
+PC00027	IHF transcriptional dual regulator	b1712	b2285
+PC00027	IHF transcriptional dual regulator	b1712	b2286
+PC00027	IHF transcriptional dual regulator	b1712	b2287
+PC00027	IHF transcriptional dual regulator	b1712	b2288
+PC00027	IHF transcriptional dual regulator	b1712	b0139
+PC00027	IHF transcriptional dual regulator	b1712	b0140
+PC00027	IHF transcriptional dual regulator	b1712	b3540
+PC00027	IHF transcriptional dual regulator	b1712	b3541
+PC00027	IHF transcriptional dual regulator	b1712	b3542
+PC00027	IHF transcriptional dual regulator	b1712	b3543
+PC00027	IHF transcriptional dual regulator	b1712	b3544
+PC00027	IHF transcriptional dual regulator	b1712	b1739
+PC00027	IHF transcriptional dual regulator	b1712	b0035
+PC00027	IHF transcriptional dual regulator	b1712	b0036
+PC00027	IHF transcriptional dual regulator	b1712	b0037
+PC00027	IHF transcriptional dual regulator	b1712	b0038
+PC00027	IHF transcriptional dual regulator	b1712	b0039
+PC00027	IHF transcriptional dual regulator	b1712	b0040
+PC00027	IHF transcriptional dual regulator	b1712	b0903
+PC00027	IHF transcriptional dual regulator	b1712	b0904
+PC00027	IHF transcriptional dual regulator	b1712	b1223
+PC00027	IHF transcriptional dual regulator	b1712	b2726
+PC00027	IHF transcriptional dual regulator	b1712	b2727
+PC00027	IHF transcriptional dual regulator	b1712	b2728
+PC00027	IHF transcriptional dual regulator	b1712	b2729
+PC00027	IHF transcriptional dual regulator	b1712	b2730
+PC00027	IHF transcriptional dual regulator	b1712	b2718
+PC00027	IHF transcriptional dual regulator	b1712	b2719
+PC00027	IHF transcriptional dual regulator	b1712	b2720
+PC00027	IHF transcriptional dual regulator	b1712	b2721
+PC00027	IHF transcriptional dual regulator	b1712	b2722
+PC00027	IHF transcriptional dual regulator	b1712	b2723
+PC00027	IHF transcriptional dual regulator	b1712	b2724
+PC00027	IHF transcriptional dual regulator	b1712	b2725
+PC00027	IHF transcriptional dual regulator	b1712	b3112
+PC00027	IHF transcriptional dual regulator	b1712	b3113
+PC00027	IHF transcriptional dual regulator	b1712	b3114
+PC00027	IHF transcriptional dual regulator	b1712	b3115
+PC00027	IHF transcriptional dual regulator	b1712	b3116
+PC00027	IHF transcriptional dual regulator	b1712	b3117
+PC00027	IHF transcriptional dual regulator	b1712	b3118
+PC00027	IHF transcriptional dual regulator	b1712	b0809
+PC00027	IHF transcriptional dual regulator	b1712	b0810
+PC00027	IHF transcriptional dual regulator	b1712	b0811
+PC00027	IHF transcriptional dual regulator	b1712	b0032
+PC00027	IHF transcriptional dual regulator	b1712	b0033
+PC00027	IHF transcriptional dual regulator	b1712	b0812
+PC00027	IHF transcriptional dual regulator	b1712	b3908
+PC00027	IHF transcriptional dual regulator	b1712	b0912
+PC00027	IHF transcriptional dual regulator	b1712	b1712
+PC00027	IHF transcriptional dual regulator	b1712	b0929
+PC00027	IHF transcriptional dual regulator	b1712	b1224
+PC00027	IHF transcriptional dual regulator	b1712	b1225
+PC00027	IHF transcriptional dual regulator	b1712	b1226
+PC00027	IHF transcriptional dual regulator	b1712	b1227
+PC00027	IHF transcriptional dual regulator	b0912	b4475
+PC00027	IHF transcriptional dual regulator	b0912	b3421
+PC00027	IHF transcriptional dual regulator	b0912	b3161
+PC00027	IHF transcriptional dual regulator	b0912	b3574
+PC00027	IHF transcriptional dual regulator	b0912	b4050
+PC00027	IHF transcriptional dual regulator	b0912	b4039
+PC00027	IHF transcriptional dual regulator	b0912	b4040
+PC00027	IHF transcriptional dual regulator	b0912	b2711
+PC00027	IHF transcriptional dual regulator	b0912	b2710
+PC00027	IHF transcriptional dual regulator	b0912	b4192
+PC00027	IHF transcriptional dual regulator	b0912	b4198
+PC00027	IHF transcriptional dual regulator	b0912	b4197
+PC00027	IHF transcriptional dual regulator	b0912	b4196
+PC00027	IHF transcriptional dual regulator	b0912	b4195
+PC00027	IHF transcriptional dual regulator	b0912	b4194
+PC00027	IHF transcriptional dual regulator	b0912	b4193
+PC00027	IHF transcriptional dual regulator	b0912	b3686
+PC00027	IHF transcriptional dual regulator	b0912	b1210
+PC00027	IHF transcriptional dual regulator	b0912	b2215
+PC00027	IHF transcriptional dual regulator	b0912	b4439
+PC00027	IHF transcriptional dual regulator	b0912	b1480
+PC00027	IHF transcriptional dual regulator	b0912	b4376
+PC00027	IHF transcriptional dual regulator	b0912	b4070
+PC00027	IHF transcriptional dual regulator	b0912	b4071
+PC00027	IHF transcriptional dual regulator	b0912	b4072
+PC00027	IHF transcriptional dual regulator	b0912	b4073
+PC00027	IHF transcriptional dual regulator	b0912	b4074
+PC00027	IHF transcriptional dual regulator	b0912	b4075
+PC00027	IHF transcriptional dual regulator	b0912	b4076
+PC00027	IHF transcriptional dual regulator	b0912	b4067
+PC00027	IHF transcriptional dual regulator	b0912	b4068
+PC00027	IHF transcriptional dual regulator	b0912	b4069
+PC00027	IHF transcriptional dual regulator	b0912	b3073
+PC00027	IHF transcriptional dual regulator	b0912	b1656
+PC00027	IHF transcriptional dual regulator	b0912	b3365
+PC00027	IHF transcriptional dual regulator	b0912	b3366
+PC00027	IHF transcriptional dual regulator	b0912	b3367
+PC00027	IHF transcriptional dual regulator	b0912	b3368
+PC00027	IHF transcriptional dual regulator	b0912	b1398
+PC00027	IHF transcriptional dual regulator	b0912	b1397
+PC00027	IHF transcriptional dual regulator	b0912	b1396
+PC00027	IHF transcriptional dual regulator	b0912	b1395
+PC00027	IHF transcriptional dual regulator	b0912	b1394
+PC00027	IHF transcriptional dual regulator	b0912	b1393
+PC00027	IHF transcriptional dual regulator	b0912	b1392
+PC00027	IHF transcriptional dual regulator	b0912	b1391
+PC00027	IHF transcriptional dual regulator	b0912	b1390
+PC00027	IHF transcriptional dual regulator	b0912	b1389
+PC00027	IHF transcriptional dual regulator	b0912	b1388
+PC00027	IHF transcriptional dual regulator	b0912	b1387
+PC00027	IHF transcriptional dual regulator	b0912	b2436
+PC00027	IHF transcriptional dual regulator	b0912	b2435
+PC00027	IHF transcriptional dual regulator	b0912	b3260
+PC00027	IHF transcriptional dual regulator	b0912	b3261
+PC00027	IHF transcriptional dual regulator	b0912	b3724
+PC00027	IHF transcriptional dual regulator	b0912	b3725
+PC00027	IHF transcriptional dual regulator	b0912	b3726
+PC00027	IHF transcriptional dual regulator	b0912	b3727
+PC00027	IHF transcriptional dual regulator	b0912	b3728
+PC00027	IHF transcriptional dual regulator	b0912	b0125
+PC00027	IHF transcriptional dual regulator	b0912	b0124
+PC00027	IHF transcriptional dual regulator	b0912	b2975
+PC00027	IHF transcriptional dual regulator	b0912	b2976
+PC00027	IHF transcriptional dual regulator	b0912	b2977
+PC00027	IHF transcriptional dual regulator	b0912	b2978
+PC00027	IHF transcriptional dual regulator	b0912	b2978
+PC00027	IHF transcriptional dual regulator	b0912	b2979
+PC00027	IHF transcriptional dual regulator	b0912	b1304
+PC00027	IHF transcriptional dual regulator	b0912	b1305
+PC00027	IHF transcriptional dual regulator	b0912	b1306
+PC00027	IHF transcriptional dual regulator	b0912	b1307
+PC00027	IHF transcriptional dual regulator	b0912	b1308
+PC00027	IHF transcriptional dual regulator	b0912	b0896
+PC00027	IHF transcriptional dual regulator	b0912	b0895
+PC00027	IHF transcriptional dual regulator	b0912	b0894
+PC00027	IHF transcriptional dual regulator	b0912	b2163
+PC00027	IHF transcriptional dual regulator	b0912	b4117
+PC00027	IHF transcriptional dual regulator	b0912	b1109
+PC00027	IHF transcriptional dual regulator	b0912	b1907
+PC00027	IHF transcriptional dual regulator	b0912	b3577
+PC00027	IHF transcriptional dual regulator	b0912	b3583
+PC00027	IHF transcriptional dual regulator	b0912	b3582
+PC00027	IHF transcriptional dual regulator	b0912	b3581
+PC00027	IHF transcriptional dual regulator	b0912	b3580
+PC00027	IHF transcriptional dual regulator	b0912	b3579
+PC00027	IHF transcriptional dual regulator	b0912	b3578
+PC00027	IHF transcriptional dual regulator	b0912	b3576
+PC00027	IHF transcriptional dual regulator	b0912	b3575
+PC00027	IHF transcriptional dual regulator	b0912	b3767
+PC00027	IHF transcriptional dual regulator	b0912	b3772
+PC00027	IHF transcriptional dual regulator	b0912	b3771
+PC00027	IHF transcriptional dual regulator	b0912	b3770
+PC00027	IHF transcriptional dual regulator	b0912	b3769
+PC00027	IHF transcriptional dual regulator	b0912	b4488
+PC00027	IHF transcriptional dual regulator	b0912	b3766
+PC00027	IHF transcriptional dual regulator	b0912	b4014
+PC00027	IHF transcriptional dual regulator	b0912	b4015
+PC00027	IHF transcriptional dual regulator	b0912	b4016
+PC00027	IHF transcriptional dual regulator	b0912	b0553
+PC00027	IHF transcriptional dual regulator	b0912	b4317
+PC00027	IHF transcriptional dual regulator	b0912	b4320
+PC00027	IHF transcriptional dual regulator	b0912	b4319
+PC00027	IHF transcriptional dual regulator	b0912	b4318
+PC00027	IHF transcriptional dual regulator	b0912	b4316
+PC00027	IHF transcriptional dual regulator	b0912	b4315
+PC00027	IHF transcriptional dual regulator	b0912	b4314
+PC00027	IHF transcriptional dual regulator	b0912	b3404
+PC00027	IHF transcriptional dual regulator	b0912	b3405
+PC00027	IHF transcriptional dual regulator	b0912	b0720
+PC00027	IHF transcriptional dual regulator	b0912	b0726
+PC00027	IHF transcriptional dual regulator	b0912	b0727
+PC00027	IHF transcriptional dual regulator	b0912	b0728
+PC00027	IHF transcriptional dual regulator	b0912	b0729
+PC00027	IHF transcriptional dual regulator	b0912	b2276
+PC00027	IHF transcriptional dual regulator	b0912	b2277
+PC00027	IHF transcriptional dual regulator	b0912	b2278
+PC00027	IHF transcriptional dual regulator	b0912	b2279
+PC00027	IHF transcriptional dual regulator	b0912	b2280
+PC00027	IHF transcriptional dual regulator	b0912	b2281
+PC00027	IHF transcriptional dual regulator	b0912	b2282
+PC00027	IHF transcriptional dual regulator	b0912	b2283
+PC00027	IHF transcriptional dual regulator	b0912	b2284
+PC00027	IHF transcriptional dual regulator	b0912	b2285
+PC00027	IHF transcriptional dual regulator	b0912	b2286
+PC00027	IHF transcriptional dual regulator	b0912	b2287
+PC00027	IHF transcriptional dual regulator	b0912	b2288
+PC00027	IHF transcriptional dual regulator	b0912	b0139
+PC00027	IHF transcriptional dual regulator	b0912	b0140
+PC00027	IHF transcriptional dual regulator	b0912	b3540
+PC00027	IHF transcriptional dual regulator	b0912	b3541
+PC00027	IHF transcriptional dual regulator	b0912	b3542
+PC00027	IHF transcriptional dual regulator	b0912	b3543
+PC00027	IHF transcriptional dual regulator	b0912	b3544
+PC00027	IHF transcriptional dual regulator	b0912	b1739
+PC00027	IHF transcriptional dual regulator	b0912	b0035
+PC00027	IHF transcriptional dual regulator	b0912	b0036
+PC00027	IHF transcriptional dual regulator	b0912	b0037
+PC00027	IHF transcriptional dual regulator	b0912	b0038
+PC00027	IHF transcriptional dual regulator	b0912	b0039
+PC00027	IHF transcriptional dual regulator	b0912	b0040
+PC00027	IHF transcriptional dual regulator	b0912	b0903
+PC00027	IHF transcriptional dual regulator	b0912	b0904
+PC00027	IHF transcriptional dual regulator	b0912	b1223
+PC00027	IHF transcriptional dual regulator	b0912	b2726
+PC00027	IHF transcriptional dual regulator	b0912	b2727
+PC00027	IHF transcriptional dual regulator	b0912	b2728
+PC00027	IHF transcriptional dual regulator	b0912	b2729
+PC00027	IHF transcriptional dual regulator	b0912	b2730
+PC00027	IHF transcriptional dual regulator	b0912	b2718
+PC00027	IHF transcriptional dual regulator	b0912	b2719
+PC00027	IHF transcriptional dual regulator	b0912	b2720
+PC00027	IHF transcriptional dual regulator	b0912	b2721
+PC00027	IHF transcriptional dual regulator	b0912	b2722
+PC00027	IHF transcriptional dual regulator	b0912	b2723
+PC00027	IHF transcriptional dual regulator	b0912	b2724
+PC00027	IHF transcriptional dual regulator	b0912	b2725
+PC00027	IHF transcriptional dual regulator	b0912	b3112
+PC00027	IHF transcriptional dual regulator	b0912	b3113
+PC00027	IHF transcriptional dual regulator	b0912	b3114
+PC00027	IHF transcriptional dual regulator	b0912	b3115
+PC00027	IHF transcriptional dual regulator	b0912	b3116
+PC00027	IHF transcriptional dual regulator	b0912	b3117
+PC00027	IHF transcriptional dual regulator	b0912	b3118
+PC00027	IHF transcriptional dual regulator	b0912	b0809
+PC00027	IHF transcriptional dual regulator	b0912	b0810
+PC00027	IHF transcriptional dual regulator	b0912	b0811
+PC00027	IHF transcriptional dual regulator	b0912	b0032
+PC00027	IHF transcriptional dual regulator	b0912	b0033
+PC00027	IHF transcriptional dual regulator	b0912	b0812
+PC00027	IHF transcriptional dual regulator	b0912	b3908
+PC00027	IHF transcriptional dual regulator	b0912	b0912
+PC00027	IHF transcriptional dual regulator	b0912	b1712
+PC00027	IHF transcriptional dual regulator	b0912	b0929
+PC00027	IHF transcriptional dual regulator	b0912	b1224
+PC00027	IHF transcriptional dual regulator	b0912	b1225
+PC00027	IHF transcriptional dual regulator	b0912	b1226
+PC00027	IHF transcriptional dual regulator	b0912	b1227
+PC00010	LexA transcriptional repressor	b4043	b0708
+PC00010	LexA transcriptional repressor	b4043	b3065
+PC00010	LexA transcriptional repressor	b4043	b3066
+PC00010	LexA transcriptional repressor	b4043	b3067
+PC00010	LexA transcriptional repressor	b4043	b1183
+PC00010	LexA transcriptional repressor	b4043	b1184
+PC00010	LexA transcriptional repressor	b4043	b3813
+PC00010	LexA transcriptional repressor	b4043	b0779
+PC00010	LexA transcriptional repressor	b4043	b4059
+PC00010	LexA transcriptional repressor	b4043	b4058
+PC00010	LexA transcriptional repressor	b4043	b0958
+PC00010	LexA transcriptional repressor	b4043	b2698
+PC00010	LexA transcriptional repressor	b4043	b2699
+PC00010	LexA transcriptional repressor	b4043	b4043
+PC00010	LexA transcriptional repressor	b4043	b4044
+PC00009	Fur transcriptional dual regulator	b0683	b4122
+PC00009	Fur transcriptional dual regulator	b0683	b3440
+PC00009	Fur transcriptional dual regulator	b0683	b2671
+PC00009	Fur transcriptional dual regulator	b0683	b2673
+PC00009	Fur transcriptional dual regulator	b0683	b2674
+PC00009	Fur transcriptional dual regulator	b0683	b2676
+PC00009	Fur transcriptional dual regulator	b0683	b2675
+PC00009	Fur transcriptional dual regulator	b0683	b0755
+PC00009	Fur transcriptional dual regulator	b0683	b1102
+PC00009	Fur transcriptional dual regulator	b0683	b3005
+PC00009	Fur transcriptional dual regulator	b0683	b3006
+PC00009	Fur transcriptional dual regulator	b0683	b0805
+PC00009	Fur transcriptional dual regulator	b0683	b4287
+PC00009	Fur transcriptional dual regulator	b0683	b4288
+PC00009	Fur transcriptional dual regulator	b0683	b4289
+PC00009	Fur transcriptional dual regulator	b0683	b4290
+PC00009	Fur transcriptional dual regulator	b0683	b4291
+PC00009	Fur transcriptional dual regulator	b0683	b0583
+PC00009	Fur transcriptional dual regulator	b0683	b0584
+PC00009	Fur transcriptional dual regulator	b0683	b0585
+PC00009	Fur transcriptional dual regulator	b0683	b0586
+PC00009	Fur transcriptional dual regulator	b0683	b0587
+PC00009	Fur transcriptional dual regulator	b0683	b0683
+PC00009	Fur transcriptional dual regulator	b0683	b1252
+PC00009	Fur transcriptional dual regulator	b0683	b0593
+PC00009	Fur transcriptional dual regulator	b0683	b0594
+PC00009	Fur transcriptional dual regulator	b0683	b0595
+PC00009	Fur transcriptional dual regulator	b0683	b0596
+PC00009	Fur transcriptional dual regulator	b0683	b0597
+PC00009	Fur transcriptional dual regulator	b0683	b4292
+PC00009	Fur transcriptional dual regulator	b0683	b4293
+PC00009	Fur transcriptional dual regulator	b0683	b0588
+PC00009	Fur transcriptional dual regulator	b0683	b0589
+PC00009	Fur transcriptional dual regulator	b0683	b0590
+PC00009	Fur transcriptional dual regulator	b0683	b0592
+PC00009	Fur transcriptional dual regulator	b0683	b3908
+PC00009	Fur transcriptional dual regulator	b0683	b0150
+PC00009	Fur transcriptional dual regulator	b0683	b0151
+PC00009	Fur transcriptional dual regulator	b0683	b0152
+PC00009	Fur transcriptional dual regulator	b0683	b0153
+PC00009	Fur transcriptional dual regulator	b0683	b2155
+PC00004	CRP transcriptional dual regulator	b3357	b3363
+PC00004	CRP transcriptional dual regulator	b3357	b4311
+PC00004	CRP transcriptional dual regulator	b3357	b0598
+PC00004	CRP transcriptional dual regulator	b3357	b3221
+PC00004	CRP transcriptional dual regulator	b3357	b3222
+PC00004	CRP transcriptional dual regulator	b3357	b3223
+PC00004	CRP transcriptional dual regulator	b3357	b3224
+PC00004	CRP transcriptional dual regulator	b3357	b3225
+PC00004	CRP transcriptional dual regulator	b3357	b3135
+PC00004	CRP transcriptional dual regulator	b3357	b3134
+PC00004	CRP transcriptional dual regulator	b3357	b3133
+PC00004	CRP transcriptional dual regulator	b3357	b3132
+PC00004	CRP transcriptional dual regulator	b3357	b3564
+PC00004	CRP transcriptional dual regulator	b3357	b3565
+PC00004	CRP transcriptional dual regulator	b3357	b4233
+PC00004	CRP transcriptional dual regulator	b3357	b3781
+PC00004	CRP transcriptional dual regulator	b3357	b1272
+PC00004	CRP transcriptional dual regulator	b3357	b4138
+PC00004	CRP transcriptional dual regulator	b3357	b3449
+PC00004	CRP transcriptional dual regulator	b3357	b3450
+PC00004	CRP transcriptional dual regulator	b3357	b3451
+PC00004	CRP transcriptional dual regulator	b3357	b3452
+PC00004	CRP transcriptional dual regulator	b3357	b3453
+PC00004	CRP transcriptional dual regulator	b3357	b3934
+PC00004	CRP transcriptional dual regulator	b3357	b4118
+PC00004	CRP transcriptional dual regulator	b3357	b4119
+PC00004	CRP transcriptional dual regulator	b3357	b4120
+PC00004	CRP transcriptional dual regulator	b3357	b3172
+PC00004	CRP transcriptional dual regulator	b3357	b3164
+PC00004	CRP transcriptional dual regulator	b3357	b3165
+PC00004	CRP transcriptional dual regulator	b3357	b3166
+PC00004	CRP transcriptional dual regulator	b3357	b3167
+PC00004	CRP transcriptional dual regulator	b3357	b3168
+PC00004	CRP transcriptional dual regulator	b3357	b3169
+PC00004	CRP transcriptional dual regulator	b3357	b3170
+PC00004	CRP transcriptional dual regulator	b3357	b3171
+PC00004	CRP transcriptional dual regulator	b3357	b4264
+PC00004	CRP transcriptional dual regulator	b3357	b4265
+PC00004	CRP transcriptional dual regulator	b3357	b4266
+PC00004	CRP transcriptional dual regulator	b3357	b4267
+PC00004	CRP transcriptional dual regulator	b3357	b4268
+PC00004	CRP transcriptional dual regulator	b3357	b4198
+PC00004	CRP transcriptional dual regulator	b3357	b4197
+PC00004	CRP transcriptional dual regulator	b3357	b4196
+PC00004	CRP transcriptional dual regulator	b3357	b4195
+PC00004	CRP transcriptional dual regulator	b3357	b4194
+PC00004	CRP transcriptional dual regulator	b3357	b4193
+PC00004	CRP transcriptional dual regulator	b3357	b1617
+PC00004	CRP transcriptional dual regulator	b3357	b4324
+PC00004	CRP transcriptional dual regulator	b3357	b3414
+PC00004	CRP transcriptional dual regulator	b3357	b3413
+PC00004	CRP transcriptional dual regulator	b3357	b4321
+PC00004	CRP transcriptional dual regulator	b3357	b3415
+PC00004	CRP transcriptional dual regulator	b3357	b3721
+PC00004	CRP transcriptional dual regulator	b3357	b3722
+PC00004	CRP transcriptional dual regulator	b3357	b3723
+PC00004	CRP transcriptional dual regulator	b3357	b2490
+PC00004	CRP transcriptional dual regulator	b3357	b2489
+PC00004	CRP transcriptional dual regulator	b3357	b2488
+PC00004	CRP transcriptional dual regulator	b3357	b2487
+PC00004	CRP transcriptional dual regulator	b3357	b2486
+PC00004	CRP transcriptional dual regulator	b3357	b2485
+PC00004	CRP transcriptional dual regulator	b3357	b2484
+PC00004	CRP transcriptional dual regulator	b3357	b2483
+PC00004	CRP transcriptional dual regulator	b3357	b2482
+PC00004	CRP transcriptional dual regulator	b3357	b2481
+PC00004	CRP transcriptional dual regulator	b3357	b0342
+PC00004	CRP transcriptional dual regulator	b3357	b0343
+PC00004	CRP transcriptional dual regulator	b3357	b0344
+PC00004	CRP transcriptional dual regulator	b3357	b1733
+PC00004	CRP transcriptional dual regulator	b3357	b1734
+PC00004	CRP transcriptional dual regulator	b3357	b1735
+PC00004	CRP transcriptional dual regulator	b3357	b1736
+PC00004	CRP transcriptional dual regulator	b3357	b1737
+PC00004	CRP transcriptional dual regulator	b3357	b1738
+PC00004	CRP transcriptional dual regulator	b3357	b0679
+PC00004	CRP transcriptional dual regulator	b3357	b2535
+PC00004	CRP transcriptional dual regulator	b3357	b2663
+PC00004	CRP transcriptional dual regulator	b3357	b2662
+PC00004	CRP transcriptional dual regulator	b3357	b2661
+PC00004	CRP transcriptional dual regulator	b3357	b2660
+PC00004	CRP transcriptional dual regulator	b3357	b2659
+PC00004	CRP transcriptional dual regulator	b3357	b4067
+PC00004	CRP transcriptional dual regulator	b3357	b4068
+PC00004	CRP transcriptional dual regulator	b3357	b4069
+PC00004	CRP transcriptional dual regulator	b3357	b3961
+PC00004	CRP transcriptional dual regulator	b3357	b1398
+PC00004	CRP transcriptional dual regulator	b3357	b1397
+PC00004	CRP transcriptional dual regulator	b3357	b1396
+PC00004	CRP transcriptional dual regulator	b3357	b1395
+PC00004	CRP transcriptional dual regulator	b3357	b1394
+PC00004	CRP transcriptional dual regulator	b3357	b1393
+PC00004	CRP transcriptional dual regulator	b3357	b1392
+PC00004	CRP transcriptional dual regulator	b3357	b1391
+PC00004	CRP transcriptional dual regulator	b3357	b1390
+PC00004	CRP transcriptional dual regulator	b3357	b1389
+PC00004	CRP transcriptional dual regulator	b3357	b1388
+PC00004	CRP transcriptional dual regulator	b3357	b1387
+PC00004	CRP transcriptional dual regulator	b3357	b0351
+PC00004	CRP transcriptional dual regulator	b3357	b0352
+PC00004	CRP transcriptional dual regulator	b3357	b0350
+PC00004	CRP transcriptional dual regulator	b3357	b0349
+PC00004	CRP transcriptional dual regulator	b3357	b0348
+PC00004	CRP transcriptional dual regulator	b3357	b0347
+PC00004	CRP transcriptional dual regulator	b3357	b2913
+PC00004	CRP transcriptional dual regulator	b3357	b0125
+PC00004	CRP transcriptional dual regulator	b3357	b0124
+PC00004	CRP transcriptional dual regulator	b3357	b4030
+PC00004	CRP transcriptional dual regulator	b3357	b3260
+PC00004	CRP transcriptional dual regulator	b3357	b3261
+PC00004	CRP transcriptional dual regulator	b3357	b3528
+PC00004	CRP transcriptional dual regulator	b3357	b3905
+PC00004	CRP transcriptional dual regulator	b3357	b3906
+PC00004	CRP transcriptional dual regulator	b3357	b1101
+PC00004	CRP transcriptional dual regulator	b3357	b2143
+PC00004	CRP transcriptional dual regulator	b3357	b3864
+PC00004	CRP transcriptional dual regulator	b3357	b0118
+PC00004	CRP transcriptional dual regulator	b3357	b1276
+PC00004	CRP transcriptional dual regulator	b3357	b1594
+PC00004	CRP transcriptional dual regulator	b3357	b4139
+PC00004	CRP transcriptional dual regulator	b3357	b4122
+PC00004	CRP transcriptional dual regulator	b3357	b4123
+PC00004	CRP transcriptional dual regulator	b3357	b3516
+PC00004	CRP transcriptional dual regulator	b3357	b3517
+PC00004	CRP transcriptional dual regulator	b3357	b1182
+PC00004	CRP transcriptional dual regulator	b3357	b3426
+PC00004	CRP transcriptional dual regulator	b3357	b3423
+PC00004	CRP transcriptional dual regulator	b3357	b3424
+PC00004	CRP transcriptional dual regulator	b3357	b3425
+PC00004	CRP transcriptional dual regulator	b3357	b2507
+PC00004	CRP transcriptional dual regulator	b3357	b2508
+PC00004	CRP transcriptional dual regulator	b3357	b2509
+PC00004	CRP transcriptional dual regulator	b3357	b3577
+PC00004	CRP transcriptional dual regulator	b3357	b3583
+PC00004	CRP transcriptional dual regulator	b3357	b3582
+PC00004	CRP transcriptional dual regulator	b3357	b3581
+PC00004	CRP transcriptional dual regulator	b3357	b3580
+PC00004	CRP transcriptional dual regulator	b3357	b3579
+PC00004	CRP transcriptional dual regulator	b3357	b3578
+PC00004	CRP transcriptional dual regulator	b3357	b3576
+PC00004	CRP transcriptional dual regulator	b3357	b3575
+PC00004	CRP transcriptional dual regulator	b3357	b3574
+PC00004	CRP transcriptional dual regulator	b3357	b0440
+PC00004	CRP transcriptional dual regulator	b3357	b4000
+PC00004	CRP transcriptional dual regulator	b3357	b1190
+PC00004	CRP transcriptional dual regulator	b3357	b1189
+PC00004	CRP transcriptional dual regulator	b3357	b2231
+PC00004	CRP transcriptional dual regulator	b3357	b0553
+PC00004	CRP transcriptional dual regulator	b3357	b3902
+PC00004	CRP transcriptional dual regulator	b3357	b3903
+PC00004	CRP transcriptional dual regulator	b3357	b3904
+PC00004	CRP transcriptional dual regulator	b3357	b4376
+PC00004	CRP transcriptional dual regulator	b3357	b4239
+PC00004	CRP transcriptional dual regulator	b3357	b4240
+PC00004	CRP transcriptional dual regulator	b3357	b0675
+PC00004	CRP transcriptional dual regulator	b3357	b0676
+PC00004	CRP transcriptional dual regulator	b3357	b0677
+PC00004	CRP transcriptional dual regulator	b3357	b0678
+PC00004	CRP transcriptional dual regulator	b3357	b0683
+PC00004	CRP transcriptional dual regulator	b3357	b0720
+PC00004	CRP transcriptional dual regulator	b3357	b0721
+PC00004	CRP transcriptional dual regulator	b3357	b0722
+PC00004	CRP transcriptional dual regulator	b3357	b0723
+PC00004	CRP transcriptional dual regulator	b3357	b0724
+PC00004	CRP transcriptional dual regulator	b3357	b0725
+PC00004	CRP transcriptional dual regulator	b3357	b0726
+PC00004	CRP transcriptional dual regulator	b3357	b0727
+PC00004	CRP transcriptional dual regulator	b3357	b0728
+PC00004	CRP transcriptional dual regulator	b3357	b0729
+PC00004	CRP transcriptional dual regulator	b3357	b0756
+PC00004	CRP transcriptional dual regulator	b3357	b0757
+PC00004	CRP transcriptional dual regulator	b3357	b0758
+PC00004	CRP transcriptional dual regulator	b3357	b0759
+PC00004	CRP transcriptional dual regulator	b3357	b0903
+PC00004	CRP transcriptional dual regulator	b3357	b0904
+PC00004	CRP transcriptional dual regulator	b3357	b0957
+PC00004	CRP transcriptional dual regulator	b3357	b1817
+PC00004	CRP transcriptional dual regulator	b3357	b1818
+PC00004	CRP transcriptional dual regulator	b3357	b1819
+PC00004	CRP transcriptional dual regulator	b3357	b1891
+PC00004	CRP transcriptional dual regulator	b3357	b1892
+PC00004	CRP transcriptional dual regulator	b3357	b4460
+PC00004	CRP transcriptional dual regulator	b3357	b1900
+PC00004	CRP transcriptional dual regulator	b3357	b1901
+PC00004	CRP transcriptional dual regulator	b3357	b2151
+PC00004	CRP transcriptional dual regulator	b3357	b2232
+PC00004	CRP transcriptional dual regulator	b3357	b2239
+PC00004	CRP transcriptional dual regulator	b3357	b2240
+PC00004	CRP transcriptional dual regulator	b3357	b2241
+PC00004	CRP transcriptional dual regulator	b3357	b2242
+PC00004	CRP transcriptional dual regulator	b3357	b2243
+PC00004	CRP transcriptional dual regulator	b3357	b2344
+PC00004	CRP transcriptional dual regulator	b3357	b2365
+PC00004	CRP transcriptional dual regulator	b3357	b2366
+PC00004	CRP transcriptional dual regulator	b3357	b2415
+PC00004	CRP transcriptional dual regulator	b3357	b2416
+PC00004	CRP transcriptional dual regulator	b3357	b2417
+PC00004	CRP transcriptional dual regulator	b3357	b2702
+PC00004	CRP transcriptional dual regulator	b3357	b2703
+PC00004	CRP transcriptional dual regulator	b3357	b2704
+PC00004	CRP transcriptional dual regulator	b3357	b2705
+PC00004	CRP transcriptional dual regulator	b3357	b2706
+PC00004	CRP transcriptional dual regulator	b3357	b2707
+PC00004	CRP transcriptional dual regulator	b3357	b2708
+PC00004	CRP transcriptional dual regulator	b3357	b2799
+PC00004	CRP transcriptional dual regulator	b3357	b2800
+PC00004	CRP transcriptional dual regulator	b3357	b2801
+PC00004	CRP transcriptional dual regulator	b3357	b2802
+PC00004	CRP transcriptional dual regulator	b3357	b2803
+PC00004	CRP transcriptional dual regulator	b3357	b2804
+PC00004	CRP transcriptional dual regulator	b3357	b2805
+PC00004	CRP transcriptional dual regulator	b3357	b2841
+PC00004	CRP transcriptional dual regulator	b3357	b2926
+PC00004	CRP transcriptional dual regulator	b3357	b2927
+PC00004	CRP transcriptional dual regulator	b3357	b2957
+PC00004	CRP transcriptional dual regulator	b3357	b2964
+PC00004	CRP transcriptional dual regulator	b3357	b2965
+PC00004	CRP transcriptional dual regulator	b3357	b3049
+PC00004	CRP transcriptional dual regulator	b3357	b3076
+PC00004	CRP transcriptional dual regulator	b3357	b3077
+PC00004	CRP transcriptional dual regulator	b3357	b3112
+PC00004	CRP transcriptional dual regulator	b3357	b3113
+PC00004	CRP transcriptional dual regulator	b3357	b3114
+PC00004	CRP transcriptional dual regulator	b3357	b3115
+PC00004	CRP transcriptional dual regulator	b3357	b3116
+PC00004	CRP transcriptional dual regulator	b3357	b3117
+PC00004	CRP transcriptional dual regulator	b3357	b3118
+PC00004	CRP transcriptional dual regulator	b3357	b3357
+PC00004	CRP transcriptional dual regulator	b3357	b3356
+PC00004	CRP transcriptional dual regulator	b3357	b3418
+PC00004	CRP transcriptional dual regulator	b3357	b0411
+PC00004	CRP transcriptional dual regulator	b3357	b3428
+PC00004	CRP transcriptional dual regulator	b3357	b3429
+PC00004	CRP transcriptional dual regulator	b3357	b3430
+PC00004	CRP transcriptional dual regulator	b3357	b4476
+PC00004	CRP transcriptional dual regulator	b3357	b3437
+PC00004	CRP transcriptional dual regulator	b3357	b3461
+PC00004	CRP transcriptional dual regulator	b3357	b3571
+PC00004	CRP transcriptional dual regulator	b3357	b3588
+PC00004	CRP transcriptional dual regulator	b3357	b3666
+PC00004	CRP transcriptional dual regulator	b3357	b3670
+PC00004	CRP transcriptional dual regulator	b3357	b3671
+PC00004	CRP transcriptional dual regulator	b3357	b3672
+PC00004	CRP transcriptional dual regulator	b3357	b3707
+PC00004	CRP transcriptional dual regulator	b3357	b3708
+PC00004	CRP transcriptional dual regulator	b3357	b3709
+PC00004	CRP transcriptional dual regulator	b3357	b3806
+PC00004	CRP transcriptional dual regulator	b3357	b3831
+PC00004	CRP transcriptional dual regulator	b3357	b3868
+PC00004	CRP transcriptional dual regulator	b3357	b3869
+PC00004	CRP transcriptional dual regulator	b3357	b3870
+PC00004	CRP transcriptional dual regulator	b3357	b3907
+PC00004	CRP transcriptional dual regulator	b3357	b3925
+PC00004	CRP transcriptional dual regulator	b3357	b3926
+PC00004	CRP transcriptional dual regulator	b3357	b3927
+PC00004	CRP transcriptional dual regulator	b3357	b4032
+PC00004	CRP transcriptional dual regulator	b3357	b4033
+PC00004	CRP transcriptional dual regulator	b3357	b4034
+PC00004	CRP transcriptional dual regulator	b3357	b4035
+PC00004	CRP transcriptional dual regulator	b3357	b4036
+PC00004	CRP transcriptional dual regulator	b3357	b4037
+PC00004	CRP transcriptional dual regulator	b3357	b4111
+PC00004	CRP transcriptional dual regulator	b3357	b4213
+PC00004	CRP transcriptional dual regulator	b3357	b4381
+PC00004	CRP transcriptional dual regulator	b3357	b4382
+PC00004	CRP transcriptional dual regulator	b3357	b4383
+PC00004	CRP transcriptional dual regulator	b3357	b4384
+PC00004	CRP transcriptional dual regulator	b3357	b1415
+PC00004	CRP transcriptional dual regulator	b3357	b2155
+PC00004	CRP transcriptional dual regulator	b3357	b2393
+PC00004	CRP transcriptional dual regulator	b3357	b3236
+PC00004	CRP transcriptional dual regulator	b3357	b3416
+PC00004	CRP transcriptional dual regulator	b3357	b3417
+PC00004	CRP transcriptional dual regulator	b3357	b3599
+PC00004	CRP transcriptional dual regulator	b3357	b3600
+PC00004	CRP transcriptional dual regulator	b3357	b3601
+PC00004	CRP transcriptional dual regulator	b3357	b3748
+PC00004	CRP transcriptional dual regulator	b3357	b3749
+PC00004	CRP transcriptional dual regulator	b3357	b3750
+PC00004	CRP transcriptional dual regulator	b3357	b3751
+PC00004	CRP transcriptional dual regulator	b3357	b3752
+PC00004	CRP transcriptional dual regulator	b3357	b4323
+PC00004	CRP transcriptional dual regulator	b3357	b4322
+PC00004	CRP transcriptional dual regulator	b3357	b1015
+PC00004	CRP transcriptional dual regulator	b3357	b0113
+PC00004	CRP transcriptional dual regulator	b3357	b0114
+PC00004	CRP transcriptional dual regulator	b3357	b0115
+PC00004	CRP transcriptional dual regulator	b3357	b3404
+PC00004	CRP transcriptional dual regulator	b3357	b3405
+PC00004	CRP transcriptional dual regulator	b3357	b2741
+PC00004	CRP transcriptional dual regulator	b3357	b2148
+PC00004	CRP transcriptional dual regulator	b3357	b2149
+PC00004	CRP transcriptional dual regulator	b3357	b2150
+PC00004	CRP transcriptional dual regulator	b3357	b1621
+PC00004	CRP transcriptional dual regulator	b3357	b1622
+PC00004	CRP transcriptional dual regulator	b3357	b1620
+PC00004	CRP transcriptional dual regulator	b3357	b0396
+PC00004	CRP transcriptional dual regulator	b3357	b0116
+PC00004	CRP transcriptional dual regulator	b3357	b0064
+PC00004	CRP transcriptional dual regulator	b3357	b0061
+PC00004	CRP transcriptional dual regulator	b3357	b0062
+PC00004	CRP transcriptional dual regulator	b3357	b0063
+PC00004	CRP transcriptional dual regulator	b3357	b0044
+PC00004	CRP transcriptional dual regulator	b3357	b0043
+PC00004	CRP transcriptional dual regulator	b3357	b0042
+PC00004	CRP transcriptional dual regulator	b3357	b0041
+PC00004	CRP transcriptional dual regulator	b3357	b0035
+PC00004	CRP transcriptional dual regulator	b3357	b0036
+PC00004	CRP transcriptional dual regulator	b3357	b0037
+PC00004	CRP transcriptional dual regulator	b3357	b0038
+PC00004	CRP transcriptional dual regulator	b3357	b0039
+PC00004	CRP transcriptional dual regulator	b3357	b0040
+PC00004	CRP transcriptional dual regulator	b3357	b0034
+PC00003	AraC transcriptional dual regulator	b0064	b4460
+PC00003	AraC transcriptional dual regulator	b0064	b1900
+PC00003	AraC transcriptional dual regulator	b0064	b1901
+PC00003	AraC transcriptional dual regulator	b0064	b2841
+PC00003	AraC transcriptional dual regulator	b0064	b0064
+PC00003	AraC transcriptional dual regulator	b0064	b0061
+PC00003	AraC transcriptional dual regulator	b0064	b0062
+PC00003	AraC transcriptional dual regulator	b0064	b0063
+PC00003	AraC transcriptional dual regulator	b0064	b0396
+PC00040	CysB transcriptional dual regulator	b1275	b1275
+PC00040	CysB transcriptional dual regulator	b1275	b0368
+PC00040	CysB transcriptional dual regulator	b1275	b0367
+PC00040	CysB transcriptional dual regulator	b1275	b0366
+PC00040	CysB transcriptional dual regulator	b1275	b0365
+PC00040	CysB transcriptional dual regulator	b1275	b1987
+PC00040	CysB transcriptional dual regulator	b1275	b2414
+PC00040	CysB transcriptional dual regulator	b1275	b2750
+PC00040	CysB transcriptional dual regulator	b1275	b2751
+PC00040	CysB transcriptional dual regulator	b1275	b2752
+PC00040	CysB transcriptional dual regulator	b1275	b2762
+PC00040	CysB transcriptional dual regulator	b1275	b2763
+PC00040	CysB transcriptional dual regulator	b1275	b2764
+PC00040	CysB transcriptional dual regulator	b1275	b2421
+PC00040	CysB transcriptional dual regulator	b1275	b2422
+PC00040	CysB transcriptional dual regulator	b1275	b2423
+PC00040	CysB transcriptional dual regulator	b1275	b2424
+PC00040	CysB transcriptional dual regulator	b1275	b2425
+PC00005	ArgR transcriptional dual regulator	b3237	b1744
+PC00005	ArgR transcriptional dual regulator	b3237	b1745
+PC00005	ArgR transcriptional dual regulator	b3237	b1746
+PC00005	ArgR transcriptional dual regulator	b3237	b1747
+PC00005	ArgR transcriptional dual regulator	b3237	b1748
+PC00005	ArgR transcriptional dual regulator	b3237	b3172
+PC00005	ArgR transcriptional dual regulator	b3237	b3164
+PC00005	ArgR transcriptional dual regulator	b3237	b3165
+PC00005	ArgR transcriptional dual regulator	b3237	b3166
+PC00005	ArgR transcriptional dual regulator	b3237	b3167
+PC00005	ArgR transcriptional dual regulator	b3237	b3168
+PC00005	ArgR transcriptional dual regulator	b3237	b3169
+PC00005	ArgR transcriptional dual regulator	b3237	b3170
+PC00005	ArgR transcriptional dual regulator	b3237	b3171
+PC00005	ArgR transcriptional dual regulator	b3237	b3958
+PC00005	ArgR transcriptional dual regulator	b3237	b3959
+PC00005	ArgR transcriptional dual regulator	b3237	b3960
+PC00005	ArgR transcriptional dual regulator	b3237	b3957
+PC00005	ArgR transcriptional dual regulator	b3237	b0273
+PC00005	ArgR transcriptional dual regulator	b3237	b4254
+PC00005	ArgR transcriptional dual regulator	b3237	b3237
+PC00005	ArgR transcriptional dual regulator	b3237	b3359
+PC00005	ArgR transcriptional dual regulator	b3237	b0032
+PC00005	ArgR transcriptional dual regulator	b3237	b0033
+PC00004	CRP transcriptional dual regulator	b3357	b3363
+PC00004	CRP transcriptional dual regulator	b3357	b4311
+PC00004	CRP transcriptional dual regulator	b3357	b0598
+PC00004	CRP transcriptional dual regulator	b3357	b3221
+PC00004	CRP transcriptional dual regulator	b3357	b3222
+PC00004	CRP transcriptional dual regulator	b3357	b3223
+PC00004	CRP transcriptional dual regulator	b3357	b3224
+PC00004	CRP transcriptional dual regulator	b3357	b3225
+PC00004	CRP transcriptional dual regulator	b3357	b3135
+PC00004	CRP transcriptional dual regulator	b3357	b3134
+PC00004	CRP transcriptional dual regulator	b3357	b3133
+PC00004	CRP transcriptional dual regulator	b3357	b3132
+PC00004	CRP transcriptional dual regulator	b3357	b3564
+PC00004	CRP transcriptional dual regulator	b3357	b3565
+PC00004	CRP transcriptional dual regulator	b3357	b4233
+PC00004	CRP transcriptional dual regulator	b3357	b3781
+PC00004	CRP transcriptional dual regulator	b3357	b1272
+PC00004	CRP transcriptional dual regulator	b3357	b4138
+PC00004	CRP transcriptional dual regulator	b3357	b3449
+PC00004	CRP transcriptional dual regulator	b3357	b3450
+PC00004	CRP transcriptional dual regulator	b3357	b3451
+PC00004	CRP transcriptional dual regulator	b3357	b3452
+PC00004	CRP transcriptional dual regulator	b3357	b3453
+PC00004	CRP transcriptional dual regulator	b3357	b3934
+PC00004	CRP transcriptional dual regulator	b3357	b4118
+PC00004	CRP transcriptional dual regulator	b3357	b4119
+PC00004	CRP transcriptional dual regulator	b3357	b4120
+PC00004	CRP transcriptional dual regulator	b3357	b3172
+PC00004	CRP transcriptional dual regulator	b3357	b3164
+PC00004	CRP transcriptional dual regulator	b3357	b3165
+PC00004	CRP transcriptional dual regulator	b3357	b3166
+PC00004	CRP transcriptional dual regulator	b3357	b3167
+PC00004	CRP transcriptional dual regulator	b3357	b3168
+PC00004	CRP transcriptional dual regulator	b3357	b3169
+PC00004	CRP transcriptional dual regulator	b3357	b3170
+PC00004	CRP transcriptional dual regulator	b3357	b3171
+PC00004	CRP transcriptional dual regulator	b3357	b4264
+PC00004	CRP transcriptional dual regulator	b3357	b4265
+PC00004	CRP transcriptional dual regulator	b3357	b4266
+PC00004	CRP transcriptional dual regulator	b3357	b4267
+PC00004	CRP transcriptional dual regulator	b3357	b4268
+PC00004	CRP transcriptional dual regulator	b3357	b4198
+PC00004	CRP transcriptional dual regulator	b3357	b4197
+PC00004	CRP transcriptional dual regulator	b3357	b4196
+PC00004	CRP transcriptional dual regulator	b3357	b4195
+PC00004	CRP transcriptional dual regulator	b3357	b4194
+PC00004	CRP transcriptional dual regulator	b3357	b4193
+PC00004	CRP transcriptional dual regulator	b3357	b1617
+PC00004	CRP transcriptional dual regulator	b3357	b4324
+PC00004	CRP transcriptional dual regulator	b3357	b3414
+PC00004	CRP transcriptional dual regulator	b3357	b3413
+PC00004	CRP transcriptional dual regulator	b3357	b4321
+PC00004	CRP transcriptional dual regulator	b3357	b3415
+PC00004	CRP transcriptional dual regulator	b3357	b3721
+PC00004	CRP transcriptional dual regulator	b3357	b3722
+PC00004	CRP transcriptional dual regulator	b3357	b3723
+PC00004	CRP transcriptional dual regulator	b3357	b2490
+PC00004	CRP transcriptional dual regulator	b3357	b2489
+PC00004	CRP transcriptional dual regulator	b3357	b2488
+PC00004	CRP transcriptional dual regulator	b3357	b2487
+PC00004	CRP transcriptional dual regulator	b3357	b2486
+PC00004	CRP transcriptional dual regulator	b3357	b2485
+PC00004	CRP transcriptional dual regulator	b3357	b2484
+PC00004	CRP transcriptional dual regulator	b3357	b2483
+PC00004	CRP transcriptional dual regulator	b3357	b2482
+PC00004	CRP transcriptional dual regulator	b3357	b2481
+PC00004	CRP transcriptional dual regulator	b3357	b0342
+PC00004	CRP transcriptional dual regulator	b3357	b0343
+PC00004	CRP transcriptional dual regulator	b3357	b0344
+PC00004	CRP transcriptional dual regulator	b3357	b1733
+PC00004	CRP transcriptional dual regulator	b3357	b1734
+PC00004	CRP transcriptional dual regulator	b3357	b1735
+PC00004	CRP transcriptional dual regulator	b3357	b1736
+PC00004	CRP transcriptional dual regulator	b3357	b1737
+PC00004	CRP transcriptional dual regulator	b3357	b1738
+PC00004	CRP transcriptional dual regulator	b3357	b0679
+PC00004	CRP transcriptional dual regulator	b3357	b2535
+PC00004	CRP transcriptional dual regulator	b3357	b2663
+PC00004	CRP transcriptional dual regulator	b3357	b2662
+PC00004	CRP transcriptional dual regulator	b3357	b2661
+PC00004	CRP transcriptional dual regulator	b3357	b2660
+PC00004	CRP transcriptional dual regulator	b3357	b2659
+PC00004	CRP transcriptional dual regulator	b3357	b4067
+PC00004	CRP transcriptional dual regulator	b3357	b4068
+PC00004	CRP transcriptional dual regulator	b3357	b4069
+PC00004	CRP transcriptional dual regulator	b3357	b3961
+PC00004	CRP transcriptional dual regulator	b3357	b1398
+PC00004	CRP transcriptional dual regulator	b3357	b1397
+PC00004	CRP transcriptional dual regulator	b3357	b1396
+PC00004	CRP transcriptional dual regulator	b3357	b1395
+PC00004	CRP transcriptional dual regulator	b3357	b1394
+PC00004	CRP transcriptional dual regulator	b3357	b1393
+PC00004	CRP transcriptional dual regulator	b3357	b1392
+PC00004	CRP transcriptional dual regulator	b3357	b1391
+PC00004	CRP transcriptional dual regulator	b3357	b1390
+PC00004	CRP transcriptional dual regulator	b3357	b1389
+PC00004	CRP transcriptional dual regulator	b3357	b1388
+PC00004	CRP transcriptional dual regulator	b3357	b1387
+PC00004	CRP transcriptional dual regulator	b3357	b0351
+PC00004	CRP transcriptional dual regulator	b3357	b0352
+PC00004	CRP transcriptional dual regulator	b3357	b0350
+PC00004	CRP transcriptional dual regulator	b3357	b0349
+PC00004	CRP transcriptional dual regulator	b3357	b0348
+PC00004	CRP transcriptional dual regulator	b3357	b0347
+PC00004	CRP transcriptional dual regulator	b3357	b2913
+PC00004	CRP transcriptional dual regulator	b3357	b0125
+PC00004	CRP transcriptional dual regulator	b3357	b0124
+PC00004	CRP transcriptional dual regulator	b3357	b4030
+PC00004	CRP transcriptional dual regulator	b3357	b3260
+PC00004	CRP transcriptional dual regulator	b3357	b3261
+PC00004	CRP transcriptional dual regulator	b3357	b3528
+PC00004	CRP transcriptional dual regulator	b3357	b3905
+PC00004	CRP transcriptional dual regulator	b3357	b3906
+PC00004	CRP transcriptional dual regulator	b3357	b1101
+PC00004	CRP transcriptional dual regulator	b3357	b2143
+PC00004	CRP transcriptional dual regulator	b3357	b3864
+PC00004	CRP transcriptional dual regulator	b3357	b0118
+PC00004	CRP transcriptional dual regulator	b3357	b1276
+PC00004	CRP transcriptional dual regulator	b3357	b1594
+PC00004	CRP transcriptional dual regulator	b3357	b4139
+PC00004	CRP transcriptional dual regulator	b3357	b4122
+PC00004	CRP transcriptional dual regulator	b3357	b4123
+PC00004	CRP transcriptional dual regulator	b3357	b3516
+PC00004	CRP transcriptional dual regulator	b3357	b3517
+PC00004	CRP transcriptional dual regulator	b3357	b1182
+PC00004	CRP transcriptional dual regulator	b3357	b3426
+PC00004	CRP transcriptional dual regulator	b3357	b3423
+PC00004	CRP transcriptional dual regulator	b3357	b3424
+PC00004	CRP transcriptional dual regulator	b3357	b3425
+PC00004	CRP transcriptional dual regulator	b3357	b2507
+PC00004	CRP transcriptional dual regulator	b3357	b2508
+PC00004	CRP transcriptional dual regulator	b3357	b2509
+PC00004	CRP transcriptional dual regulator	b3357	b3577
+PC00004	CRP transcriptional dual regulator	b3357	b3583
+PC00004	CRP transcriptional dual regulator	b3357	b3582
+PC00004	CRP transcriptional dual regulator	b3357	b3581
+PC00004	CRP transcriptional dual regulator	b3357	b3580
+PC00004	CRP transcriptional dual regulator	b3357	b3579
+PC00004	CRP transcriptional dual regulator	b3357	b3578
+PC00004	CRP transcriptional dual regulator	b3357	b3576
+PC00004	CRP transcriptional dual regulator	b3357	b3575
+PC00004	CRP transcriptional dual regulator	b3357	b3574
+PC00004	CRP transcriptional dual regulator	b3357	b0440
+PC00004	CRP transcriptional dual regulator	b3357	b4000
+PC00004	CRP transcriptional dual regulator	b3357	b1190
+PC00004	CRP transcriptional dual regulator	b3357	b1189
+PC00004	CRP transcriptional dual regulator	b3357	b2231
+PC00004	CRP transcriptional dual regulator	b3357	b0553
+PC00004	CRP transcriptional dual regulator	b3357	b3902
+PC00004	CRP transcriptional dual regulator	b3357	b3903
+PC00004	CRP transcriptional dual regulator	b3357	b3904
+PC00004	CRP transcriptional dual regulator	b3357	b4376
+PC00004	CRP transcriptional dual regulator	b3357	b4239
+PC00004	CRP transcriptional dual regulator	b3357	b4240
+PC00004	CRP transcriptional dual regulator	b3357	b0675
+PC00004	CRP transcriptional dual regulator	b3357	b0676
+PC00004	CRP transcriptional dual regulator	b3357	b0677
+PC00004	CRP transcriptional dual regulator	b3357	b0678
+PC00004	CRP transcriptional dual regulator	b3357	b0683
+PC00004	CRP transcriptional dual regulator	b3357	b0720
+PC00004	CRP transcriptional dual regulator	b3357	b0721
+PC00004	CRP transcriptional dual regulator	b3357	b0722
+PC00004	CRP transcriptional dual regulator	b3357	b0723
+PC00004	CRP transcriptional dual regulator	b3357	b0724
+PC00004	CRP transcriptional dual regulator	b3357	b0725
+PC00004	CRP transcriptional dual regulator	b3357	b0726
+PC00004	CRP transcriptional dual regulator	b3357	b0727
+PC00004	CRP transcriptional dual regulator	b3357	b0728
+PC00004	CRP transcriptional dual regulator	b3357	b0729
+PC00004	CRP transcriptional dual regulator	b3357	b0756
+PC00004	CRP transcriptional dual regulator	b3357	b0757
+PC00004	CRP transcriptional dual regulator	b3357	b0758
+PC00004	CRP transcriptional dual regulator	b3357	b0759
+PC00004	CRP transcriptional dual regulator	b3357	b0903
+PC00004	CRP transcriptional dual regulator	b3357	b0904
+PC00004	CRP transcriptional dual regulator	b3357	b0957
+PC00004	CRP transcriptional dual regulator	b3357	b1817
+PC00004	CRP transcriptional dual regulator	b3357	b1818
+PC00004	CRP transcriptional dual regulator	b3357	b1819
+PC00004	CRP transcriptional dual regulator	b3357	b1891
+PC00004	CRP transcriptional dual regulator	b3357	b1892
+PC00004	CRP transcriptional dual regulator	b3357	b4460
+PC00004	CRP transcriptional dual regulator	b3357	b1900
+PC00004	CRP transcriptional dual regulator	b3357	b1901
+PC00004	CRP transcriptional dual regulator	b3357	b2151
+PC00004	CRP transcriptional dual regulator	b3357	b2232
+PC00004	CRP transcriptional dual regulator	b3357	b2239
+PC00004	CRP transcriptional dual regulator	b3357	b2240
+PC00004	CRP transcriptional dual regulator	b3357	b2241
+PC00004	CRP transcriptional dual regulator	b3357	b2242
+PC00004	CRP transcriptional dual regulator	b3357	b2243
+PC00004	CRP transcriptional dual regulator	b3357	b2344
+PC00004	CRP transcriptional dual regulator	b3357	b2365
+PC00004	CRP transcriptional dual regulator	b3357	b2366
+PC00004	CRP transcriptional dual regulator	b3357	b2415
+PC00004	CRP transcriptional dual regulator	b3357	b2416
+PC00004	CRP transcriptional dual regulator	b3357	b2417
+PC00004	CRP transcriptional dual regulator	b3357	b2702
+PC00004	CRP transcriptional dual regulator	b3357	b2703
+PC00004	CRP transcriptional dual regulator	b3357	b2704
+PC00004	CRP transcriptional dual regulator	b3357	b2705
+PC00004	CRP transcriptional dual regulator	b3357	b2706
+PC00004	CRP transcriptional dual regulator	b3357	b2707
+PC00004	CRP transcriptional dual regulator	b3357	b2708
+PC00004	CRP transcriptional dual regulator	b3357	b2799
+PC00004	CRP transcriptional dual regulator	b3357	b2800
+PC00004	CRP transcriptional dual regulator	b3357	b2801
+PC00004	CRP transcriptional dual regulator	b3357	b2802
+PC00004	CRP transcriptional dual regulator	b3357	b2803
+PC00004	CRP transcriptional dual regulator	b3357	b2804
+PC00004	CRP transcriptional dual regulator	b3357	b2805
+PC00004	CRP transcriptional dual regulator	b3357	b2841
+PC00004	CRP transcriptional dual regulator	b3357	b2926
+PC00004	CRP transcriptional dual regulator	b3357	b2927
+PC00004	CRP transcriptional dual regulator	b3357	b2957
+PC00004	CRP transcriptional dual regulator	b3357	b2964
+PC00004	CRP transcriptional dual regulator	b3357	b2965
+PC00004	CRP transcriptional dual regulator	b3357	b3049
+PC00004	CRP transcriptional dual regulator	b3357	b3076
+PC00004	CRP transcriptional dual regulator	b3357	b3077
+PC00004	CRP transcriptional dual regulator	b3357	b3112
+PC00004	CRP transcriptional dual regulator	b3357	b3113
+PC00004	CRP transcriptional dual regulator	b3357	b3114
+PC00004	CRP transcriptional dual regulator	b3357	b3115
+PC00004	CRP transcriptional dual regulator	b3357	b3116
+PC00004	CRP transcriptional dual regulator	b3357	b3117
+PC00004	CRP transcriptional dual regulator	b3357	b3118
+PC00004	CRP transcriptional dual regulator	b3357	b3357
+PC00004	CRP transcriptional dual regulator	b3357	b3356
+PC00004	CRP transcriptional dual regulator	b3357	b3418
+PC00004	CRP transcriptional dual regulator	b3357	b0411
+PC00004	CRP transcriptional dual regulator	b3357	b3428
+PC00004	CRP transcriptional dual regulator	b3357	b3429
+PC00004	CRP transcriptional dual regulator	b3357	b3430
+PC00004	CRP transcriptional dual regulator	b3357	b4476
+PC00004	CRP transcriptional dual regulator	b3357	b3437
+PC00004	CRP transcriptional dual regulator	b3357	b3461
+PC00004	CRP transcriptional dual regulator	b3357	b3571
+PC00004	CRP transcriptional dual regulator	b3357	b3588
+PC00004	CRP transcriptional dual regulator	b3357	b3666
+PC00004	CRP transcriptional dual regulator	b3357	b3670
+PC00004	CRP transcriptional dual regulator	b3357	b3671
+PC00004	CRP transcriptional dual regulator	b3357	b3672
+PC00004	CRP transcriptional dual regulator	b3357	b3707
+PC00004	CRP transcriptional dual regulator	b3357	b3708
+PC00004	CRP transcriptional dual regulator	b3357	b3709
+PC00004	CRP transcriptional dual regulator	b3357	b3806
+PC00004	CRP transcriptional dual regulator	b3357	b3831
+PC00004	CRP transcriptional dual regulator	b3357	b3868
+PC00004	CRP transcriptional dual regulator	b3357	b3869
+PC00004	CRP transcriptional dual regulator	b3357	b3870
+PC00004	CRP transcriptional dual regulator	b3357	b3907
+PC00004	CRP transcriptional dual regulator	b3357	b3925
+PC00004	CRP transcriptional dual regulator	b3357	b3926
+PC00004	CRP transcriptional dual regulator	b3357	b3927
+PC00004	CRP transcriptional dual regulator	b3357	b4032
+PC00004	CRP transcriptional dual regulator	b3357	b4033
+PC00004	CRP transcriptional dual regulator	b3357	b4034
+PC00004	CRP transcriptional dual regulator	b3357	b4035
+PC00004	CRP transcriptional dual regulator	b3357	b4036
+PC00004	CRP transcriptional dual regulator	b3357	b4037
+PC00004	CRP transcriptional dual regulator	b3357	b4111
+PC00004	CRP transcriptional dual regulator	b3357	b4213
+PC00004	CRP transcriptional dual regulator	b3357	b4381
+PC00004	CRP transcriptional dual regulator	b3357	b4382
+PC00004	CRP transcriptional dual regulator	b3357	b4383
+PC00004	CRP transcriptional dual regulator	b3357	b4384
+PC00004	CRP transcriptional dual regulator	b3357	b1415
+PC00004	CRP transcriptional dual regulator	b3357	b2155
+PC00004	CRP transcriptional dual regulator	b3357	b2393
+PC00004	CRP transcriptional dual regulator	b3357	b3236
+PC00004	CRP transcriptional dual regulator	b3357	b3416
+PC00004	CRP transcriptional dual regulator	b3357	b3417
+PC00004	CRP transcriptional dual regulator	b3357	b3599
+PC00004	CRP transcriptional dual regulator	b3357	b3600
+PC00004	CRP transcriptional dual regulator	b3357	b3601
+PC00004	CRP transcriptional dual regulator	b3357	b3748
+PC00004	CRP transcriptional dual regulator	b3357	b3749
+PC00004	CRP transcriptional dual regulator	b3357	b3750
+PC00004	CRP transcriptional dual regulator	b3357	b3751
+PC00004	CRP transcriptional dual regulator	b3357	b3752
+PC00004	CRP transcriptional dual regulator	b3357	b4323
+PC00004	CRP transcriptional dual regulator	b3357	b4322
+PC00004	CRP transcriptional dual regulator	b3357	b1015
+PC00004	CRP transcriptional dual regulator	b3357	b0113
+PC00004	CRP transcriptional dual regulator	b3357	b0114
+PC00004	CRP transcriptional dual regulator	b3357	b0115
+PC00004	CRP transcriptional dual regulator	b3357	b3404
+PC00004	CRP transcriptional dual regulator	b3357	b3405
+PC00004	CRP transcriptional dual regulator	b3357	b2741
+PC00004	CRP transcriptional dual regulator	b3357	b2148
+PC00004	CRP transcriptional dual regulator	b3357	b2149
+PC00004	CRP transcriptional dual regulator	b3357	b2150
+PC00004	CRP transcriptional dual regulator	b3357	b1621
+PC00004	CRP transcriptional dual regulator	b3357	b1622
+PC00004	CRP transcriptional dual regulator	b3357	b1620
+PC00004	CRP transcriptional dual regulator	b3357	b0396
+PC00004	CRP transcriptional dual regulator	b3357	b0116
+PC00004	CRP transcriptional dual regulator	b3357	b0064
+PC00004	CRP transcriptional dual regulator	b3357	b0061
+PC00004	CRP transcriptional dual regulator	b3357	b0062
+PC00004	CRP transcriptional dual regulator	b3357	b0063
+PC00004	CRP transcriptional dual regulator	b3357	b0044
+PC00004	CRP transcriptional dual regulator	b3357	b0043
+PC00004	CRP transcriptional dual regulator	b3357	b0042
+PC00004	CRP transcriptional dual regulator	b3357	b0041
+PC00004	CRP transcriptional dual regulator	b3357	b0035
+PC00004	CRP transcriptional dual regulator	b3357	b0036
+PC00004	CRP transcriptional dual regulator	b3357	b0037
+PC00004	CRP transcriptional dual regulator	b3357	b0038
+PC00004	CRP transcriptional dual regulator	b3357	b0039
+PC00004	CRP transcriptional dual regulator	b3357	b0040
+PC00004	CRP transcriptional dual regulator	b3357	b0034
+CPLX0-2021	HU	b4000	b0756
+CPLX0-2021	HU	b4000	b0757
+CPLX0-2021	HU	b4000	b0758
+CPLX0-2021	HU	b4000	b0759
+CPLX0-2021	HU	b4000	b0687
+CPLX0-2021	HU	b4000	b4439
+CPLX0-2021	HU	b0440	b0756
+CPLX0-2021	HU	b0440	b0757
+CPLX0-2021	HU	b0440	b0758
+CPLX0-2021	HU	b0440	b0759
+CPLX0-2021	HU	b0440	b0687
+CPLX0-2021	HU	b0440	b4439
+PC00003	AraC transcriptional dual regulator	b0064	b4460
+PC00003	AraC transcriptional dual regulator	b0064	b1900
+PC00003	AraC transcriptional dual regulator	b0064	b1901
+PC00003	AraC transcriptional dual regulator	b0064	b2841
+PC00003	AraC transcriptional dual regulator	b0064	b0064
+PC00003	AraC transcriptional dual regulator	b0064	b0061
+PC00003	AraC transcriptional dual regulator	b0064	b0062
+PC00003	AraC transcriptional dual regulator	b0064	b0063
+PC00003	AraC transcriptional dual regulator	b0064	b0396
+PC00007	TrpR transcriptional repressor	b4393	b1704
+PC00007	TrpR transcriptional repressor	b4393	b1260
+PC00007	TrpR transcriptional repressor	b4393	b1261
+PC00007	TrpR transcriptional repressor	b4393	b1262
+PC00007	TrpR transcriptional repressor	b4393	b1263
+PC00007	TrpR transcriptional repressor	b4393	b1264
+PC00007	TrpR transcriptional repressor	b4393	b1265
+PC00007	TrpR transcriptional repressor	b4393	b4393
+PC00007	TrpR transcriptional repressor	b4393	b3161
+PC00007	TrpR transcriptional repressor	b4393	b0388
+PC00007	TrpR transcriptional repressor	b4393	b0389
+PC00007	TrpR transcriptional repressor	b4393	b0390
+PC00086	RhaS transcriptional activator	b3905	b3907
+PC00086	RhaS transcriptional activator	b3905	b3902
+PC00086	RhaS transcriptional activator	b3905	b3903
+PC00086	RhaS transcriptional activator	b3905	b3904
+PC00033	PurR transcriptional repressor	b1658	b1131
+PC00033	PurR transcriptional repressor	b1658	b1132
+PC00033	PurR transcriptional repressor	b1658	b2476
+PC00033	PurR transcriptional repressor	b1658	b4005
+PC00033	PurR transcriptional repressor	b1658	b4006
+PC00033	PurR transcriptional repressor	b1658	b2557
+PC00033	PurR transcriptional repressor	b1658	b2499
+PC00033	PurR transcriptional repressor	b1658	b2500
+PC00033	PurR transcriptional repressor	b1658	b1658
+PC00033	PurR transcriptional repressor	b1658	b1062
+PC00033	PurR transcriptional repressor	b1658	b0945
+PC00033	PurR transcriptional repressor	b1658	b0522
+PC00033	PurR transcriptional repressor	b1658	b0523
+PC00033	PurR transcriptional repressor	b1658	b1207
+PC00033	PurR transcriptional repressor	b1658	b2937
+PC00033	PurR transcriptional repressor	b1658	b2938
+PC00033	PurR transcriptional repressor	b1658	b2507
+PC00033	PurR transcriptional repressor	b1658	b2508
+PC00033	PurR transcriptional repressor	b1658	b2551
+PC00033	PurR transcriptional repressor	b1658	b2311
+PC00033	PurR transcriptional repressor	b1658	b2312
+PC00033	PurR transcriptional repressor	b1658	b2313
+PC00033	PurR transcriptional repressor	b1658	b2903
+PC00033	PurR transcriptional repressor	b1658	b2904
+PC00033	PurR transcriptional repressor	b1658	b2905
+PC00033	PurR transcriptional repressor	b1658	b2553
+PC00033	PurR transcriptional repressor	b1658	b0336
+PC00033	PurR transcriptional repressor	b1658	b0337
+UHPA-MONOMER	UhpA transcriptional activator	b3669	b3666
+PD00440	sigma19 factor	b4293	b4287
+PD00440	sigma19 factor	b4293	b4288
+PD00440	sigma19 factor	b4293	b4289
+PD00440	sigma19 factor	b4293	b4290
+PD00440	sigma19 factor	b4293	b4291
+PD00440	sigma19 factor	b4293	b4292
+PD00440	sigma19 factor	b4293	b4293
+PHOP-MONOMER	PhoP transcriptional regulator	b1130	b1129
+PHOP-MONOMER	PhoP transcriptional regulator	b1130	b1130
+PHOP-MONOMER	PhoP transcriptional regulator	b1130	b1826
+PHOP-MONOMER	PhoP transcriptional regulator	b1130	b4242
+PHOP-MONOMER	PhoP transcriptional regulator	b1130	b4241
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b3449
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b3450
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b3451
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b3452
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b3453
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b4030
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b1597
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b2916
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b1020
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b3724
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b3725
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b3726
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b3727
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b3728
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b4092
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b4093
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b4094
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b4095
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b4096
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b4097
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b4098
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b4099
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b4100
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b4101
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b4102
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b4103
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b4104
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b4105
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b4106
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b0399
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b0400
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b0383
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b0384
+PHOB-MONOMER	PhoB transcriptional dual regulator	b0399	b0241
+NARP-MONOMER	NarP transcriptional regulator	b2193	b0872
+NARP-MONOMER	NarP transcriptional regulator	b2193	b0873
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2711
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2710
+NARP-MONOMER	NarP transcriptional regulator	b2193	b0972
+NARP-MONOMER	NarP transcriptional regulator	b2193	b0973
+NARP-MONOMER	NarP transcriptional regulator	b2193	b0974
+NARP-MONOMER	NarP transcriptional regulator	b2193	b0975
+NARP-MONOMER	NarP transcriptional regulator	b2193	b0976
+NARP-MONOMER	NarP transcriptional regulator	b2193	b0977
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2194
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2195
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2196
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2197
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2198
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2199
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2200
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2201
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2202
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2203
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2204
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2205
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2206
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2207
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2208
+NARP-MONOMER	NarP transcriptional regulator	b2193	b0872
+NARP-MONOMER	NarP transcriptional regulator	b2193	b0873
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2711
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2710
+NARP-MONOMER	NarP transcriptional regulator	b2193	b0972
+NARP-MONOMER	NarP transcriptional regulator	b2193	b0973
+NARP-MONOMER	NarP transcriptional regulator	b2193	b0974
+NARP-MONOMER	NarP transcriptional regulator	b2193	b0975
+NARP-MONOMER	NarP transcriptional regulator	b2193	b0976
+NARP-MONOMER	NarP transcriptional regulator	b2193	b0977
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2194
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2195
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2196
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2197
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2198
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2199
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2200
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2201
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2202
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2203
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2204
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2205
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2206
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2207
+NARP-MONOMER	NarP transcriptional regulator	b2193	b2208
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0872
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0873
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2711
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2710
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4079
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2194
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2195
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2196
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2197
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2198
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2199
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2200
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2201
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2202
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2203
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2204
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2205
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2206
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2207
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2208
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0826
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0827
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2997
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2990
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2991
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2992
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2993
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2994
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2995
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2996
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0972
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0973
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0974
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0975
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0976
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0977
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0886
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0887
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4122
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4123
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2276
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2277
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2278
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2279
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2280
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2281
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2282
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2283
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2284
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2285
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2286
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2287
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2288
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0903
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0904
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b1241
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0996
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0997
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0998
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b3365
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b3366
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b3367
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b3368
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b1223
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4151
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4152
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4153
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4154
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0894
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0895
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0896
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0034
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b1224
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b1225
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b1226
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b1227
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4070
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4071
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4072
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4073
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4074
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4075
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4076
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b1474
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b1475
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b1476
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0872
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0873
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2711
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2710
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4079
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2194
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2195
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2196
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2197
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2198
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2199
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2200
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2201
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2202
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2203
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2204
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2205
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2206
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2207
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2208
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0826
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0827
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2997
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2990
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2991
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2992
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2993
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2994
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2995
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2996
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0972
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0973
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0974
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0975
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0976
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0977
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0886
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0887
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4122
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4123
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2276
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2277
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2278
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2279
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2280
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2281
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2282
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2283
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2284
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2285
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2286
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2287
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b2288
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0903
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0904
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b1241
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0996
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0997
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0998
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b3365
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b3366
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b3367
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b3368
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b1223
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4151
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4152
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4153
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4154
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0894
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0895
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0896
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b0034
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b1224
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b1225
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b1226
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b1227
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4070
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4071
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4072
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4073
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4074
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4075
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b4076
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b1474
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b1475
+NARL-MONOMER	NarL transcriptional dual regulator	b1221	b1476
+KDPE-MONOMER	KdpE transcriptional activator	b0694	b0696
+KDPE-MONOMER	KdpE transcriptional activator	b0694	b0697
+KDPE-MONOMER	KdpE transcriptional activator	b0694	b0698
+HYDG-MONOMER	ZraR transcriptional activator	b4004	b4004
+HYDG-MONOMER	ZraR transcriptional activator	b4004	b4003
+EVGA-MONOMER	EvgA transcriptional regulator	b2369	b3512
+EVGA-MONOMER	EvgA transcriptional regulator	b2369	b2368
+DCUR-MONOMER	DcuR transcriptional activator	b4124	b4122
+DCUR-MONOMER	DcuR transcriptional activator	b4124	b4123
+DCUR-MONOMER	DcuR transcriptional activator	b4124	b3528
+DCUR-MONOMER	DcuR transcriptional activator	b4124	b4151
+DCUR-MONOMER	DcuR transcriptional activator	b4124	b4152
+DCUR-MONOMER	DcuR transcriptional activator	b4124	b4153
+DCUR-MONOMER	DcuR transcriptional activator	b4124	b4154
+CPXR-MONOMER	CpxR transcriptional dual regulator	b3912	b4160
+CPXR-MONOMER	CpxR transcriptional dual regulator	b3912	b3057
+CPXR-MONOMER	CpxR transcriptional dual regulator	b3912	b2617
+CPXR-MONOMER	CpxR transcriptional dual regulator	b3912	b3688
+CPXR-MONOMER	CpxR transcriptional dual regulator	b3912	b0178
+CPXR-MONOMER	CpxR transcriptional dual regulator	b3912	b2893
+CPXR-MONOMER	CpxR transcriptional dual regulator	b3912	b1041
+CPXR-MONOMER	CpxR transcriptional dual regulator	b3912	b1042
+CPXR-MONOMER	CpxR transcriptional dual regulator	b3912	b1037
+CPXR-MONOMER	CpxR transcriptional dual regulator	b3912	b1038
+CPXR-MONOMER	CpxR transcriptional dual regulator	b3912	b1039
+CPXR-MONOMER	CpxR transcriptional dual regulator	b3912	b1040
+CPXR-MONOMER	CpxR transcriptional dual regulator	b3912	b3363
+CPXR-MONOMER	CpxR transcriptional dual regulator	b3912	b3860
+CPXR-MONOMER	CpxR transcriptional dual regulator	b3912	b3859
+CPXR-MONOMER	CpxR transcriptional dual regulator	b3912	b0161
+ATOC-MONOMER	AtoC transcriptional activator	b2220	b2221
+ATOC-MONOMER	AtoC transcriptional activator	b2220	b2222
+ATOC-MONOMER	AtoC transcriptional activator	b2220	b2223
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b4122
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2579
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b1101
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b4239
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b4240
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b1528
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b3605
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b3604
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b3603
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b3845
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b3846
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b3907
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b1109
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0035
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0036
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0037
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0038
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0039
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0040
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b4131
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b4132
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b1210
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0826
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0827
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2997
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2990
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2991
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2992
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2993
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2994
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2995
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2996
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2975
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2976
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2977
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2978
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2978
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2979
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0621
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b3528
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0118
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b1276
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b1324
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0116
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0972
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0973
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0974
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0975
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0976
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0977
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2276
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2277
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2278
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2279
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2280
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2281
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2282
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2283
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2284
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2285
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2286
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2287
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2288
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0903
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0904
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b3236
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0720
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b4014
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b4015
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b4016
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b1611
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2241
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2242
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b2243
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b1136
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b3908
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0721
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0722
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0723
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0724
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0725
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0726
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0727
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0728
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0729
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b3426
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b1612
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0428
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0429
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0430
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0431
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0432
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0733
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0734
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0314
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0311
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0312
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b0313
+ARCA-MONOMER	ArcA transcriptional dual regulator	b4401	b1415
+PUTA-MONOMER	PutA bifunctional enzyme and transcriptional regulator	b1014	b1014
+PD04418	Rob transcriptional activator	b4396	b4439
+PD04418	Rob transcriptional activator	b4396	b2237
+PD04418	Rob transcriptional activator	b4396	b1530
+PD04418	Rob transcriptional activator	b4396	b1531
+PD04418	Rob transcriptional activator	b4396	b1532
+PD04418	Rob transcriptional activator	b4396	b1852
+PD04418	Rob transcriptional activator	b4396	b2159
+PD04418	Rob transcriptional activator	b4396	b3908
+PD04418	Rob transcriptional activator	b4396	b1611
+PD04413	NadR transcriptional repressor / ribosylnicotinamide kinase / NMN adenylyltransferase	b4390	b0931
+PD04413	NadR transcriptional repressor / ribosylnicotinamide kinase / NMN adenylyltransferase	b4390	b2574
+PD04132	SoxR transcriptional dual regulator	b4063	b4063
+PD04132	SoxR transcriptional dual regulator	b4063	b4062
+PD04099	IclR transcriptional repressor	b4018	b4018
+PD04099	IclR transcriptional repressor	b4018	b4014
+PD04099	IclR transcriptional repressor	b4018	b4015
+PD04099	IclR transcriptional repressor	b4018	b4016
+PD04028	CytR transcriptional dual regulator	b3934	b3934
+PD04028	CytR transcriptional dual regulator	b3934	b2143
+PD04028	CytR transcriptional dual regulator	b3934	b3363
+PD04028	CytR transcriptional dual regulator	b3934	b0411
+PD04028	CytR transcriptional dual regulator	b3934	b2964
+PD04028	CytR transcriptional dual regulator	b3934	b3461
+PD04028	CytR transcriptional dual regulator	b3934	b3831
+PD04028	CytR transcriptional dual regulator	b3934	b2393
+PD04028	CytR transcriptional dual regulator	b3934	b4381
+PD04028	CytR transcriptional dual regulator	b3934	b4382
+PD04028	CytR transcriptional dual regulator	b3934	b4383
+PD04028	CytR transcriptional dual regulator	b3934	b4384
+PD03867	RbsR transcriptional repressor	b3753	b3748
+PD03867	RbsR transcriptional repressor	b3753	b3749
+PD03867	RbsR transcriptional repressor	b3753	b3750
+PD03867	RbsR transcriptional repressor	b3753	b3751
+PD03867	RbsR transcriptional repressor	b3753	b3752
+PD03695	cold shock protein CspA	b3556	b2231
+PD03695	cold shock protein CspA	b3556	b1237
+PD03585	GntR transcriptional repressor	b3438	b4268
+PD03585	GntR transcriptional repressor	b3438	b4264
+PD03585	GntR transcriptional repressor	b3438	b4265
+PD03585	GntR transcriptional repressor	b3438	b4266
+PD03585	GntR transcriptional repressor	b3438	b4267
+PD03585	GntR transcriptional repressor	b3438	b3414
+PD03585	GntR transcriptional repressor	b3438	b3413
+PD03585	GntR transcriptional repressor	b3438	b3415
+PD03585	GntR transcriptional repressor	b3438	b4476
+PD03585	GntR transcriptional repressor	b3438	b3437
+PD03585	GntR transcriptional repressor	b3438	b1850
+PD03585	GntR transcriptional repressor	b3438	b1851
+PD03576	GlpR transcriptional repressor	b3423	b3925
+PD03576	GlpR transcriptional repressor	b3423	b3926
+PD03576	GlpR transcriptional repressor	b3423	b3927
+PD03576	GlpR transcriptional repressor	b3423	b2241
+PD03576	GlpR transcriptional repressor	b3423	b2242
+PD03576	GlpR transcriptional repressor	b3423	b2243
+PD03576	GlpR transcriptional repressor	b3423	b2239
+PD03576	GlpR transcriptional repressor	b3423	b2240
+PD03576	GlpR transcriptional repressor	b3423	b3426
+PD03292	TdcR transcriptional activator	b3119	b3112
+PD03292	TdcR transcriptional activator	b3119	b3113
+PD03292	TdcR transcriptional activator	b3119	b3114
+PD03292	TdcR transcriptional activator	b3119	b3115
+PD03292	TdcR transcriptional activator	b3119	b3116
+PD03292	TdcR transcriptional activator	b3119	b3117
+PD03292	TdcR transcriptional activator	b3119	b3118
+PD03270	ExuR transcriptional repressor	b3094	b4323
+PD03270	ExuR transcriptional repressor	b3094	b4322
+PD03270	ExuR transcriptional repressor	b3094	b3094
+PD03270	ExuR transcriptional repressor	b3094	b4324
+PD03270	ExuR transcriptional repressor	b3094	b1521
+PD03270	ExuR transcriptional repressor	b3094	b3091
+PD03270	ExuR transcriptional repressor	b3094	b3092
+PD03270	ExuR transcriptional repressor	b3094	b3093
+PD03254	EbgR transcriptional repressor	b3075	b3076
+PD03254	EbgR transcriptional repressor	b3075	b3077
+PD03028	GalR transcriptional repressor	b2837	b2151
+PD03028	GalR transcriptional repressor	b2837	b0756
+PD03028	GalR transcriptional repressor	b2837	b0757
+PD03028	GalR transcriptional repressor	b2837	b0758
+PD03028	GalR transcriptional repressor	b2837	b0759
+PD02936	FhlA transcriptional activator	b2731	b2490
+PD02936	FhlA transcriptional activator	b2731	b2489
+PD02936	FhlA transcriptional activator	b2731	b2488
+PD02936	FhlA transcriptional activator	b2731	b2487
+PD02936	FhlA transcriptional activator	b2731	b2486
+PD02936	FhlA transcriptional activator	b2731	b2485
+PD02936	FhlA transcriptional activator	b2731	b2484
+PD02936	FhlA transcriptional activator	b2731	b2483
+PD02936	FhlA transcriptional activator	b2731	b2482
+PD02936	FhlA transcriptional activator	b2731	b2481
+PD02936	FhlA transcriptional activator	b2731	b4079
+PD02936	FhlA transcriptional activator	b2731	b2726
+PD02936	FhlA transcriptional activator	b2731	b2727
+PD02936	FhlA transcriptional activator	b2731	b2728
+PD02936	FhlA transcriptional activator	b2731	b2729
+PD02936	FhlA transcriptional activator	b2731	b2730
+PD02936	FhlA transcriptional activator	b2731	b2712
+PD02936	FhlA transcriptional activator	b2731	b2713
+PD02936	FhlA transcriptional activator	b2731	b2718
+PD02936	FhlA transcriptional activator	b2731	b2719
+PD02936	FhlA transcriptional activator	b2731	b2720
+PD02936	FhlA transcriptional activator	b2731	b2721
+PD02936	FhlA transcriptional activator	b2731	b2722
+PD02936	FhlA transcriptional activator	b2731	b2723
+PD02936	FhlA transcriptional activator	b2731	b2724
+PD02936	FhlA transcriptional activator	b2731	b2725
+PD02850	AlpA transcriptional activator	b2624	b3506
+PD02198	SdiA transcriptional activator	b1916	b0093
+PD02198	SdiA transcriptional activator	b1916	b0094
+PD02198	SdiA transcriptional activator	b1916	b0095
+PD01896	Mlc transcriptional repressor	b1594	b2415
+PD01896	Mlc transcriptional repressor	b1594	b2416
+PD01896	Mlc transcriptional repressor	b1594	b2417
+PD01896	Mlc transcriptional repressor	b1594	b1101
+PD01896	Mlc transcriptional repressor	b1594	b3418
+PD01896	Mlc transcriptional repressor	b1594	b1594
+PD01896	Mlc transcriptional repressor	b1594	b1817
+PD01896	Mlc transcriptional repressor	b1594	b1818
+PD01896	Mlc transcriptional repressor	b1594	b1819
+PD01520	FadR transcriptional dual regulator	b1187	b2341
+PD01520	FadR transcriptional dual regulator	b1187	b2342
+PD01520	FadR transcriptional dual regulator	b1187	b4018
+PD01520	FadR transcriptional dual regulator	b1187	b1805
+PD01520	FadR transcriptional dual regulator	b1187	b2323
+PD01520	FadR transcriptional dual regulator	b1187	b3495
+PD01520	FadR transcriptional dual regulator	b1187	b0954
+PD01520	FadR transcriptional dual regulator	b1187	b2344
+PD01520	FadR transcriptional dual regulator	b1187	b3845
+PD01520	FadR transcriptional dual regulator	b1187	b3846
+PD01379	CsgD transcriptional activator	b1040	b1037
+PD01379	CsgD transcriptional activator	b1040	b1038
+PD01379	CsgD transcriptional activator	b1040	b1039
+PD01379	CsgD transcriptional activator	b1040	b1040
+PD01379	CsgD transcriptional activator	b1040	b1041
+PD01379	CsgD transcriptional activator	b1040	b1042
+PD01196	DeoR transcriptional repressor	b0840	b0411
+PD01196	DeoR transcriptional repressor	b0840	b2964
+PD01196	DeoR transcriptional repressor	b0840	b4381
+PD01196	DeoR transcriptional repressor	b0840	b4382
+PD01196	DeoR transcriptional repressor	b0840	b4383
+PD01196	DeoR transcriptional repressor	b0840	b4384
+PD00969	EnvY transcriptional activator	b0566	b0929
+PD00969	EnvY transcriptional activator	b0566	b2215
+PD00967	AppY transcriptional activator	b0564	b0972
+PD00967	AppY transcriptional activator	b0564	b0973
+PD00967	AppY transcriptional activator	b0564	b0974
+PD00967	AppY transcriptional activator	b0564	b0975
+PD00967	AppY transcriptional activator	b0564	b0976
+PD00967	AppY transcriptional activator	b0564	b0977
+PD00967	AppY transcriptional activator	b0564	b0978
+PD00967	AppY transcriptional activator	b0564	b0979
+PD00967	AppY transcriptional activator	b0564	b0980
+PD00763	LacI transcriptional repressor	b0345	b0342
+PD00763	LacI transcriptional repressor	b0345	b0343
+PD00763	LacI transcriptional repressor	b0345	b0344
+PD00521	FruR transcriptional dual regulator	b0080	b3916
+PD00521	FruR transcriptional dual regulator	b0080	b3365
+PD00521	FruR transcriptional dual regulator	b0080	b3366
+PD00521	FruR transcriptional dual regulator	b0080	b3367
+PD00521	FruR transcriptional dual regulator	b0080	b3368
+PD00521	FruR transcriptional dual regulator	b0080	b3403
+PD00519	LeuO transcriptional activator	b0076	b0071
+PD00519	LeuO transcriptional activator	b0076	b0072
+PD00519	LeuO transcriptional activator	b0076	b0073
+PD00519	LeuO transcriptional activator	b0076	b0074
+PD00519	LeuO transcriptional activator	b0076	b0075
+PD00444	FucR transcriptional activator	b2805	b2799
+PD00444	FucR transcriptional activator	b2805	b2800
+PD00444	FucR transcriptional activator	b2805	b2801
+PD00444	FucR transcriptional activator	b2805	b2802
+PD00444	FucR transcriptional activator	b2805	b2803
+PD00444	FucR transcriptional activator	b2805	b2804
+PD00444	FucR transcriptional activator	b2805	b2805
+PD00436	CadC transcriptional activator	b4133	b4131
+PD00436	CadC transcriptional activator	b4133	b4132
+PD00436	CadC transcriptional activator	b4133	b4133
+PD00413	TyrR transcriptional dual regulator	b1323	b1323
+PD00413	TyrR transcriptional dual regulator	b1323	b0754
+PD00413	TyrR transcriptional dual regulator	b1323	b0112
+PD00413	TyrR transcriptional dual regulator	b1323	b1907
+PD00413	TyrR transcriptional dual regulator	b1323	b3161
+PD00413	TyrR transcriptional dual regulator	b1323	b4054
+PD00413	TyrR transcriptional dual regulator	b1323	b0388
+PD00413	TyrR transcriptional dual regulator	b1323	b0389
+PD00413	TyrR transcriptional dual regulator	b1323	b0390
+PD00413	TyrR transcriptional dual regulator	b1323	b2600
+PD00413	TyrR transcriptional dual regulator	b1323	b2601
+PD00406	SoxS transcriptional activator	b4062	b4062
+PD00406	SoxS transcriptional activator	b4062	b0853
+PD00406	SoxS transcriptional activator	b4062	b0852
+PD00406	SoxS transcriptional activator	b4062	b0851
+PD00406	SoxS transcriptional activator	b4062	b0850
+PD00406	SoxS transcriptional activator	b4062	b4439
+PD00406	SoxS transcriptional activator	b4062	b2895
+PD00406	SoxS transcriptional activator	b4062	b0463
+PD00406	SoxS transcriptional activator	b4062	b0462
+PD00406	SoxS transcriptional activator	b4062	b2237
+PD00406	SoxS transcriptional activator	b4062	b0871
+PD00406	SoxS transcriptional activator	b4062	b1277
+PD00406	SoxS transcriptional activator	b4062	b0683
+PD00406	SoxS transcriptional activator	b4062	b0684
+PD00406	SoxS transcriptional activator	b4062	b0951
+PD00406	SoxS transcriptional activator	b4062	b0950
+PD00406	SoxS transcriptional activator	b4062	b1530
+PD00406	SoxS transcriptional activator	b4062	b1531
+PD00406	SoxS transcriptional activator	b4062	b1532
+PD00406	SoxS transcriptional activator	b4062	b1852
+PD00406	SoxS transcriptional activator	b4062	b3924
+PD00406	SoxS transcriptional activator	b4062	b1611
+PD00406	SoxS transcriptional activator	b4062	b3908
+PD00406	SoxS transcriptional activator	b4062	b2159
+PD00369	MtlR transcriptional repressor	b3601	b3599
+PD00369	MtlR transcriptional repressor	b3601	b3600
+PD00369	MtlR transcriptional repressor	b3601	b3601
+PD00365	MarA transcriptional activator	b1531	b0578
+PD00365	MarA transcriptional activator	b1531	b1014
+PD00365	MarA transcriptional activator	b1531	b4439
+PD00365	MarA transcriptional activator	b1531	b3506
+PD00365	MarA transcriptional activator	b1531	b0463
+PD00365	MarA transcriptional activator	b1531	b0462
+PD00365	MarA transcriptional activator	b1531	b0951
+PD00365	MarA transcriptional activator	b1531	b0950
+PD00365	MarA transcriptional activator	b1531	b2237
+PD00365	MarA transcriptional activator	b1531	b0871
+PD00365	MarA transcriptional activator	b1531	b1530
+PD00365	MarA transcriptional activator	b1531	b1531
+PD00365	MarA transcriptional activator	b1531	b1532
+PD00365	MarA transcriptional activator	b1531	b3908
+PD00365	MarA transcriptional activator	b1531	b2159
+PD00365	MarA transcriptional activator	b1531	b1611
+PD00365	MarA transcriptional activator	b1531	b3924
+PD00365	MarA transcriptional activator	b1531	b1852
+PD00364	MarR transcriptional repressor	b1530	b1530
+PD00364	MarR transcriptional repressor	b1530	b1531
+PD00364	MarR transcriptional repressor	b1530	b1532
+PD00361	MalI transcriptional repressor	b1620	b1620
+PD00361	MalI transcriptional repressor	b1620	b1621
+PD00361	MalI transcriptional repressor	b1620	b1622
+PD00360	LysR transcriptional dual regulator	b2839	b2839
+PD00360	LysR transcriptional dual regulator	b2839	b2838
+PD00353	Lrp transcriptional dual regulator	b0889	b4187
+PD00353	Lrp transcriptional dual regulator	b0889	b0908
+PD00353	Lrp transcriptional dual regulator	b0889	b3418
+PD00353	Lrp transcriptional dual regulator	b0889	b0071
+PD00353	Lrp transcriptional dual regulator	b0889	b0072
+PD00353	Lrp transcriptional dual regulator	b0889	b0073
+PD00353	Lrp transcriptional dual regulator	b0889	b0074
+PD00353	Lrp transcriptional dual regulator	b0889	b0075
+PD00353	Lrp transcriptional dual regulator	b0889	b4320
+PD00353	Lrp transcriptional dual regulator	b0889	b4319
+PD00353	Lrp transcriptional dual regulator	b0889	b4318
+PD00353	Lrp transcriptional dual regulator	b0889	b4317
+PD00353	Lrp transcriptional dual regulator	b0889	b4316
+PD00353	Lrp transcriptional dual regulator	b0889	b4315
+PD00353	Lrp transcriptional dual regulator	b0889	b4314
+PD00353	Lrp transcriptional dual regulator	b0889	b4313
+PD00353	Lrp transcriptional dual regulator	b0889	b2903
+PD00353	Lrp transcriptional dual regulator	b0889	b2904
+PD00353	Lrp transcriptional dual regulator	b0889	b2905
+PD00353	Lrp transcriptional dual regulator	b0889	b2669
+PD00353	Lrp transcriptional dual regulator	b0889	b1814
+PD00353	Lrp transcriptional dual regulator	b0889	b1243
+PD00353	Lrp transcriptional dual regulator	b0889	b1244
+PD00353	Lrp transcriptional dual regulator	b0889	b1245
+PD00353	Lrp transcriptional dual regulator	b0889	b1246
+PD00353	Lrp transcriptional dual regulator	b0889	b1247
+PD00353	Lrp transcriptional dual regulator	b0889	b0929
+PD00353	Lrp transcriptional dual regulator	b0889	b4129
+PD00353	Lrp transcriptional dual regulator	b0889	b3454
+PD00353	Lrp transcriptional dual regulator	b0889	b3455
+PD00353	Lrp transcriptional dual regulator	b0889	b3456
+PD00353	Lrp transcriptional dual regulator	b0889	b3457
+PD00353	Lrp transcriptional dual regulator	b0889	b3458
+PD00353	Lrp transcriptional dual regulator	b0889	b3212
+PD00353	Lrp transcriptional dual regulator	b0889	b3213
+PD00353	Lrp transcriptional dual regulator	b0889	b3214
+PD00353	Lrp transcriptional dual regulator	b0889	b0889
+PD00353	Lrp transcriptional dual regulator	b0889	b3616
+PD00353	Lrp transcriptional dual regulator	b0889	b3617
+PD00353	Lrp transcriptional dual regulator	b0889	b0077
+PD00353	Lrp transcriptional dual regulator	b0889	b0078
+PD00353	Lrp transcriptional dual regulator	b0889	b0907
+PD00353	Lrp transcriptional dual regulator	b0889	b2663
+PD00353	Lrp transcriptional dual regulator	b0889	b2662
+PD00353	Lrp transcriptional dual regulator	b0889	b2661
+PD00353	Lrp transcriptional dual regulator	b0889	b2660
+PD00353	Lrp transcriptional dual regulator	b0889	b2659
+PD00353	Lrp transcriptional dual regulator	b0889	b4376
+PD00353	Lrp transcriptional dual regulator	b0889	b4439
+PD00353	Lrp transcriptional dual regulator	b0889	b2913
+PD00353	Lrp transcriptional dual regulator	b0889	b1482
+PD00353	Lrp transcriptional dual regulator	b0889	b2163
+PD00353	Lrp transcriptional dual regulator	b0889	b3767
+PD00353	Lrp transcriptional dual regulator	b0889	b3772
+PD00353	Lrp transcriptional dual regulator	b0889	b3771
+PD00353	Lrp transcriptional dual regulator	b0889	b3770
+PD00353	Lrp transcriptional dual regulator	b0889	b3769
+PD00353	Lrp transcriptional dual regulator	b0889	b4488
+PD00353	Lrp transcriptional dual regulator	b0889	b3766
+PD00353	Lrp transcriptional dual regulator	b0889	b1189
+PD00353	Lrp transcriptional dual regulator	b0889	b1190
+PD00353	Lrp transcriptional dual regulator	b0889	b2215
+PD00353	Lrp transcriptional dual regulator	b0889	b3460
+PD00345	GutM transcriptional activator	b2706	b2702
+PD00345	GutM transcriptional activator	b2706	b2703
+PD00345	GutM transcriptional activator	b2706	b2704
+PD00345	GutM transcriptional activator	b2706	b2705
+PD00345	GutM transcriptional activator	b2706	b2706
+PD00345	GutM transcriptional activator	b2706	b2707
+PD00345	GutM transcriptional activator	b2706	b2708
+PD00339	GcvA transcriptional dual regulator	b2808	b4443
+PD00339	GcvA transcriptional dual regulator	b2808	b2808
+PD00339	GcvA transcriptional dual regulator	b2808	b2903
+PD00339	GcvA transcriptional dual regulator	b2808	b2904
+PD00339	GcvA transcriptional dual regulator	b2808	b2905
+PD00297	DsdC transcriptional dual regulator	b2364	b2365
+PD00297	DsdC transcriptional dual regulator	b2364	b2364
+PD00297	DsdC transcriptional dual regulator	b2364	b2366
+PD00291	CynR transcriptional dual regulator	b0338	b0338
+PD00291	CynR transcriptional dual regulator	b0338	b0339
+PD00291	CynR transcriptional dual regulator	b0338	b0340
+PD00291	CynR transcriptional dual regulator	b0338	b0341
+PD00288	H-NS transcriptional dual regulator	b1237	b0756
+PD00288	H-NS transcriptional dual regulator	b1237	b0757
+PD00288	H-NS transcriptional dual regulator	b1237	b0758
+PD00288	H-NS transcriptional dual regulator	b1237	b0759
+PD00288	H-NS transcriptional dual regulator	b1237	b0342
+PD00288	H-NS transcriptional dual regulator	b1237	b0343
+PD00288	H-NS transcriptional dual regulator	b1237	b0344
+PD00288	H-NS transcriptional dual regulator	b1237	b0205
+PD00288	H-NS transcriptional dual regulator	b1237	b0204
+PD00288	H-NS transcriptional dual regulator	b1237	b0203
+PD00288	H-NS transcriptional dual regulator	b1237	b0202
+PD00288	H-NS transcriptional dual regulator	b1237	b0201
+PD00288	H-NS transcriptional dual regulator	b1237	b2588
+PD00288	H-NS transcriptional dual regulator	b1237	b2589
+PD00288	H-NS transcriptional dual regulator	b1237	b2590
+PD00288	H-NS transcriptional dual regulator	b1237	b2591
+PD00288	H-NS transcriptional dual regulator	b1237	b3272
+PD00288	H-NS transcriptional dual regulator	b1237	b3273
+PD00288	H-NS transcriptional dual regulator	b1237	b3274
+PD00288	H-NS transcriptional dual regulator	b1237	b3275
+PD00288	H-NS transcriptional dual regulator	b1237	b3276
+PD00288	H-NS transcriptional dual regulator	b1237	b3277
+PD00288	H-NS transcriptional dual regulator	b1237	b3278
+PD00288	H-NS transcriptional dual regulator	b1237	b3759
+PD00288	H-NS transcriptional dual regulator	b1237	b3758
+PD00288	H-NS transcriptional dual regulator	b1237	b3757
+PD00288	H-NS transcriptional dual regulator	b1237	b3756
+PD00288	H-NS transcriptional dual regulator	b1237	b1923
+PD00288	H-NS transcriptional dual regulator	b1237	b3721
+PD00288	H-NS transcriptional dual regulator	b1237	b3722
+PD00288	H-NS transcriptional dual regulator	b1237	b3723
+PD00288	H-NS transcriptional dual regulator	b1237	b4439
+PD00288	H-NS transcriptional dual regulator	b1237	b2663
+PD00288	H-NS transcriptional dual regulator	b1237	b2662
+PD00288	H-NS transcriptional dual regulator	b1237	b2661
+PD00288	H-NS transcriptional dual regulator	b1237	b2660
+PD00288	H-NS transcriptional dual regulator	b1237	b2659
+PD00288	H-NS transcriptional dual regulator	b1237	b2535
+PD00288	H-NS transcriptional dual regulator	b1237	b1656
+PD00288	H-NS transcriptional dual regulator	b1237	b3365
+PD00288	H-NS transcriptional dual regulator	b1237	b3366
+PD00288	H-NS transcriptional dual regulator	b1237	b3367
+PD00288	H-NS transcriptional dual regulator	b1237	b3368
+PD00288	H-NS transcriptional dual regulator	b1237	b0734
+PD00288	H-NS transcriptional dual regulator	b1237	b0733
+PD00288	H-NS transcriptional dual regulator	b1237	b3338
+PD00288	H-NS transcriptional dual regulator	b1237	b3516
+PD00288	H-NS transcriptional dual regulator	b1237	b3517
+PD00288	H-NS transcriptional dual regulator	b1237	b3971
+PD00288	H-NS transcriptional dual regulator	b1237	b3970
+PD00288	H-NS transcriptional dual regulator	b1237	b3969
+PD00288	H-NS transcriptional dual regulator	b1237	b3968
+PD00288	H-NS transcriptional dual regulator	b1237	b4131
+PD00288	H-NS transcriptional dual regulator	b1237	b4132
+PD00288	H-NS transcriptional dual regulator	b1237	b4117
+PD00288	H-NS transcriptional dual regulator	b1237	b0435
+PD00288	H-NS transcriptional dual regulator	b1237	b2679
+PD00288	H-NS transcriptional dual regulator	b1237	b2678
+PD00288	H-NS transcriptional dual regulator	b1237	b2677
+PD00288	H-NS transcriptional dual regulator	b1237	b0019
+PD00288	H-NS transcriptional dual regulator	b1237	b1182
+PD00288	H-NS transcriptional dual regulator	b1237	b0924
+PD00288	H-NS transcriptional dual regulator	b1237	b0923
+PD00288	H-NS transcriptional dual regulator	b1237	b0922
+PD00288	H-NS transcriptional dual regulator	b1237	b0921
+PD00288	H-NS transcriptional dual regulator	b1237	b4313
+PD00288	H-NS transcriptional dual regulator	b1237	b4317
+PD00288	H-NS transcriptional dual regulator	b1237	b4320
+PD00288	H-NS transcriptional dual regulator	b1237	b4319
+PD00288	H-NS transcriptional dual regulator	b1237	b4318
+PD00288	H-NS transcriptional dual regulator	b1237	b4316
+PD00288	H-NS transcriptional dual regulator	b1237	b4315
+PD00288	H-NS transcriptional dual regulator	b1237	b4314
+PD00288	H-NS transcriptional dual regulator	b1237	b1951
+PD00288	H-NS transcriptional dual regulator	b1237	b1920
+PD00288	H-NS transcriptional dual regulator	b1237	b1921
+PD00288	H-NS transcriptional dual regulator	b1237	b1922
+PD00288	H-NS transcriptional dual regulator	b1237	b1891
+PD00288	H-NS transcriptional dual regulator	b1237	b1892
+PD00288	H-NS transcriptional dual regulator	b1237	b2669
+PD00288	H-NS transcriptional dual regulator	b1237	b1237
+PD00283	GutR transcriptional repressor	b2707	b2702
+PD00283	GutR transcriptional repressor	b2707	b2703
+PD00283	GutR transcriptional repressor	b2707	b2704
+PD00283	GutR transcriptional repressor	b2707	b2705
+PD00283	GutR transcriptional repressor	b2707	b2706
+PD00283	GutR transcriptional repressor	b2707	b2707
+PD00283	GutR transcriptional repressor	b2707	b2708
+PD00268	TdcA transcriptional activator	b3118	b3112
+PD00268	TdcA transcriptional activator	b3118	b3113
+PD00268	TdcA transcriptional activator	b3118	b3114
+PD00268	TdcA transcriptional activator	b3118	b3115
+PD00268	TdcA transcriptional activator	b3118	b3116
+PD00268	TdcA transcriptional activator	b3118	b3117
+PD00268	TdcA transcriptional activator	b3118	b3118
+PD00266	NagC transcriptional dual regulator	b0676	b4311
+PD00266	NagC transcriptional dual regulator	b0676	b1733
+PD00266	NagC transcriptional dual regulator	b0676	b1734
+PD00266	NagC transcriptional dual regulator	b0676	b1735
+PD00266	NagC transcriptional dual regulator	b0676	b1736
+PD00266	NagC transcriptional dual regulator	b0676	b1737
+PD00266	NagC transcriptional dual regulator	b0676	b1738
+PD00266	NagC transcriptional dual regulator	b0676	b0679
+PD00266	NagC transcriptional dual regulator	b0676	b0675
+PD00266	NagC transcriptional dual regulator	b0676	b0676
+PD00266	NagC transcriptional dual regulator	b0676	b0677
+PD00266	NagC transcriptional dual regulator	b0676	b0678
+PD00266	NagC transcriptional dual regulator	b0676	b3729
+PD00266	NagC transcriptional dual regulator	b0676	b3730
+PD00266	NagC transcriptional dual regulator	b0676	b1817
+PD00266	NagC transcriptional dual regulator	b0676	b1818
+PD00266	NagC transcriptional dual regulator	b0676	b1819
+PD00261	GalS transcriptional repressor	b2151	b2148
+PD00261	GalS transcriptional repressor	b2151	b2149
+PD00261	GalS transcriptional repressor	b2151	b2150
+PD00261	GalS transcriptional repressor	b2151	b2151
+PD00260	Fur	b0683	b1102
+PD00260	Fur	b0683	b4287
+PD00260	Fur	b0683	b4288
+PD00260	Fur	b0683	b4289
+PD00260	Fur	b0683	b4290
+PD00260	Fur	b0683	b4291
+PD00260	Fur	b0683	b1252
+PD00260	Fur	b0683	b0592
+PD00260	Fur	b0683	b3005
+PD00260	Fur	b0683	b3006
+PD00260	Fur	b0683	b2155
+PD00260	Fur	b0683	b0591
+PD00251	BetI transcriptional repressor	b0313	b0311
+PD00251	BetI transcriptional repressor	b0313	b0312
+PD00251	BetI transcriptional repressor	b0313	b0313
+PD00251	BetI transcriptional repressor	b0313	b0314
+PD00250	AsnC transcriptional dual regulator	b3743	b3743
+PD00250	AsnC transcriptional dual regulator	b3743	b3744
+PD00230	Ada transcriptional dual regulator / O-6-methylguanine-DNA methyltransferase	b2213	b4187
+PD00230	Ada transcriptional dual regulator / O-6-methylguanine-DNA methyltransferase	b2213	b2212
+PD00230	Ada transcriptional dual regulator / O-6-methylguanine-DNA methyltransferase	b2213	b2213
+PD00230	Ada transcriptional dual regulator / O-6-methylguanine-DNA methyltransferase	b2213	b2068
+PD00214	OxyR transcriptional dual regulator	b3961	b1679
+PD00214	OxyR transcriptional dual regulator	b3961	b1680
+PD00214	OxyR transcriptional dual regulator	b3961	b1681
+PD00214	OxyR transcriptional dual regulator	b3961	b1682
+PD00214	OxyR transcriptional dual regulator	b3961	b1683
+PD00214	OxyR transcriptional dual regulator	b3961	b1684
+PD00214	OxyR transcriptional dual regulator	b3961	b2582
+PD00214	OxyR transcriptional dual regulator	b3961	b2000
+PD00214	OxyR transcriptional dual regulator	b3961	b0683
+PD00214	OxyR transcriptional dual regulator	b3961	b0849
+PD00214	OxyR transcriptional dual regulator	b3961	b0812
+PD00214	OxyR transcriptional dual regulator	b3961	b0605
+PD00214	OxyR transcriptional dual regulator	b3961	b0606
+PD00214	OxyR transcriptional dual regulator	b3961	b3961
+PD00214	OxyR transcriptional dual regulator	b3961	b3942
+PD00208	MelR transcriptional dual regulator	b4118	b4118
+PD00208	MelR transcriptional dual regulator	b4118	b4119
+PD00208	MelR transcriptional dual regulator	b4118	b4120
+PD00200	IlvY transcriptional dual regulator	b3773	b3773
+PD00200	IlvY transcriptional dual regulator	b3773	b3774
+PD00197	FNR transcriptional dual regulator	b1334	b0872
+PD00197	FNR transcriptional dual regulator	b1334	b0873
+PD00197	FNR transcriptional dual regulator	b1334	b4138
+PD00197	FNR transcriptional dual regulator	b1334	b2552
+PD00197	FNR transcriptional dual regulator	b1334	b4039
+PD00197	FNR transcriptional dual regulator	b1334	b4040
+PD00197	FNR transcriptional dual regulator	b1334	b2711
+PD00197	FNR transcriptional dual regulator	b1334	b2710
+PD00197	FNR transcriptional dual regulator	b1334	b2490
+PD00197	FNR transcriptional dual regulator	b1334	b2489
+PD00197	FNR transcriptional dual regulator	b1334	b2488
+PD00197	FNR transcriptional dual regulator	b1334	b2487
+PD00197	FNR transcriptional dual regulator	b1334	b2486
+PD00197	FNR transcriptional dual regulator	b1334	b2485
+PD00197	FNR transcriptional dual regulator	b1334	b2484
+PD00197	FNR transcriptional dual regulator	b1334	b2483
+PD00197	FNR transcriptional dual regulator	b1334	b2482
+PD00197	FNR transcriptional dual regulator	b1334	b2481
+PD00197	FNR transcriptional dual regulator	b1334	b4237
+PD00197	FNR transcriptional dual regulator	b1334	b4238
+PD00197	FNR transcriptional dual regulator	b1334	b1210
+PD00197	FNR transcriptional dual regulator	b1334	b0826
+PD00197	FNR transcriptional dual regulator	b1334	b0827
+PD00197	FNR transcriptional dual regulator	b1334	b0734
+PD00197	FNR transcriptional dual regulator	b1334	b0733
+PD00197	FNR transcriptional dual regulator	b1334	b0621
+PD00197	FNR transcriptional dual regulator	b1334	b4401
+PD00197	FNR transcriptional dual regulator	b1334	b4123
+PD00197	FNR transcriptional dual regulator	b1334	b3481
+PD00197	FNR transcriptional dual regulator	b1334	b3476
+PD00197	FNR transcriptional dual regulator	b1334	b3477
+PD00197	FNR transcriptional dual regulator	b1334	b3478
+PD00197	FNR transcriptional dual regulator	b1334	b3479
+PD00197	FNR transcriptional dual regulator	b1334	b3480
+PD00197	FNR transcriptional dual regulator	b1334	b2163
+PD00197	FNR transcriptional dual regulator	b1334	b1324
+PD00197	FNR transcriptional dual regulator	b1334	b1276
+PD00197	FNR transcriptional dual regulator	b1334	b1241
+PD00197	FNR transcriptional dual regulator	b1334	b1182
+PD00197	FNR transcriptional dual regulator	b1334	b0886
+PD00197	FNR transcriptional dual regulator	b1334	b0887
+PD00197	FNR transcriptional dual regulator	b1334	b2579
+PD00197	FNR transcriptional dual regulator	b1334	b0781
+PD00197	FNR transcriptional dual regulator	b1334	b0782
+PD00197	FNR transcriptional dual regulator	b1334	b0783
+PD00197	FNR transcriptional dual regulator	b1334	b0784
+PD00197	FNR transcriptional dual regulator	b1334	b0785
+PD00197	FNR transcriptional dual regulator	b1334	b1612
+PD00197	FNR transcriptional dual regulator	b1334	b0113
+PD00197	FNR transcriptional dual regulator	b1334	b0114
+PD00197	FNR transcriptional dual regulator	b1334	b0115
+PD00197	FNR transcriptional dual regulator	b1334	b0116
+PD00197	FNR transcriptional dual regulator	b1334	b1221
+PD00197	FNR transcriptional dual regulator	b1334	b1222
+PD00197	FNR transcriptional dual regulator	b1334	b2194
+PD00197	FNR transcriptional dual regulator	b1334	b2195
+PD00197	FNR transcriptional dual regulator	b1334	b2196
+PD00197	FNR transcriptional dual regulator	b1334	b2197
+PD00197	FNR transcriptional dual regulator	b1334	b2198
+PD00197	FNR transcriptional dual regulator	b1334	b2199
+PD00197	FNR transcriptional dual regulator	b1334	b2200
+PD00197	FNR transcriptional dual regulator	b1334	b2201
+PD00197	FNR transcriptional dual regulator	b1334	b2202
+PD00197	FNR transcriptional dual regulator	b1334	b2203
+PD00197	FNR transcriptional dual regulator	b1334	b2204
+PD00197	FNR transcriptional dual regulator	b1334	b2205
+PD00197	FNR transcriptional dual regulator	b1334	b2206
+PD00197	FNR transcriptional dual regulator	b1334	b2207
+PD00197	FNR transcriptional dual regulator	b1334	b2208
+PD00197	FNR transcriptional dual regulator	b1334	b2239
+PD00197	FNR transcriptional dual regulator	b1334	b2240
+PD00197	FNR transcriptional dual regulator	b1334	b3908
+PD00197	FNR transcriptional dual regulator	b1334	b4070
+PD00197	FNR transcriptional dual regulator	b1334	b4071
+PD00197	FNR transcriptional dual regulator	b1334	b4072
+PD00197	FNR transcriptional dual regulator	b1334	b4073
+PD00197	FNR transcriptional dual regulator	b1334	b4074
+PD00197	FNR transcriptional dual regulator	b1334	b4075
+PD00197	FNR transcriptional dual regulator	b1334	b4076
+PD00197	FNR transcriptional dual regulator	b1334	b2727
+PD00197	FNR transcriptional dual regulator	b1334	b2728
+PD00197	FNR transcriptional dual regulator	b1334	b2729
+PD00197	FNR transcriptional dual regulator	b1334	b2730
+PD00197	FNR transcriptional dual regulator	b1334	b0034
+PD00197	FNR transcriptional dual regulator	b1334	b2276
+PD00197	FNR transcriptional dual regulator	b1334	b2277
+PD00197	FNR transcriptional dual regulator	b1334	b2278
+PD00197	FNR transcriptional dual regulator	b1334	b2279
+PD00197	FNR transcriptional dual regulator	b1334	b2280
+PD00197	FNR transcriptional dual regulator	b1334	b2281
+PD00197	FNR transcriptional dual regulator	b1334	b2282
+PD00197	FNR transcriptional dual regulator	b1334	b2283
+PD00197	FNR transcriptional dual regulator	b1334	b2284
+PD00197	FNR transcriptional dual regulator	b1334	b2285
+PD00197	FNR transcriptional dual regulator	b1334	b2286
+PD00197	FNR transcriptional dual regulator	b1334	b2287
+PD00197	FNR transcriptional dual regulator	b1334	b2288
+PD00197	FNR transcriptional dual regulator	b1334	b1136
+PD00197	FNR transcriptional dual regulator	b1334	b0903
+PD00197	FNR transcriptional dual regulator	b1334	b0904
+PD00197	FNR transcriptional dual regulator	b1334	b0721
+PD00197	FNR transcriptional dual regulator	b1334	b0722
+PD00197	FNR transcriptional dual regulator	b1334	b0723
+PD00197	FNR transcriptional dual regulator	b1334	b0724
+PD00197	FNR transcriptional dual regulator	b1334	b0725
+PD00197	FNR transcriptional dual regulator	b1334	b0726
+PD00197	FNR transcriptional dual regulator	b1334	b0727
+PD00197	FNR transcriptional dual regulator	b1334	b0728
+PD00197	FNR transcriptional dual regulator	b1334	b0729
+PD00197	FNR transcriptional dual regulator	b1334	b4139
+PD00197	FNR transcriptional dual regulator	b1334	b4122
+PD00197	FNR transcriptional dual regulator	b1334	b1109
+PD00197	FNR transcriptional dual regulator	b1334	b1474
+PD00197	FNR transcriptional dual regulator	b1334	b1475
+PD00197	FNR transcriptional dual regulator	b1334	b1476
+PD00197	FNR transcriptional dual regulator	b1334	b0428
+PD00197	FNR transcriptional dual regulator	b1334	b0429
+PD00197	FNR transcriptional dual regulator	b1334	b0430
+PD00197	FNR transcriptional dual regulator	b1334	b0431
+PD00197	FNR transcriptional dual regulator	b1334	b0432
+PD00197	FNR transcriptional dual regulator	b1334	b2957
+PD00197	FNR transcriptional dual regulator	b1334	b3365
+PD00197	FNR transcriptional dual regulator	b1334	b3366
+PD00197	FNR transcriptional dual regulator	b1334	b3367
+PD00197	FNR transcriptional dual regulator	b1334	b3368
+PD00197	FNR transcriptional dual regulator	b1334	b1223
+PD00197	FNR transcriptional dual regulator	b1334	b1224
+PD00197	FNR transcriptional dual regulator	b1334	b1225
+PD00197	FNR transcriptional dual regulator	b1334	b1226
+PD00197	FNR transcriptional dual regulator	b1334	b1227
+PD00197	FNR transcriptional dual regulator	b1334	b2241
+PD00197	FNR transcriptional dual regulator	b1334	b2242
+PD00197	FNR transcriptional dual regulator	b1334	b2243
+PD00197	FNR transcriptional dual regulator	b1334	b4151
+PD00197	FNR transcriptional dual regulator	b1334	b4152
+PD00197	FNR transcriptional dual regulator	b1334	b4153
+PD00197	FNR transcriptional dual regulator	b1334	b4154
+PD00197	FNR transcriptional dual regulator	b1334	b1334
+PD00197	FNR transcriptional dual regulator	b1334	b0894
+PD00197	FNR transcriptional dual regulator	b1334	b0895
+PD00197	FNR transcriptional dual regulator	b1334	b0896
+PD00196	Fis transcriptional dual regulator	b3261	b4122
+PD00196	Fis transcriptional dual regulator	b3261	b3164
+PD00196	Fis transcriptional dual regulator	b3261	b3165
+PD00196	Fis transcriptional dual regulator	b3261	b3166
+PD00196	Fis transcriptional dual regulator	b3261	b3167
+PD00196	Fis transcriptional dual regulator	b3261	b2507
+PD00196	Fis transcriptional dual regulator	b3261	b2508
+PD00196	Fis transcriptional dual regulator	b3261	b0051
+PD00196	Fis transcriptional dual regulator	b3261	b0052
+PD00196	Fis transcriptional dual regulator	b3261	b3721
+PD00196	Fis transcriptional dual regulator	b3261	b3722
+PD00196	Fis transcriptional dual regulator	b3261	b3723
+PD00196	Fis transcriptional dual regulator	b3261	b1101
+PD00196	Fis transcriptional dual regulator	b3261	b1237
+PD00196	Fis transcriptional dual regulator	b3261	b1480
+PD00196	Fis transcriptional dual regulator	b3261	b2782
+PD00196	Fis transcriptional dual regulator	b3261	b2783
+PD00196	Fis transcriptional dual regulator	b3261	b4111
+PD00196	Fis transcriptional dual regulator	b3261	b4070
+PD00196	Fis transcriptional dual regulator	b3261	b4071
+PD00196	Fis transcriptional dual regulator	b3261	b4072
+PD00196	Fis transcriptional dual regulator	b3261	b4073
+PD00196	Fis transcriptional dual regulator	b3261	b4074
+PD00196	Fis transcriptional dual regulator	b3261	b4075
+PD00196	Fis transcriptional dual regulator	b3261	b4076
+PD00196	Fis transcriptional dual regulator	b3261	b4067
+PD00196	Fis transcriptional dual regulator	b3261	b4068
+PD00196	Fis transcriptional dual regulator	b3261	b4069
+PD00196	Fis transcriptional dual regulator	b3261	b0205
+PD00196	Fis transcriptional dual regulator	b3261	b0204
+PD00196	Fis transcriptional dual regulator	b3261	b0203
+PD00196	Fis transcriptional dual regulator	b3261	b0202
+PD00196	Fis transcriptional dual regulator	b3261	b0201
+PD00196	Fis transcriptional dual regulator	b3261	b2588
+PD00196	Fis transcriptional dual regulator	b3261	b2589
+PD00196	Fis transcriptional dual regulator	b3261	b2590
+PD00196	Fis transcriptional dual regulator	b3261	b2591
+PD00196	Fis transcriptional dual regulator	b3261	b4010
+PD00196	Fis transcriptional dual regulator	b3261	b4009
+PD00196	Fis transcriptional dual regulator	b3261	b4008
+PD00196	Fis transcriptional dual regulator	b3261	b4007
+PD00196	Fis transcriptional dual regulator	b3261	b3272
+PD00196	Fis transcriptional dual regulator	b3261	b3273
+PD00196	Fis transcriptional dual regulator	b3261	b3274
+PD00196	Fis transcriptional dual regulator	b3261	b3275
+PD00196	Fis transcriptional dual regulator	b3261	b3276
+PD00196	Fis transcriptional dual regulator	b3261	b3277
+PD00196	Fis transcriptional dual regulator	b3261	b3278
+PD00196	Fis transcriptional dual regulator	b3261	b3759
+PD00196	Fis transcriptional dual regulator	b3261	b3758
+PD00196	Fis transcriptional dual regulator	b3261	b3757
+PD00196	Fis transcriptional dual regulator	b3261	b3756
+PD00196	Fis transcriptional dual regulator	b3261	b3855
+PD00196	Fis transcriptional dual regulator	b3261	b3854
+PD00196	Fis transcriptional dual regulator	b3261	b3853
+PD00196	Fis transcriptional dual regulator	b3261	b3852
+PD00196	Fis transcriptional dual regulator	b3261	b3851
+PD00196	Fis transcriptional dual regulator	b3261	b3073
+PD00196	Fis transcriptional dual regulator	b3261	b1274
+PD00196	Fis transcriptional dual regulator	b3261	b2276
+PD00196	Fis transcriptional dual regulator	b3261	b2277
+PD00196	Fis transcriptional dual regulator	b3261	b2278
+PD00196	Fis transcriptional dual regulator	b3261	b2279
+PD00196	Fis transcriptional dual regulator	b3261	b2280
+PD00196	Fis transcriptional dual regulator	b3261	b2281
+PD00196	Fis transcriptional dual regulator	b3261	b2282
+PD00196	Fis transcriptional dual regulator	b3261	b2283
+PD00196	Fis transcriptional dual regulator	b3261	b2284
+PD00196	Fis transcriptional dual regulator	b3261	b2285
+PD00196	Fis transcriptional dual regulator	b3261	b2286
+PD00196	Fis transcriptional dual regulator	b3261	b2287
+PD00196	Fis transcriptional dual regulator	b3261	b2288
+PD00196	Fis transcriptional dual regulator	b3261	b3699
+PD00196	Fis transcriptional dual regulator	b3261	b2231
+PD00196	Fis transcriptional dual regulator	b3261	b3971
+PD00196	Fis transcriptional dual regulator	b3261	b3970
+PD00196	Fis transcriptional dual regulator	b3261	b3969
+PD00196	Fis transcriptional dual regulator	b3261	b3968
+PD00196	Fis transcriptional dual regulator	b3261	b3365
+PD00196	Fis transcriptional dual regulator	b3261	b3366
+PD00196	Fis transcriptional dual regulator	b3261	b3367
+PD00196	Fis transcriptional dual regulator	b3261	b3368
+PD00196	Fis transcriptional dual regulator	b3261	b1530
+PD00196	Fis transcriptional dual regulator	b3261	b1531
+PD00196	Fis transcriptional dual regulator	b3261	b1532
+PD00196	Fis transcriptional dual regulator	b3261	b0405
+PD00196	Fis transcriptional dual regulator	b3261	b0118
+PD00196	Fis transcriptional dual regulator	b3261	b3599
+PD00196	Fis transcriptional dual regulator	b3261	b3600
+PD00196	Fis transcriptional dual regulator	b3261	b3601
+PD00196	Fis transcriptional dual regulator	b3261	b4381
+PD00196	Fis transcriptional dual regulator	b3261	b4382
+PD00196	Fis transcriptional dual regulator	b3261	b4383
+PD00196	Fis transcriptional dual regulator	b3261	b4384
+PD00196	Fis transcriptional dual regulator	b3261	b1109
+PD00196	Fis transcriptional dual regulator	b3261	b1241
+PD00196	Fis transcriptional dual regulator	b3261	b0440
+PD00196	Fis transcriptional dual regulator	b3261	b4000
+PD00196	Fis transcriptional dual regulator	b3261	b0116
+PD00196	Fis transcriptional dual regulator	b3261	b4368
+PD00196	Fis transcriptional dual regulator	b3261	b4369
+PD00196	Fis transcriptional dual regulator	b3261	b4370
+PD00196	Fis transcriptional dual regulator	b3261	b4270
+PD00196	Fis transcriptional dual regulator	b3261	b4134
+PD00196	Fis transcriptional dual regulator	b3261	b3976
+PD00196	Fis transcriptional dual regulator	b3261	b3977
+PD00196	Fis transcriptional dual regulator	b3261	b3978
+PD00196	Fis transcriptional dual regulator	b3261	b3979
+PD00196	Fis transcriptional dual regulator	b3261	b3796
+PD00196	Fis transcriptional dual regulator	b3261	b3797
+PD00196	Fis transcriptional dual regulator	b3261	b3798
+PD00196	Fis transcriptional dual regulator	b3261	b3799
+PD00196	Fis transcriptional dual regulator	b3261	b3545
+PD00196	Fis transcriptional dual regulator	b3261	b3168
+PD00196	Fis transcriptional dual regulator	b3261	b3169
+PD00196	Fis transcriptional dual regulator	b3261	b3170
+PD00196	Fis transcriptional dual regulator	b3261	b3171
+PD00196	Fis transcriptional dual regulator	b3261	b2967
+PD00196	Fis transcriptional dual regulator	b3261	b2401
+PD00196	Fis transcriptional dual regulator	b3261	b2402
+PD00196	Fis transcriptional dual regulator	b3261	b2403
+PD00196	Fis transcriptional dual regulator	b3261	b2404
+PD00196	Fis transcriptional dual regulator	b3261	b2396
+PD00196	Fis transcriptional dual regulator	b3261	b2397
+PD00196	Fis transcriptional dual regulator	b3261	b2348
+PD00196	Fis transcriptional dual regulator	b3261	b2189
+PD00196	Fis transcriptional dual regulator	b3261	b1229
+PD00196	Fis transcriptional dual regulator	b3261	b1230
+PD00196	Fis transcriptional dual regulator	b3261	b1231
+PD00196	Fis transcriptional dual regulator	b3261	b1032
+PD00196	Fis transcriptional dual regulator	b3261	b0971
+PD00196	Fis transcriptional dual regulator	b3261	b0743
+PD00196	Fis transcriptional dual regulator	b3261	b0744
+PD00196	Fis transcriptional dual regulator	b3261	b0745
+PD00196	Fis transcriptional dual regulator	b3261	b0664
+PD00196	Fis transcriptional dual regulator	b3261	b0665
+PD00196	Fis transcriptional dual regulator	b3261	b0666
+PD00196	Fis transcriptional dual regulator	b3261	b0668
+PD00196	Fis transcriptional dual regulator	b3261	b0670
+PD00196	Fis transcriptional dual regulator	b3261	b0672
+PD00196	Fis transcriptional dual regulator	b3261	b0673
+PD00196	Fis transcriptional dual regulator	b3261	b0536
+PD00196	Fis transcriptional dual regulator	b3261	b0244
+PD00196	Fis transcriptional dual regulator	b3261	b0216
+PD00196	Fis transcriptional dual regulator	b3261	b3588
+PD00196	Fis transcriptional dual regulator	b3261	b2234
+PD00196	Fis transcriptional dual regulator	b3261	b2235
+PD00196	Fis transcriptional dual regulator	b3261	b3260
+PD00196	Fis transcriptional dual regulator	b3261	b3261
+G7546-MONOMER	GlcC transcriptional dual regulator	b2980	b2975
+G7546-MONOMER	GlcC transcriptional dual regulator	b2980	b2976
+G7546-MONOMER	GlcC transcriptional dual regulator	b2980	b2977
+G7546-MONOMER	GlcC transcriptional dual regulator	b2980	b2978
+G7546-MONOMER	GlcC transcriptional dual regulator	b2980	b2978
+G7546-MONOMER	GlcC transcriptional dual regulator	b2980	b2979
+G7546-MONOMER	GlcC transcriptional dual regulator	b2980	b2980
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b2194
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b2195
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b2196
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b2197
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b2198
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b2199
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b2200
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b2201
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b2202
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b2203
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b2204
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b2205
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b2206
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b2207
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b2208
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b1221
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b1222
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b0785
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b0784
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b0783
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b0782
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b0781
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b2718
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b2719
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b2720
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b2721
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b2722
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b2723
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b2724
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b2725
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b0896
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b0895
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b0894
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b0763
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b0764
+MONOMER0-185	Molybdate-responsive  transcription factor monomer	b0761	b0765
+PD02936	FhlA transcriptional activator	b2731	b2490
+PD02936	FhlA transcriptional activator	b2731	b2489
+PD02936	FhlA transcriptional activator	b2731	b2488
+PD02936	FhlA transcriptional activator	b2731	b2487
+PD02936	FhlA transcriptional activator	b2731	b2486
+PD02936	FhlA transcriptional activator	b2731	b2485
+PD02936	FhlA transcriptional activator	b2731	b2484
+PD02936	FhlA transcriptional activator	b2731	b2483
+PD02936	FhlA transcriptional activator	b2731	b2482
+PD02936	FhlA transcriptional activator	b2731	b2481
+PD02936	FhlA transcriptional activator	b2731	b4079
+PD02936	FhlA transcriptional activator	b2731	b2726
+PD02936	FhlA transcriptional activator	b2731	b2727
+PD02936	FhlA transcriptional activator	b2731	b2728
+PD02936	FhlA transcriptional activator	b2731	b2729
+PD02936	FhlA transcriptional activator	b2731	b2730
+PD02936	FhlA transcriptional activator	b2731	b2712
+PD02936	FhlA transcriptional activator	b2731	b2713
+PD02936	FhlA transcriptional activator	b2731	b2718
+PD02936	FhlA transcriptional activator	b2731	b2719
+PD02936	FhlA transcriptional activator	b2731	b2720
+PD02936	FhlA transcriptional activator	b2731	b2721
+PD02936	FhlA transcriptional activator	b2731	b2722
+PD02936	FhlA transcriptional activator	b2731	b2723
+PD02936	FhlA transcriptional activator	b2731	b2724
+PD02936	FhlA transcriptional activator	b2731	b2725
+EG11519-MONOMER	nickel-responsive transcriptional regulator	b3481	b3481
+EG11519-MONOMER	nickel-responsive transcriptional regulator	b3481	b3476
+EG11519-MONOMER	nickel-responsive transcriptional regulator	b3481	b3477
+EG11519-MONOMER	nickel-responsive transcriptional regulator	b3481	b3478
+EG11519-MONOMER	nickel-responsive transcriptional regulator	b3481	b3479
+EG11519-MONOMER	nickel-responsive transcriptional regulator	b3481	b3480
+EG20253-MONOMER	XylR transcriptional activator	b3569	b3566
+EG20253-MONOMER	XylR transcriptional activator	b3569	b3567
+EG20253-MONOMER	XylR transcriptional activator	b3569	b3568
+EG20253-MONOMER	XylR transcriptional activator	b3569	b3569
+EG20253-MONOMER	XylR transcriptional activator	b3569	b3564
+EG20253-MONOMER	XylR transcriptional activator	b3569	b3565
+PD00291	CynR transcriptional dual regulator	b0338	b0338
+PD00291	CynR transcriptional dual regulator	b0338	b0339
+PD00291	CynR transcriptional dual regulator	b0338	b0340
+PD00291	CynR transcriptional dual regulator	b0338	b0341
+PD00413	TyrR transcriptional dual regulator	b1323	b1323
+PD00413	TyrR transcriptional dual regulator	b1323	b0754
+PD00413	TyrR transcriptional dual regulator	b1323	b0112
+PD00413	TyrR transcriptional dual regulator	b1323	b1907
+PD00413	TyrR transcriptional dual regulator	b1323	b3161
+PD00413	TyrR transcriptional dual regulator	b1323	b4054
+PD00413	TyrR transcriptional dual regulator	b1323	b0388
+PD00413	TyrR transcriptional dual regulator	b1323	b0389
+PD00413	TyrR transcriptional dual regulator	b1323	b0390
+PD00413	TyrR transcriptional dual regulator	b1323	b2600
+PD00413	TyrR transcriptional dual regulator	b1323	b2601
+PD00208	MelR transcriptional dual regulator	b4118	b4118
+PD00208	MelR transcriptional dual regulator	b4118	b4119
+PD00208	MelR transcriptional dual regulator	b4118	b4120
+PD03831	DnaA transcriptional dual regulator	b3702	b1415
+PD03831	DnaA transcriptional dual regulator	b3702	b3863
+PD03831	DnaA transcriptional dual regulator	b3702	b3700
+PD03831	DnaA transcriptional dual regulator	b3702	b3701
+PD03831	DnaA transcriptional dual regulator	b3702	b3702
+PD03831	DnaA transcriptional dual regulator	b3702	b2507
+PD03831	DnaA transcriptional dual regulator	b3702	b2508
+PD03831	DnaA transcriptional dual regulator	b3702	b3461
+PD03831	DnaA transcriptional dual regulator	b3702	b2234
+PD03831	DnaA transcriptional dual regulator	b3702	b2235
+PD00237	MalT transcriptional activator	b3418	b3416
+PD00237	MalT transcriptional activator	b3418	b3417
+PD00237	MalT transcriptional activator	b3418	b0403
+PD00237	MalT transcriptional activator	b3418	b4032
+PD00237	MalT transcriptional activator	b3418	b4033
+PD00237	MalT transcriptional activator	b3418	b4034
+PD00237	MalT transcriptional activator	b3418	b4035
+PD00237	MalT transcriptional activator	b3418	b4036
+PD00237	MalT transcriptional activator	b3418	b4037
+PD00237	MalT transcriptional activator	b3418	b3571
+PD04032	MetJ transcriptional repressor	b3938	b0605
+PD04032	MetJ transcriptional repressor	b3938	b0606
+PD04032	MetJ transcriptional repressor	b3938	b2942
+PD04032	MetJ transcriptional repressor	b3938	b3940
+PD04032	MetJ transcriptional repressor	b3938	b3939
+PD04032	MetJ transcriptional repressor	b3938	b0197
+PD04032	MetJ transcriptional repressor	b3938	b0198
+PD04032	MetJ transcriptional repressor	b3938	b0199
+PD04032	MetJ transcriptional repressor	b3938	b4013
+PD04032	MetJ transcriptional repressor	b3938	b3941
+PD04032	MetJ transcriptional repressor	b3938	b3008
+PD00353	Lrp transcriptional dual regulator	b0889	b4187
+PD00353	Lrp transcriptional dual regulator	b0889	b0908
+PD00353	Lrp transcriptional dual regulator	b0889	b3418
+PD00353	Lrp transcriptional dual regulator	b0889	b0071
+PD00353	Lrp transcriptional dual regulator	b0889	b0072
+PD00353	Lrp transcriptional dual regulator	b0889	b0073
+PD00353	Lrp transcriptional dual regulator	b0889	b0074
+PD00353	Lrp transcriptional dual regulator	b0889	b0075
+PD00353	Lrp transcriptional dual regulator	b0889	b4320
+PD00353	Lrp transcriptional dual regulator	b0889	b4319
+PD00353	Lrp transcriptional dual regulator	b0889	b4318
+PD00353	Lrp transcriptional dual regulator	b0889	b4317
+PD00353	Lrp transcriptional dual regulator	b0889	b4316
+PD00353	Lrp transcriptional dual regulator	b0889	b4315
+PD00353	Lrp transcriptional dual regulator	b0889	b4314
+PD00353	Lrp transcriptional dual regulator	b0889	b4313
+PD00353	Lrp transcriptional dual regulator	b0889	b2903
+PD00353	Lrp transcriptional dual regulator	b0889	b2904
+PD00353	Lrp transcriptional dual regulator	b0889	b2905
+PD00353	Lrp transcriptional dual regulator	b0889	b2669
+PD00353	Lrp transcriptional dual regulator	b0889	b1814
+PD00353	Lrp transcriptional dual regulator	b0889	b1243
+PD00353	Lrp transcriptional dual regulator	b0889	b1244
+PD00353	Lrp transcriptional dual regulator	b0889	b1245
+PD00353	Lrp transcriptional dual regulator	b0889	b1246
+PD00353	Lrp transcriptional dual regulator	b0889	b1247
+PD00353	Lrp transcriptional dual regulator	b0889	b0929
+PD00353	Lrp transcriptional dual regulator	b0889	b4129
+PD00353	Lrp transcriptional dual regulator	b0889	b3454
+PD00353	Lrp transcriptional dual regulator	b0889	b3455
+PD00353	Lrp transcriptional dual regulator	b0889	b3456
+PD00353	Lrp transcriptional dual regulator	b0889	b3457
+PD00353	Lrp transcriptional dual regulator	b0889	b3458
+PD00353	Lrp transcriptional dual regulator	b0889	b3212
+PD00353	Lrp transcriptional dual regulator	b0889	b3213
+PD00353	Lrp transcriptional dual regulator	b0889	b3214
+PD00353	Lrp transcriptional dual regulator	b0889	b0889
+PD00353	Lrp transcriptional dual regulator	b0889	b3616
+PD00353	Lrp transcriptional dual regulator	b0889	b3617
+PD00353	Lrp transcriptional dual regulator	b0889	b0077
+PD00353	Lrp transcriptional dual regulator	b0889	b0078
+PD00353	Lrp transcriptional dual regulator	b0889	b0907
+PD00353	Lrp transcriptional dual regulator	b0889	b2663
+PD00353	Lrp transcriptional dual regulator	b0889	b2662
+PD00353	Lrp transcriptional dual regulator	b0889	b2661
+PD00353	Lrp transcriptional dual regulator	b0889	b2660
+PD00353	Lrp transcriptional dual regulator	b0889	b2659
+PD00353	Lrp transcriptional dual regulator	b0889	b4376
+PD00353	Lrp transcriptional dual regulator	b0889	b4439
+PD00353	Lrp transcriptional dual regulator	b0889	b2913
+PD00353	Lrp transcriptional dual regulator	b0889	b1482
+PD00353	Lrp transcriptional dual regulator	b0889	b2163
+PD00353	Lrp transcriptional dual regulator	b0889	b3767
+PD00353	Lrp transcriptional dual regulator	b0889	b3772
+PD00353	Lrp transcriptional dual regulator	b0889	b3771
+PD00353	Lrp transcriptional dual regulator	b0889	b3770
+PD00353	Lrp transcriptional dual regulator	b0889	b3769
+PD00353	Lrp transcriptional dual regulator	b0889	b4488
+PD00353	Lrp transcriptional dual regulator	b0889	b3766
+PD00353	Lrp transcriptional dual regulator	b0889	b1189
+PD00353	Lrp transcriptional dual regulator	b0889	b1190
+PD00353	Lrp transcriptional dual regulator	b0889	b2215
+PD00353	Lrp transcriptional dual regulator	b0889	b3460
+G6201-MONOMER	MhpR transcriptional regulator	b0346	b0351
+G6201-MONOMER	MhpR transcriptional regulator	b0346	b0352
+G6201-MONOMER	MhpR transcriptional regulator	b0346	b0350
+G6201-MONOMER	MhpR transcriptional regulator	b0346	b0349
+G6201-MONOMER	MhpR transcriptional regulator	b0346	b0348
+G6201-MONOMER	MhpR transcriptional regulator	b0346	b0347
+G7891-MONOMER	IdnR transcriptional regulator	b4264	b4268
+G7891-MONOMER	IdnR transcriptional regulator	b4264	b4264
+G7891-MONOMER	IdnR transcriptional regulator	b4264	b4265
+G7891-MONOMER	IdnR transcriptional regulator	b4264	b4266
+G7891-MONOMER	IdnR transcriptional regulator	b4264	b4267
+G7891-MONOMER	IdnR transcriptional regulator	b4264	b4476
+G7891-MONOMER	IdnR transcriptional regulator	b4264	b3437
+BIOTINLIG-MONOMER	BirA transcriptional repressor / biotin-[acetyl-CoA-carboxylase] ligase	b3973	b0774
+BIOTINLIG-MONOMER	BirA transcriptional repressor / biotin-[acetyl-CoA-carboxylase] ligase	b3973	b0775
+BIOTINLIG-MONOMER	BirA transcriptional repressor / biotin-[acetyl-CoA-carboxylase] ligase	b3973	b0776
+BIOTINLIG-MONOMER	BirA transcriptional repressor / biotin-[acetyl-CoA-carboxylase] ligase	b3973	b0777
+BIOTINLIG-MONOMER	BirA transcriptional repressor / biotin-[acetyl-CoA-carboxylase] ligase	b3973	b0778
+PD00222	RhaR transcriptional activator	b3906	b3905
+PD00222	RhaR transcriptional activator	b3906	b3906
+PD00474	NhaR transcriptional activator	b0020	b1482
+PD00474	NhaR transcriptional activator	b0020	b0019
+PD03938	MetR transcriptional activator	b3828	b4019
+PD03938	MetR transcriptional activator	b3828	b4013
+PD03938	MetR transcriptional activator	b3828	b2551
+G7854-MONOMER	putative DeoR-type transcriptional regulator	b4191	b4192
+G7854-MONOMER	putative DeoR-type transcriptional regulator	b4191	b4198
+G7854-MONOMER	putative DeoR-type transcriptional regulator	b4191	b4197
+G7854-MONOMER	putative DeoR-type transcriptional regulator	b4191	b4196
+G7854-MONOMER	putative DeoR-type transcriptional regulator	b4191	b4195
+G7854-MONOMER	putative DeoR-type transcriptional regulator	b4191	b4194
+G7854-MONOMER	putative DeoR-type transcriptional regulator	b4191	b4193
+G7821-MONOMER	AlsR transcriptional repressor	b4089	b4090
+G7821-MONOMER	AlsR transcriptional repressor	b4089	b4085
+G7821-MONOMER	AlsR transcriptional repressor	b4089	b4086
+G7821-MONOMER	AlsR transcriptional repressor	b4089	b4087
+G7821-MONOMER	AlsR transcriptional repressor	b4089	b4088
+G7821-MONOMER	AlsR transcriptional repressor	b4089	b4089
+G7678-MONOMER	NanR transcriptional regulator	b3226	b4311
+G7678-MONOMER	NanR transcriptional regulator	b3226	b3221
+G7678-MONOMER	NanR transcriptional regulator	b3226	b3222
+G7678-MONOMER	NanR transcriptional regulator	b3226	b3223
+G7678-MONOMER	NanR transcriptional regulator	b3226	b3224
+G7678-MONOMER	NanR transcriptional regulator	b3226	b3225
+G7630-MONOMER	AgaR transcriptional regulator	b3131	b3141
+G7630-MONOMER	AgaR transcriptional regulator	b3131	b3140
+G7630-MONOMER	AgaR transcriptional regulator	b3131	b3139
+G7630-MONOMER	AgaR transcriptional regulator	b3131	b3138
+G7630-MONOMER	AgaR transcriptional regulator	b3131	b3137
+G7630-MONOMER	AgaR transcriptional regulator	b3131	b3136
+G7630-MONOMER	AgaR transcriptional regulator	b3131	b3135
+G7630-MONOMER	AgaR transcriptional regulator	b3131	b3134
+G7630-MONOMER	AgaR transcriptional regulator	b3131	b3133
+G7630-MONOMER	AgaR transcriptional regulator	b3131	b3132
+G7575-MONOMER	putative 2-component transcriptional regulator	b3025	b1891
+G7575-MONOMER	putative 2-component transcriptional regulator	b3025	b1892
+G7326-MONOMER	IscR transcriptional regulator	b2531	b2528
+G7326-MONOMER	IscR transcriptional regulator	b2531	b2529
+G7326-MONOMER	IscR transcriptional regulator	b2531	b2530
+G7326-MONOMER	IscR transcriptional regulator	b2531	b2531
+G7308-MONOMER	HyfR transcriptional activator	b2491	b2490
+G7308-MONOMER	HyfR transcriptional activator	b2491	b2489
+G7308-MONOMER	HyfR transcriptional activator	b2491	b2488
+G7308-MONOMER	HyfR transcriptional activator	b2491	b2487
+G7308-MONOMER	HyfR transcriptional activator	b2491	b2486
+G7308-MONOMER	HyfR transcriptional activator	b2491	b2485
+G7308-MONOMER	HyfR transcriptional activator	b2491	b2484
+G7308-MONOMER	HyfR transcriptional activator	b2491	b2483
+G7308-MONOMER	HyfR transcriptional activator	b2491	b2482
+G7308-MONOMER	HyfR transcriptional activator	b2491	b2481
+G7072-MONOMER	Nac transcriptional activator	b1988	b3212
+G7072-MONOMER	Nac transcriptional activator	b1988	b3213
+G7072-MONOMER	Nac transcriptional activator	b1988	b3214
+G7072-MONOMER	Nac transcriptional activator	b1988	b2393
+G7072-MONOMER	Nac transcriptional activator	b1988	b0336
+G7072-MONOMER	Nac transcriptional activator	b1988	b0337
+G7072-MONOMER	Nac transcriptional activator	b1988	b2663
+G7072-MONOMER	Nac transcriptional activator	b1988	b2662
+G7072-MONOMER	Nac transcriptional activator	b1988	b2661
+G7072-MONOMER	Nac transcriptional activator	b1988	b3743
+G7072-MONOMER	Nac transcriptional activator	b1988	b1761
+G7072-MONOMER	Nac transcriptional activator	b1988	b1988
+G7071-MONOMER	Cbl transcriptional activator	b1987	b0368
+G7071-MONOMER	Cbl transcriptional activator	b1987	b0367
+G7071-MONOMER	Cbl transcriptional activator	b1987	b0366
+G7071-MONOMER	Cbl transcriptional activator	b1987	b0365
+G6882-MONOMER	SlyA transcriptional activator	b1642	b1182
+G6867-MONOMER	UidR transcriptional regulator	b1618	b1617
+G6867-MONOMER	UidR transcriptional regulator	b1618	b1618
+G6789-MONOMER	putative ARAC-type regulatory protein	b1499	b3512
+G6720-MONOMER	PaaX transcriptional regulator	b1399	b1387
+G6720-MONOMER	PaaX transcriptional regulator	b1399	b1398
+G6720-MONOMER	PaaX transcriptional regulator	b1399	b1397
+G6720-MONOMER	PaaX transcriptional regulator	b1399	b1396
+G6720-MONOMER	PaaX transcriptional regulator	b1399	b1395
+G6720-MONOMER	PaaX transcriptional regulator	b1399	b1394
+G6720-MONOMER	PaaX transcriptional regulator	b1399	b1393
+G6720-MONOMER	PaaX transcriptional regulator	b1399	b1392
+G6720-MONOMER	PaaX transcriptional regulator	b1399	b1391
+G6720-MONOMER	PaaX transcriptional regulator	b1399	b1390
+G6720-MONOMER	PaaX transcriptional regulator	b1399	b1389
+G6720-MONOMER	PaaX transcriptional regulator	b1399	b1388
+G6319-MONOMER	CusR transcriptional activator	b0571	b0575
+G6319-MONOMER	CusR transcriptional activator	b0571	b0574
+G6319-MONOMER	CusR transcriptional activator	b0571	b0573
+G6319-MONOMER	CusR transcriptional activator	b0571	b0572
+G6263-MONOMER	CueR transcriptional activator	b0487	b0123
+G6263-MONOMER	CueR transcriptional activator	b0487	b0484
+G6088-MONOMER	CaiF transcriptional activator	b0034	b0035
+G6088-MONOMER	CaiF transcriptional activator	b0034	b0036
+G6088-MONOMER	CaiF transcriptional activator	b0034	b0037
+G6088-MONOMER	CaiF transcriptional activator	b0034	b0038
+G6088-MONOMER	CaiF transcriptional activator	b0034	b0039
+G6088-MONOMER	CaiF transcriptional activator	b0034	b0040
+G6088-MONOMER	CaiF transcriptional activator	b0034	b0044
+G6088-MONOMER	CaiF transcriptional activator	b0034	b0043
+G6088-MONOMER	CaiF transcriptional activator	b0034	b0042
+G6088-MONOMER	CaiF transcriptional activator	b0034	b0041
+EG20249-MONOMER	UxuR transcriptional regulator	b4324	b4321
+EG20249-MONOMER	UxuR transcriptional regulator	b4324	b1617
+EG20249-MONOMER	UxuR transcriptional regulator	b4324	b4323
+EG20249-MONOMER	UxuR transcriptional regulator	b4324	b4322
+EG20249-MONOMER	UxuR transcriptional regulator	b4324	b4324
+EG12386-MONOMER	CsiR transcriptional repressor	b2664	b2663
+EG12386-MONOMER	CsiR transcriptional repressor	b2664	b2662
+EG12386-MONOMER	CsiR transcriptional repressor	b2664	b2661
+EG12386-MONOMER	CsiR transcriptional repressor	b2664	b2660
+EG12386-MONOMER	CsiR transcriptional repressor	b2664	b2659
+EG12356-MONOMER	RtcR transcriptional regulator	b3422	b4475
+EG12356-MONOMER	RtcR transcriptional regulator	b3422	b3421
+EG12344-MONOMER	PspF transcriptional activator	b1303	b4050
+EG12344-MONOMER	PspF transcriptional activator	b1303	b1304
+EG12344-MONOMER	PspF transcriptional activator	b1303	b1305
+EG12344-MONOMER	PspF transcriptional activator	b1303	b1306
+EG12344-MONOMER	PspF transcriptional activator	b1303	b1307
+EG12344-MONOMER	PspF transcriptional activator	b1303	b1308
+EG12335-MONOMER	SdaR transcriptional regulator	b0162	b2787
+EG12335-MONOMER	SdaR transcriptional regulator	b0162	b2788
+EG12335-MONOMER	SdaR transcriptional regulator	b0162	b2789
+EG12335-MONOMER	SdaR transcriptional regulator	b0162	b3128
+EG12335-MONOMER	SdaR transcriptional regulator	b0162	b3123
+EG12335-MONOMER	SdaR transcriptional regulator	b0162	b3124
+EG12335-MONOMER	SdaR transcriptional regulator	b0162	b3125
+EG12335-MONOMER	SdaR transcriptional regulator	b0162	b3126
+EG12335-MONOMER	SdaR transcriptional regulator	b0162	b3127
+EG12335-MONOMER	SdaR transcriptional regulator	b0162	b0162
+EG12278-MONOMER	YiaJ transcriptional repressor	b3574	b3577
+EG12278-MONOMER	YiaJ transcriptional repressor	b3574	b3583
+EG12278-MONOMER	YiaJ transcriptional repressor	b3574	b3582
+EG12278-MONOMER	YiaJ transcriptional repressor	b3574	b3581
+EG12278-MONOMER	YiaJ transcriptional repressor	b3574	b3580
+EG12278-MONOMER	YiaJ transcriptional repressor	b3574	b3579
+EG12278-MONOMER	YiaJ transcriptional repressor	b3574	b3578
+EG12278-MONOMER	YiaJ transcriptional repressor	b3574	b3576
+EG12278-MONOMER	YiaJ transcriptional repressor	b3574	b3575
+EG12243-MONOMER	GadX transcriptional activator	b3516	b2741
+EG12243-MONOMER	GadX transcriptional activator	b3516	b3511
+EG12243-MONOMER	GadX transcriptional activator	b3516	b3509
+EG12243-MONOMER	GadX transcriptional activator	b3516	b3510
+EG12243-MONOMER	GadX transcriptional activator	b3516	b4131
+EG12243-MONOMER	GadX transcriptional activator	b3516	b4132
+EG12243-MONOMER	GadX transcriptional activator	b3516	b0451
+EG12243-MONOMER	GadX transcriptional activator	b3516	b0450
+EG12243-MONOMER	GadX transcriptional activator	b3516	b0485
+EG12243-MONOMER	GadX transcriptional activator	b3516	b0439
+EG12243-MONOMER	GadX transcriptional activator	b3516	b1237
+EG12243-MONOMER	GadX transcriptional activator	b3516	b0674
+EG12243-MONOMER	GadX transcriptional activator	b3516	b1492
+EG12243-MONOMER	GadX transcriptional activator	b3516	b1493
+EG12243-MONOMER	GadX transcriptional activator	b3516	b3516
+EG12243-MONOMER	GadX transcriptional activator	b3516	b3517
+EG12242-MONOMER	GadWtranscriptional repressor	b3515	b1492
+EG12242-MONOMER	GadWtranscriptional repressor	b3515	b1493
+EG12242-MONOMER	GadWtranscriptional repressor	b3515	b3516
+EG12242-MONOMER	GadWtranscriptional repressor	b3515	b3517
+EG12202-MONOMER	TreR transcriptional repressor	b4241	b4239
+EG12202-MONOMER	TreR transcriptional repressor	b4241	b4240
+EG12179-MONOMER	CspE transcriptional repressor	b0623	b3556
+EG12123-MONOMER	LrhA transcriptional repressor	b2289	b2289
+EG12123-MONOMER	LrhA transcriptional repressor	b2289	b1891
+EG12123-MONOMER	LrhA transcriptional repressor	b2289	b1892
+EG12108-MONOMER	transcriptional regulator of the anaerobic response to reactive nitrogen species	b2709	b2711
+EG12108-MONOMER	transcriptional regulator of the anaerobic response to reactive nitrogen species	b2709	b2710
+EG12031-MONOMER	yeiL transcriptional activator	b2163	b2163
+EG11969-MONOMER	ZntR transcriptional regulator	b3292	b3469
+EG11966-MONOMER	AdiY transcriptional activator	b4116	b4117
+EG11962-MONOMER	LctR transcriptional repressor	b3604	b3605
+EG11962-MONOMER	LctR transcriptional repressor	b3604	b3604
+EG11962-MONOMER	LctR transcriptional repressor	b3604	b3603
+EG11929-MONOMER	Zur transcriptional regulator	b4046	b1859
+EG11929-MONOMER	Zur transcriptional regulator	b4046	b1858
+EG11544-MONOMER	GadE transcriptional activator	b3512	b3512
+EG11544-MONOMER	GadE transcriptional activator	b3512	b0178
+EG11544-MONOMER	GadE transcriptional activator	b3512	b2029
+EG11544-MONOMER	GadE transcriptional activator	b3512	b0428
+EG11544-MONOMER	GadE transcriptional activator	b3512	b0429
+EG11544-MONOMER	GadE transcriptional activator	b3512	b0430
+EG11544-MONOMER	GadE transcriptional activator	b3512	b0431
+EG11544-MONOMER	GadE transcriptional activator	b3512	b0432
+EG11544-MONOMER	GadE transcriptional activator	b3512	b4131
+EG11544-MONOMER	GadE transcriptional activator	b3512	b4132
+EG11544-MONOMER	GadE transcriptional activator	b3512	b3980
+EG11544-MONOMER	GadE transcriptional activator	b3512	b4177
+EG11544-MONOMER	GadE transcriptional activator	b3512	b0889
+EG11544-MONOMER	GadE transcriptional activator	b3512	b1923
+EG11544-MONOMER	GadE transcriptional activator	b3512	b3511
+EG11544-MONOMER	GadE transcriptional activator	b3512	b3509
+EG11544-MONOMER	GadE transcriptional activator	b3512	b3510
+EG11544-MONOMER	GadE transcriptional activator	b3512	b1951
+EG11544-MONOMER	GadE transcriptional activator	b3512	b3212
+EG11544-MONOMER	GadE transcriptional activator	b3512	b3213
+EG11544-MONOMER	GadE transcriptional activator	b3512	b3214
+EG11544-MONOMER	GadE transcriptional activator	b3512	b3516
+EG11544-MONOMER	GadE transcriptional activator	b3512	b3517
+EG11449-MONOMER	HdfR transcriptional regulator	b4480	b1891
+EG11449-MONOMER	HdfR transcriptional regulator	b4480	b1892
+EG11394-MONOMER	FabR transcriptional repressor	b3963	b2323
+EG11394-MONOMER	FabR transcriptional repressor	b3963	b0954
+EG11149-MONOMER	GcvR transcriptional repressor	b2479	b4443
+EG11149-MONOMER	GcvR transcriptional repressor	b2479	b2903
+EG11149-MONOMER	GcvR transcriptional repressor	b2479	b2904
+EG11149-MONOMER	GcvR transcriptional repressor	b2479	b2905
+EG11146-MONOMER	XapR transcriptional activator	b2405	b2406
+EG11146-MONOMER	XapR transcriptional activator	b2405	b2407
+EG11088-MONOMER	PdhR transcriptional dual regulator	b0113	b2579
+EG11088-MONOMER	PdhR transcriptional dual regulator	b0113	b0113
+EG11088-MONOMER	PdhR transcriptional dual regulator	b0113	b0114
+EG11088-MONOMER	PdhR transcriptional dual regulator	b0113	b0115
+EG11088-MONOMER	PdhR transcriptional dual regulator	b0113	b0116
+EG11088-MONOMER	PdhR transcriptional dual regulator	b0113	b3605
+EG11088-MONOMER	PdhR transcriptional dual regulator	b0113	b3604
+EG11088-MONOMER	PdhR transcriptional dual regulator	b0113	b3603
+EG10603-MONOMER	EmrR transcriptional regulator	b2684	b2684
+EG10603-MONOMER	EmrR transcriptional regulator	b2684	b2685
+EG10603-MONOMER	EmrR transcriptional regulator	b2684	b2686
+EG10490-MONOMER	ArgP transcriptional activator	b2916	b2234
+EG10490-MONOMER	ArgP transcriptional activator	b2916	b2235
+EG10490-MONOMER	ArgP transcriptional activator	b2916	b3700
+EG10490-MONOMER	ArgP transcriptional activator	b2916	b3701
+EG10490-MONOMER	ArgP transcriptional activator	b2916	b3702
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b1194
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b3525
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b2712
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b2713
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b4070
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b4071
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b4072
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b4073
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b4074
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b4075
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b4076
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b2241
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b2242
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b2243
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b3236
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b2148
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b2149
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b2150
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b1944
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b1945
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b1946
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b1947
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b1948
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b1949
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b1950
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b1920
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b1921
+EG10320-MONOMER	FlhD transcriptional dual regulator	b1892	b1922
+EG10143-MONOMER	ChbR transcriptional regulator	b1735	b1733
+EG10143-MONOMER	ChbR transcriptional regulator	b1735	b1734
+EG10143-MONOMER	ChbR transcriptional regulator	b1735	b1735
+EG10143-MONOMER	ChbR transcriptional regulator	b1735	b1736
+EG10143-MONOMER	ChbR transcriptional regulator	b1735	b1737
+EG10143-MONOMER	ChbR transcriptional regulator	b1735	b1738
