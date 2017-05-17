@@ -68,7 +68,7 @@ def read_fsas(ec_dir='/home/users/assafp/Database/EcoCyc/current/data'):
     from Bio import SeqIO
     fsa_seqs = {}
     for fsa_name in glob.glob("%s/*-*.fsa"%(ec_dir)):
-        fsa_seqs[fsa_name.rsplit('.',1)[0].split('-',1)[1]] =\
+        fsa_seqs[fsa_name.rsplit('/',1)[1].rsplit('.',1)[0].split('-',1)[1]] =\
                      SeqIO.read(open(fsa_name), 'fasta').seq
     return fsa_seqs
 

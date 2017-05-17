@@ -32,8 +32,7 @@ def flat_list(list_to_flat):
 
 # Functions for simple mapping (single fragment)
 def run_bwa(bwa_cmd, fname1, fname2, output_dir, output_prefix, mismatches,
-            fasta_genome, params_aln, params_sampe, params_samse, samtools_cmd,
-            processors=1):
+            fasta_genome, params_aln, params_sampe, params_samse, samtools_cmd):
     """
     Run bwa on paired or single end fastq files. write a sorted bam and a bai
     file
@@ -49,7 +48,6 @@ def run_bwa(bwa_cmd, fname1, fname2, output_dir, output_prefix, mismatches,
     - `params_sampe`: extra paarmeters for sampe execution
     - `params_samse`: extra parameters for samse execution
     - `samtools_cmd`: samtools command
-    - `processors`: Number of processors to utilize
 
     Return
     - `bamfile`: Output bam file name
@@ -59,7 +57,7 @@ def run_bwa(bwa_cmd, fname1, fname2, output_dir, output_prefix, mismatches,
    
     # Added 11.2.17 - bug fix for adding of the params_aln parameters.
     # This param was ignored when using the splitting option of subprocess.
-    next_cmd = [bwa_cmd, 'aln', '-n', str(mismatches), '-t', str(processors)]
+    next_cmd = [bwa_cmd, 'aln', '-n', str(mismatches)]
     next_cmd.extend(params_aln.split())
     next_cmd.extend([fasta_genome, fname1])
 
@@ -68,7 +66,7 @@ def run_bwa(bwa_cmd, fname1, fname2, output_dir, output_prefix, mismatches,
 
     if fname2:
         sai2 = NamedTemporaryFile(dir=output_dir)
-        next_cmd = [bwa_cmd, 'aln', '-n', str(mismatches), '-t', str(processors)]
+        next_cmd = [bwa_cmd, 'aln', '-n', str(mismatches)]
         next_cmd.extend(params_aln.split())
         next_cmd.extend([fasta_genome, fname2])
         logging.info("Executing %s", ' '.join(next_cmd))
@@ -356,6 +354,8 @@ def read_transcripts(trans_gff, feature='exon', identifier='gene_id'):
     """
     tus = {}
     for line in csv.reader(open(trans_gff), delimiter='\t'):
+        if line[0].startswith('#') or line[0].startswith('@'):
+            continue
         if line[2] != feature:
             continue
         ids_dict = {}
