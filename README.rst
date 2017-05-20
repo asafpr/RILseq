@@ -92,9 +92,9 @@ The coverage of single fragments can be viewed in UCSC genome browser for instan
 
 Data Files
 ----------
-This package works well for E. coli K12 (RefSeq NC_000913.2 genome). The data
-directory contains the genome (E_coli_K12/genome.fa), the EcoCyc genes gff file and the
-EcoCyc transcripts gff file. These files and other in the directory are based on EcoCyc version 19.0 and include data from BioCyCTM pathway/genome database under license from SRI international. 
+This package works well for E. coli K12 (RefSeq NC_000913.2 genome and RefSeq NC_000913.3 genome). The data
+directory contains two separate sub directories temred ver2 and ver3 for each of the two genome versions which
+includesthe genome *.fa, the EcoCyc genes gff file and the EcoCyc transcripts gff file. These files and others in the ver2 and ver3 directories are based on EcoCyc version 19.0 and 20.0 respectively and include data from BioCyC(TM) pathway/genome database under license from SRI international. 
 The genome should be indexed using bwa index genome.fa before using it. The two gff files can be generated using the scripts::
 
     generate_transcripts_gff.py EcoCyc_data_dir
@@ -103,7 +103,7 @@ and::
 
     generate_genes_gff.py EcoCyc_data_dir
 
-There are two additional files in the data directory: a curated list of targets
+There are two additional files in the ver2 data directory: a curated list of targets
 taken from EcoCyc with slight changes and a table of REP elements (used for annotation of results), this table was downloaded from:  http://ecocyc.org/group?id=biocyc14-8223-3640227683 
 
 Requirements
