@@ -59,12 +59,12 @@ def process_command_line(argv):
         ' meaning this is the highest amount of IP reads that can be obtained'
         ' in this library given the amount of total RNA.')
     parser.add_argument(
-        '--ec_dir', #default='/home/users/assafp/Database/EcoCyc/19.0/data',
-        help='EcoCyc data dir, used to map the regions to genes. If not'
+        '--bc_dir', #default='/home/users/assafp/Database/EcoCyc/19.0/data',
+        help='BioCyc data dir, used to map the regions to genes. If not'
         ' given only the regions will be reported')
     parser.add_argument(
         '--ribozero', default=False, action='store_true',
-        help='Remove rRNA from the list of chimeric reads.')
+        help='Remove rRNA prior to the statistical analysis.')
     parser.add_argument(
         '--all_interactions', default=False, action='store_true',
         help='Skip all statistical tests and report all the interactions.')
@@ -145,10 +145,10 @@ def process_command_line(argv):
 
 def main(argv=None):
     settings = process_command_line(argv)
-    if settings.ribozero and settings.ec_dir:
+    if settings.ribozero and settings.bc_dir:
         try:
             uid_pos,_,_,_,_,rRNAs = RILseq.ecocyc_parser.read_genes_data(
-                settings.ec_dir)
+                settings.bc_dir)
         except IOError:
             raise 
         rr_pos = []
@@ -259,7 +259,7 @@ def main(argv=None):
     # Read the additional data to decorate the results with
     RILseq.report_interactions(
         region_interactions, sys.stdout, interacting_regions, settings.seglen,
-        settings.ec_dir, settings.genome, settings.EC_chrlist, settings.refseq_dir,
+        settings.bc_dir, settings.genome, settings.EC_chrlist, settings.refseq_dir,
         settings.targets_file, settings.rep_table, settings.single_counts,
         settings.shuffles, settings.RNAup_cmd, settings.servers,
         settings.length, settings.est_utr_lens, settings.pad_seqs,

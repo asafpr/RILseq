@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 
 """
 Read files with interactions summary (with or without p-values) and plot
@@ -7,6 +7,11 @@ in two libraries. The script will also scatter plot the single reads count
 (above the diagonal). On the diagonal print the scatter of singles vs
 interactions. In addition computes the correlation of these numbers and
 plot a heatmap of the correlations.
+
+NOTE: 26/1/16 I added small changes:
+1. added to scatit another variable with the name of the corr type i.e. single-single etc..
+2. I print within scatit the type names r and p-val to the stdout
+
 """
 
 import sys
@@ -16,6 +21,7 @@ from mpl_toolkits.axes_grid1 import ImageGrid
 from collections import defaultdict
 import csv
 from scipy.stats import spearmanr
+
 
 def process_command_line(argv):
     """
@@ -65,10 +71,10 @@ def get_singles_counts(sname, seglen, mincounts):
             if ints < mincounts:
                 continue
             r1_reg = (
-                line['RNA1 chromosome'],int(line['RNA1 from'])/seglen*seglen,
+                line['RNA1 chromosome'],int(line['Start of RNA1 first read'])/seglen*seglen,
                 line['RNA1 strand'])
             r2_reg = (
-                line['RNA2 chromosome'],int(line['RNA2 from'])/seglen*seglen,
+                line['RNA2 chromosome'],int(line['Start of RNA2 first read'])/seglen*seglen,
                 line['RNA2 strand'])
             counts[r1_reg] += ints
             counts[r2_reg] += ints
@@ -90,9 +96,9 @@ def get_regions_counts(fname, seglen, mincounts):
             if int(line['interactions']) < mincounts:
                 continue
             t_reg = (
-                line['RNA1 chromosome'],int(line['RNA1 from'])/seglen*seglen,
+                line['RNA1 chromosome'],int(line['Start of RNA1 first read'])/seglen*seglen,
                 line['RNA1 strand'], 
-                line['RNA2 chromosome'],int(line['RNA2 from'])/seglen*seglen,
+                line['RNA2 chromosome'],int(line['Start of RNA2 first read'])/seglen*seglen,
                 line['RNA2 strand'])
 
             counts[t_reg] = int(line['interactions'])
@@ -110,7 +116,7 @@ def plot_scatter(chimera, singles, chisum, lorder, figname, mincount):
     - `lorder`: A list of library names in printing order
     - `figname`: Save the figure to this file
     """
-    def scatit(dname, dname2, grd, i, j, l1, l2, lln):
+    def scatit(dname, dname2, grd, i, j, l1, l2, lln, cur_name):
         """
         scatterplot the specific plot
         """
@@ -118,14 +124,18 @@ def plot_scatter(chimera, singles, chisum, lorder, figname, mincount):
         xvec = []
         yvec = []
         for k in lkeys:
-            if dname[l1][k] > mincount and dname2[l2][k] > mincount:
+            if dname[l1][k] > mincount or dname2[l2][k] > mincount:
                 xvec.append(dname[l1][k]+1)
                 yvec.append(dname2[l2][k]+1)
         spr = spearmanr(xvec, yvec)
+        #print "*" * 100
+        #my addition - print to stdout the pairs and the values
+        # print cur_name, l1, l2, spr[0] ,spr[1]
         im = grd[i*lln + j].hexbin(
             xvec, yvec, xscale = 'log', yscale = 'log', bins='log', mincnt=1,
             gridsize=(50,50))
 #        grd.cbar_axes[i*lln+j].colorbar(im)
+
         grd[i*lln + j].text(10, 10e4, "r=%.2f"%(spr[0]), size=6, color='m')
         grd[i*lln + j].set_xlim([-10, 10e5])
         grd[i*lln + j].set_ylim([-10, 10e5])
@@ -153,12 +163,12 @@ def plot_scatter(chimera, singles, chisum, lorder, figname, mincount):
         for j, l2 in enumerate(lorder):
             if i>j: # Print singles
                 corrs[i, j] = scatit(
-                    singles, singles, grid, i, j, l1, l2, lln)[0]
+                    singles, singles, grid, i, j, l1, l2, lln,  "sing-sing")[0]
             elif i==j:
-                corrs[i, j] =scatit(singles, chisum, grid, i, j, l1, l2, lln)[0]
+                corrs[i, j] =scatit(singles, chisum, grid, i, j, l1, l2, lln, "sing-chim")[0]
             else:
                 corrs[i, j] = scatit(
-                    chimera, chimera, grid, i, j, l1, l2, lln)[0]
+                    chimera, chimera, grid, i, j, l1, l2, lln, "chim-chim")[0]
             xlabel(l1)
             ylabel(l2)
     rcParams.update({'font.size': 8})
