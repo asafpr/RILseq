@@ -74,7 +74,7 @@ def get_singles_counts(sname, seglen, mincounts):
                 line['RNA1 chromosome'],int(line['Start of RNA1 first read'])/seglen*seglen,
                 line['RNA1 strand'])
             r2_reg = (
-                line['RNA2 chromosome'],int(line['Start of RNA2 first read'])/seglen*seglen,
+                line['RNA2 chromosome'],int(line['Start of RNA2 last read'])/seglen*seglen,
                 line['RNA2 strand'])
             counts[r1_reg] += ints
             counts[r2_reg] += ints
@@ -98,7 +98,7 @@ def get_regions_counts(fname, seglen, mincounts):
             t_reg = (
                 line['RNA1 chromosome'],int(line['Start of RNA1 first read'])/seglen*seglen,
                 line['RNA1 strand'], 
-                line['RNA2 chromosome'],int(line['Start of RNA2 first read'])/seglen*seglen,
+                line['RNA2 chromosome'],int(line['Start of RNA2 last read'])/seglen*seglen,
                 line['RNA2 strand'])
 
             counts[t_reg] = int(line['interactions'])

@@ -791,8 +791,8 @@ def read_significant_reads(summary_file, chr_dict, gname=None):
         except KeyError:
             r1_chrn = line['RNA1 chromosome']
         r1_str = line['RNA1 strand']
-        r2_from = int(line['Start of RNA2 first read'])-1
-        r2_to = int(line['Start of RNA2 last read'])
+        r2_from = int(line['Start of RNA2 last read'])-1
+        r2_to = int(line['Start of RNA2 first read'])
         try:
             r2_chrn = chr_dict[line['RNA2 chromosome']]
         except KeyError:
@@ -1279,7 +1279,7 @@ def report_interactions(
     out_data = {}
     header_vec = [
         'RNA1 chromosome', 'Start of RNA1 first read', 'Start of RNA1 last read', 'RNA1 strand',
-        'RNA2 chromosome', 'Start of RNA2 first read', 'Start of RNA2 last read', 'RNA2 strand',
+        'RNA2 chromosome', 'Start of RNA2 last read', 'Start of RNA2 first read', 'RNA2 strand',
         'interactions', 'other interactions of RNA1',
         'other interactions of RNA2', 'total other interactions', 'odds ratio',
         "Fisher's exact test p-value"]
