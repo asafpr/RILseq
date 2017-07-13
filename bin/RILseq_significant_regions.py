@@ -77,7 +77,7 @@ def process_command_line(argv):
         '--est_utr_lens', type=int, default=100,
         help='Estimated UTRs lengths when there is not data.')
     parser.add_argument(
-        '--EC_chrlist', default='chr,COLI-K12',
+        '--BC_chrlist', default='chr,COLI-K12',
         help='A comma separated dictionary of chromosome names from the bam'
         ' file to EcoCyc names. See the names of chromosomes in bam file using'
         ' samtools view -H foo.bam.')
@@ -153,8 +153,8 @@ def main(argv=None):
             raise 
         rr_pos = []
         chr_dict = dict(zip(
-                settings.EC_chrlist.split(',')[1::2],
-                settings.EC_chrlist.split(',')[0::2]))
+                settings.BC_chrlist.split(',')[1::2],
+                settings.BC_chrlist.split(',')[0::2]))
         for rrgene in rRNAs:
             # Pad the position of the rRNA gene with the alignment length
             rr_pos.append([chr_dict[uid_pos[rrgene][0]]] +\
@@ -259,7 +259,7 @@ def main(argv=None):
     # Read the additional data to decorate the results with
     RILseq.report_interactions(
         region_interactions, sys.stdout, interacting_regions, settings.seglen,
-        settings.bc_dir, settings.genome, settings.EC_chrlist, settings.refseq_dir,
+        settings.bc_dir, settings.genome, settings.BC_chrlist, settings.refseq_dir,
         settings.targets_file, settings.rep_table, settings.single_counts,
         settings.shuffles, settings.RNAup_cmd, settings.servers,
         settings.length, settings.est_utr_lens, settings.pad_seqs,
