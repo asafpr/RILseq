@@ -60,7 +60,7 @@ def process_command_line(argv):
         '--dust_thr', type=float, default=10,
         help='Threshold for dust filter. If 0 skip.')
     parser.add_argument(
-        '-d', '--dirout', default='.',
+        '-d', '--dirout', default='./remapped-data/',
         help='Output directory, default is this directory.')
     parser.add_argument(
         '-a', '--all_reads',
@@ -127,6 +127,8 @@ def process_command_line(argv):
 def main(argv=None):
     settings = process_command_line(argv)
     # Read the transcripts if given
+    if not os.path.isdir(settings.dirout):
+        os.mkdir(settings.dirout)
     if settings.transcripts:
         trans_dict = RILseq.read_transcripts(settings.transcripts, settings.feature, settings.identifier)
     else:
