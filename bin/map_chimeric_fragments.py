@@ -18,6 +18,7 @@ import sys
 import argparse
 import pysam
 import os
+import errno
 
 import RILseq
 
@@ -127,8 +128,11 @@ def process_command_line(argv):
 def main(argv=None):
     settings = process_command_line(argv)
     # Read the transcripts if given
-    if not os.path.isdir(settings.dirout):
-        os.mkdir(settings.dirout)
+    try:
+        os.makedirs(settings.dirout)
+    except OSError as e:
+        if e.errno != errno.EEXIST:
+            raise
     if settings.transcripts:
         trans_dict = RILseq.read_transcripts(settings.transcripts, settings.feature, settings.identifier)
     else:
