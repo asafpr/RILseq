@@ -76,13 +76,16 @@ def process_command_line(argv):
         '-S', '--samtools_cmd', default='samtools',
         help='Samtools executable.')
     parser.add_argument(
-        '-a', '--params_aln', default='-t 32 -R 200',
+        '-a', '--params_aln', default='-t 8 -R 200',
         help='Additional parameters for aln function of bwa.')
     parser.add_argument(
         '-s', '--sampe_params', default='-a 1500 -P',
         help='Additional parameters for sampe function of bwa.')
     parser.add_argument(
         '--samse_params', default=' ',
+        help='Additional parameters for samse function of bwa.')
+    parser.add_argument(
+        '-w', '--create_wig', default=False, action='store_true',
         help='Additional parameters for samse function of bwa.')
 
     settings = parser.parse_args(argv)
@@ -93,7 +96,7 @@ def main(argv=None):
     settings = process_command_line(argv)
     if not os.path.exists(settings.dirout):
         os.makedirs(settings.dirout)
-    outwig = open("%s/%s_coverage.wig"%(settings.dirout, settings.outhead), 'w')
+
     if settings.genes_gff:
         try:
             pos_feat_list, all_features = RILseq.read_gtf(
@@ -102,6 +105,8 @@ def main(argv=None):
             settings.genes_gff = None
         gcounts = {}
         lib_order = []
+    
+    fastq_1_list = list(RILseq.flat_list(settings.fastq_1))
     fastq_2_list = list(RILseq.flat_list(settings.fastq_2))
     for i, r1_name in enumerate(RILseq.flat_list(settings.fastq_1)):
         try:
@@ -122,22 +127,26 @@ def main(argv=None):
             gcounts[libname] = RILseq.count_features(
                 pos_feat_list, samfile, settings.overlap,
                 rev=settings.reverse_complement)
-        coverage = RILseq.generate_wig(
-            samfile, rev=settings.reverse_complement, first_pos=False)
-        RILseq.print_wiggle(
-            coverage, "%s_single_fragments_coverage"%libname,
-            "%s single fragments coverage"%libname, outwig)
+        if settings.create_wig:
+            outwigs = [open("%s/%s_coverage.wig"%(settings.dirout, fastq.split("_cutadapt")[0]), 'w')
+               for fastq in fastq_1_list]
+            coverage = RILseq.generate_wig(
+                samfile, rev=settings.reverse_complement, first_pos=False)
+            RILseq.print_wiggle(
+                coverage, "%s_single_fragments_coverage"%libname,
+                "%s single fragments coverage"%libname, outwigs[i])
     # Print the table of counts
     if settings.genes_gff:
-        outtable = open(
-            "%s/%s_counts.txt"%(settings.dirout, settings.outhead), 'w')
-        outt = csv.writer(outtable, delimiter='\t')
-        outt.writerow(['Gene name'] + lib_order)
-        for g in sorted(list(all_features)):
-            row_out = [g]
-            for libn in lib_order:
-                row_out.append(gcounts[libn][g])
-            outt.writerow(row_out)
+        outtables = [open("%s/%s_counts.txt"%(settings.dirout, fastq.split("_cutadapt")[0]), 'w')
+                     for fastq in fastq_1_list]
+        for i, r1_name in enumerate(fastq_1_list):
+            outt = csv.writer(outtables[i], delimiter='\t')
+            outt.writerow(['Gene name'] + lib_order)
+            for g in sorted(list(all_features)):
+                row_out = [g]
+                for libn in lib_order:
+                    row_out.append(gcounts[libn][g])
+                outt.writerow(row_out)
     return 0        # success
 
 if __name__ == '__main__':
