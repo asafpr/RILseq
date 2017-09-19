@@ -1,3 +1,4 @@
+# Generated using EcoCyc database version 20.0 downloaded from http://biocyc.org/ecocyc/index.shtml owned by and copyrighted to SRI International. genes and transcription units names and positions were taken from DB using UTRs data and genes positions.
 chr	EcoCyc	exon	1989645	1990992	.	+	.	gene_id "TU00088"; transcript_id "TU00088";
 chr	EcoCyc	exon	4473240	4474063	.	-	.	gene_id "TU0-14171"; transcript_id "TU0-14171";
 chr	EcoCyc	exon	1942634	1944299	.	+	.	gene_id "TU0-4604"; transcript_id "TU0-4604";
