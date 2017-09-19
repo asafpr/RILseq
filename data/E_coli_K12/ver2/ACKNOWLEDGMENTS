@@ -1,0 +1,9 @@
+Some files in this directory, including: 
+* EcoCyc_genes_190.gff
+* EcoCyc_transcripts_190.gff
+* REP_elements_table_from_SmartTrables.txt
+* curated_list_of_sRNA_mRNA_interactions.txt
+* sRNAs_highlight_wide.txt
+* tRNAs_highlight_wide.txt
+* rRNAs_highlight.txt
+Include data from BioCyCTM pathway/genome database under license from SRI international.
