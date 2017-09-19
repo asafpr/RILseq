@@ -1025,7 +1025,7 @@ def read_annotations(refseq_dir, an_ext = ('.ptt.gz', '.rnt.gz')):
     ec_files = []
     for ext in an_ext:
         ec_files.extend(glob.glob("%s/*%s"%(refseq_dir, ext)))
-    if not ec_file:
+    if not ec_files:
         logging.warn("There are no .ppt.gz and .rn.gz files in the refseq directory. PLease check your directory. ")
     for fin in ec_files:
         fo = gzip.open(fin)
