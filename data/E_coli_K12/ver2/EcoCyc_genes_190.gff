@@ -1,4 +1,4 @@
-# Generated using EcoCyc database version 1.90 downloaded from http://biocyc.org/ecocyc/index.shtml owned by and copyrighted to SRI International. genes names and positions were taken from DB
+# Generated using EcoCyc database version 19.0 downloaded from http://biocyc.org/ecocyc/index.shtml owned by and copyrighted to SRI International. genes names and positions were taken from DB
 chr	EcoCyc	exon	190	255	.	+	.	gene_id "EG11277"; transcript_id "EG11277";
 chr	EcoCyc	exon	337	2799	.	+	.	gene_id "EG10998"; transcript_id "EG10998";
 chr	EcoCyc	exon	2801	3733	.	+	.	gene_id "EG10999"; transcript_id "EG10999";
