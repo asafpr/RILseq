@@ -1026,7 +1026,7 @@ def read_annotations(refseq_dir, an_ext = ('.ptt.gz', '.rnt.gz')):
     for ext in an_ext:
         ec_files.extend(glob.glob("%s/*%s"%(refseq_dir, ext)))
     if not ec_files:
-        logging.warn("There are no .ppt.gz and .rn.gz files in the refseq directory. PLease check your directory. ")
+        logging.warn("There are no .ppt.gz or .rnt.gz files in the refseq directory. Please check your directory. ")
     for fin in ec_files:
         fo = gzip.open(fin)
         for row in csv.reader(fo, delimiter='\t'):
@@ -1037,15 +1037,17 @@ def read_annotations(refseq_dir, an_ext = ('.ptt.gz', '.rnt.gz')):
     return annotations
 
 
-def get_genes_dict(ec_dir, pad=100):
+def get_genes_dict(ec_dir, pad=100, linear_chromosome_list=None):
     """
     Return a dictionary from genomic position to annotation based on EcoCyc
     Arguments:
     - `ec_dir`: EcoCyc directory
     - `pad`: Estimated UTR length
+    - `linear_chromosome_list`: list of chromosomes/plasmids that are linear.
+
     """
     try:
-        pos_maps, uid_gene = ecocyc_parser.get_mapping(ec_dir, pad)
+        pos_maps, uid_gene = ecocyc_parser.get_mapping(ec_dir, pad, linear_chromosome_list=linear_chromosome_list)
     except IOError:
         return None
     pos_maps_lists = defaultdict(dict)
@@ -1159,11 +1161,12 @@ def get_seqs(chrn, pfrom, pto, pstrand, fsa_seqs, shuffles=0):
         return shf_seqs
     return pseq
 
-def get_names(gname, uid_names, annotations):
+def get_names(gname, uid_names, annotations, strand):
     """
     return the names of the gene
     Arguments:
     - `gname`: a gene EcoCyc accession number
+    - `strand`: Added 24.09.17 for flipping the IGR order if minus strand.
     """
     try:
         p0_name = uid_names[gname[0]]['COMMON-NAME']
@@ -1181,12 +1184,20 @@ def get_names(gname, uid_names, annotations):
             cn2 = uid_names[gname[1]]['COMMON-NAME']
         except KeyError:
             cn2 = gname[1]
-        p0_name += '.%s.%s'%(cn2, gname[2])
+        if strand == '+' or gname[2] != 'IGR':
+            p0_name += '.%s.%s'%(cn2, gname[2])
+        else:  # if minus strand and IGR, flip the order
+            flipped = '%s.%s.%s'%(cn2, p0_name, gname[2])
+            p0_name = flipped
         try:
             p1_desc = annotations[cn2]
         except KeyError:
             p1_desc = '-'
-        p0_desc += ' : %s'%p1_desc
+        if strand == '+' or gname[2] != 'IGR':
+            p0_desc += ' : %s'%p1_desc
+        else:  # if minus strand and IGR, flip the order
+            flipped_desc = '%s : %s'%(p1_desc, p0_desc)
+            p0_desc = flipped_desc
         
     elif len(gname)>=2:
         p0_name += '.%s'%gname[1]
@@ -1215,7 +1226,7 @@ def report_interactions(
     region_interactions, outfile, interacting_regions, seglen, ec_dir, genome, ec_chrs,
     refseq_dir, targets_file, rep_file,  single_counts, shuffles, RNAup_cmd,
     servers, rlen, est_utr_lens, pad_seqs, totRNA_count, ip_tot_norm=0,
-    total_reads_IP=0, total_reads_total=0):
+    total_reads_IP=0, total_reads_total=0, linear_chromosome_list=None):
     """
     Report the interactions with additional data such as genes in region, if
     it's a known target, number of single fragments count, binding energy
@@ -1244,13 +1255,14 @@ def report_interactions(
                      to this ratio
     - `total_reads_IP`: Number of reads in IP library
     - `total_reads_total`: Number of reads in total library
+    - `linear_chromosome_list`: list of chromosomes/plasmids that are linear.
     """
     targets = read_targets(targets_file)
     singles = read_singles(single_counts)
     desc = read_annotations(refseq_dir)
 #    genes_dict = get_genes_dict(ec_dir, est_utr_lens)
     try:
-        pos_maps, _ = ecocyc_parser.get_mapping(ec_dir, est_utr_lens)
+        pos_maps, _ = ecocyc_parser.get_mapping(ec_dir, est_utr_lens, linear_chromosome_list=linear_chromosome_list)
     except IOError:
         pos_maps = None
     try:
@@ -1401,12 +1413,18 @@ def report_interactions(
             genes2_list = ['-']
         gname1 = genes1_list[0]
         gname2 = genes2_list[0]
-        g1common, g1desc = get_names(gname1, uid_names, desc)
-        g2common, g2desc = get_names(gname2, uid_names, desc)
+        g1common, g1desc = get_names(gname1, uid_names, desc, r1_str)
+        g2common, g2desc = get_names(gname2, uid_names, desc, r2_str)
+        if r1_str == '-' and len(gname1) > 2 and (gname1[2] == 'IGR'):  # if reverse strand and IGR, flip the gene name.
+            gname1_str = "%s.%s.%s" % (gname1[1], gname1[0], gname1[2])
+        else:
+            gname1_str = '.'.join([str(j) for j in gname1])
+        if r2_str == '-' and len(gname2) > 2 and (gname2[2] == 'IGR'):  # if reverse strand and IGR, flip the gene name.
+            gname2_str = "%s.%s.%s" % (gname2[1], gname2[0], gname2[2])
+        else:
+            gname2_str = '.'.join([str(j) for j in gname2])
         out_data[rkey] = [
-            '.'.join([str(j) for j in gname1]),
-            '.'.join([str(j) for j in gname2]), g1common,
-            g2common, g1desc, g2desc] + out_data[rkey]
+            gname1_str, gname2_str, g1common, g2common, g1desc, g2desc] + out_data[rkey]
         if targets:
             is_target = False
             for g1 in gname1:
