@@ -136,9 +136,17 @@ def process_command_line(argv):
     parser.add_argument(
         '--min_odds_ratio', type=float, default=1.0,
         help='Minimal odds ratio to report')
+    parser.add_argument(
+        '--linear_chromosome_list', type=str, default="",
+        help='A list of chromosomes/plasmids names that are linear and not cyclic.'
+             'The name should be identical to the chromosome/plasmid name in the given genome fasta file.')
 
     settings = parser.parse_args(argv)
 
+    if settings.linear_chromosome_list:
+        settings.linear_chromosome_list = settings.linear_chromosome_list.split(',')
+    else:
+        settings.linear_chromosome_list = None
     return settings
 
 
@@ -263,7 +271,7 @@ def main(argv=None):
         settings.targets_file, settings.rep_table, settings.single_counts,
         settings.shuffles, settings.RNAup_cmd, settings.servers,
         settings.length, settings.est_utr_lens, settings.pad_seqs,
-        totRNA_counts, max_IP_div_total, total_interactions, sum_reads)
+        totRNA_counts, max_IP_div_total, total_interactions, sum_reads, settings.linear_chromosome_list)
 
     return 0        # success
 

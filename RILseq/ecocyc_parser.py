@@ -8,13 +8,14 @@ from collections import defaultdict
 import csv
 
 def get_mapping(ec_dir='/home/users/assafp/Database/EcoCyc/current/data',
-                utr_len=100, inc_rep_pos=False):
+                utr_len=100, inc_rep_pos=False, linear_chromosome_list=None):
     """
     Get the mapping directly
     Arguments:
     - `ec_dir`: EcoCyc dir
     - `utr_len`: For estimating UTRs
     - `inc_rep_pos`: Include REP positions in map?
+    - `linear_chromosome_list`: list of linear chromosome/plasmid names.
     """
     tu_promoters = read_promoters_data(ec_dir)
     tu_terminators = read_terminators_data(ec_dir)
@@ -34,7 +35,7 @@ def get_mapping(ec_dir='/home/users/assafp/Database/EcoCyc/current/data',
         fsa_lens[fn] = len(fs)
     maps = position_to_gene(
         uid_pos, uid_tudata, tu_promoters, tu_terminators, tu_genes,
-        sRNAs_list+other_RNAs_list, fsa_lens, rep_pos=rep_pos, utr_len=utr_len)
+        sRNAs_list+other_RNAs_list, fsa_lens, rep_pos=rep_pos, utr_len=utr_len, lin_list=linear_chromosome_list)
     return maps, uid_names
 
 def read_REP_table(rep_file):
@@ -325,7 +326,7 @@ def anti_strand(strand):
 
 def position_to_gene(
     uid_pos, uid_tu, tu_promoters, tu_terminators, tu_genes, sRNAs_list,
-    fsa_lens, rep_pos=None, utr_len=100):
+    fsa_lens, rep_pos=None, utr_len=100, lin_list=None):
     """
     For each postion (and strand) determines the gene in the position.
     If the real transcription is known use it. If between the TSS and the
@@ -347,6 +348,7 @@ def position_to_gene(
     - `fsa_lens`: Lengths of chromosomes
     - `rep_pos`: Positions of REP elements in the genome
     - `utr_len`: Default UTR length
+    - `lin_list`: List of linear chromosome/plasmid name
 
     Returns:
     - `pos_map`: A dictionary (position, strand) -> annotation
@@ -613,6 +615,23 @@ def position_to_gene(
                                    len(pos_map[chrn][(j, '-')]) == 1])
         except ValueError:
             max_min_pos = None
+
+        # This handling is for cyclic genomes only
+        try:
+            min_plus_pos = min([j for j in range(chrlen) if\
+                                    (j, '+') in pos_map[chrn] and\
+                                    len(pos_map[chrn][(j, '+')]) == 1])
+        except ValueError:
+            min_plus_pos = None
+
+        try:
+            min_min_pos = min([j for j in range(chrlen) if\
+                                   (j, '-') in pos_map[chrn] and\
+                                   len(pos_map[chrn][(j, '-')]) == 1])
+        except ValueError:
+            min_min_pos = None
+        # end of cyclic code
+
         if max_plus_pos and max_plus_pos > max_min_pos:
             last_gene = pos_map[chrn][(max_plus_pos, '+')]
         elif max_min_pos:
@@ -642,12 +661,19 @@ def position_to_gene(
                     next_strand = '-'
                     break
                 next_pos += 1
+
             if next_strand == '+':
                 next_gene = pos_map[chrn][(next_pos, '+')]
             elif next_strand == '-':
                 next_gene = pos_map[chrn][(next_pos, '-')]
+            # This handling is for cyclic genomes only (otherwise use the commented else)
+            elif lin_list and chrn in lin_list:
+                next_gene = (chrn+'_End', )
             else:
-                next_gene = ('None', )
+                if min_plus_pos < min_min_pos:
+                    next_gene = pos_map[chrn][(min_plus_pos, '+')]
+                else:
+                    next_gene = pos_map[chrn][(min_min_pos, '-')]
 #        sys.stderr.write('%d\t%s\n'%(i, next_gene[0]))
             igr_plus_tag = 'IGR'
             igr_minus_tag = 'IGR'
