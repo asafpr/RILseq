@@ -100,7 +100,7 @@ def process_command_line(argv):
     parser.add_argument(
         '--maxG', type=float, default=0.8,
         help='If a read has more than this fraction of Gs remove this read'
-        'from the screen. This is due to nextseq technology wcich puts G '
+        'from the screen. This is due to nextseq technology which puts G '
         'where there is no signal, the poly G might just be noise.'
         ' When using other sequencing technologies set to 1.')
     parser.add_argument(
