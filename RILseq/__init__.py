@@ -117,15 +117,22 @@ def read_gtf(gtf_file, feature, identifier):
     # Get all the names of the features
     all_features = set(['~~intergenic', '~~antisense'])
     for line in csv.reader(gtf_file, delimiter='\t'):
-        if line[2] != feature:
-            continue
-        ids_dict = {}
-        for id_pair in line[8].strip().split(';'):
-            try:
-                k, v = id_pair.strip().split(' ')
-            except ValueError:
-                pass
-            ids_dict[k] = v.replace('"','')
+        if line[0].startswith('#'):
+            continue  # handle headers in the GTF
+        try:
+            if line[2] != feature:
+                continue
+            ids_dict = {}
+            for id_pair in line[8].strip().split(';'):
+                try:
+                    k, v = id_pair.strip().split(' ')
+                except ValueError:
+                    pass
+                ids_dict[k] = v.replace('"','')
+        except IndexError as e:
+            print "Error reading GTF file. line: %s " \
+                  "might not be tab-delimited, or columns might be missing \n%s " % (str(line), e)
+            raise e
         fid = ids_dict[identifier]
         all_features.add(fid)
         # Change to 0-based coordinates and add this feature to all the
