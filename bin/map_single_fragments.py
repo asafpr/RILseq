@@ -86,7 +86,7 @@ def process_command_line(argv):
         help='Additional parameters for samse function of bwa.')
     parser.add_argument(
         '-w', '--create_wig', default=False, action='store_true',
-        help='Additional parameters for samse function of bwa.')
+        help='Create a coverage wiggle file.')
 
     settings = parser.parse_args(argv)
 

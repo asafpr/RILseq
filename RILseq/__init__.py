@@ -1021,7 +1021,7 @@ def read_singles(singles_file):
     return counts
 
 
-def read_annotations(refseq_dir, an_ext = ('.ptt.gz', '.rnt.gz')):
+def read_annotations(refseq_dir, an_ext = ('.ptt.gz', '.rnt.gz', '_feature_table.txt.gz')):
     """
     Read the annotations from rnt and ptt files and return a dictionary
     Arguments:
@@ -1033,12 +1033,15 @@ def read_annotations(refseq_dir, an_ext = ('.ptt.gz', '.rnt.gz')):
     for ext in an_ext:
         ec_files.extend(glob.glob("%s/*%s"%(refseq_dir, ext)))
     if not ec_files:
-        logging.warn("There are no .ppt.gz or .rnt.gz files in the refseq directory. Please check your directory. ")
+        logging.warn("There are no .ppt.gz or .rnt.gz or *_feature_table.txt.gz files in the refseq directory. Please check your directory. ")
     for fin in ec_files:
         fo = gzip.open(fin)
         for row in csv.reader(fo, delimiter='\t'):
             try:
-                annotations[row[4]] = row[8]
+                if '_feature_table.txt.gz' in fin and row[13] is not "" and row[13] is not "name":
+                    annotations[row[14]] = row[13]
+                else:  # rnt.gz or ptt.gz files
+                    annotations[row[4]] = row[8]
             except IndexError:
                 pass
     return annotations
