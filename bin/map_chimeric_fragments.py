@@ -173,8 +173,8 @@ def main(argv=None):
             else:
                 bamname = RILseq.run_bwa(
                     settings.bwa_exec, fqname, None,
-                    settings.dirout, bamheadname, settings.max_mismatches,
-                    settings.genome_fasta, settings.params_aln,
+                    os.path.abspath(settings.dirout), bamheadname, settings.max_mismatches,
+                    os.path.abspath(settings.genome_fasta), settings.params_aln,
                     '', settings.samse_params,
                     settings.samtools_cmd)
             bamin = pysam.Samfile(bamname)

@@ -118,8 +118,8 @@ def main(argv=None):
         outhead = '%s_bwa'%libname
         bamname = RILseq.run_bwa(
             settings.bwa_exec, r1_name, r2_name,
-            settings.dirout, outhead, settings.allowed_mismatches,
-            settings.genome_fasta, settings.params_aln, settings.sampe_params,
+            os.path.abspath(settings.dirout), outhead, settings.allowed_mismatches,
+            os.path.abspath(settings.genome_fasta), settings.params_aln, settings.sampe_params,
             settings.samse_params, settings.samtools_cmd)
         samfile = pysam.Samfile(bamname)
         if settings.genes_gff:
