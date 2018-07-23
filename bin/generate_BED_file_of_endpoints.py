@@ -99,7 +99,7 @@ def get_reads_seqs(bamfile, rnames, rev=False):
     for rn in set(rnames) & rqns:
         for read in reads[rn]:
             if read.is_read1==rev:
-                outseq = Seq(read.seq)
+                outseq = Seq(read.query_sequence)
                 if not read.is_reverse:
                     outseq = outseq.reverse_complement()
                 r1_seqs[read.query_name] = str(outseq)
