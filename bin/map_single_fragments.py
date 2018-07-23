@@ -121,7 +121,7 @@ def main(argv=None):
             os.path.abspath(settings.dirout), outhead, settings.allowed_mismatches,
             os.path.abspath(settings.genome_fasta), settings.params_aln, settings.sampe_params,
             settings.samse_params, settings.samtools_cmd)
-        samfile = pysam.Samfile(bamname)
+        samfile = pysam.AlignmentFile(bamname,'rb')
         if settings.genes_gff:
             lib_order.append(libname)
             gcounts[libname] = RILseq.count_features(
