@@ -407,7 +407,7 @@ def get_unmapped_reads(
                 # This can't happen unless all_reads is set to True
                 reverse_seq = True
             cseq = read.query_sequence
-            cqual = read.query_qualities
+            cqual = ''.join([chr(i+33) for i in read.query_qualities])
             # If the read is the reverse complement of the RNA XOR it's been
             # reversed on the bam file, reverse it
             if rev!=reverse_seq:
@@ -436,22 +436,22 @@ def get_unmapped_reads(
             if read.is_read1==rev:
                 ouf = outfile2
                 outseq = Seq(read.query_sequence)
-                outqual = read.query_qualities[-length:]
+                outqual = ''.join([chr(i+33) for i in read.query_qualities[-length:]])
                 # Reverse complement the read if it haven't been
                 # done in the bam file. Otherwise, do nothing
                 if not read.is_reverse:
                     outseq = outseq.reverse_complement()
-                    outqual = read.query_qualities[::-1][-length:]
+                    outqual = ''.join([chr(i+33) for i in read.query_qualities[::-1][-length:]])
                 outseq = str(outseq[-length:])
                 if (str(outseq).count('C')>=int(maxG*length)):
                     continue
             else: # First read in the fragment
                 ouf = outfile1
                 outseq = Seq(read.query_sequence)
-                outqual = read.query_qualities[:length]
+                outqual = ''.join([chr(i+33) for i in read.query_qualities[:length]])
                 if read.is_reverse:
                     outseq = outseq.reverse_complement()
-                    outqual = read.query_qualities[::-1][:length]
+                    outqual = ''.join([chr(i+33) for i in read.query_qualities[::-1][:length]])
                 outseq = str(outseq[:length])
                 if outseq.count('G') >= int(maxG*length):
                     continue
