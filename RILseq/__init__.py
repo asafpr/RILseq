@@ -164,8 +164,8 @@ def get_paired_pos(read, rev=False):
     strand = '+'
     if rev!=read.is_read2:
         strand = '-'
-    fpos = read.pos
-    tpos = read.tlen + fpos
+    fpos = read.reference_start
+    tpos = read.template_length + fpos
     return strand, fpos, tpos
 
 def get_single_pos(read, rev=False):
@@ -180,8 +180,8 @@ def get_single_pos(read, rev=False):
     strand = '+'
     if rev!=read.is_reverse:
         strand = '-'
-    fpos = read.pos
-    tpos = read.qlen + fpos
+    fpos = read.reference_start
+    tpos = read.query_alignment_length + fpos
     return strand, fpos, tpos
 
 
@@ -230,7 +230,7 @@ def count_features(
 #            pass
             sys.stderr.write("Processed %i fragments\n"%counter)
         try:
-            chrname = samfile.getrname(read.tid)
+            chrname = samfile.getrname(read.reference_id)
         except ValueError:
             sys.stderr.write(str(read)+"\n")
         # Get the positions of the fragment
@@ -302,7 +302,7 @@ def generate_wig(samfile, rev=False, first_pos=False):
                 continue
         # Take only the forward mate
         try:
-            chrname = samfile.getrname(read.tid)
+            chrname = samfile.getrname(read.reference_id)
         except ValueError:
             logging.warn("Read has no valid chr name %s"%(str(read)))
             continue
@@ -406,15 +406,15 @@ def get_unmapped_reads(
             if read.is_reverse:
                 # This can't happen unless all_reads is set to True
                 reverse_seq = True
-            cseq = read.seq
-            cqual = read.qual
+            cseq = read.query_sequence
+            cqual = read.query_qualities
             # If the read is the reverse complement of the RNA XOR it's been
             # reversed on the bam file, reverse it
             if rev!=reverse_seq:
                 cseq = str(Seq(cseq).reverse_complement())
                 cqual = cqual[::-1]
             if all_reads and (not read.is_unmapped):
-                single_mapped.add(read.qname)
+                single_mapped.add(read.query_name)
             search_for = 'G'
             if rev:
                 search_for = 'C'
@@ -432,26 +432,26 @@ def get_unmapped_reads(
                 (not read.is_proper_pair)) and read.is_paired:
             if all_reads and not (read.is_unmapped or read.mate_is_unmapped or\
                 (not read.is_proper_pair)):
-                single_mapped.add(read.qname)
+                single_mapped.add(read.query_name)
             if read.is_read1==rev:
                 ouf = outfile2
-                outseq = Seq(read.seq)
-                outqual = read.qual[-length:]
+                outseq = Seq(read.query_sequence)
+                outqual = read.query_qualities[-length:]
                 # Reverse complement the read if it haven't been
                 # done in the bam file. Otherwise, do nothing
                 if not read.is_reverse:
                     outseq = outseq.reverse_complement()
-                    outqual = read.qual[::-1][-length:]
+                    outqual = read.query_qualities[::-1][-length:]
                 outseq = str(outseq[-length:])
                 if (str(outseq).count('C')>=int(maxG*length)):
                     continue
             else: # First read in the fragment
                 ouf = outfile1
-                outseq = Seq(read.seq)
-                outqual = read.qual[:length]
+                outseq = Seq(read.query_sequence)
+                outqual = read.query_qualities[:length]
                 if read.is_reverse:
                     outseq = outseq.reverse_complement()
-                    outqual = read.qual[::-1][:length]
+                    outqual = read.query_qualities[::-1][:length]
                 outseq = str(outseq[:length])
                 if outseq.count('G') >= int(maxG*length):
                     continue
@@ -536,9 +536,9 @@ def replace_with_XA(read, al, chrnames_bam):
     - `chrnames_bam`: The names of the chrs in the bam file
     """
     apos = int(al[1][1:])
-    nm_num = get_NM_number(read.tags)
+    nm_num = get_NM_number(read.get_tags())
     # Add the read one to the XA tag
-    tags = read.tags
+    tags = read.get_tags()
     for xt in tags:
         if xt[0] == 'XA':
             xaval = xt[1]
@@ -547,14 +547,14 @@ def replace_with_XA(read, al, chrnames_bam):
             if read.is_reverse:
                 strs = '-'
             tags.append(('XA', '%s,%s%d,%s,%d;'%(
-                        chrnames_bam[read.tid],
-                        strs, read.pos,
+                        chrnames_bam[read.reference_id],
+                        strs, read.reference_start,
                         read.cigarstring, nm_num) +xaval))
-            read.tags = tags
-    read.pos = apos
+            read.set_tags(tags)
+    read.reference_start = apos
     read.is_reverse = al[1][0]=='-'
     read.cigarstring = al[2]
-    read.tid = min([i for i, x in enumerate(chrnames_bam) if x==al[0]])
+    read.reference_id = min([i for i, x in enumerate(chrnames_bam) if x==al[0]])
 
 
 def test_concordance(
@@ -601,20 +601,20 @@ def test_concordance(
     # read1 is the reverse of the real read. If both directions are the same
     # and distance is short they can be concordant
     
-    if read1.is_reverse == read2.is_reverse and read1.tid==read2.tid:
+    if read1.is_reverse == read2.is_reverse and read1.reference_id==read2.reference_id:
         if is_conc(
-            read1.is_reverse, read2.is_reverse, read1.pos, read2.pos,
-            read1.tid, read2.tid):
+            read1.is_reverse, read2.is_reverse, read1.reference_start, read2.reference_start,
+            read1.reference_id, read2.reference_id):
             return True
-    r1_XA = get_XA_mapping(read1.tags)
-    r2_XA = get_XA_mapping(read2.tags)
+    r1_XA = get_XA_mapping(read1.get_tags())
+    r2_XA = get_XA_mapping(read2.get_tags())
     if r1_XA:
         for altp in r1_XA:
             is_rev1 = (altp[1][0] == '-')
             pos1 = abs(int(altp[1]))
             if is_conc(
-                is_rev1, read2.is_reverse, pos1, read2.pos, altp[0],
-                chrnames_bam[read2.tid]):
+                is_rev1, read2.is_reverse, pos1, read2.reference_start, altp[0],
+                chrnames_bam[read2.reference_id]):
                 # Replace with alternative
                 replace_with_XA(read1, altp, chrnames_bam)
                 return True
@@ -630,7 +630,7 @@ def test_concordance(
         for altp2 in r2_XA:
             is_rev2 = (altp2[1][0] == '-')
             pos2 = abs(int(altp2[1]))
-            if is_conc(read1.is_reverse, is_rev2, read1.pos, pos2, altp2[0], chrnames_bam[read1.tid]):
+            if is_conc(read1.is_reverse, is_rev2, read1.reference_start, pos2, altp2[0], chrnames_bam[read1.reference_id]):
                 # Replace with alternative
                 replace_with_XA(read2, altp2, chrnames_bam)
                 return True
@@ -650,12 +650,12 @@ def read_bam_file(bamfile, chrnames_bam, max_NM=0):
     read_objects = {}
     for read in bamfile.fetch():
         if not read.is_unmapped:
-            nm_num = get_NM_number(read.tags)
+            nm_num = get_NM_number(read.get_tags())
             if nm_num > max_NM:
                 continue
             # If there are multiple hits, choose the one with the smallest coor
-            alt_list = get_XA_mapping(read.tags, max_NM)
-            min_pos = read.pos
+            alt_list = get_XA_mapping(read.get_tags(), max_NM)
+            min_pos = read.reference_start
             min_al = None
             for al in alt_list:
                 apos = int(al[1][1:])
@@ -666,9 +666,9 @@ def read_bam_file(bamfile, chrnames_bam, max_NM=0):
                     min_pos = apos
                     min_al = al
             # If changed, add the read one to the XA tag
-            if read.pos != min_pos:
+            if read.reference_start != min_pos:
                 replace_with_XA(read, min_al, chrnames_bam)
-            read_objects[read.qname] = read
+            read_objects[read.query_name] = read
     return read_objects
 
 
@@ -705,8 +705,8 @@ def write_reads_table(
             read1_reads[rname], read2_reads[rname], maxdist,
             chrnames_bam, trans_gff=trans_gff, remove_self=remove_self):
             if write_single:
-                if get_NM_number(read1_reads[rname].tags) > max_NM or\
-                        get_NM_number(read2_reads[rname].tags) > max_NM:
+                if get_NM_number(read1_reads[rname].get_tags()) > max_NM or\
+                        get_NM_number(read2_reads[rname].get_tags()) > max_NM:
                     continue
                 write_to = write_single
                 read_type = "single"
@@ -717,19 +717,19 @@ def write_reads_table(
             # ignore this read
             if single_mapped and rname in single_mapped:
                 continue
-        read1_chrn = chrnames_bam[read1_reads[rname].tid]
-        read2_chrn = chrnames_bam[read2_reads[rname].tid]
+        read1_chrn = chrnames_bam[read1_reads[rname].reference_id]
+        read2_chrn = chrnames_bam[read2_reads[rname].reference_id]
         if not read2_reads[rname].is_reverse:
-            end2_pos = read2_reads[rname].pos+read2_reads[rname].qlen-1
+            end2_pos = read2_reads[rname].reference_start+read2_reads[rname].query_alignment_length-1
             end2_str = '+'
         else:
-            end2_pos = read2_reads[rname].pos
+            end2_pos = read2_reads[rname].reference_start
             end2_str = '-'
         if read1_reads[rname].is_reverse:
-            end1_pos = read1_reads[rname].pos+read1_reads[rname].qlen-1
+            end1_pos = read1_reads[rname].reference_start+read1_reads[rname].query_alignment_length-1
             end1_str = '-'
         else:
-            end1_pos = read1_reads[rname].pos
+            end1_pos = read1_reads[rname].reference_start
             end1_str = '+'
         write_to.write(
             "%s\t%d\t%s\t%s\t%d\t%s\t%s\t%s\n"%(
