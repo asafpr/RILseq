@@ -89,6 +89,12 @@ def generate_transcripts_file(
     uid_pos, uid_names, uid_tudata, sRNAs_list, other_RNAs_list, rRNAs =\
         read_genes_data(ec_dir)
     tu_genes = defaultdict(list)
+
+    fsa_seqs = read_fsas(ec_dir)
+    fsa_lens = {}
+    for fn, fs in fsa_seqs.items():
+        fsa_lens[fn] = len(fs)
+
     for gene, tus in uid_tudata.items():
         if not tus:
             tu_genes[gene] = [gene]
@@ -113,10 +119,10 @@ def generate_transcripts_file(
             # Get first gene
             if tu_str == '+':
                 first_pos = min([uid_pos[gene][1] for gene in tu_genes[tu]])
-                tu_boundaries[tu][0] = first_pos-utr_len
+                tu_boundaries[tu][0] = max(first_pos-utr_len, 0)
             else:
                 last_pos = max([uid_pos[gene][2] for gene in tu_genes[tu]])
-                tu_boundaries[tu][1] = last_pos+utr_len
+                tu_boundaries[tu][1] = min(last_pos+utr_len, fsa_lens[tu_chrn])
         if tu in tu_terminators:
             if tu_str == '+':
                 tu_boundaries[tu][1] = max(tu_terminators[tu])+1
@@ -126,10 +132,10 @@ def generate_transcripts_file(
             # Get first gene
             if tu_str == '-':
                 first_pos = min([uid_pos[gene][1] for gene in tu_genes[tu]])
-                tu_boundaries[tu][0] = first_pos-utr_len
+                tu_boundaries[tu][0] = max(first_pos-utr_len, 0)
             else:
                 last_pos = max([uid_pos[gene][2] for gene in tu_genes[tu]])
-                tu_boundaries[tu][1] = last_pos+utr_len
+                tu_boundaries[tu][1] = min(last_pos+utr_len, fsa_lens[tu_chrn])
     # Now write all the tus to a gff file
     for tu, tub in tu_boundaries.items():
         outfile.write(
