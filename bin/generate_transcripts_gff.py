@@ -43,9 +43,13 @@ def main(argv=None):
                 settings.EC_chrlist.split(',')[1::2]))
     else:
         chr_dict = None
-    ecocyc_parser.generate_transcripts_file(
-        sys.stdout, utr_len=settings.est_utr_lens,
-        ec_dir=settings.ec_dir, chr_dict=chr_dict)
+    try:
+        ecocyc_parser.generate_transcripts_file(
+            sys.stdout, utr_len=settings.est_utr_lens,
+            ec_dir=settings.ec_dir, chr_dict=chr_dict)
+    except ValueError as e:
+        print e.msg
+        return 1
     # application code here, like:
     # run(settings, args)
     return 0        # success

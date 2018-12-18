@@ -83,6 +83,8 @@ def generate_transcripts_file(
     - `utr_len`: Default UTR len
     - `ec_dir`: EcoCyc data dir
     - `chr_dict`: map chromosome name in EcoCyc to another name (e.g. chr)
+    Raises:
+        ValueError: if a gene chromosome is not in the bc-dir
     """
     tu_promoters = read_promoters_data(ec_dir)
     tu_terminators = read_terminators_data(ec_dir)
@@ -95,6 +97,18 @@ def generate_transcripts_file(
     for fn, fs in fsa_seqs.items():
         fsa_lens[fn] = len(fs)
 
+    # Rename chromosomes according to chr_dict
+    if chr_dict:
+        chr_lens = {}
+
+        for fn, length in fsa_lens.items():
+            if fn in chr_dict:
+                chr_lens[chr_dict[fn]] = length
+            else:
+                chr_lens[fn] = length
+
+        fsa_lens = chr_lens
+
     for gene, tus in uid_tudata.items():
         if not tus:
             tu_genes[gene] = [gene]
@@ -104,11 +118,17 @@ def generate_transcripts_file(
     for tu in tu_genes:
         tu_str = uid_pos[tu_genes[tu][0]][3]
         tu_chrn = uid_pos[tu_genes[tu][0]][0]
+
         if chr_dict:
             try:
                 tu_chrn = chr_dict[tu_chrn]
             except KeyError:
                 pass
+
+        # Report genes that do not match any chromosome. an exception is caught in the generate_transcripts_gff main()
+        if tu_chrn not in fsa_lens:
+            raise ValueError('the chromosome: %s cuold not be found in the bc-dir given.' % tu_chrn)
+
         tu_boundaries[tu] = [0, 0, tu_str, tu_chrn]
         if tu in tu_promoters:
             if tu_str == '+':
