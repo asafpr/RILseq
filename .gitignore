@@ -9,3 +9,6 @@
 
 # Emacs autosave files
 *.py~
+
+# BioCyc test directory
+RILseq/test-biocyc/

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Generate a gff file of transcripts using an EcoCyc data flat-files
+Generate a gff file of transcripts using an BioCyc data flat-files
 """
 
 import sys
@@ -18,15 +18,15 @@ def process_command_line(argv):
         argv = sys.argv[1:]
 
     # initialize the parser object, replace the description
-    parser = argparse.ArgumentParser(description='Generate EcoCyc genes gff file')
+    parser = argparse.ArgumentParser(description='Generate BioCyc genes gff file')
 
     parser.add_argument(
-        'ec_dir',
-        help='EcoCyc flat-files directory.')
+        'bc_dir',
+        help='BioCyc flat-files directory.')
     parser.add_argument(
-        '--EC_chrlist', default='COLI-K12,chr',
+        '--BC_chrlist', default='COLI-K12,chr',
         help='A comma separated dictionary of chromosome names from the '
-        'EcoCyc name to the bam name. See the names of chromosomes in bam file'
+        'BioCyc name to the bam name. See the names of chromosomes in bam file'
         ' using samtools view -H foo.bam.')
     parser.add_argument(
         '--est_utr_lens', type=int, default=100,
@@ -37,16 +37,16 @@ def process_command_line(argv):
 
 def main(argv=None):
     settings = process_command_line(argv)
-    if settings.EC_chrlist:
+    if settings.BC_chrlist:
         chr_dict = dict(zip(
-                settings.EC_chrlist.split(',')[0::2],
-                settings.EC_chrlist.split(',')[1::2]))
+                settings.BC_chrlist.split(',')[0::2],
+                settings.BC_chrlist.split(',')[1::2]))
     else:
         chr_dict = None
     try:
         ecocyc_parser.generate_transcripts_file(
             sys.stdout, utr_len=settings.est_utr_lens,
-            ec_dir=settings.ec_dir, chr_dict=chr_dict)
+            ec_dir=settings.bc_dir, chr_dict=chr_dict)
     except ValueError as e:
         print e.msg
         return 1
