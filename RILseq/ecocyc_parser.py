@@ -83,12 +83,32 @@ def generate_transcripts_file(
     - `utr_len`: Default UTR len
     - `ec_dir`: EcoCyc data dir
     - `chr_dict`: map chromosome name in EcoCyc to another name (e.g. chr)
+    Raises:
+        ValueError: if a gene chromosome is not in the bc-dir
     """
     tu_promoters = read_promoters_data(ec_dir)
     tu_terminators = read_terminators_data(ec_dir)
     uid_pos, uid_names, uid_tudata, sRNAs_list, other_RNAs_list, rRNAs =\
         read_genes_data(ec_dir)
     tu_genes = defaultdict(list)
+
+    fsa_seqs = read_fsas(ec_dir)
+    fsa_lens = {}
+    for fn, fs in fsa_seqs.items():
+        fsa_lens[fn] = len(fs)
+
+    # Rename chromosomes according to chr_dict
+    if chr_dict:
+        chr_lens = {}
+
+        for fn, length in fsa_lens.items():
+            if fn in chr_dict:
+                chr_lens[chr_dict[fn]] = length
+            else:
+                chr_lens[fn] = length
+
+        fsa_lens = chr_lens
+
     for gene, tus in uid_tudata.items():
         if not tus:
             tu_genes[gene] = [gene]
@@ -98,11 +118,17 @@ def generate_transcripts_file(
     for tu in tu_genes:
         tu_str = uid_pos[tu_genes[tu][0]][3]
         tu_chrn = uid_pos[tu_genes[tu][0]][0]
+
         if chr_dict:
             try:
                 tu_chrn = chr_dict[tu_chrn]
             except KeyError:
                 pass
+
+        # Report genes that do not match any chromosome. an exception is caught in the generate_transcripts_gff main()
+        if tu_chrn not in fsa_lens:
+            raise ValueError('the chromosome: %s cuold not be found in the bc-dir given.' % tu_chrn)
+
         tu_boundaries[tu] = [0, 0, tu_str, tu_chrn]
         if tu in tu_promoters:
             if tu_str == '+':
@@ -113,10 +139,10 @@ def generate_transcripts_file(
             # Get first gene
             if tu_str == '+':
                 first_pos = min([uid_pos[gene][1] for gene in tu_genes[tu]])
-                tu_boundaries[tu][0] = first_pos-utr_len
+                tu_boundaries[tu][0] = max(first_pos-utr_len, 0)
             else:
                 last_pos = max([uid_pos[gene][2] for gene in tu_genes[tu]])
-                tu_boundaries[tu][1] = last_pos+utr_len
+                tu_boundaries[tu][1] = min(last_pos+utr_len, fsa_lens[tu_chrn])
         if tu in tu_terminators:
             if tu_str == '+':
                 tu_boundaries[tu][1] = max(tu_terminators[tu])+1
@@ -126,10 +152,10 @@ def generate_transcripts_file(
             # Get first gene
             if tu_str == '-':
                 first_pos = min([uid_pos[gene][1] for gene in tu_genes[tu]])
-                tu_boundaries[tu][0] = first_pos-utr_len
+                tu_boundaries[tu][0] = max(first_pos-utr_len, 0)
             else:
                 last_pos = max([uid_pos[gene][2] for gene in tu_genes[tu]])
-                tu_boundaries[tu][1] = last_pos+utr_len
+                tu_boundaries[tu][1] = min(last_pos+utr_len, fsa_lens[tu_chrn])
     # Now write all the tus to a gff file
     for tu, tub in tu_boundaries.items():
         outfile.write(
@@ -235,7 +261,7 @@ def read_genes_data(
     gfile = 'genes.dat', sRNAs_types=('BC-2.2','BC-2.2.7'),
     other_RNAs_types=('BC-2.2.5', 'BC-2.2.6', 'BC-3.1.3.6'),
     exclude_set=('EG10438',),
-    rRNA_prod='RRNA'):
+    rRNA_prod=['RRNA']):
     """
     Read the genes.dat from the ec directory 
     Arguments:
@@ -291,7 +317,7 @@ def read_genes_data(
                 else:
                     chrom_name = tuname.rsplit('-',1)[0]
             if line.startswith('PRODUCT'):
-                if line.strip().split()[-1].split('-')[-1]==rRNA_prod:
+                if line.strip().split()[-1].split('-')[-1] in rRNA_prod:
                     rRNAs.append(ingene)
             if line.startswith('//'):
                 if coords[2] != '' and coords[1]>coords[0]:

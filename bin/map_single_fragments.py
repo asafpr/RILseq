@@ -13,6 +13,7 @@ import argparse
 import pysam
 import csv
 import os
+from Bio import SeqIO
 
 import RILseq
 
@@ -86,7 +87,7 @@ def process_command_line(argv):
         help='Additional parameters for samse function of bwa.')
     parser.add_argument(
         '-w', '--create_wig', default=False, action='store_true',
-        help='Additional parameters for samse function of bwa.')
+        help='Create a coverage wiggle file.')
 
     settings = parser.parse_args(argv)
 
@@ -96,6 +97,11 @@ def main(argv=None):
     settings = process_command_line(argv)
     if not os.path.exists(settings.dirout):
         os.makedirs(settings.dirout)
+
+    genome_len = {}
+    if settings.genome_fasta:
+        for chrf in SeqIO.parse(settings.genome_fasta, 'fasta'):
+            genome_len[chrf.id] = len(chrf.seq)
 
     if settings.genes_gff:
         try:
@@ -131,7 +137,7 @@ def main(argv=None):
             outwigs = [open("%s/%s_coverage.wig"%(settings.dirout, fastq.split("_cutadapt")[0]), 'w')
                for fastq in fastq_1_list]
             coverage = RILseq.generate_wig(
-                samfile, rev=settings.reverse_complement, first_pos=False)
+                samfile, rev=settings.reverse_complement, first_pos=False, genome_lengths=genome_len)
             RILseq.print_wiggle(
                 coverage, "%s_single_fragments_coverage"%libname,
                 "%s single fragments coverage"%libname, outwigs[i])
