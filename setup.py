@@ -31,6 +31,6 @@ setup(name='RILseq',
       license='MIT',
       packages=['RILseq'],
       install_requires=[
-        'scipy', 'numpy', 'pysam', 'biopython'],
+        'scipy', 'numpy', 'pysam>=0.14.1', 'biopython'],
       include_package_data=True,
       zip_safe=False)

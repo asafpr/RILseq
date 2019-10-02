@@ -3,7 +3,7 @@ RILseq
 ================
 Intention
 ---------
-This package can be used to analyzed RILseq experiments. It is written for a prokaryotic genome, without splice junction mapping and with some additional features. RILseq is described in Melamed et al, Molecular Cell 63 (2016), pp. 884-897 (http://www.cell.com/molecular-cell/fulltext/S1097-2765(16)30413-0).
+This package can be used to analyzed RILseq experiments. It is written for a prokaryotic genome, without splice junction mapping and with some additional features. RILseq is described in Melamed et al, Molecular Cell 63 (2016), pp. 884-897 (http://www.cell.com/molecular-cell/fulltext/S1097-2765(16)30413-0) and Melamed et al, Nature Protocols volume 13, pages 133 (2018) (https://www.nature.com/articles/nprot.2017.115).
 
 The package handles the different stages processing fastq files to pairs of interacting RNAs and some statistics. It *does not* handle quality issues, adapter removing etc. so the fastq files should be treated with cutadapt or equivalent before applying this package.
 
@@ -95,7 +95,6 @@ Data Files
 This package works well for E. coli K12 (RefSeq NC_000913.2 genome and RefSeq NC_000913.3 genome). The data
 directory contains two separate sub directories termed ver2 and ver3 for each of the two genome versions which
 includes the genome \*.fa, the EcoCyc genes gff file and the EcoCyc transcripts gff file. These files and others in the ver2 and ver3 directories are based on EcoCyc version 19.0 and 20.0 respectively and include data from BioCyC(TM) pathway/genome database under license from SRI international. 
- .. image:: biocyc-logo.jpg
 The genome should be indexed using bwa index genome.fa before using it. The two gff files can be generated using the scripts::
 
     generate_transcripts_gff.py EcoCyc_data_dir

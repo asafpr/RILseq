@@ -152,7 +152,7 @@ def main(argv=None):
     else:
         outall = None
     for bf in RILseq.flat_list(settings.bamfiles):
-        bfin = pysam.Samfile(bf)
+        bfin = pysam.AlignmentFile(bf,'rb')
         outhead = bf.rsplit('.', 1)[0]
         libname = outhead.rsplit('/',1)[-1]
         fsq1name = "%s/%s_ends_1.fastq"%(settings.dirout, libname)
@@ -176,11 +176,11 @@ def main(argv=None):
             else:
                 bamname = RILseq.run_bwa(
                     settings.bwa_exec, fqname, None,
-                    settings.dirout, bamheadname, settings.max_mismatches,
-                    settings.genome_fasta, settings.params_aln,
+                    os.path.abspath(settings.dirout), bamheadname, settings.max_mismatches,
+                    os.path.abspath(settings.genome_fasta), settings.params_aln,
                     '', settings.samse_params,
                     settings.samtools_cmd)
-            bamin = pysam.Samfile(bamname)
+            bamin = pysam.AlignmentFile(bamname,'rb')
             reads_in.append(RILseq.read_bam_file(
                     bamin, bamin.references, settings.allowed_mismatches))
         RILseq.write_reads_table(

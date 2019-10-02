@@ -93,22 +93,23 @@ def get_reads_seqs(bamfile, rnames, rev=False):
     rqns = set()
     reads = defaultdict(list)
     for read in bamfile.fetch(until_eof=True):
-        rqns.add(read.qname)
-        reads[read.qname].append(read)  # read reads
+        rqns.add(read.query_name)
+        reads[read.query_name].append(read)  # read reads
     for rn in set(rnames) & rqns:  # iterate through the reads which are also in the bam file
         for read in reads[rn]:
             if read.is_read1==rev:  # read is first and reverse flag (Livny)
-                outseq = Seq(read.seq)
+                outseq = Seq(read.query_sequence)
                 if not read.is_reverse:  # if read is not reversed, reverse_complement the read and store in r1_seqs
                     outseq = outseq.reverse_complement()
-                r1_seqs[read.qname] = str(outseq)
+                r1_seqs[read.query_name] = str(outseq)
             else:  # read is second and reverse flag (Livny)
-                outseq = Seq(read.seq)
+                outseq = Seq(read.query_sequence)
                 if read.is_reverse:  # if read is reversed, reverse_complement the read and store in r2_seqs
                     outseq = outseq.reverse_complement()
-                r2_seqs[read.qname] = str(outseq)
+                r2_seqs[read.query_name] = str(outseq)
     # r1_seqs is the 3' end of the second fused RNA, r2_seqs is the 5' of the first fused RNA
     return r1_seqs, r2_seqs
+
 
 def extend_alignment(rseq, pos5p, pos3p, is_read1, strand, genome, mismatch=1):
     """
@@ -226,7 +227,7 @@ def main(argv=None):
     r2_seqs = {}
     for bamfile in list(RILseq.flat_list(settings.bamfiles)):  # flat multiple lists into one list.
         r1s, r2s = get_reads_seqs(
-            pysam.Samfile(bamfile), read_5ps.keys(), rev=settings.reverse)
+            pysam.AlignmentFile(bamfile, 'rb'), read_5ps.keys(), rev=settings.reverse)
         r1_seqs.update(r1s)
         r2_seqs.update(r2s)
     # For each read find the overlap, if exists and find the fusion point
