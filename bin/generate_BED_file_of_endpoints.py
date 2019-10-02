@@ -46,8 +46,6 @@ def process_command_line(argv):
     parser.add_argument(
         'bamfiles', action='append', nargs='+',
         help='The original bam file (or several files) with the full reads.')
-
-
     parser.add_argument(
         '-r', '--reverse', default=False, action='store_true',
         help='The original bam file is the reverse complement of the RNA.')
@@ -75,19 +73,20 @@ def process_command_line(argv):
         '--rev_second', default='51,102,255',
         help='Color of second part, reverse strand.')
     parser.add_argument(
-        '--EC_chrlist', default='COLI-K12,chr',
-        help='A comma separated dictionary of chromosome names from the EcoCyc'
+        '--BC_chrlist', default='COLI-K12,chr',
+        help='A comma separated dictionary of chromosome names from the BioCyc'
         ' names to the bam file names. The names in the bam file should be '
         ' the same as the UCSC genome browser (they will be printed).')
     settings = parser.parse_args(argv)
     return settings
+
 
 def get_reads_seqs(bamfile, rnames, rev=False):
     """
     Return the sequences of all the reads from the bam file
     Arguments:
     - `bamfile`: The pysam file
-    - `rnames`: reads names
+    - `rnames`: reads names (a list of the 5p read id)
     """
     r1_seqs = {}
     r2_seqs = {}
@@ -95,21 +94,20 @@ def get_reads_seqs(bamfile, rnames, rev=False):
     reads = defaultdict(list)
     for read in bamfile.fetch(until_eof=True):
         rqns.add(read.qname)
-        reads[read.qname].append(read)
-    for rn in set(rnames) & rqns:
+        reads[read.qname].append(read)  # read reads
+    for rn in set(rnames) & rqns:  # iterate through the reads which are also in the bam file
         for read in reads[rn]:
-            if read.is_read1==rev:
+            if read.is_read1==rev:  # read is first and reverse flag (Livny)
                 outseq = Seq(read.seq)
-                if not read.is_reverse:
+                if not read.is_reverse:  # if read is not reversed, reverse_complement the read and store in r1_seqs
                     outseq = outseq.reverse_complement()
                 r1_seqs[read.qname] = str(outseq)
-            else:
+            else:  # read is second and reverse flag (Livny)
                 outseq = Seq(read.seq)
-                if read.is_reverse:
+                if read.is_reverse:  # if read is reversed, reverse_complement the read and store in r2_seqs
                     outseq = outseq.reverse_complement()
                 r2_seqs[read.qname] = str(outseq)
-    # r1_seqs is the 3' end of the second fused RNA, r2_seqs is the 5' of the
-    # first fused RNA
+    # r1_seqs is the 3' end of the second fused RNA, r2_seqs is the 5' of the first fused RNA
     return r1_seqs, r2_seqs
 
 def extend_alignment(rseq, pos5p, pos3p, is_read1, strand, genome, mismatch=1):
@@ -158,7 +156,7 @@ def extend_alignment(rseq, pos5p, pos3p, is_read1, strand, genome, mismatch=1):
                     while rcnt[genome[(pos5p-ipos)%glen]] == rseq[ipos]:
                         ipos += 1
                 except IndexError:
-                    return ipos -1
+                    return ipos - 1
                 ipos += 1
             return ipos 
         else:
@@ -172,13 +170,13 @@ def extend_alignment(rseq, pos5p, pos3p, is_read1, strand, genome, mismatch=1):
                 ipos += 1
             return ipos 
         
-                
-        
+
 def find_overlap(s1, s2):
     """
     Find overlaps between two reads. Assume they are both in the same
     orientation (r1 is revcomp)
-    Return 3 seuqnces: s1, overlap, s2
+    Return 3 sequences: s1, overlap, s2
+    e.g: find_overlap("ACTGTGTGTGTGCC", "GTGTGCCCCCCCCCCC") - ('ACTGTGT', 'GTGTGCC', 'CCCCCCCCC')
     Arguments:
     - `s1`: first sequence, this is mate 2 actually in our experiments
     - `s2`: last sequence, mate 1
@@ -199,14 +197,15 @@ def main(argv=None):
     gsize = {}
     for sr in SeqIO.parse(settings.genome, 'fasta'):
         genome[sr.id] = sr.seq
-        gsize[sr.id] = len(sr.seq)
-    if len(settings.EC_chrlist) >= 2:
+        gsize[sr.id] = len(sr.seq)  # genome size dictionary - {chr:size}
+    if len(settings.BC_chrlist) >= 2:
         chr_dict = dict(zip(
-                settings.EC_chrlist.split(',')[0::2],
-                settings.EC_chrlist.split(',')[1::2]))
+                settings.BC_chrlist.split(',')[0::2],
+                settings.BC_chrlist.split(',')[1::2]))
+    #  create dictionary of {'COLI-K12' : 'chr'}
     else:
         chr_dict = {}
-    if settings.summary:
+    if settings.summary:  # only reads from the significant interactions in -s param, also can enter a specific gene.
         sig_reads = RILseq.read_significant_reads(
             settings.summary, chr_dict, gname=settings.gene_name)
 
@@ -217,14 +216,15 @@ def main(argv=None):
         if settings.summary:
             if (int(line[4])-1, line[5], line[3]) not in\
                     sig_reads[(int(line[1])-1, line[2], line[0])]:
+                # skip if (coord_2, strand_2, chrom_2) not in the (coord_2, strand_2, chrom_2) of the significant reads.
                 continue
-        read_5ps[line[6]] = [int(line[1])-1, line[2], line[0]]
-        read_3ps[line[6]] = [int(line[4])-1, line[5], line[3]]
+        read_5ps[line[6]] = [int(line[1])-1, line[2], line[0]]  # {read_id : [coord_1(0-based), strand_1, chrom_1]}
+        read_3ps[line[6]] = [int(line[4])-1, line[5], line[3]]  # {read_id : [coord_2(0-based), strand_2, chrom_2]}
 #        read_genes[line[6]] = [line[0], line[1]]
     # Read the bam files and return the long sequences
     r1_seqs = {}
     r2_seqs = {}
-    for bamfile in list(RILseq.flat_list(settings.bamfiles)):
+    for bamfile in list(RILseq.flat_list(settings.bamfiles)):  # flat multiple lists into one list.
         r1s, r2s = get_reads_seqs(
             pysam.Samfile(bamfile), read_5ps.keys(), rev=settings.reverse)
         r1_seqs.update(r1s)
@@ -238,9 +238,10 @@ def main(argv=None):
         if rname in r1_seqs:
             r2seq = r2_seqs[rname]
             r1seq = r1_seqs[rname]
-        else: # single-end
+        else:  # single-end
             r2seq = r2_seqs[rname]
             r1seq = ''
+        # r2seq, r1seq are the sequences from the bam files for paired end
         s1, overlap, s2 = find_overlap(r2seq, r1seq)
         side_5p_len = extend_alignment(
             s1+overlap+s2, read_5ps[rname][0], 0, False, read_5ps[rname][1],
@@ -263,7 +264,7 @@ def main(argv=None):
             gto = min(gsize[read_5ps[rname][2]], read_5ps[rname][0]+1)
             outer.writerow([
                     read_5ps[rname][2], gfrom, gto, "%s_5p"%rname, score, '-',
-                    gfrom, gto,settings.rev_first])
+                    gfrom, gto, settings.rev_first])
         if read_3ps[rname][1] == '+':
             gfrom = max(0, read_3ps[rname][0]-side_3p_len+1)
             gto = min(gsize[read_3ps[rname][2]], read_3ps[rname][0]+1)

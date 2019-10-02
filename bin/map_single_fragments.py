@@ -13,6 +13,7 @@ import argparse
 import pysam
 import csv
 import os
+from Bio import SeqIO
 
 import RILseq
 
@@ -97,6 +98,11 @@ def main(argv=None):
     if not os.path.exists(settings.dirout):
         os.makedirs(settings.dirout)
 
+    genome_len = {}
+    if settings.genome_fasta:
+        for chrf in SeqIO.parse(settings.genome_fasta, 'fasta'):
+            genome_len[chrf.id] = len(chrf.seq)
+
     if settings.genes_gff:
         try:
             pos_feat_list, all_features = RILseq.read_gtf(
@@ -131,7 +137,7 @@ def main(argv=None):
             outwigs = [open("%s/%s_coverage.wig"%(settings.dirout, fastq.split("_cutadapt")[0]), 'w')
                for fastq in fastq_1_list]
             coverage = RILseq.generate_wig(
-                samfile, rev=settings.reverse_complement, first_pos=False)
+                samfile, rev=settings.reverse_complement, first_pos=False, genome_lengths=genome_len)
             RILseq.print_wiggle(
                 coverage, "%s_single_fragments_coverage"%libname,
                 "%s single fragments coverage"%libname, outwigs[i])

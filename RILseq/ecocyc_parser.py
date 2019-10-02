@@ -261,7 +261,7 @@ def read_genes_data(
     gfile = 'genes.dat', sRNAs_types=('BC-2.2','BC-2.2.7'),
     other_RNAs_types=('BC-2.2.5', 'BC-2.2.6', 'BC-3.1.3.6'),
     exclude_set=('EG10438',),
-    rRNA_prod='RRNA'):
+    rRNA_prod=['RRNA']):
     """
     Read the genes.dat from the ec directory 
     Arguments:
@@ -317,7 +317,7 @@ def read_genes_data(
                 else:
                     chrom_name = tuname.rsplit('-',1)[0]
             if line.startswith('PRODUCT'):
-                if line.strip().split()[-1].split('-')[-1]==rRNA_prod:
+                if line.strip().split()[-1].split('-')[-1] in rRNA_prod:
                     rRNAs.append(ingene)
             if line.startswith('//'):
                 if coords[2] != '' and coords[1]>coords[0]:

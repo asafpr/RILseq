@@ -19,6 +19,7 @@ import argparse
 import pysam
 import os
 import errno
+import pkg_resources
 
 import RILseq
 
@@ -125,7 +126,9 @@ def process_command_line(argv):
 
     return settings
 
+
 def main(argv=None):
+    sys.stderr.write("RILseq version: {}\n".format(pkg_resources.get_distribution("RILseq").version))
     settings = process_command_line(argv)
     # Read the transcripts if given
     try:

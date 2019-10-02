@@ -275,7 +275,7 @@ def count_features(
         return fcounts
 
 
-def generate_wig(samfile, rev=False, first_pos=False):
+def generate_wig(samfile, rev=False, first_pos=False, genome_lengths=None):
     """
     Go over the samfile and return two histograms (for + and - strands) of
     coverage
@@ -284,6 +284,7 @@ def generate_wig(samfile, rev=False, first_pos=False):
     - `samfile`: A pysam object
     - `rev`: reverse the strand of the read
     - `first_pos`: Count only the first position of each read
+    - `genome_lengths`: a dictionary of genome name and length {'chr': len, 'chr2': len}
     """
     # Build the structure of the dictionary chromosome->strand->list of 0
     coverage = {}
@@ -319,9 +320,9 @@ def generate_wig(samfile, rev=False, first_pos=False):
                 rrange = [tpos]
         for i in rrange:
             try:
-                coverage[chrname][strand][i] += 1
+                coverage[chrname][strand][i%(genome_lengths[chrname])] += 1  # support cyclic genomes
             except IndexError:
-                logging.warn("IndexError: trying to set index %d on chr %s, bu length is only %d"%(i, chrname, len(coverage[chrname][strand])))
+                logging.warn("IndexError: trying to set index %d on chr %s, but length is only %d"%(i, chrname, len(coverage[chrname][strand])))
     return coverage
 
 
@@ -509,6 +510,10 @@ def get_XA_mapping(tags, max_mm=None):
         if tpair[0] == 'XA':
             for xadat in tpair[1].split(';')[:-1]:
                 alt_dat = xadat.split(',')
+                # 22.9.2019 - added this line to fix an off by 1 bug when the alternative alignment is read.
+                # the alternative alignment in the XA tag is 1-based and not 0-based like read.pos
+                alt_dat[1] = alt_dat[1][0]+str(int(alt_dat[1][1:])-1)
+                # end edit
                 if max_mm is None or int(alt_dat[-1])<=max_mm:
                     tlist[int(alt_dat[1][1:])] = alt_dat
                     
@@ -548,7 +553,7 @@ def replace_with_XA(read, al, chrnames_bam):
                 strs = '-'
             tags.append(('XA', '%s,%s%d,%s,%d;'%(
                         chrnames_bam[read.tid],
-                        strs, read.pos,
+                        strs, read.pos+1,  # the tags are written as 1-based and read.pos is 0-based
                         read.cigarstring, nm_num) +xaval))
             read.tags = tags
     read.pos = apos
@@ -1425,6 +1430,10 @@ def report_interactions(
         gname2 = genes2_list[0]
         g1common, g1desc = get_names(gname1, uid_names, desc, r1_str)
         g2common, g2desc = get_names(gname2, uid_names, desc, r2_str)
+        if len(gname1) > 2 and gname1[0] == gname1[1]:
+            logging.warn("the elements have the same name {}".format(gname1))
+        if len(gname2) > 2 and gname2[0] == gname2[1]:
+            logging.warn("the elements have the same name {}".format(gname2))
         if r1_str == '-' and len(gname1) > 2 and (gname1[2] == 'IGR'):  # if reverse strand and IGR, flip the gene name.
             gname1_str = "%s.%s.%s" % (gname1[1], gname1[0], gname1[2])
         else:
@@ -1470,7 +1479,7 @@ def report_interactions(
     sorted_order.extend(sorted(sort_3UTRs, key=sort_3UTRs.get))
     sorted_order.extend(sorted(sort_rest, key=sort_rest.get))
     # Print all the interactions
-    outer=csv.writer(outfile, delimiter='\t')
+    outer=csv.writer(outfile, delimiter='\t', lineterminator='\n')
     outer.writerow(header_vec)
     for k in sorted_order:
         outer.writerow(out_data[k])

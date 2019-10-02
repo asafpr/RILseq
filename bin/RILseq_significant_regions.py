@@ -66,6 +66,10 @@ def process_command_line(argv):
         '--ribozero', default=False, action='store_true',
         help='Remove rRNA prior to the statistical analysis.')
     parser.add_argument(
+        '--rrna_list', default='rrna',
+        help='rRNA list of types for rRNA_prod param in read_genes_data(). this is a no spaces comma-seperated list.'
+             ' e.g. \'rRNA,rrna,RRNA\'')
+    parser.add_argument(
         '--all_interactions', default=False, action='store_true',
         help='Skip all statistical tests and report all the interactions.')
     parser.add_argument(
@@ -142,13 +146,16 @@ def process_command_line(argv):
              'The name should be identical to the chromosome/plasmid name in the given genome fasta file.')
 
     settings = parser.parse_args(argv)
-
     if settings.linear_chromosome_list:
         settings.linear_chromosome_list = settings.linear_chromosome_list.split(',')
     else:
         settings.linear_chromosome_list = None
-    return settings
 
+    if settings.rrna_list:
+        settings.rrna_list = settings.rrna_list.split(',')
+    else:
+        settings.rrna_list = None
+    return settings
 
 
 def main(argv=None):
@@ -156,7 +163,7 @@ def main(argv=None):
     if settings.ribozero and settings.bc_dir:
         try:
             uid_pos,_,_,_,_,rRNAs = RILseq.ecocyc_parser.read_genes_data(
-                settings.bc_dir)
+                settings.bc_dir, rRNA_prod=settings.rrna_list)
         except IOError:
             raise 
         rr_pos = []
