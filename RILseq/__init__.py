@@ -165,7 +165,7 @@ def get_paired_pos(read, rev=False):
     if rev!=read.is_read2:
         strand = '-'
     fpos = read.reference_start
-    tpos = read.template_length + fpos
+    tpos = read.template_length + fpos  # previously termed tlen
     return strand, fpos, tpos
 
 def get_single_pos(read, rev=False):
@@ -181,10 +181,9 @@ def get_single_pos(read, rev=False):
     if rev!=read.is_reverse:
         strand = '-'
     fpos = read.reference_start
-    tpos = read.query_alignment_length + fpos
+    # tpos = read.query_alignment_length + fpos. previously termed qlen
+    tpos = read.reference_length + fpos  # previously termed alen
     return strand, fpos, tpos
-
-
 
 
 def count_features(
@@ -275,7 +274,7 @@ def count_features(
         return fcounts
 
 
-def generate_wig(samfile, rev=False, first_pos=False, genome_lengths=None):
+def generate_wig(samfile, rev=False, genome_lengths=None):
     """
     Go over the samfile and return two histograms (for + and - strands) of
     coverage
@@ -283,7 +282,6 @@ def generate_wig(samfile, rev=False, first_pos=False, genome_lengths=None):
     Arguments:
     - `samfile`: A pysam object
     - `rev`: reverse the strand of the read
-    - `first_pos`: Count only the first position of each read
     - `genome_lengths`: a dictionary of genome name and length {'chr': len, 'chr2': len}
     """
     # Build the structure of the dictionary chromosome->strand->list of 0
@@ -313,11 +311,6 @@ def generate_wig(samfile, rev=False, first_pos=False, genome_lengths=None):
         else:
             strand, fpos, tpos = get_single_pos(read, rev=rev)
         rrange = range(fpos, tpos)
-        if first_pos:
-            if strand == '+':
-                rrange = [fpos]
-            else:
-                rrange = [tpos]
         for i in rrange:
             try:
                 coverage[chrname][strand][i%(genome_lengths[chrname])] += 1  # support cyclic genomes
