@@ -137,7 +137,7 @@ def main(argv=None):
             outwigs = [open("%s/%s_coverage.wig"%(settings.dirout, fastq.split("_cutadapt")[0]), 'w')
                for fastq in fastq_1_list]
             coverage = RILseq.generate_wig(
-                samfile, rev=settings.reverse_complement, first_pos=False, genome_lengths=genome_len)
+                samfile, rev=settings.reverse_complement, genome_lengths=genome_len)
             RILseq.print_wiggle(
                 coverage, "%s_single_fragments_coverage"%libname,
                 "%s single fragments coverage"%libname, outwigs[i])
