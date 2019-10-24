@@ -130,8 +130,8 @@ def read_gtf(gtf_file, feature, identifier):
                     pass
                 ids_dict[k] = v.replace('"','')
         except IndexError as e:
-            print "Error reading GTF file. line: %s " \
-                  "might not be tab-delimited, or columns might be missing \n%s " % (str(line), e)
+            print("Error reading GTF file. line: %s " \
+                  "might not be tab-delimited, or columns might be missing \n%s " % (str(line), e))
             raise e
         fid = ids_dict[identifier]
         all_features.add(fid)
