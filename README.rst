@@ -9,7 +9,7 @@ The package handles the different stages processing fastq files to pairs of inte
 
 Installation
 ------------
-Either `pip install rilseq` or `conda install rilseq`
+Either :bash:`pip install rilseq` or :bash:`conda install rilseq`
 
 Simple mapping
 --------------
