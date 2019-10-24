@@ -7,6 +7,10 @@ This package can be used to analyzed RILseq experiments. It is written for a pro
 
 The package handles the different stages processing fastq files to pairs of interacting RNAs and some statistics. It *does not* handle quality issues, adapter removing etc. so the fastq files should be treated with cutadapt or equivalent before applying this package.
 
+Installation
+------------
+Either `pip install rilseq` or `conda install rilseq`
+
 Simple mapping
 --------------
 The first stage is to map the reads to the genome. In this readme file it's assumed that the reads are paired-end but all the commands will work for single-end mapping.
