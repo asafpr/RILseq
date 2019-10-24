@@ -30,7 +30,7 @@ def shuffle_difreq(rseq):
 
 if __name__ == "__main__":
     seq = 'AACAAAACAAAAAGTTGGGTAGTTTGAGAAC' * 20
-    print difreq(seq)
+    print(difreq(seq))
     shuff_seqr = shuffle_difreq(seq)
-    print shuff_seqr
-    print difreq(shuff_seqr)
+    print(shuff_seqr)
+    print(difreq(shuff_seqr))
