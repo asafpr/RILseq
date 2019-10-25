@@ -256,9 +256,10 @@ def count_features(
             if strand == '-':
                 rev_str = '+'
             rev_counts = defaultdict(int)
-            for fset in features_lists[chrname+rev_str][fpos:tpos]:
-                for el in fset:
-                    rev_counts[el] += 1
+            if (chrname+rev_str in features_lists):
+                for fset in features_lists[chrname+rev_str][fpos:tpos]:
+                    for el in fset:
+                        rev_counts[el] += 1
             is_antis = False
             for feature, counts in rev_counts.items():
                 if counts >= overlap:
