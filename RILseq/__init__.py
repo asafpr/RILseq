@@ -240,9 +240,10 @@ def count_features(
         
         # Count the number of times a feature intersects with the fragment
         rcounts = defaultdict(int)
-        for fset in features_lists[chrname+strand][fpos:tpos]:
-            for el in fset:
-                rcounts[el] += 1
+        if (chrname+strand in features_lists):
+            for fset in features_lists[chrname+strand][fpos:tpos]:
+                for el in fset:
+                    rcounts[el] += 1
         # Go over the list of features, if the number of counts is above the
         # Threshold add 1 to the count of this feature
         is_counted = False
