@@ -768,8 +768,8 @@ def read_reads_table(reads_in, seglen, rRNAs=None, only_single=False):
                     break
             if has_rRNA:
                 continue
-        end1_seg = (end1_pos/seglen)*seglen
-        end2_seg = (end2_pos/seglen)*seglen
+        end1_seg = int(end1_pos/seglen)*seglen
+        end2_seg = int(end2_pos/seglen)*seglen
         total_interactions += 1
         if (rtype != "single") != only_single:
             region_interactions[(end1_seg, end1_str, end1_chrn)]\
@@ -1034,7 +1034,7 @@ def read_annotations(refseq_dir, an_ext = ('.ptt.gz', '.rnt.gz', '_feature_table
     if not ec_files:
         logging.warn("There are no .ppt.gz or .rnt.gz or *_feature_table.txt.gz files in the refseq directory. Please check your directory. ")
     for fin in ec_files:
-        fo = gzip.open(fin)
+        fo = gzip.open(fin, "rt")
         for row in csv.reader(fo, delimiter='\t'):
             try:
                 if '_feature_table.txt.gz' in fin and row[13] is not "" and row[13] is not "name":
