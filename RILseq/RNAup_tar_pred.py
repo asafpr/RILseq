@@ -1,5 +1,8 @@
 from subprocess import Popen,PIPE
-from Queue import Queue
+try: 
+    from queue import Queue
+except ImportError:
+    from Queue import Queue
 import threading
 import sys
 class Runner(threading.Thread):

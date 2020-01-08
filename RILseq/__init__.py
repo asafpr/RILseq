@@ -130,8 +130,8 @@ def read_gtf(gtf_file, feature, identifier):
                     pass
                 ids_dict[k] = v.replace('"','')
         except IndexError as e:
-            print "Error reading GTF file. line: %s " \
-                  "might not be tab-delimited, or columns might be missing \n%s " % (str(line), e)
+            print("Error reading GTF file. line: %s " \
+                  "might not be tab-delimited, or columns might be missing \n%s " % (str(line), e))
             raise e
         fid = ids_dict[identifier]
         all_features.add(fid)
@@ -165,7 +165,7 @@ def get_paired_pos(read, rev=False):
     if rev!=read.is_read2:
         strand = '-'
     fpos = read.reference_start
-    tpos = read.template_length + fpos
+    tpos = read.template_length + fpos  # previously termed tlen
     return strand, fpos, tpos
 
 def get_single_pos(read, rev=False):
@@ -181,10 +181,9 @@ def get_single_pos(read, rev=False):
     if rev!=read.is_reverse:
         strand = '-'
     fpos = read.reference_start
-    tpos = read.query_alignment_length + fpos
+    # tpos = read.query_alignment_length + fpos. previously termed qlen
+    tpos = read.reference_length + fpos  # previously termed alen
     return strand, fpos, tpos
-
-
 
 
 def count_features(
@@ -241,9 +240,10 @@ def count_features(
         
         # Count the number of times a feature intersects with the fragment
         rcounts = defaultdict(int)
-        for fset in features_lists[chrname+strand][fpos:tpos]:
-            for el in fset:
-                rcounts[el] += 1
+        if (chrname+strand in features_lists):
+            for fset in features_lists[chrname+strand][fpos:tpos]:
+                for el in fset:
+                    rcounts[el] += 1
         # Go over the list of features, if the number of counts is above the
         # Threshold add 1 to the count of this feature
         is_counted = False
@@ -257,9 +257,10 @@ def count_features(
             if strand == '-':
                 rev_str = '+'
             rev_counts = defaultdict(int)
-            for fset in features_lists[chrname+rev_str][fpos:tpos]:
-                for el in fset:
-                    rev_counts[el] += 1
+            if (chrname+rev_str in features_lists):
+                for fset in features_lists[chrname+rev_str][fpos:tpos]:
+                    for el in fset:
+                        rev_counts[el] += 1
             is_antis = False
             for feature, counts in rev_counts.items():
                 if counts >= overlap:
@@ -275,7 +276,7 @@ def count_features(
         return fcounts
 
 
-def generate_wig(samfile, rev=False, first_pos=False, genome_lengths=None):
+def generate_wig(samfile, rev=False, genome_lengths=None):
     """
     Go over the samfile and return two histograms (for + and - strands) of
     coverage
@@ -283,7 +284,6 @@ def generate_wig(samfile, rev=False, first_pos=False, genome_lengths=None):
     Arguments:
     - `samfile`: A pysam object
     - `rev`: reverse the strand of the read
-    - `first_pos`: Count only the first position of each read
     - `genome_lengths`: a dictionary of genome name and length {'chr': len, 'chr2': len}
     """
     # Build the structure of the dictionary chromosome->strand->list of 0
@@ -313,11 +313,6 @@ def generate_wig(samfile, rev=False, first_pos=False, genome_lengths=None):
         else:
             strand, fpos, tpos = get_single_pos(read, rev=rev)
         rrange = range(fpos, tpos)
-        if first_pos:
-            if strand == '+':
-                rrange = [fpos]
-            else:
-                rrange = [tpos]
         for i in rrange:
             try:
                 coverage[chrname][strand][i%(genome_lengths[chrname])] += 1  # support cyclic genomes
@@ -773,8 +768,8 @@ def read_reads_table(reads_in, seglen, rRNAs=None, only_single=False):
                     break
             if has_rRNA:
                 continue
-        end1_seg = (end1_pos/seglen)*seglen
-        end2_seg = (end2_pos/seglen)*seglen
+        end1_seg = int(end1_pos/seglen)*seglen
+        end2_seg = int(end2_pos/seglen)*seglen
         total_interactions += 1
         if (rtype != "single") != only_single:
             region_interactions[(end1_seg, end1_str, end1_chrn)]\
@@ -1039,7 +1034,7 @@ def read_annotations(refseq_dir, an_ext = ('.ptt.gz', '.rnt.gz', '_feature_table
     if not ec_files:
         logging.warn("There are no .ppt.gz or .rnt.gz or *_feature_table.txt.gz files in the refseq directory. Please check your directory. ")
     for fin in ec_files:
-        fo = gzip.open(fin)
+        fo = gzip.open(fin, "rt")
         for row in csv.reader(fo, delimiter='\t'):
             try:
                 if '_feature_table.txt.gz' in fin and row[13] is not "" and row[13] is not "name":

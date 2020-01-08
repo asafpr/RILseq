@@ -134,16 +134,16 @@ def main(argv=None):
                 pos_feat_list, samfile, settings.overlap,
                 rev=settings.reverse_complement)
         if settings.create_wig:
-            outwigs = [open("%s/%s_coverage.wig"%(settings.dirout, fastq.split("_cutadapt")[0]), 'w')
+            outwigs = [open("%s/%s_coverage.wig"%(settings.dirout, fastq.split("_cutadapt")[0].split('/')[-1]), 'w')
                for fastq in fastq_1_list]
             coverage = RILseq.generate_wig(
-                samfile, rev=settings.reverse_complement, first_pos=False, genome_lengths=genome_len)
+                samfile, rev=settings.reverse_complement, genome_lengths=genome_len)
             RILseq.print_wiggle(
                 coverage, "%s_single_fragments_coverage"%libname,
                 "%s single fragments coverage"%libname, outwigs[i])
     # Print the table of counts
     if settings.genes_gff:
-        outtables = [open("%s/%s_counts.txt"%(settings.dirout, fastq.split("_cutadapt")[0]), 'w')
+        outtables = [open("%s/%s_counts.txt"%(settings.dirout, fastq.split("_cutadapt")[0].split('/')[-1]), 'w')
                      for fastq in fastq_1_list]
         for i, r1_name in enumerate(fastq_1_list):
             outt = csv.writer(outtables[i], delimiter='\t')

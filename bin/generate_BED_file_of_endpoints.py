@@ -240,8 +240,8 @@ def main(argv=None):
         r2_seqs.update(r2s)
     # For each read find the overlap, if exists and find the fusion point
     outer = csv.writer(sys.stdout, delimiter='\t')
-    print 'track name="%s" description="%s" visibility=4 itemRgb="On" useScore=0'%(
-        settings.track_name, settings.track_desc)
+    print ('track name="%s" description="%s" visibility=4 itemRgb="On" useScore=0'%(
+        settings.track_name, settings.track_desc))
     # Because I'm lazy, the code is written so r1 is the 3' end of the fragment
     for rname in set(r2_seqs.keys()):
         if rname in r1_seqs:
