@@ -285,6 +285,7 @@ def read_genes_data(
     other_RNAs_list = []
     rRNAs = []
     uid_tudata = {}
+    # import sys
     with open("%s/%s"%(ec_dir, gfile)) as ecin:
         ingene = None
         has_types = False

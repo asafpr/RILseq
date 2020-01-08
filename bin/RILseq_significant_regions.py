@@ -162,6 +162,7 @@ def main(argv=None):
     settings = process_command_line(argv)
     if settings.ribozero and settings.bc_dir:
         try:
+            # sys.stderr.write("{}\n".format(','.join(settings.rrna_list)))
             uid_pos,_,_,_,_,rRNAs = RILseq.ecocyc_parser.read_genes_data(
                 settings.bc_dir, rRNA_prod=settings.rrna_list)
         except IOError:
@@ -176,8 +177,12 @@ def main(argv=None):
                               [uid_pos[rrgene][1]-settings.length] +\
                               [uid_pos[rrgene][2]+settings.length] +\
                               [uid_pos[rrgene][3]])
+        # sys.stderr.write('\n'.join(rRNAs))
+        # print uid_pos.items()[:10]
+        # sys.stderr.write('\n'.join(' '.join(map(str,sl)) for sl in rr_pos))
     else:
         rr_pos = None
+
     region_interactions, region_ints_as1, region_ints_as2, total_interactions=\
         RILseq.read_reads_table(
         open(settings.reads_in), settings.seglen, rr_pos, settings.only_singles)

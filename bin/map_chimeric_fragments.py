@@ -62,7 +62,7 @@ def process_command_line(argv):
         '--dust_thr', type=float, default=10,
         help='Threshold for dust filter. If 0 skip.')
     parser.add_argument(
-        '-d', '--dirout', default='./remapped-data/',
+            '-d', '--dirout', default='./remapped-data/',
         help='Output directory, default is this directory.')
     parser.add_argument(
         '-a', '--all_reads',
@@ -117,7 +117,7 @@ def process_command_line(argv):
         '-S', '--samtools_cmd', default='samtools',
         help='Samtools executable.')
     parser.add_argument(
-        '--params_aln', default='-t 8 -N -M 0',
+            '--params_aln', default='-t 8 -N -M 0',
         help='Additional parameters for aln function of bwa.')
     parser.add_argument(
         '--samse_params', default='-n 1000',
