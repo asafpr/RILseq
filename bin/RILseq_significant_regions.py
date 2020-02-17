@@ -66,7 +66,7 @@ def process_command_line(argv):
         '--ribozero', default=False, action='store_true',
         help='Remove rRNA prior to the statistical analysis.')
     parser.add_argument(
-        '--rrna_list', default='rrna',
+        '--rrna_list', default='rRNA,rrna,RRNA',
         help='rRNA list of types for rRNA_prod param in read_genes_data(). this is a no spaces comma-seperated list.'
              ' e.g. \'rRNA,rrna,RRNA\'')
     parser.add_argument(
