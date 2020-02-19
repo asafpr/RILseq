@@ -5,7 +5,7 @@ def readme():
         return f.read()
     
 setup(name='RILseq',
-      version='0.73',
+      version='0.74',
       description='Processing RILSeq experiments results',
       long_description=readme(),
       classifiers=[
@@ -16,7 +16,7 @@ setup(name='RILseq',
       ],
       scripts=[
         'bin/map_chimeric_fragments.py', 
-	'bin/map_single_fragments.py',
+        'bin/map_single_fragments.py',
         'bin/RILseq_significant_regions.py',
         'bin/generate_genes_gff.py',
         'bin/generate_transcripts_gff.py',

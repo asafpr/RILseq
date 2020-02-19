@@ -97,12 +97,12 @@ def get_reads_seqs(bamfile, rnames, rev=False):
         reads[read.query_name].append(read)  # read reads
     for rn in set(rnames) & rqns:  # iterate through the reads which are also in the bam file
         for read in reads[rn]:
-            if read.is_read1==rev:  # read is first and reverse flag (Livny)
+            if read.is_read1==rev:  # read is first and reverse flag (Livny) this actually tests for 3p
                 outseq = Seq(read.query_sequence)
                 if not read.is_reverse:  # if read is not reversed, reverse_complement the read and store in r1_seqs
                     outseq = outseq.reverse_complement()
                 r1_seqs[read.query_name] = str(outseq)
-            else:  # read is second and reverse flag (Livny)
+            else:  # read is second and reverse flag (Livny). this actually tests for 5p
                 outseq = Seq(read.query_sequence)
                 if read.is_reverse:  # if read is reversed, reverse_complement the read and store in r2_seqs
                     outseq = outseq.reverse_complement()
@@ -124,6 +124,14 @@ def extend_alignment(rseq, pos5p, pos3p, is_read1, strand, genome, mismatch=1):
     - `strand`: mapping strand
     - `genome`: The genome Seq object
     - `mismatch`: allowed mismatches
+
+    side_5p_len = extend_alignment(
+        s1+overlap+s2, read_5ps[rname][0], 0, False, read_5ps[rname][1],
+        genome[read_5ps[rname][2]])
+    side_3p_len = extend_alignment(
+        s1+overlap+s2, 0, read_3ps[rname][0], True, read_3ps[rname][1],
+        genome[read_3ps[rname][2]])
+
     """
     rcnt = {'A':'T', 'C':'G', 'G':'C', 'T':'A'}
     glen = len(genome)
@@ -244,6 +252,10 @@ def main(argv=None):
             r1seq = ''
         # r2seq, r1seq are the sequences from the bam files for paired end
         s1, overlap, s2 = find_overlap(r2seq, r1seq)
+        # print here
+        print(s1+overlap+s2)
+        print(read_5ps[rname][0])
+        print(read_3ps[rname][0])
         side_5p_len = extend_alignment(
             s1+overlap+s2, read_5ps[rname][0], 0, False, read_5ps[rname][1],
             genome[read_5ps[rname][2]])

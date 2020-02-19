@@ -86,7 +86,7 @@ def generate_table_s1(settings, outfile):
 
     if len(glob.glob("%s/fastq_files/*_1.fastq" % settings.process_nextseq_work_dir)) == 0:
         if len(glob.glob("%s/fastq_files/*_1.fastq.gz" % settings.process_nextseq_work_dir)) == 0:
-            print ("There are no fastq files in the given process_next_seq directory, Exiting")
+            print("There are no fastq files in the given process_next_seq directory, Exiting")
             return
         else:
             file_list = glob.glob("%s/fastq_files/*_1.fastq.gz" % settings.process_nextseq_work_dir)
@@ -124,7 +124,7 @@ def generate_table_s1(settings, outfile):
             count_cmd.append('-c')
         count_cmd_strict = count_cmd + ['-t']
 
-        print (count_cmd)
+        print(count_cmd)
         mapped_reads = Popen(' '.join(count_cmd), shell=True, stdout=PIPE).stdout.read().strip()
         mapped_reads_strict, multiple, antisense, igr = Popen(' '.join(count_cmd_strict), shell=True, stdout=PIPE)\
             .stdout.read().strip().split(',')

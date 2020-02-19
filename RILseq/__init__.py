@@ -597,7 +597,6 @@ def test_concordance(
                 return True
         return False
                         
-    
     # read1 is the reverse of the real read. If both directions are the same
     # and distance is short they can be concordant
     
