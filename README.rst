@@ -2,8 +2,11 @@
 .. image:: https://badge.fury.io/py/RILseq.svg
     :target: https://badge.fury.io/py/RILseq
 
-.. image:: https://travis-ci.org/asafpr/RILseq.svg?branch=master
+.. image:: https://travis-ci.org/asafpr/RILseq.svg
     :target: https://travis-ci.org/asafpr/RILseq
+
+.. image:: https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg?style=flat
+    :target: http://bioconda.github.io/recipes/rilseq/README.html
 
 ================
 RILseq
