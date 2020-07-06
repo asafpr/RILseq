@@ -2,6 +2,9 @@
 .. image:: https://badge.fury.io/py/RILseq.svg
     :target: https://badge.fury.io/py/RILseq
 
+.. image:: https://travis-ci.org/asafpr/RILseq.svg?branch=master
+    :target: https://travis-ci.org/asafpr/RILseq
+
 ================
 RILseq
 ================
