@@ -1,0 +1,4 @@
+scipy
+numpy
+pysam>=0.14.1
+biopython
