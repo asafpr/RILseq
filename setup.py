@@ -5,13 +5,13 @@ def readme():
         return f.read()
     
 setup(name='RILseq',
-      version='0.74',
+      version='0.76',
       description='Processing RILSeq experiments results',
       long_description=readme(),
       classifiers=[
         'Development Status :: 3 - Alpha',
         'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.7',
         'Topic :: Scientific/Engineering :: Bio-Informatics',
       ],
       scripts=[
