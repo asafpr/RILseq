@@ -2,8 +2,7 @@ language: python
 python:
   - '3.6'
 install:
-  - pip install -r requirements.txt
-  - pip install .
+  - python setup.py install
 script:
   - map_single_fragments.py -h
   - map_chimeric_fragments.py -h
