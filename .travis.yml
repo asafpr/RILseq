@@ -7,7 +7,7 @@ install:
 script:
   - map_single_fragments.py -h
   - map_chimeric_fragments.py -h
-  - TILseq_significant_regions.py -h
+  - RILseq_significant_regions.py -h
 deploy:
   provider: pypi
   username: "__token__"
