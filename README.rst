@@ -1,4 +1,7 @@
-[![install with bioconda](https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg?style=flat)](http://bioconda.github.io/recipes/rilseq/README.html)
+
+.. image:: https://badge.fury.io/py/RILseq.svg
+    :target: https://badge.fury.io/py/RILseq
+
 ================
 RILseq
 ================
