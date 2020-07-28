@@ -719,13 +719,13 @@ def write_reads_table(
         read1_chrn = chrnames_bam[read1_reads[rname].reference_id]
         read2_chrn = chrnames_bam[read2_reads[rname].reference_id]
         if not read2_reads[rname].is_reverse:
-            end2_pos = read2_reads[rname].reference_start+read2_reads[rname].query_alignment_length-1
+            end2_pos = read2_reads[rname].reference_start+read2_reads[rname].reference_length-1
             end2_str = '+'
         else:
             end2_pos = read2_reads[rname].reference_start
             end2_str = '-'
         if read1_reads[rname].is_reverse:
-            end1_pos = read1_reads[rname].reference_start+read1_reads[rname].query_alignment_length-1
+            end1_pos = read1_reads[rname].reference_start+read1_reads[rname].reference_length-1
             end1_str = '-'
         else:
             end1_pos = read1_reads[rname].reference_start

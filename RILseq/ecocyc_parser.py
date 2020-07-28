@@ -134,7 +134,7 @@ def generate_transcripts_file(
             if tu_str == '+':
                 tu_boundaries[tu][0] = tu_promoters[tu]
             else:
-                tu_boundaries[tu][1] = tu_promoters[tu]
+                tu_boundaries[tu][1] = tu_promoters[tu] + 1
         else:
             # Get first gene
             if tu_str == '+':
@@ -145,7 +145,7 @@ def generate_transcripts_file(
                 tu_boundaries[tu][1] = min(last_pos+utr_len, fsa_lens[tu_chrn])
         if tu in tu_terminators:
             if tu_str == '+':
-                tu_boundaries[tu][1] = max(tu_terminators[tu])+1
+                tu_boundaries[tu][1] = max(tu_terminators[tu]) + 1
             else:
                 tu_boundaries[tu][0] = min(tu_terminators[tu])
         else:
