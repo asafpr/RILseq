@@ -1,0 +1,14 @@
+language: python
+python:
+  - '3.6'
+install:
+  - python setup.py install
+script:
+  - map_single_fragments.py -h
+  - map_chimeric_fragments.py -h
+  - RILseq_significant_regions.py -h
+deploy:
+  provider: pypi
+  username: "__token__"
+  password:
+    secure: qEdkhlOmCjsJ/WfNgipH0LPLVvtDZJgu5Lbvq/h4Gbu/bpyyVd/r4X2XjLiAWl4VY321FlMwsd/Os0bP8qAApbyJMu+h3sBOkjRHZkGL+dwipNxZDWhePBUtOLi/f8EKCSoWp2mpbGoD6w7l3J3nWkwoMF/trnt9H9BxasZAbTFATBwR3/N4QRPySNXX0N4lkH3uMLKmCl+lxjLV8OhOuP3ZJeLxl06j674h5WXNkutgIA3FF74VqaIQaIFt6GRHdjLX+6a5hP37zGwOTJ00vWtF0areLPC5If4Ki21CBhFPZutkKaKDjAbdDVjqCa0n620X0tEFE5PWo2KCfLHnpBTsQr8XVdTHc7UYXiz9aWXeUc3R/9J1NCYvo8Jc5lSPWz5hK91ItFnc5nEY6fCW7rvs80reAbtN0JJdu2Hes+QEIsHT4O7VRN2IZX8X3b2lpYfKBvXkRcEpxXj6M46Mjpw7R+HXYMx31LVOsQK0yplV3Pj3TcCVnnLlAHJqCOCyUellpbwm2DLMjiwX+jiYZ9rmgRmkyX4vP4C9kxZC5smUEz0psKAY6Q2YsENSTpZKRZv6KVjzQWXhCfj0nZmaKSFfx+6rjuyTn/pW5ubNcTgLwS52NwCB34NmzQXUCPMX2JBZDeUERWzQdysysH2fKaMTQWTxrlD8z7ZksJnymm8=
