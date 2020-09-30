@@ -1269,7 +1269,6 @@ def report_interactions(
     targets = read_targets(targets_file)
     singles = read_singles(single_counts)
     desc = read_annotations(refseq_dir)
-#    genes_dict = get_genes_dict(ec_dir, est_utr_lens)
     try:
         pos_maps, _ = ecocyc_parser.get_mapping(ec_dir, est_utr_lens, linear_chromosome_list=linear_chromosome_list)
     except IOError:
@@ -1394,12 +1393,8 @@ def report_interactions(
             p5_seqs = get_seqs(
                 r1_chrn, min1_pos-pad_seqs, max1_pos+pad_seqs, r1_str, fsa_seqs,
                 shuffles=shuffles)
-            if r2_str == '+':
-                p3_seq = get_seqs(
-                    r2_chrn, min2_pos-pad_seqs, max2_pos, r2_str, fsa_seqs)
-            else:
-                p3_seq = get_seqs(
-                    r2_chrn, min2_pos, max2_pos+pad_seqs, r2_str, fsa_seqs)
+            p3_seq = get_seqs(
+                    r2_chrn, min2_pos-pad_seqs, max2_pos+pad_seqs, r2_str, fsa_seqs)
             rnrgs = rnup.scoreall(p3_seq, p5_seqs)
             if shuffles>0:
                 pv = len([r for r in rnrgs.values() if r>=rnrgs['real']])/float(

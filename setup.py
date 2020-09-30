@@ -3,9 +3,9 @@ from setuptools import setup
 def readme():
     with open('README.rst') as f:
         return f.read()
-    
+
 setup(name='RILseq',
-      version='0.78',
+      version='0.79',
       description='Processing RILSeq experiments results',
       long_description=readme(),
       classifiers=[
