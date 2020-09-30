@@ -280,10 +280,10 @@ def main(argv=None):
     # check if RNAup is exists
     if settings.shuffles != 0:
         RNAup_path = settings.RNAup_cmd.split(" ")[0]
-        if not os.path.exists(RNAup_path):
+        if not os.path.isfile(RNAup_path):
             in_path = False
             for p in os.environ["PATH"].split(os.pathsep):
-                if os.path.exists(os.path.join(p, RNAup_path)):
+                if os.path.isfile(os.path.join(p, RNAup_path)):
                     in_path = True
                     real_path = os.path.join(p, RNAup_path)
                     settings.RNAup_cmd = " ".join([real_path] + settings.RNAup_cmd.split(" ")[1:])
