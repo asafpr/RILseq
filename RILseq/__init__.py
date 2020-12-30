@@ -675,7 +675,15 @@ def test_concordance(
                 is_rev2 = (altp2[1][0] == '-')
                 pos2 = abs(int(altp2[1]))
 
-                if is_conc(is_rev1, is_rev2, pos1, pos2, altp[0], altp2[0]):
+                if is_conc(
+                    is_rev1,
+                    is_rev2,
+                    pos1,
+                    pos2,
+                    altp[0],
+                    altp2[0],
+                    chrlens_bam[chrnames_bam.index(altp[0])]
+                ):
                     # Replace both with alternatives.
                     replace_with_XA(read1, altp, chrnames_bam)
                     replace_with_XA(read2, altp2, chrnames_bam)
