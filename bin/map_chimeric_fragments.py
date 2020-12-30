@@ -23,6 +23,7 @@ import pkg_resources
 
 import RILseq
 
+
 def process_command_line(argv):
     """
     Return a 2-tuple: (settings object, args list).
@@ -130,65 +131,117 @@ def process_command_line(argv):
 def main(argv=None):
     sys.stderr.write("RILseq version: {}\n".format(pkg_resources.get_distribution("RILseq").version))
     settings = process_command_line(argv)
+
     # Read the transcripts if given
     try:
         os.makedirs(settings.dirout)
+
     except OSError as e:
         if e.errno != errno.EEXIST:
             raise
+
     if settings.transcripts:
         trans_dict = RILseq.read_transcripts(settings.transcripts, settings.feature, settings.identifier)
+
     else:
         trans_dict = None
+
     # Get the ends of the reads from the bam files
 #    sys.stderr.write('%s\n'%str(settings.bamfiles))
     if settings.all_reads:
         try:
             outall = open(settings.all_reads, 'w')
+
         except IOError:
             outall = None
+
     elif settings.add_all_reads:
         outall = sys.stdout
+
     else:
         outall = None
+
     for bf in RILseq.flat_list(settings.bamfiles):
-        bfin = pysam.AlignmentFile(bf,'rb')
+        bfin = pysam.AlignmentFile(bf, 'rb')
         outhead = bf.rsplit('.', 1)[0]
-        libname = outhead.rsplit('/',1)[-1]
-        fsq1name = "%s/%s_ends_1.fastq"%(settings.dirout, libname)
-        fsq2name = "%s/%s_ends_2.fastq"%(settings.dirout, libname)
+        libname = outhead.rsplit('/', 1)[-1]
+        fsq1name = "%s/%s_ends_1.fastq" % (settings.dirout, libname)
+        fsq2name = "%s/%s_ends_2.fastq" % (settings.dirout, libname)
+
         if settings.skip_mapping:
             fsq1 = open(os.devnull, 'w')
             fsq2 = fsq1
+
         else:
             fsq1 = open(fsq1name, 'w')
             fsq2 = open(fsq2name, 'w')
+
         single_mapped = RILseq.get_unmapped_reads(
-            bfin, fsq1, fsq2, settings.length, settings.maxG,
-            rev=settings.reverse_complement, all_reads=True,
-            dust_thr=settings.dust_thr)
+            bfin,
+            fsq1,
+            fsq2,
+            settings.length,
+            settings.maxG,
+            rev=settings.reverse_complement,
+            all_reads=True,
+            dust_thr=settings.dust_thr
+        )
+
         reads_in = []
+
         # Map the fastq files to the genome
         for fqname in (fsq1name, fsq2name):
-            bamheadname = fqname.rsplit('.',1)[0].rsplit('/',1)[-1]
+            bamheadname = fqname.rsplit('.', 1)[0].rsplit('/', 1)[-1]
+
             if settings.skip_mapping:
-                bamname = "%s/%s.bam"%(settings.dirout, bamheadname)
+                bamname = "%s/%s.bam" % (settings.dirout, bamheadname)
+
             else:
                 bamname = RILseq.run_bwa(
-                    settings.bwa_exec, fqname, None,
-                    os.path.abspath(settings.dirout), bamheadname, settings.max_mismatches,
-                    os.path.abspath(settings.genome_fasta), settings.params_aln,
-                    '', settings.samse_params,
-                    settings.samtools_cmd)
-            bamin = pysam.AlignmentFile(bamname,'rb')
+                    settings.bwa_exec,
+                    fqname,
+                    None,
+                    os.path.abspath(settings.dirout),
+                    bamheadname,
+                    settings.max_mismatches,
+                    os.path.abspath(settings.genome_fasta),
+                    settings.params_aln,
+                    '',
+                    settings.samse_params,
+                    settings.samtools_cmd
+                )
+
+            bamin = pysam.AlignmentFile(bamname, 'rb')
             reads_in.append(RILseq.read_bam_file(
-                    bamin, bamin.references, settings.allowed_mismatches))
+                bamin,
+                bamin.references,
+                settings.allowed_mismatches
+            ))
+
+        # TODO: Preferably these should be a dictionary
+        # the chrnames_bam is used to get the name of a chromosome from a
+        # read in the bamfile (read.reference_id). However, it should be
+        # accessible using read.reference_name. Maybe there is a reason
+        # I'm not aware of it is written this way
+        chrnames_bam = bfin.references
+        chrlens_bam = [bfin.get_reference_length(ref) for ref in chrnames_bam]
+
         RILseq.write_reads_table(
-            sys.stdout, reads_in[0], reads_in[1], bfin.references,
-            settings.distance, not settings.keep_circular,
-            trans_dict, write_single=outall, single_mapped=single_mapped,
-            max_NM=settings.allowed_mismatches)
+            sys.stdout,
+            reads_in[0],
+            reads_in[1],
+            chrnames_bam,
+            chrlens_bam,
+            settings.distance,
+            not settings.keep_circular,
+            trans_dict,
+            write_single=outall,
+            single_mapped=single_mapped,
+            max_NM=settings.allowed_mismatches
+        )
+
     return 0        # success
+
 
 if __name__ == '__main__':
     status = main()
