@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 Generate a gff file of transcripts using an BioCyc data flat-files
@@ -48,7 +48,7 @@ def main(argv=None):
             sys.stdout, utr_len=settings.est_utr_lens,
             ec_dir=settings.bc_dir, chr_dict=chr_dict)
     except ValueError as e:
-        print e.msg
+        print(e.msg)
         return 1
     # application code here, like:
     # run(settings, args)

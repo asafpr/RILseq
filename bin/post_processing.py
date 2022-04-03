@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 This script is used to run post processing analysis on the RILseq results.
 This will generate table S1 in the RILseq essay.
@@ -107,7 +108,7 @@ def generate_table_s1(settings, outfile):
             total_reads = 0
 
         procfile = libname + '_cutadapt_1.fastq.gz'
-        processed_reads = sum(1 for line in gzip.open(procfile) if line.startswith('@'))
+        processed_reads = sum(1 for line in gzip.open(procfile) if line.startswith(b'@'))
         if os.path.exists(procfile.replace('_1.fastq.gz', '_2.fastq.gz')):
             processed_reads *= 2
         if total_reads > 0:
@@ -125,8 +126,8 @@ def generate_table_s1(settings, outfile):
         count_cmd_strict = count_cmd + ['-t']
 
         print(count_cmd)
-        mapped_reads = Popen(' '.join(count_cmd), shell=True, stdout=PIPE).stdout.read().strip()
-        mapped_reads_strict, multiple, antisense, igr = Popen(' '.join(count_cmd_strict), shell=True, stdout=PIPE)\
+        mapped_reads = Popen(' '.join(count_cmd), shell=True, stdout=PIPE, encoding='utf8').stdout.read().strip()
+        mapped_reads_strict, multiple, antisense, igr = Popen(' '.join(count_cmd_strict), shell=True, stdout=PIPE, encoding='utf8')\
             .stdout.read().strip().split(',')
 
         mapped_fraction = "{:1.2f}".format(int(mapped_reads)/float(processed_reads))
@@ -138,26 +139,26 @@ def generate_table_s1(settings, outfile):
 
         if settings.RILseq_work_dir:
             short_name = libname.split('/')[-1]
-            fastq1 = settings.RILseq_work_dir+short_name+"_cutadapt_bwa_ends_1.fastq"
-            fastq2 = settings.RILseq_work_dir+short_name+"_cutadapt_bwa_ends_2.fastq"
+            fastq1 = settings.RILseq_work_dir+"/remapped-data/"+short_name+"_cutadapt_bwa_ends_1.fastq"
+            fastq2 = settings.RILseq_work_dir+"/remapped-data/"+short_name+"_cutadapt_bwa_ends_2.fastq"
             if os.path.exists(fastq1):
                 numfrag = len(list(set([line.strip() for line in open(fastq1) if line.startswith('@')]).intersection(
                         [line.strip() for line in open(fastq2) if line.startswith('@')])))
 
-                frags_file = settings.RILseq_work_dir+short_name+'_cutadapt_bwa.bam_all_fragments_l25.txt'
+                frags_file = settings.RILseq_work_dir+short_name+'_cutadapt_bwa.bam_mapping_all_fragments_l25.txt'
                 singles = sum(1 for line in open(frags_file) if "single" in line)
                 chimeras = sum(1 for line in open(frags_file) if "chimera" in line)
 
-                singles_file = settings.RILseq_work_dir+short_name+'_cutadapt_bwa.bam_all_fragments_l25.txt_only_single.txt'
-                all_file = settings.RILseq_work_dir+short_name+'_cutadapt_bwa.bam_all_fragments_l25.txt_all_interactions.txt'
-                sig_file = settings.RILseq_work_dir+short_name+'_cutadapt_bwa.bam_all_fragments_l25.txt_sig_interactions_with-total.txt'
+                singles_file = settings.RILseq_work_dir+short_name+'_cutadapt_bwa.bam_mapping_all_fragments_l25.txt_singles.txt'
+                all_file = settings.RILseq_work_dir+short_name+'_cutadapt_bwa.bam_mapping_all_fragments_l25.txt_all_interactions.txt'
+                sig_file = settings.RILseq_work_dir+short_name+'_cutadapt_bwa.bam_mapping_all_fragments_l25.txt_significant_interactions.txt'
 
                 temp = open(singles_file)
-                temp.next()
+                next(temp)
                 map_si_exc_rrna = sum(int(line.split('\t')[14]) for line in temp)
 
                 temp = open(all_file)
-                temp.next()
+                next(temp)
                 map_ch_exc_rrna = sum(int(line.split('\t')[14]) for line in temp)
 
                 per_mapped = "{:1.1f}%".format(((singles+chimeras)/float(numfrag))*100)
@@ -165,7 +166,7 @@ def generate_table_s1(settings, outfile):
 
                 stat_interactions = sum(1 for line in open(sig_file)) - 1
                 temp = open(sig_file)
-                temp.next()
+                next(temp)
                 stat_frags = sum(int(line.split('\t')[14]) for line in temp)
                 per_stat = "{:1.1f}%".format((stat_frags/float(chimeras))*100)
 

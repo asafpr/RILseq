@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 After a library is mapped to the genome (using map_single_fragments.py or any
@@ -210,7 +210,6 @@ def main(argv=None):
                     settings.samse_params,
                     settings.samtools_cmd
                 )
-
             bamin = pysam.AlignmentFile(bamname, 'rb')
             reads_in.append(RILseq.read_bam_file(
                 bamin,
@@ -225,7 +224,6 @@ def main(argv=None):
         # I'm not aware of it is written this way
         chrnames_bam = bfin.references
         chrlens_bam = [bfin.get_reference_length(ref) for ref in chrnames_bam]
-
         RILseq.write_reads_table(
             sys.stdout,
             reads_in[0],
