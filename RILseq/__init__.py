@@ -100,7 +100,6 @@ def run_bwa(bwa_cmd, fname1, fname2, output_dir, output_prefix, mismatches,
     return bamname
 
 
-
 def read_gtf(gtf_file, feature, identifier):
     """
     Read a GTF file and return a list in the length of the genome in which each
@@ -151,7 +150,6 @@ def read_gtf(gtf_file, feature, identifier):
     return pos_feat_list, all_features
 
 
-
 def get_paired_pos(read, rev=False):
     """
     Given a read which is the positive of the pairs return a strand and
@@ -167,6 +165,7 @@ def get_paired_pos(read, rev=False):
     fpos = read.reference_start
     tpos = read.template_length + fpos  # previously termed tlen
     return strand, fpos, tpos
+
 
 def get_single_pos(read, rev=False):
     """
@@ -193,7 +192,7 @@ def count_features(
     Go over the samfile and for each pair of reads find the features that
     overlap the fragment with at least 'overlap' nucleotides. Add 1 to the count
     of these features
-    
+
     Arguments:
     - `features_lists`: The list of features returned from the read_gtf function
     - `samfile`: A pysam object
@@ -202,7 +201,7 @@ def count_features(
     - `checkpoint`: Report every 100000 reads processed, set to None or False
                     for silencing
     - `get_sum`: Return the number of reads as well
-                    
+
     Return:
     - `fcounts`: A dictionary from gene name to number of reads mapped to the
                  gene. ~~antisense and ~~intergenic count the number of reads
@@ -456,6 +455,7 @@ def get_unmapped_reads(
                 ouf.write("@%s\n%s\n+\n%s\n"%(read.qname, outseq, outqual))
     return single_mapped
 
+
 def pass_dust_filter(seq, thr):
     """
     Run dust filter and return True of False. The filter is applied as
@@ -477,7 +477,7 @@ def pass_dust_filter(seq, thr):
 #    sys.stderr.write("%g\n"%(cscore/(len(seq)-3)*10))
     return cscore/(len(seq)-3) * 10 <= thr
 
-            
+
 def run_dust_filter(fname, fout, prinseq_cmd, threshold):
     """
     Run the dust filter implemented in prinseq. Read a fastq file and write to
@@ -558,7 +558,14 @@ def replace_with_XA(read, al, chrnames_bam):
 
 
 def test_concordance(
-    read1, read2, maxdist, chrnames_bam, trans_gff=None, remove_self=False):
+    read1,
+    read2,
+    maxdist,
+    chrnames_bam,
+    chrlens_bam,
+    trans_gff=None,
+    remove_self=False
+):
     """
     Test if the two reads can be concordant and not ligated.
     If it finds a combination that is concordant, replace the concordant
@@ -571,70 +578,144 @@ def test_concordance(
     - `read2`: read 2 object
     - `maxdist`: Maximal distance to consider concordance if not on the same
                  transcript and have same orientation (possibly self ligation)
-    - `chrnames_bam`: A list of chr names as they appear in the bam file.
+    - `chrnames_bam: A list of chr names as they appear in the bam file.
                       can be generated from Samfile.getrname() function
+    - `chrlens_bam: A list of chr lengths as they appear in the bam file.
+                     can be generated using Samfile.get_reference_length()
+                     function.
     - `trans_gff`: A dict IGT->(from, to, strand)
     - `remove_self`: Remove pairs that have the same orientation but different
                      order i.e. r1--->r2---> instead of r2--->r1--->
     """
-    def is_conc(str1, str2, pos1, pos2, chr1, chr2):
+    def is_conc(str1, str2, pos1, pos2, chr1, chr2, chr_len):
         """
         """
-        if str1 != str2:
+        # Same strand and chromosome
+        if chr1 != chr2 or str1 != str2:
             return False
-        if chr1 != chr2:
-            return False
-        if abs(pos2-pos1)<maxdist and ((pos1>pos2)==str1 or remove_self):
-            return True
+
+        # If orientation is |--r1-----r2--|
+        if pos1 < pos2:
+            regular_dist = pos2 - pos1
+            cyclic_dist = (chr_len - pos2) + pos1 + 1
+
+            # If ignore orientation look only on the distances
+            if remove_self and min(regular_dist, cyclic_dist) < maxdist:
+                return True
+
+            # Forward strand
+            elif regular_dist < maxdist and not str1:
+                return True
+
+            # Reverse strand
+            elif cyclic_dist < maxdist and str1:
+                return True
+
+        # If orientation is |--r2-----r1--|
+        else:
+            regular_dist = pos1 - pos2
+            cyclic_dist = (chr_len - pos1) + pos2 + 1
+
+            # If ignore orientation look only on the distances
+            if remove_self and min(regular_dist, cyclic_dist) < maxdist:
+                return True
+
+            # Reverse strand
+            elif regular_dist < maxdist and str1:
+                return True
+
+            # Forward strand
+            elif cyclic_dist < maxdist and not str1:
+                return True
+
         if trans_gff:
             in_trans = False
+
             for tu_pos in trans_gff.values():
-                if (tu_pos[2]=='-')==str1:
-                    if tu_pos[0]<=pos1<=tu_pos[1] and tu_pos[0]<=pos2<=tu_pos[1]:
+                if (tu_pos[2] == '-') == str1:
+                    if tu_pos[0] <= pos1 <= tu_pos[1] and tu_pos[0] <= pos2 <= tu_pos[1]:
                         in_trans = True
                         break
-            if in_trans and ((pos1>pos2)==str1 or remove_self):
+
+            if in_trans and ((pos1 > pos2) == str1 or remove_self):
                 return True
+
         return False
-                        
+
     # read1 is the reverse of the real read. If both directions are the same
     # and distance is short they can be concordant
-    
-    if read1.is_reverse == read2.is_reverse and read1.reference_id==read2.reference_id:
+    # TODO: Why do we test it here? this is exactly why is conc is doing inside
+    if read1.is_reverse == read2.is_reverse and read1.reference_id == read2.reference_id:
         if is_conc(
-            read1.is_reverse, read2.is_reverse, read1.reference_start, read2.reference_start,
-            read1.reference_id, read2.reference_id):
+            read1.is_reverse,
+            read2.is_reverse,
+            read1.reference_start,
+            read2.reference_start,
+            read1.reference_id,
+            read2.reference_id,
+            chrlens_bam[read1.reference_id]
+        ):
             return True
+
     r1_XA = get_XA_mapping(read1.get_tags())
     r2_XA = get_XA_mapping(read2.get_tags())
+
     if r1_XA:
         for altp in r1_XA:
             is_rev1 = (altp[1][0] == '-')
             pos1 = abs(int(altp[1]))
+
             if is_conc(
-                is_rev1, read2.is_reverse, pos1, read2.reference_start, altp[0],
-                chrnames_bam[read2.reference_id]):
+                is_rev1,
+                read2.is_reverse,
+                pos1,
+                read2.reference_start,
+                altp[0],
+                chrnames_bam[read2.reference_id],
+                chrlens_bam[read2.reference_id]
+            ):
                 # Replace with alternative
                 replace_with_XA(read1, altp, chrnames_bam)
                 return True
+
             for altp2 in r2_XA:
                 is_rev2 = (altp2[1][0] == '-')
                 pos2 = abs(int(altp2[1]))
-                if is_conc(is_rev1, is_rev2, pos1, pos2, altp[0], altp2[0]):
+
+                if is_conc(
+                    is_rev1,
+                    is_rev2,
+                    pos1,
+                    pos2,
+                    altp[0],
+                    altp2[0],
+                    chrlens_bam[chrnames_bam.index(altp[0])]
+                ):
                     # Replace both with alternatives.
                     replace_with_XA(read1, altp, chrnames_bam)
                     replace_with_XA(read2, altp2, chrnames_bam)
                     return True
+
     if r2_XA:
         for altp2 in r2_XA:
             is_rev2 = (altp2[1][0] == '-')
             pos2 = abs(int(altp2[1]))
-            if is_conc(read1.is_reverse, is_rev2, read1.reference_start, pos2, altp2[0], chrnames_bam[read1.reference_id]):
+
+            if is_conc(
+                read1.is_reverse,
+                is_rev2,
+                read1.reference_start,
+                pos2,
+                altp2[0],
+                chrnames_bam[read1.reference_id],
+                chrlens_bam[read1.reference_id]
+            ):
                 # Replace with alternative
                 replace_with_XA(read2, altp2, chrnames_bam)
                 return True
-        
+
     return False
+
 
 def read_bam_file(bamfile, chrnames_bam, max_NM=0):
     """
@@ -672,9 +753,18 @@ def read_bam_file(bamfile, chrnames_bam, max_NM=0):
 
 
 def write_reads_table(
-    outfile, read1_reads, read2_reads, chrnames_bam, maxdist,
-    remove_self, trans_gff=None, write_single=None, single_mapped=None,
-    max_NM=1):
+    outfile,
+    read1_reads,
+    read2_reads,
+    chrnames_bam,
+    chrlens_bam,
+    maxdist,
+    remove_self,
+    trans_gff=None,
+    write_single=None,
+    single_mapped=None,
+    max_NM=1
+):
     """
     Read the lists of reads and print a list of chimeric fragments after
     removing concordant reads
@@ -684,6 +774,7 @@ def write_reads_table(
     - `read2_reads`: A dictionary of reads from side 2, keys of 1 and 2 should
                      match
     - `chrnames_bam`: A list of chromosome names in the bam file
+    - `chrlens_bam`: A list of chromosome lengths in the bam file
     - `maxdist`: Maximal distance between concordant reads
     - `remove_self`: Remove circular RNAs
     - `trans_gff`: A dictionary with transcripts positions, optional
@@ -692,47 +783,64 @@ def write_reads_table(
                        mapped as single
     - `max_NM`: Maximla number of mismatches. Used to screen printing of singles
     """
-    
 
     for rname in read1_reads:
         if rname not in read2_reads:
             continue
+
         # If the two reads share at least one gene they are excluded
         write_to = outfile
         read_type = "chimera"
+
         if test_concordance(
-            read1_reads[rname], read2_reads[rname], maxdist,
-            chrnames_bam, trans_gff=trans_gff, remove_self=remove_self):
+            read1_reads[rname],
+            read2_reads[rname],
+            maxdist,
+            chrnames_bam,
+            chrlens_bam,
+            trans_gff=trans_gff,
+            remove_self=remove_self
+        ):
+
             if write_single:
                 if get_NM_number(read1_reads[rname].get_tags()) > max_NM or\
                         get_NM_number(read2_reads[rname].get_tags()) > max_NM:
                     continue
+
                 write_to = write_single
                 read_type = "single"
+
             else:
                 continue
+
         else:
             # If it was originally mapped as single and now as chimeric
             # ignore this read
             if single_mapped and rname in single_mapped:
                 continue
+
         read1_chrn = chrnames_bam[read1_reads[rname].reference_id]
         read2_chrn = chrnames_bam[read2_reads[rname].reference_id]
+
         if not read2_reads[rname].is_reverse:
-            end2_pos = read2_reads[rname].reference_start+read2_reads[rname].query_alignment_length-1
+            end2_pos = read2_reads[rname].reference_start + read2_reads[rname].reference_length - 1
             end2_str = '+'
+
         else:
             end2_pos = read2_reads[rname].reference_start
             end2_str = '-'
+
         if read1_reads[rname].is_reverse:
-            end1_pos = read1_reads[rname].reference_start+read1_reads[rname].query_alignment_length-1
+            end1_pos = read1_reads[rname].reference_start + read1_reads[rname].reference_length - 1
             end1_str = '-'
+
         else:
             end1_pos = read1_reads[rname].reference_start
             end1_str = '+'
+
         write_to.write(
-            "%s\t%d\t%s\t%s\t%d\t%s\t%s\t%s\n"%(
-                read1_chrn, end1_pos+1, end1_str, read2_chrn, end2_pos+1,
+            "%s\t%d\t%s\t%s\t%d\t%s\t%s\t%s\n" % (
+                read1_chrn, end1_pos + 1, end1_str, read2_chrn, end2_pos + 1,
                 end2_str, rname, read_type))
 
 
@@ -1269,7 +1377,6 @@ def report_interactions(
     targets = read_targets(targets_file)
     singles = read_singles(single_counts)
     desc = read_annotations(refseq_dir)
-#    genes_dict = get_genes_dict(ec_dir, est_utr_lens)
     try:
         pos_maps, _ = ecocyc_parser.get_mapping(ec_dir, est_utr_lens, linear_chromosome_list=linear_chromosome_list)
     except IOError:
@@ -1394,12 +1501,8 @@ def report_interactions(
             p5_seqs = get_seqs(
                 r1_chrn, min1_pos-pad_seqs, max1_pos+pad_seqs, r1_str, fsa_seqs,
                 shuffles=shuffles)
-            if r2_str == '+':
-                p3_seq = get_seqs(
-                    r2_chrn, min2_pos-pad_seqs, max2_pos, r2_str, fsa_seqs)
-            else:
-                p3_seq = get_seqs(
-                    r2_chrn, min2_pos, max2_pos+pad_seqs, r2_str, fsa_seqs)
+            p3_seq = get_seqs(
+                    r2_chrn, min2_pos-pad_seqs, max2_pos+pad_seqs, r2_str, fsa_seqs)
             rnrgs = rnup.scoreall(p3_seq, p5_seqs)
             if shuffles>0:
                 pv = len([r for r in rnrgs.values() if r>=rnrgs['real']])/float(

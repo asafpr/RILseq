@@ -3,9 +3,9 @@ from setuptools import setup
 def readme():
     with open('README.rst') as f:
         return f.read()
-    
+
 setup(name='RILseq',
-      version='0.77',
+      version='0.82',
       description='Processing RILSeq experiments results',
       long_description=readme(),
       classifiers=[
@@ -31,6 +31,6 @@ setup(name='RILseq',
       license='MIT',
       packages=['RILseq'],
       install_requires=[
-        'scipy', 'numpy', 'pysam>=0.14.1', 'biopython'],
+        'scipy', 'numpy', 'pysam>=0.14.1', 'biopython==1.76'],
       include_package_data=True,
       zip_safe=False)

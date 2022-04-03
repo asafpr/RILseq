@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 """
 Read files with interactions summary (with or without p-values) and plot
@@ -71,10 +71,10 @@ def get_singles_counts(sname, seglen, mincounts):
             if ints < mincounts:
                 continue
             r1_reg = (
-                line['RNA1 chromosome'],int(line['Start of RNA1 first read'])/seglen*seglen,
+                line['RNA1 chromosome'],int(int(line['Start of RNA1 first read'])/seglen)*seglen,
                 line['RNA1 strand'])
             r2_reg = (
-                line['RNA2 chromosome'],int(line['Start of RNA2 last read'])/seglen*seglen,
+                line['RNA2 chromosome'],int(int(line['Start of RNA2 last read'])/seglen)*seglen,
                 line['RNA2 strand'])
             counts[r1_reg] += ints
             counts[r2_reg] += ints
@@ -96,9 +96,9 @@ def get_regions_counts(fname, seglen, mincounts):
             if int(line['interactions']) < mincounts:
                 continue
             t_reg = (
-                line['RNA1 chromosome'],int(line['Start of RNA1 first read'])/seglen*seglen,
+                line['RNA1 chromosome'],int(int(line['Start of RNA1 first read'])/seglen)*seglen,
                 line['RNA1 strand'], 
-                line['RNA2 chromosome'],int(line['Start of RNA2 last read'])/seglen*seglen,
+                line['RNA2 chromosome'],int(int(line['Start of RNA2 last read'])/seglen)*seglen,
                 line['RNA2 strand'])
 
             counts[t_reg] = int(line['interactions'])
@@ -137,8 +137,8 @@ def plot_scatter(chimera, singles, chisum, lorder, figname, mincount):
 #        grd.cbar_axes[i*lln+j].colorbar(im)
 
         grd[i*lln + j].text(10, 10e4, "r=%.2f"%(spr[0]), size=6, color='m')
-        grd[i*lln + j].set_xlim([-10, 10e5])
-        grd[i*lln + j].set_ylim([-10, 10e5])
+        grd[i*lln + j].set_xlim([10e0, 10e5])
+        grd[i*lln + j].set_ylim([10e0, 10e5])
         grd[i*lln + j].set_yscale('log')
         grd[i*lln + j].set_xscale('log')
         grd[i*lln + j].set_xticks([10e0, 10e2, 10e4])

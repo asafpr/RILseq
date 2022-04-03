@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 Read the table of chimeric fragments and find regions that are over-represented
@@ -17,6 +17,7 @@ import pysam
 import sys
 import argparse
 from collections import defaultdict
+import os
 
 import RILseq
 
@@ -114,7 +115,7 @@ def process_command_line(argv):
         '--run_RNAup', default=False, action='store_true',
         help='Run RNAup and compute the interactions predicted strength')
     parser.add_argument(
-        '--RNAup_cmd', default='RNAup -Xp -w 25 -b -o',
+        '--RNAup_cmd', default='RNAup',
         help='Executable of RNAup with its parameters')
     parser.add_argument(
         '--pad_seqs', type=int, default=50,
@@ -270,12 +271,25 @@ def main(argv=None):
         max_IP_div_total = mm_sorted[
             int(len(mm_sorted)*settings.norm_percentile)]
         sys.stderr.write("%f\n"%(max_IP_div_total))
-            
+
     else:
         totRNA_counts = defaultdict(int)
         max_IP_div_total = 0
-    if (settings.shuffles ==0 and settings.run_RNAup):
-        settings.shuffles=-1
+    if settings.shuffles == 0 and settings.run_RNAup:
+        settings.shuffles = -1
+    # check if RNAup is exists
+    if settings.shuffles != 0:
+        RNAup_path = settings.RNAup_cmd.split(" ")[0]
+        if not os.path.isfile(RNAup_path):
+            in_path = False
+            for p in os.environ["PATH"].split(os.pathsep):
+                if os.path.isfile(os.path.join(p, RNAup_path)):
+                    in_path = True
+                    real_path = os.path.join(p, RNAup_path)
+                    settings.RNAup_cmd = " ".join([real_path] + settings.RNAup_cmd.split(" ")[1:])
+            if not in_path:
+                sys.exit("RNAup is not found. Please specify its location")
+
     # Read the additional data to decorate the results with
     RILseq.report_interactions(
         region_interactions, sys.stdout, interacting_regions, settings.seglen,
